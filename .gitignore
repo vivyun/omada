@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Build output
+.svelte-kit/
+build/
+docs/  # (only if you're building locally into this and deploying manually via GitHub Pages. Keep if needed.)
+
+# System files
+.DS_Store
+
+# Logs
+npm-debug.log*
