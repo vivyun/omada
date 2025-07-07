@@ -2,22 +2,22 @@
   import { fade } from 'svelte/transition';
   const features = [
     {
-      icon: '/icons/graph.svg',
+      icon: 'icons/graph.svg',
       title: 'Win More Projects',
       description: 'Competitive costs that align with your clients’ tight budgets—without compromising quality.',
     },
     {
-      icon: '/icons/coin.svg',
+      icon: 'icons/coin.svg',
       title: 'Gain More Profit',
       description: 'Competitive partner pricing to a broad product lineup and exclusive tools.',
     },
     {
-      icon: '/icons/rocket.svg',
+      icon: 'icons/rocket.svg',
       title: 'Business-Grade Performance',
       description: 'High-quality, high-density Wi-Fi designed for business. A steady supply chain ensures cost control and dependable quality.',
     },
     {
-      icon: '/icons/headset.svg',
+      icon: 'icons/headset.svg',
       title: 'Dedicated Support & Warranty',
       description: 'Get help fast via call, email, or chat. We’re here pre- and post-sale. Extended warranties give peace of mind to you and your customers.',
     },
@@ -25,8 +25,8 @@
 
   let products = [
     {
-      image: '/images/ER707-M2.jpg',
-      image_mobile: '/images/ER707-M2_m.jpg',
+      image: 'images/ER707-M2.jpg',
+      image_mobile: 'images/ER707-M2_m.jpg',
       name: 'Omada Multi-Gigabit VPN Gateway',
       id: 'ER707-M2',
       price: '$99.99',
@@ -38,8 +38,8 @@
       ]
     },
     {
-      image: '/images/EAP723.jpg',
-      image_mobile: '/images/EAP723_m.jpg',
+      image: 'images/EAP723.jpg',
+      image_mobile: 'images/EAP723_m.jpg',
       name: 'Omada Dual-Band Wi-Fi 7 Ceiling Mount AP',
       id: 'EAP723, 2 count',
       price: '$178.98 ($89.99 x 2)',
@@ -51,8 +51,8 @@
       ]
     },
     {
-      image: '/images/SG2210P.jpg',
-      image_mobile: '/images/SG2210P_m.jpg',
+      image: 'images/SG2210P.jpg',
+      image_mobile: 'images/SG2210P_m.jpg',
       name: 'Omada 10-Port Gigabit Smart Switch',
       id: 'SG2210P',
       price: '$114.99',
@@ -86,7 +86,7 @@
         <button class="btn-primary self-start">Claim My Kit Now</button>
       </div>
       <div class="w-full max-w-2xl relative">
-        <img src="/images/demo_kit_products.png" alt="Omada Cloud Essentials" />
+        <img src="images/demo_kit_products.png" alt="Omada Cloud Essentials" />
         <div class="scale-70 lg:scale-100 absolute top-0 right-0 w-52 h-52 bg-black/50 backdrop-blur rounded-full flex flex-col items-center justify-center">
           <p class="text-limeGreen text-center text-3xl font-light">
             Get it<br><span class="text-5xl">50%</span><br>off!
@@ -124,7 +124,7 @@
                 <!-- Info Button -->
                 <div class="absolute top-3 right-2 z-10 flex flex-row gap-2">
                   <p class="text-white small-paragraph text-right leading-tight">Click to<br> view specs</p>
-                  <img src="/icons/info.svg" alt="Info icon" />
+                  <img src="icons/info.svg" alt="Info icon" />
                 </div>
                 <p class="absolute top-3 left-4 z-20 text-white leading-tight large-paragraph">Included in <br>your kit</p>
                 <img class="hidden md:block w-full" src={product.image} alt={product.name} />

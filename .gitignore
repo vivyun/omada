@@ -4,7 +4,7 @@ node_modules/
 # Build output
 .svelte-kit/
 build/
-docs/  # (only if you're building locally into this and deploying manually via GitHub Pages. Keep if needed.)
+docs/
 
 # System files
 .DS_Store
