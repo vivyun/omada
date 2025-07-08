@@ -65,6 +65,31 @@
     }
   ];
 
+  let selected = 'cloud';
+
+  const controllers = {
+    cloud: {  
+      image: 'images/Omada_Cloud_Essentials.png',
+      name: 'Cloud-Based Controller',
+      price: 'Free',
+      best: 'Best for Surveillance Network Houses, Home Labs, Motels, and Small Offices',
+      description: 'Manage your entire network from anywhere — no hardware required. Includes free lifetime cloud access.',
+      total: '$197.48',
+      msrp: '$394.96',
+    },
+    hardware: {
+      image: 'images/OC220.png',
+      name: 'Hardware Controller',
+      price: 'Retails for $79.99',
+      best: 'Best for Hotels, Retails, MDU, Schools, Small to Medium Offices',
+      description: 'Ideal for schools, hotels, and larger networks needing local control, VLANs, and advanced authentication.',
+      total: '$237.48',
+      msrp: '$474.95',
+    },
+  };
+
+  $: controller = controllers[selected];
+
   let activeInfoIndex = null;
 
 	function toggleInfo(index) {
@@ -149,7 +174,53 @@
           </div>
         {/each}
       </div>
-      <h2>Choose Your Controller</h2>
+      <h2 class="mt-8">Choose Your Controller</h2>
+      <div class="flex flex-wrap justify-center gap-2 mb-6">
+        {#each Object.entries(controllers) as [key, data]}
+          <button
+            class={`px-4 py-2 rounded-full border ${
+              selected === key ? 'border-neonGreen' : 'bg-gray-200 border-gray-200'
+            }`}
+            on:click={() => (selected = key)}
+          >
+            {data.name} ({data.price})
+          </button>
+        {/each}
+      </div>
+      <div class="flex flex-col lg:flex-row gap-8 w-full">
+        <img
+          class=" max-w-[80%] lg:max-w-1/2 m-auto"
+          src={controller.image}
+          alt={controller.name} />
+
+        <div class="flex flex-col gap-4 w-full">
+          <h3>{controller.name}</h3>
+          <h4 class="subheading">{controller.best}</h4>
+          <p>{controller.description}</p>
+
+          <div class="mt-6 flex flex-col gap-4">
+            <h3>Demo Kit Price</h3>
+            <h4 class="subheading">
+              3 Products + {controller.name}
+            </h4>
+
+            <div class="flex items-end gap-4 mt-2">
+              <h2 class="text-dullGreen">
+                {controller.total}
+                <span class="large-paragraph ml-2 font-normal">(50% off)</span>
+              </h2>
+              <p class="large-paragraph text-black/40">
+                MSRP<br />
+                <span class="line-through">{controller.msrp}</span>
+              </p>
+            </div>
+          </div>
+
+          <button class="btn-primary self-start">
+            Claim My Kit Now
+          </button>
+        </div>
+      </div>
     </div>
   </section>
 
