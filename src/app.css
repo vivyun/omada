@@ -8,6 +8,7 @@
   --color-primaryGreen: #00A870;
   --color-dullGreen: #2B816D;
   --color-darkGreen: #0A5A5A;
+  --color-primaryBlue: #285AEA;
 
   /* Grays */
   --color-gray-100: #F7F7F7;
@@ -67,6 +68,18 @@ p, li {
 .subheading {
   font-weight: 800;
   font-size: clamp(0.875rem, 1vw + 0.2rem, 1rem);
+}
+
+.link {
+  color: var(--color-primaryBlue);
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.link:hover {
+  color: var(--color-primaryGreen);
 }
 
 .main-container {
