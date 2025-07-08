@@ -1,6 +1,10 @@
 <script>
-  import { fade } from 'svelte/transition';
-  import { onMount } from 'svelte';
+  import Hero from '$lib/components/Hero.svelte';
+  import Content4col from '$lib/components/Content4col.svelte';
+  import Carousel from '$lib/components/Carousel.svelte';
+  import ProductCard from '$lib/components/ProductCard.svelte';
+  import Tab from '$lib/components/Tab.svelte';
+  import Comparison from '$lib/components/Comparison.svelte';
 
   const features = [
     {
@@ -119,164 +123,49 @@
       quote: 'We were looking for a vendor that could do pre-shared key for our clients at a reasonable price point. <span class="text-limeGreen font-extrabold">TP-Link fits that bill.</span><br /><br />– Scott Davison, CTO at GSD Solutions',
     },
   ];
-
-  let index = 0;
-	let itemsPerSlide = 3;
-
-  let clientWidth;
-  $: itemsPerSlide = clientWidth >= 1024 ? 3 : clientWidth >= 768 ? 2 : 1;
-  $: maxIndex = testimonials.length - itemsPerSlide;
-
-  function next() {
-    index = (index + 1) > maxIndex ? 0 : index + 1;
-  }
-
-  function prev() {
-    index = Math.max(index - 1, 0);
-  }
-
-  let activeInfoIndex = null;
-
-	function toggleInfo(index) {
-		activeInfoIndex = activeInfoIndex === index ? null : index;
-	}
-
-  onMount(() => {
-    const interval = setInterval(() => {
-      next();
-    }, 5000);
-
-    return () => clearInterval(interval);
-  });
 </script>
 
 <main class="main-container">
 
   <!-- Hero -->
-  <section id="Hero" class="section-container bg-[url(/images/hero_m.png)] lg:bg-[url(/images/hero.png)] bg-center bg-cover">
-    <div class="container-row-to-col justify-between items-center max-w-[1920px] mx-auto py-16 px-8 lg:px-16">
-      <div class="flex flex-col gap-8 text-white w-full max-w-2xl">
-        <h1>Explore Omada’s Business-Grade Wi-Fi 7 Demo Kit</h1>
-        <p class="large-paragraph text-white/80">
-          Business-grade networking gear with lifetime free cloud management.<br />
-          Built for system integrators ready to scale.
-        </p>
-        <button class="btn-primary self-start">Claim My Kit Now</button>
-      </div>
-      <div class="w-full max-w-2xl relative">
-        <img src="images/demo_kit_products.png" alt="Omada Cloud Essentials" />
-        <div class="scale-70 lg:scale-100 absolute top-0 right-0 w-52 h-52 bg-black/50 backdrop-blur rounded-full flex flex-col items-center justify-center">
-          <p class="text-limeGreen text-center text-3xl font-light">
-            Get it<br /><span class="text-5xl">50%</span><br />off!
-          </p>
-          <p class="text-white">Limited time only</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Hero cta="Claim My Kit Now" link="#Form" />
 
   <!-- Why Omada -->
-  <section id="WhyOmada" class="section-container bg-gray-100">
-    <div class="flex flex-col gap-8 max-w-[1920px] mx-auto py-16 lg:py-28 px-8 lg:px-16">
-      <h2>Why Omada?</h2>
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-        {#each features as { icon, title, description }}
-          <div class="flex flex-col items-center text-center gap-2 max-w-sm mx-auto">
-            <img src={icon} alt={title} class="scale-75 lg:scale-100" />
-            <h4>{title}</h4>
-            <p class="text-darkGray/60">{description}</p>
-          </div>
-        {/each}
-      </div>
-    </div>
-  </section>
+  <Content4col title="Why Omada?" features={features} />
 
   <!-- What's In Your Demo Kit -->
   <section id="InYourKit" class="section-container">
     <div class="flex flex-col gap-12 max-w-[1920px] items-center mx-auto py-16 lg:py-28 px-8 lg:px-16">
       <h2>What's In <span class="border-b-3 border-neonGreen">Your</span> Omada Wi-Fi 7 Demo Kit?</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl w-full">
-        {#each products as product, index}
-          <div class="flex flex-col gap-2 hover:scale-105 transition-all">
-            <button on:click={() => toggleInfo(index)} aria-label="Toggle product info" class="relative text-left">
-                <!-- Info Button -->
-                <div class="absolute top-3 right-2 z-10 flex flex-row gap-2">
-                  <p class="text-white small-paragraph text-right leading-tight">Click to<br /> view specs</p>
-                  <img src="icons/info.svg" alt="Info icon" />
-                </div>
-                <p class="absolute top-3 left-4 z-20 text-white leading-tight large-paragraph">Included in <br />your kit</p>
-                <img class="hidden md:block w-full" src={product.image} alt={product.name} />
-                <img class="block md:hidden w-full" src={product.image_mobile} alt={product.name} />
-            <!-- Overlay -->
-            {#if activeInfoIndex === index}
-              <div in:fade={{ duration: 300 }} out:fade={{ duration: 200 }} class="absolute inset-0 bg-black/50 backdrop-blur z-20 flex justify-center p-4 md:p-8">
-                <ul class="text-white list-disc w-full pl-4">
-                  {#each product.features as feature}
-                    <li class="small-paragraph md:mb-2">
-                      {feature}
-                    </li>
-                  {/each}
-                </ul>
-              </div>
-            {/if}
-            </button>
-            <h4 class="xl:max-w-[70%]">{product.name}</h4>
-            <div class="flex flex-row gap-3">
-                <p class="text-darkGray"><span class="text-primaryGreen">{product.id}</span><span class="mx-3">|</span> Retails for {product.price}</p>
-            </div>
-          </div>
+        {#each products as product}
+          <ProductCard product={product} />
         {/each}
       </div>
-
       <!-- Choose Your Controller -->
       <h2 class="mt-8">Choose Your Controller</h2>
       <div class="flex flex-wrap justify-center gap-2 mb-6">
         {#each Object.entries(controllers) as [key, data]}
-          <button
-            class={`px-4 py-2 rounded-full border ${
-              selected === key ? 'border-neonGreen' : 'bg-gray-200 border-gray-200'
-            }`}
-            on:click={() => (selected = key)}
-          >
-            {data.name} ({data.price})
-          </button>
+          <Tab
+            value={key}
+            label={`${data.name} (${data.price})`}
+            selected={selected}
+            setSelected={(val) => selected = val}
+          />
         {/each}
       </div>
 
-      <div class="flex flex-col lg:flex-row gap-8 w-full">
-        <img
-          class=" max-w-[80%] lg:max-w-1/2 m-auto"
-          src={controller.image}
-          alt={controller.name} />
+      <Comparison
+        image={controller.image}
+        name={controller.name}
+        best={controller.best}
+        description={controller.description}
+        total={controller.total}
+        msrp={controller.msrp}
+        cta="Claim My Kit Now"
+        link="#Form"
+      />
 
-        <div class="flex flex-col gap-4 w-full">
-          <h3>{controller.name}</h3>
-          <h4 class="subheading">{controller.best}</h4>
-          <p>{controller.description}</p>
-
-          <div class="mt-6 flex flex-col gap-4">
-            <h3>Demo Kit Price</h3>
-            <h4 class="subheading">
-              3 Products + {controller.name}
-            </h4>
-
-            <div class="flex items-end gap-4 mt-2">
-              <h2 class="text-dullGreen bg-dullGreen/10 px-4 py-2">
-                {controller.total}
-                <span class="large-paragraph ml-2 font-normal">(50% off)</span>
-              </h2>
-              <p class="large-paragraph font-normal text-black/60">
-                MSRP<br />
-                <span class="line-through">{controller.msrp}</span>
-              </p>
-            </div>
-          </div>
-
-          <button class="btn-primary self-start mt-4">
-            Claim My Kit Now
-          </button>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -460,4 +349,161 @@
     </script>
 </section>
 
+<div class="contact-us-form">
+<h4>Claim Your 50% Off on Demo Kit Now</h4>
+
+<form action="/phppage/addPromotion.php" id="demo-form" method="post" role="form"><iframe frameborder="0" id="demo-form-iframe" name="hidden_iframe" scrolling="no" style="display:none;"></iframe><?php require_once($_SERVER['ROOT_DIR']."/phppage/front-vertication-code.php"); ?><input name="token" type="hidden" value="<?php echo setToken(); ?>" /> <input name="email_subscribe" type="hidden" value="1" /> <input name="promotion_type" type="hidden" value="$tpAppFolder_promotion_202505_omada-demo-kit" /> <input name="promotion_string" type="hidden" value="From|* Company Name|* Job Title|Business Phone|Company Website" /> <input name="BySiteId" type="hidden" value="$tpSiteId" /> <input name="col_1" type="hidden" value="<?php echo htmlspecialchars($_GET['utm_source'], ENT_QUOTES); ?>" />
+<div class="tp-row">
+<div class="tp-col tp-col-2 required">
+<p><span style="color:red;">*</span> First Name</p>
+<input maxlength="50" name="firstName" required="" type="text" /></div>
+
+<div class="tp-col tp-col-2 required">
+<p><span style="color:red;">*</span> Last Name</p>
+<input maxlength="50" name="lastName" required="" type="text" /></div>
+</div>
+
+<div class="tp-row">
+<div class="tp-col tp-col-1 required">
+<p><span style="color:red;">*</span> Business Email</p>
+<input maxlength="100" name="email" required="" type="email" /></div>
+</div>
+
+<div class="tp-row">
+<div class="tp-col tp-col-1 required">
+<p><span style="color:red;">*</span> Company Name</p>
+<input maxlength="100" name="col_2" required="" type="text" /></div>
+</div>
+
+<div class="tp-row">
+<div class="tp-col tp-col-2 required">
+<p><span style="color:red;">*</span> Job Title</p>
+<input maxlength="50" name="col_3" required="" type="text" /></div>
+
+<div class="tp-col tp-col-2">
+<p>Business Phone</p>
+<input maxlength="50" name="col_4" type="text" /></div>
+</div>
+
+<div class="tp-row">
+<div class="tp-col tp-col-1">
+<p>Company Website</p>
+<input maxlength="200" name="col_5" type="text" /></div>
+</div>
+
+<div class="tp-row">
+<div class="tp-col tp-col-1 required"><label for="contact-us-privacy"><input id="contact-us-privacy" required="" type="checkbox" /> <b class="checkbox">&nbsp;</b> <span id="contact-us-privacy-text">I have read and agree to the <a class="contact-us-privacy-link" href="https://privacy.tp-link.com/web/official/privacy-policy?region=US" target="_blank">Privacy Policy</a>.</span> </label></div>
+
+<div class="tp-col tp-col-1">
+<div class="promotion-recaptcha">&nbsp;</div>
+</div>
+</div>
+
+<div class="submit"><button>Submit</button></div>
+
+<div class="form-result-success hidden">
+<div id="demo-dialog">
+<h2>Please confirm your signup in your email!</h2>
+
+<p>Thank you for your submission! Please follow your email to complete the signup.<br />
+<br />
+Best Regards,<br />
+Omada Team</p>
+</div>
+</div>
+
+<div class="form-result-failed hidden">
+<div id="demo-dialog">
+<h2>Submission failed, please try again.</h2>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="d">
+<div class="w-container">
+<div class="text">
+<p><strong>Terms &amp; Conditions:</strong></p>
+
+<ul style="font-size:0.9em;">
+	<li>The 50% discount on the Wi-Fi 7 demo kit applies only to eligible partners within the United States.</li>
+	<li>The program aims to provide easy access to Omada for targeted B2B channel partners, such as resellers, installers, and MSPs. TP-Link reserves the right to select eligible partners only for the discounted demo kit. Submission does not guarantee receipt of the demo kit.</li>
+	<li>LIMIT 1 DISCOUNT DEMO KIT for each eligible partner. Items are not allowed for resale.</li>
+	<li>When Submit, the customer agrees to share the contact information with TP-Link and recieve email or call from TP-Link.</li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+<script>
+$("#demo-form").on("submit", function(){
+typeof fbq == 'function' && fbq('trackCustom', 'submit-form-landing-omada-demo-kit', {promotion: 'demo-kit_promotion'});
+})
+</script><script src="https://static-page.tp-link.com/landing/omada-demo-kit/script.js"></script><script>
+window.addEventListener("load", function () {
+  const form = document.getElementById("demo-form");
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+    })
+    .then(response => response.text())
+    .then(data => {
+      if (data.includes("email success")) {
+        // Remove loading modal if present
+        document.querySelector('.tp-dialog')?.remove();
+
+        // Grab the content block
+        const contentBlock = document.querySelector(".form-result-success");
+        if (contentBlock) {
+          const modal = document.createElement("div");
+          modal.className = "tp-dialog";
+          modal.setAttribute("role", "dialog");
+          modal.setAttribute("aria-modal", "true");
+          modal.setAttribute("title", "TP-Link Dialog");
+
+          modal.innerHTML = `
+            <div class="tp-dialog-box">
+              ${contentBlock.querySelector("#demo-dialog")?.innerHTML || ''}
+            </div>
+          `;
+
+          // Add close button
+          const closeBtn = document.createElement("button");
+          closeBtn.innerHTML = "&times;";
+          closeBtn.className = "tp-dialog-close";
+          closeBtn.addEventListener("click", () => modal.remove());
+          modal.querySelector(".tp-dialog-box")?.appendChild(closeBtn);
+
+          document.body.appendChild(modal);
+        }
+
+        // Simulate thank-you URL for Reddit ad tracking
+        const basePath = '/thank-you-omada-demo-kit';
+        const search = window.location.search;
+        const newUrl = search ? basePath + search : basePath;
+        window.history.pushState({}, '', newUrl);
+
+      } else {
+        alert("Submission failed. Please try again.");
+      }
+    })
+    .catch(error => {
+      console.error("Submission error:", error);
+      alert("There was an error submitting the form.");
+      document.querySelector('.tp-dialog')?.remove();
+    });
+  });
+});
+</script>
 </main>
