@@ -109,24 +109,22 @@
       quote: 'We looked at Aruba, we looked at Cisco, but we decided to go TP-Link because of the <span class="text-limeGreen font-extrabold">reliability</span>. Having so many crucial things in the building which have to be kept working. We knew we needed something which we could reply on, and also the back-end support from TP-Link. If we need help, the ability of just pick up the phone and get an instant chat. That was the most attractive thing to us. <br /><br />- Chris Jarred, Birchgrove’s IT Director',
     },
     {
-      logo: 'images/texas_roadhouse.svg',
-      title: 'Texas Roadhouse Trusts Omada for Reliable Network Solutions',
-      quote: 'With <span class="text-limeGreen font-extrabold">400+ restaurants</span> across the U.S., Texas Roadhouse upgraded their network using Omada switches for seamless, crash-free POS systems and stable Wi-Fi. Diners can now enjoy uninterrupted service, while the brand benefits from cost-effective, secure solutions.',
+      logo: 'images/ipacket.svg',
+      title: 'Omada Delivers Efficient Wi-Fi 6 Upgrades for 14,000 Resort Condominiums',
+      quote: 'Both my other vendors were actually very depleted in stock, and they didn’t have <span class="text-limeGreen font-extrabold">Wi-Fi 6</span>, so those were the first big drivers on what got me looking at TP-Link again.<br /><br />– Luis Santos, VP of Engineering at IPacket Networks',
     },
     {
-      logo: 'images/texas_roadhouse.svg',
-      title: '3 Words: Reliable, Functional, and Available',
-      quote: 'It’s very important for venues such as Manchester Hall that reliability of a solution, the service(s) from TP-Link (are) probably the best we’ve had from a vendor. TP-Link has a more personal approach from initial opportunity to the end sale. Three words: <span class="text-limeGreen font-extrabold">Reliable</span>, <span class="text-limeGreen font-extrabold">Functional</span>, and <span class="text-limeGreen font-extrabold">Available</span>. <br /><br />– Sam Connolly, Technical Consultant/Account Manager from LIV',
-    },
-    {
-      logo: 'images/texas_roadhouse.svg',
-      title: 'We decided to go TP-Link because of the reliability',
-      quote: 'We looked at Aruba, we looked at Cisco, but we decided to go TP-Link because of the <span class="text-limeGreen font-extrabold">reliability</span>. Having so many crucial things in the building which have to be kept working. We knew we needed something which we could reply on, and also the back-end support from TP-Link. If we need help, the ability of just pick up the phone and get an instant chat. That was the most attractive thing to us. <br /><br />- Chris Jarred, Birchgrove’s IT Director',
+      logo: 'images/gsd_solutions.svg',
+      title: 'Omada Delivers Seamless, Reliable Internet for a 100+ Unit MDU in Oakland, CA',
+      quote: 'We were looking for a vendor that could do pre-shared key for our clients at a reasonable price point. <span class="text-limeGreen font-extrabold">TP-Link fits that bill.</span><br /><br />– Scott Davison, CTO at GSD Solutions',
     },
   ];
 
   let index = 0;
-	const itemsPerSlide = 3;
+	let itemsPerSlide = 3;
+
+  let clientWidth;
+  $: itemsPerSlide = clientWidth >= 1024 ? 3 : clientWidth >= 768 ? 2 : 1;
   $: maxIndex = testimonials.length - itemsPerSlide;
 
   function next() {
@@ -285,7 +283,7 @@
   <section class="w-full bg-gradient-to-b from-darkGreen to-dullGreen text-white py-16 px-6">
   <div class="flex flex-col gap-8 max-w-[1920px] mx-auto py-16 lg:py-28 px-8 lg:px-16">
     <h2>Proven Results with Omada</h2>
-    <div class="relative mt-8">
+    <div class="relative">
       <!-- Previous button -->
         <button class="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 z-10" on:click={prev}>
           <img src="icons/arrow.svg" alt="previous" />
@@ -294,10 +292,12 @@
         <button class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 z-10" on:click={next}>
           <img class="rotate-180" src="icons/arrow.svg" alt="next" />
         </button>
-        <div class="overflow-hidden relative">
-          <div class="flex transition-transform duration-500 ease-in-out gap-8 lg:mx-24" style="transform: translateX(-{index * (100 / testimonials.length)}%); width: {testimonials.length * (100 / itemsPerSlide)}%;">
-            {#each testimonials as t, i (i)}
-                <div class="flex flex-col gap-6 lg:w-1/3">
+        <div bind:clientWidth class="overflow-hidden relative lg:mx-24">
+          <div
+            class="flex transition-transform duration-500 ease-in-out gap-8"
+            style="transform: translateX(-{index * (100 / testimonials.length)}%); width: {testimonials.length * (100 / itemsPerSlide)}%;">
+            {#each testimonials as t}
+                <div class="flex flex-col gap-6 w-full md:w-1/2 lg:w-1/3 h-fit">
                   <img src={t.logo} alt="testimonial logo" class="h-16 mb-2 self-start" />
                   <h4>“{t.title}”</h4>
                   <p class="text-white/80">{@html t.quote}</p>
