@@ -90,6 +90,52 @@
 
   $: controller = controllers[selected];
 
+  const testimonials = [
+    {
+      logo: 'images/texas_roadhouse.svg',
+      title: 'Texas Roadhouse Trusts Omada for Reliable Network Solutions',
+      quote: 'With <span class="text-limeGreen font-extrabold">400+ restaurants</span> across the U.S., Texas Roadhouse upgraded their network using Omada switches for seamless, crash-free POS systems and stable Wi-Fi. Diners can now enjoy uninterrupted service, while the brand benefits from cost-effective, secure solutions.',
+    },
+    {
+      logo: 'images/manchester_hall.svg',
+      title: '3 Words: Reliable, Functional, and Available',
+      quote: 'It’s very important for venues such as Manchester Hall that reliability of a solution, the service(s) from TP-Link (are) probably the best we’ve had from a vendor. TP-Link has a more personal approach from initial opportunity to the end sale. Three words: <span class="text-limeGreen font-extrabold">Reliable</span>, <span class="text-limeGreen font-extrabold">Functional</span>, and <span class="text-limeGreen font-extrabold">Available</span>. <br /><br />– Sam Connolly, Technical Consultant/Account Manager from LIV',
+    },
+    {
+      logo: 'images/birchgrove.svg',
+      title: 'We decided to go TP-Link because of the reliability',
+      quote: 'We looked at Aruba, we looked at Cisco, but we decided to go TP-Link because of the <span class="text-limeGreen font-extrabold">reliability</span>. Having so many crucial things in the building which have to be kept working. We knew we needed something which we could reply on, and also the back-end support from TP-Link. If we need help, the ability of just pick up the phone and get an instant chat. That was the most attractive thing to us. <br /><br />- Chris Jarred, Birchgrove’s IT Director',
+    },
+    {
+      logo: 'images/texas_roadhouse.svg',
+      title: 'Texas Roadhouse Trusts Omada for Reliable Network Solutions',
+      quote: 'With <span class="text-limeGreen font-extrabold">400+ restaurants</span> across the U.S., Texas Roadhouse upgraded their network using Omada switches for seamless, crash-free POS systems and stable Wi-Fi. Diners can now enjoy uninterrupted service, while the brand benefits from cost-effective, secure solutions.',
+    },
+    {
+      logo: 'images/texas_roadhouse.svg',
+      title: '3 Words: Reliable, Functional, and Available',
+      quote: 'It’s very important for venues such as Manchester Hall that reliability of a solution, the service(s) from TP-Link (are) probably the best we’ve had from a vendor. TP-Link has a more personal approach from initial opportunity to the end sale. Three words: <span class="text-limeGreen font-extrabold">Reliable</span>, <span class="text-limeGreen font-extrabold">Functional</span>, and <span class="text-limeGreen font-extrabold">Available</span>. <br /><br />– Sam Connolly, Technical Consultant/Account Manager from LIV',
+    },
+    {
+      logo: 'images/texas_roadhouse.svg',
+      title: 'We decided to go TP-Link because of the reliability',
+      quote: 'We looked at Aruba, we looked at Cisco, but we decided to go TP-Link because of the <span class="text-limeGreen font-extrabold">reliability</span>. Having so many crucial things in the building which have to be kept working. We knew we needed something which we could reply on, and also the back-end support from TP-Link. If we need help, the ability of just pick up the phone and get an instant chat. That was the most attractive thing to us. <br /><br />- Chris Jarred, Birchgrove’s IT Director',
+    },
+  ];
+
+  let index = 0;
+
+  const testimonialsArray = Object.values(testimonials);
+	const itemsPerSlide = 3;
+
+  function next() {
+    index = (index + 1) % (testimonialsArray.length - itemsPerSlide + 1);
+  }
+
+  function prev() {
+    index = (index - 1 + (testimonialsArray.length - itemsPerSlide + 1)) % (testimonialsArray.length - itemsPerSlide + 1);
+  }
+
   let activeInfoIndex = null;
 
 	function toggleInfo(index) {
@@ -212,7 +258,7 @@
                 {controller.total}
                 <span class="large-paragraph ml-2 font-normal">(50% off)</span>
               </h2>
-              <p class="large-paragraph text-black/40">
+              <p class="large-paragraph font-normal text-black/60">
                 MSRP<br />
                 <span class="line-through">{controller.msrp}</span>
               </p>
@@ -226,5 +272,30 @@
       </div>
     </div>
   </section>
+
+  <section class="w-full bg-gradient-to-b from-darkGreen to-dullGreen text-white py-16 px-6">
+  <div class="flex flex-col gap-8 max-w-[1920px] mx-auto py-16 lg:py-28 px-8 lg:px-16">
+    <h2>Proven Results with Omada</h2>
+    <div class="relative mt-8">
+      <!-- Previous button -->
+        <button class="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2" on:click={prev}>
+          <img src="icons/arrow.svg" alt="previous" />
+        </button>
+        <!-- Next button -->
+        <button class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2" on:click={next}>
+          <img class="rotate-180" src="icons/arrow.svg" alt="next" />
+        </button>
+      <div class="flex flex-row gap-8 lg:mx-24">
+        {#each testimonialsArray.slice(index, index + itemsPerSlide) as t}
+            <div class="flex flex-col gap-6 w-full">
+              <img src={t.logo} alt="testimonial logo" class="h-16 mb-2 self-start" />
+              <h4>“{t.title}”</h4>
+              <p class="text-white/80">{@html t.quote}</p>
+            </div>
+        {/each}
+      </div>
+    </div>
+  </div>
+</section>
 
 </main>
