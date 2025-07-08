@@ -105,7 +105,7 @@
       <div class="flex flex-col gap-8 text-white w-full max-w-2xl">
         <h1>Explore Omada’s Business-Grade Wi-Fi 7 Demo Kit</h1>
         <p class="large-paragraph text-white/80">
-          Business-grade networking gear with lifetime free cloud management.<br>
+          Business-grade networking gear with lifetime free cloud management.<br />
           Built for system integrators ready to scale.
         </p>
         <button class="btn-primary self-start">Claim My Kit Now</button>
@@ -114,7 +114,7 @@
         <img src="images/demo_kit_products.png" alt="Omada Cloud Essentials" />
         <div class="scale-70 lg:scale-100 absolute top-0 right-0 w-52 h-52 bg-black/50 backdrop-blur rounded-full flex flex-col items-center justify-center">
           <p class="text-limeGreen text-center text-3xl font-light">
-            Get it<br><span class="text-5xl">50%</span><br>off!
+            Get it<br /><span class="text-5xl">50%</span><br />off!
           </p>
           <p class="text-white">Limited time only</p>
         </div>
@@ -148,10 +148,10 @@
             <button on:click={() => toggleInfo(index)} aria-label="Toggle product info" class="relative text-left">
                 <!-- Info Button -->
                 <div class="absolute top-3 right-2 z-10 flex flex-row gap-2">
-                  <p class="text-white small-paragraph text-right leading-tight">Click to<br> view specs</p>
+                  <p class="text-white small-paragraph text-right leading-tight">Click to<br /> view specs</p>
                   <img src="icons/info.svg" alt="Info icon" />
                 </div>
-                <p class="absolute top-3 left-4 z-20 text-white leading-tight large-paragraph">Included in <br>your kit</p>
+                <p class="absolute top-3 left-4 z-20 text-white leading-tight large-paragraph">Included in <br />your kit</p>
                 <img class="hidden md:block w-full" src={product.image} alt={product.name} />
                 <img class="block md:hidden w-full" src={product.image_mobile} alt={product.name} />
             <!-- Overlay -->
@@ -174,6 +174,8 @@
           </div>
         {/each}
       </div>
+
+      <!-- Choose Your Controller -->
       <h2 class="mt-8">Choose Your Controller</h2>
       <div class="flex flex-wrap justify-center gap-2 mb-6">
         {#each Object.entries(controllers) as [key, data]}
@@ -187,6 +189,7 @@
           </button>
         {/each}
       </div>
+
       <div class="flex flex-col lg:flex-row gap-8 w-full">
         <img
           class=" max-w-[80%] lg:max-w-1/2 m-auto"
@@ -205,7 +208,7 @@
             </h4>
 
             <div class="flex items-end gap-4 mt-2">
-              <h2 class="text-dullGreen">
+              <h2 class="text-dullGreen bg-dullGreen/10 px-4 py-2">
                 {controller.total}
                 <span class="large-paragraph ml-2 font-normal">(50% off)</span>
               </h2>
@@ -216,7 +219,7 @@
             </div>
           </div>
 
-          <button class="btn-primary self-start">
+          <button class="btn-primary self-start mt-4">
             Claim My Kit Now
           </button>
         </div>
