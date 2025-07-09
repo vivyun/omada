@@ -38,17 +38,35 @@
                 height: 8px;
                 border-radius: 100%;
             }
-            .carousel-item {
-                flex: 0 0 100%;
-                max-width: 100%;
-                transition: transform 0.5s ease-in-out;
-            }
-
             .carousel-wrapper {
-                display: flex;
                 width: 100%;
-                overflow: hidden;
                 position: relative;
+                overflow: hidden;
+            }
+            .carousel-item {
+                display: flex;
+                flex: 0 0 100%;
+                transition: transform 0.5s ease-in-out;
+                box-sizing: border-box;
+                gap: 16px;
+            }
+            .case-img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+            .case-text {
+                width: 100%;
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+            #case-carousel {
+                width: 100%;
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                will-change: transform;
             }
         </style>
    </head>
@@ -229,7 +247,7 @@
                         <a href="#Form" class="btn-primary self-start mt-4">Claim My Kit Now</a>
                      </div>
                   </div>
-                  <div id="content-hardware" class="hidden lg:flex-row gap-8 w-full">
+                  <div id="content-hardware" class="hidden flex-col lg:flex-row gap-8 w-full">
                     <img class="max-w-[80%] lg:max-w-1/2 m-auto" src="images/OC220.png" alt="On-Premises Hardware Controller"> 
                     <div class="flex flex-col gap-4 w-full">
                         <h3>On-Premises Hardware Controller (OC220)</h3>
@@ -250,45 +268,49 @@
             </section>
             <section class="section-container bg-gradient-to-b from-darkGreen to-dullGreen text-white">
                <div class="flex flex-col gap-8 max-w-[1920px] mx-auto py-16 lg:py-28 px-8 lg:px-16">
-                  <h2 class="border-b border-white/20 pb-6">Proven Results with Omada</h2>
-                  <div>
-                     <div class="carousel-wrapper overflow-hidden relative">
+                    <h2 class="border-b border-white/20 pb-6">Proven Results with Omada</h2>
+                    <div class="carousel-wrapper">
                         <div id="case-carousel" class="flex transition-transform duration-500 ease-in-out">
-                           <!--[-->
-                           <div class="carousel-item container-row-to-col gap-6 w-full h-fit">
-                              <img class="w-full max-w-2xl" src="images/manchester_hall_img.jpg" alt="case study image"/>
-                              <div class="flex flex-col gap-2">
-                                <img src="images/manchester_hall.svg" alt="testimonial logo" class="h-16 mb-2 self-start"/> 
-                                <h3>Omada Powers Guest Wi-Fi Experience at Manchester Hall <span class="text-limeGreen">over 100</span> Rooms and Offices</h3>
-                                <p class="text-white/80">
-                                    <!---->"These functionalities were exactly what we'd expect from enterprise products."<br /><br />– Ben Ganley, Managing Director<!---->
-                                </p>
-                              </div>
-                           </div>
-                           <div class="carousel-item container-row-to-col gap-6 w-full h-fit">
-                              <img class="w-full max-w-2xl" src="images/ipacket_img.jpg" alt="case study image"/>
-                              <div class="flex flex-col gap-2">
-                                <img src="images/ipacket.svg" alt="testimonial logo" class="h-16 mb-2 self-start"/> 
-                                <h3>Omada Helps Streamline MSP Operations <span class="text-limeGreen">over 14,000</span> Condos and Indoor/Outdoor common areas</h3>
-                                <p class="text-white/80">
-                                    <!---->"Once the APs are plugged in, they instantly show up. We adopt them, assign a Wi-Fi profile, and voila, they're done! The controller has easily sped up our deployment time by 20 or 30 percent."<br /><br />– Luis Santos, vice president of engineering at IPacket Networks<!---->
-                                </p>
-                              </div>
-                           </div>
-                           <div class="carousel-item container-row-to-col gap-6 w-full h-fit">
-                              <img class="w-full max-w-2xl" src="images/gsd_solutions_img.jpg" alt="case study image"/>
-                              <div class="flex flex-col gap-2">
-                                <img src="images/gsd_solutions.svg" alt="testimonial logo" class="h-16 mb-2 self-start"/> 
-                                <h3>Omada PPSK Solution Powers "Excellent Features" and Greater Affordability for <span class="text-limeGreen">over 100</span> Doors</h3>
-                                <p class="text-white/80">
-                                    <!---->"The features are excellent, and we have had no issues with any of the products. We also like the fact that they can be cloud managed - PPSK, availability, pricing, and the overall solution."<br /><br />– Scott Davison, CTO GSD Solutions<!---->
-                                </p>
-                              </div>
-                           </div>
-                           <!--]-->
+                            <!--[-->
+                            <div class="carousel-item container-row-to-col">
+                                <div class="flex w-fill max-w-2xl">
+                                    <img class="case-img" src="images/manchester_hall_img.jpg" alt="case study image"/>
+                                </div>
+                                <div class="case-text">
+                                    <img src="images/manchester_hall.svg" alt="testimonial logo" class="h-16 mb-2 self-start"/> 
+                                    <h3>Omada Powers Guest Wi-Fi Experience at Manchester Hall <span class="text-limeGreen">over 100</span> Rooms and Offices</h3>
+                                    <p class="text-white/80">
+                                        <!---->"These functionalities were exactly what we'd expect from enterprise products."<br /><br />– Ben Ganley, Managing Director<!---->
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item container-row-to-col">
+                                <div class="flex w-fill max-w-2xl">
+                                    <img class="case-img" src="images/ipacket_img.jpg" alt="case study image"/>
+                                </div>
+                                <div class="case-text">
+                                    <img src="images/ipacket.svg" alt="testimonial logo" class="h-16 mb-2 self-start"/> 
+                                    <h3>Omada Helps Streamline MSP Operations <span class="text-limeGreen">over 14,000</span> Condos and Indoor/Outdoor common areas</h3>
+                                    <p class="text-white/80">
+                                        <!---->"Once the APs are plugged in, they instantly show up. We adopt them, assign a Wi-Fi profile, and voila, they're done! The controller has easily sped up our deployment time by 20 or 30 percent."<br /><br />– Luis Santos, vice president of engineering at IPacket Networks<!---->
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item container-row-to-col">
+                                <div class="flex w-fill max-w-2xl">
+                                    <img class="case-img" src="images/gsd_solutions_img.jpg" alt="case study image"/>
+                                </div>
+                                <div class="case-text">
+                                    <img src="images/gsd_solutions.svg" alt="testimonial logo" class="h-16 mb-2 self-start"/> 
+                                    <h3>Omada PPSK Solution Powers "Excellent Features" and Greater Affordability for <span class="text-limeGreen">over 100</span> Doors</h3>
+                                    <p class="text-white/80">
+                                        <!---->"The features are excellent, and we have had no issues with any of the products. We also like the fact that they can be cloud managed - PPSK, availability, pricing, and the overall solution."<br /><br />– Scott Davison, CTO GSD Solutions<!---->
+                                    </p>
+                                </div>
+                            </div>
+                            <!--]-->
                         </div>
-                     </div>
-                  </div>
+                    </div>
                   <div class="flex justify-center gap-2 mt-4" id="case-dots"></div>
                </div>
             </section>
