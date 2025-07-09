@@ -325,155 +325,109 @@
   </div>
 </section>
 
-<section id="Form" class="section-container bg-gray-100">
-    <form action="/phppage/addPromotion.php" method="post" id="demo-form" class="flex flex-col lg:flex-row gap-8 max-w-[1920px] mx-auto py-16 lg:py-28 px-8 lg:px-16">
-      <!-- Hidden backend inputs -->
-      <input type="hidden" name="token" value="your-token-here" />
-      <input type="hidden" name="email_subscribe" value="1" />
-      <input type="hidden" name="promotion_type" value="demo-kit_202505" />
-      <input type="hidden" name="promotion_string" value="From|* Company Name|* Job Title|Business Phone|Company Website" />
-      <input type="hidden" name="BySiteId" value="your-site-id" />
-      <input type="hidden" name="col_1" value="utm-source" />
-
-      <!-- Heading & Terms (Left column spans both rows) -->
-      <div class="flex flex-col gap-8 w-full">
+<section id="Form" class="c section-container bg-gray-100">
+    <div class="contact-us-form container-row-to-col gap-8 max-w-[1920px] mx-auto py-16 lg:py-28 px-8 lg:px-16">
+      <div class="d w-full flex flex-col gap-4">
         <h2>Claim Your <span class="text-primaryGreen">50% Off</span><br />Omada Wi-Fi 7 Demo Kit</h2>
         <p class="large-paragraph">Interested? Sign up using the form before our limited promotion ends.</p>
-
-        <div class="hidden lg:block">
-          <h4 class="mb-2 large-paragraph font-medium">Terms & Conditions</h4>
-          <ul class="list-disc pl-8 space-y-2 text-black/60">
-            <li>The 50% discount on the Wi-Fi 7 demo kit applies only to eligible partners within the United States.</li>
-            <li>The program aims to provide easy access to Omada for targeted B2B channel partners, such as resellers, installers, and MSPs. TP-Link reserves the right to select eligible partners only for the discounted demo kit. Submission does not guarantee receipt of the demo kit.</li>
-            <li>LIMIT 1 DISCOUNT DEMO KIT per eligible partner. Items are not allowed for resale.</li>
-            <li>When Submit is pressed, the customer agrees to share their contact information with TP-Link and receive emails or calls from TP-Link.</li>
-          </ul>
-        </div>
+        <h4 class="mb-2 large-paragraph font-medium mt-4">Terms & Conditions</h4>
+        <ul class="list-disc pl-8 space-y-2 text-black/60">
+          <li>The 50% discount on the Wi-Fi 7 demo kit applies only to eligible partners within the United States.</li>
+          <li>The program aims to provide easy access to Omada for targeted B2B channel partners, such as resellers, installers, and MSPs. TP-Link reserves the right to select eligible partners only for the discounted demo kit. Submission does not guarantee receipt of the demo kit.</li>
+          <li>LIMIT 1 DISCOUNT DEMO KIT per eligible partner. Items are not allowed for resale.</li>
+          <li>When Submit is pressed, the customer agrees to share their contact information with TP-Link and receive emails or calls from TP-Link.</li>
+        </ul>
       </div>
-
-      <!-- Input Fields (Right side) -->
-      <div class="col-span-2 md:col-span-1 space-y-4 w-full">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="input-container">
-            <label class="text-sm font-medium">First Name<span class="text-neonGreen">*</span></label>
-            <input name="firstName" required class="input" />
-          </div>
-          <div class="input-container">
-            <label class="text-sm font-medium">Last Name<span class="text-neonGreen">*</span></label>
-            <input name="lastName" required class="input" />
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="input-container">
-            <label class="text-sm font-medium">Business Email<span class="text-neonGreen">*</span></label>
-            <input type="email" name="email" required class="input" />
-          </div>
-          <div class="input-container">
-            <label class="text-sm font-medium">Business Phone</label>
-            <input name="col_4" class="input" />
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="input-container">
-            <label class="text-sm font-medium">Company Name<span class="text-neonGreen">*</span></label>
-            <input name="col_2" required class="input" />
-          </div>
-          <div class="input-container">
-            <label class="text-sm font-medium">Job Title<span class="text-neonGreen">*</span></label>
-            <input name="col_3" required class="input" />
-          </div>
-        </div>
-
-        <div class="input-container">
-          <label class="text-sm font-medium">Company Website</label>
-          <input name="col_5" class="input" />
-        </div>
-
-        <div class="flex items-start gap-2">
-          <input id="privacy" type="checkbox" required class="mt-1" />
-          <label for="privacy" class="text-sm">I have read and agree to the <a class="link" href="https://privacy.tp-link.com/web/official/privacy-policy?region=US" target="_blank">Privacy Policy</a>.</label>
-        </div>
-
-        <!-- reCAPTCHA -->
-        <div class="promotion-recaptcha mb-4">&nbsp;</div>
-
-        <button type="submit" class="btn-primary">Submit</button>
-        <div class="block lg:hidden">
-          <h4 class="mb-2 large-paragraph font-medium">Terms & Conditions</h4>
-          <ul class="list-disc pl-8 space-y-2 text-black/60">
-            <li>The 50% discount on the Wi-Fi 7 demo kit applies only to eligible partners within the United States.</li>
-            <li>The program aims to provide easy access to Omada for targeted B2B channel partners, such as resellers, installers, and MSPs. TP-Link reserves the right to select eligible partners only for the discounted demo kit. Submission does not guarantee receipt of the demo kit.</li>
-            <li>LIMIT 1 DISCOUNT DEMO KIT per eligible partner. Items are not allowed for resale.</li>
-            <li>When Submit is pressed, the customer agrees to share their contact information with TP-Link and receive emails or calls from TP-Link.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Modal content to be used on success -->
+      
+      <form class="w-full" action="/phppage/addPromotion.php" id="demo-form" method="post" role="form" target="hidden_iframe">
+            <iframe title="hidden_iframe" frameborder="0" id="demo-form-iframe" name="hidden_iframe" scrolling="no" style="display:none;"></iframe>
+            <!-- <?php require_once($_SERVER['ROOT_DIR']."/phppage/front-vertication-code.php"); ?> -->
+            <input name="token" type="hidden" value="<?php echo setToken(); ?>" />
+            <input name="email_subscribe" type="hidden" value="1" />
+            <input name="promotion_type" type="hidden" value="$tpAppFolder_promotion_202505_omada-demo-kit" />
+            <input name="promotion_string" type="hidden" value="From|* Company Name|* Job Title|Business Phone|Company Website" />
+            <input name="BySiteId" type="hidden" value="$tpSiteId" />
+            <input name="col_1" type="hidden" value="<?php echo htmlspecialchars($_GET['utm_source'], ENT_QUOTES); ?>" />
+            
+            <div class="tp-row grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="tp-col tp-col-2 required input-container">
+                <p class="label-text">First Name<span class="text-neonGreen">*</span></p>
+                <input class="input" maxlength="50" name="firstName" required type="text" />
+              </div>
+      
+              <div class="tp-col tp-col-2 required input-container">
+                <p class="label-text">Last Name<span class="text-neonGreen">*</span></p>
+                <input class="input" maxlength="50" name="lastName" required type="text" />
+              </div>
+            </div>
+      
+            <div class="tp-row grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="tp-col tp-col-1 required input-container">
+                <p class="label-text">Business Email<span class="text-neonGreen">*</span></p>
+                <input class="input" maxlength="100" name="email" required type="email" />
+              </div>
+              <div class="tp-col tp-col-2 input-container">
+                <p class="label-text">Business Phone</p>
+                <input class="input" maxlength="50" name="col_4" type="text" />
+              </div>
+            </div>
+      
+            <div class="tp-row grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="tp-col tp-col-1 required input-container">
+                <p class="label-text">Company Name<span class="text-neonGreen">*</span></p>
+                <input class="input" maxlength="100" name="col_2" required type="text" />
+              </div>
+              <div class="tp-col tp-col-2 required input-container">
+                <p class="label-text">Job Title<span class="text-neonGreen">*</span></p>
+                <input class="input" maxlength="50" name="col_3" required type="text" />
+              </div>
+            </div>
+      
+            <div class="tp-col tp-col-1 input-container">
+              <p class="label-text">Company Website</p>
+              <input class="input" maxlength="200" name="col_5" type="text" />
+            </div>
+      
+            <div class="tp-col tp-col-1 required input-container">
+              <label for="contact-us-privacy">
+                <input id="contact-us-privacy" required type="checkbox" />
+                <b class="checkbox">&nbsp;</b>
+                <span id="contact-us-privacy-text">I have read and agree to the <a class="contact-us-privacy-link link" href="https://privacy.tp-link.com/web/official/privacy-policy?region=US" target="_blank">Privacy Policy</a>.</span>
+              </label>
+            </div>
+            
+            <div class="tp-col tp-col-1">
+              <div class="promotion-recaptcha">&nbsp;</div>
+            </div>
+      
+            <div class="submit btn-primary w-fit"><button>Submit</button></div>
+      
       <div class="form-result-success hidden">
-        <div id="demo-dialog">
-          <h2 class="text-xl font-semibold">Please confirm your signup in your email!</h2>
-          <p class="mt-2">Thank you for your submission! Please follow your email to complete the signup.</p>
-          <p class="mt-4">Best Regards,<br />Omada Team</p>
-        </div>
+      <div id="demo-dialog">
+      <h2>Please confirm your signup in your email!</h2>
+      
+      <p>Thank you for your submission! Please follow your email to complete the signup.<br />
+      <br />
+      Best Regards,<br />
+      Omada Team</p>
       </div>
-    </form>
-    <!-- Modal success logic -->
-    <script>
-    window.addEventListener("load", function () {
-      const form = document.getElementById("demo-form");
-      if (!form) return;
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const formData = new FormData(form);
-
-        fetch(form.action, {
-          method: "POST",
-          body: formData,
-        })
-        .then(response => response.text())
-        .then(data => {
-          if (data.includes("email success")) {
-            document.querySelector('.tp-dialog')?.remove();
-
-            const contentBlock = document.querySelector(".form-result-success");
-            if (contentBlock) {
-              const modal = document.createElement("div");
-              modal.className = "tp-dialog fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50";
-              modal.setAttribute("role", "dialog");
-              modal.setAttribute("aria-modal", "true");
-
-              modal.innerHTML = `
-                <div class="bg-white p-6 rounded shadow-md relative max-w-md w-full">
-                  ${contentBlock.querySelector("#demo-dialog")?.innerHTML || ''}
-                  <button class="absolute top-2 right-3 text-xl" onclick="this.closest('.tp-dialog').remove()">&times;</button>
-                </div>
-              `;
-
-              document.body.appendChild(modal);
-            }
-
-            // Push new URL
-            const basePath = '/thank-you-omada-demo-kit';
-            const search = window.location.search;
-            const newUrl = search ? basePath + search : basePath;
-            window.history.pushState({}, '', newUrl);
-          } else {
-            alert("Submission failed. Please try again.");
-          }
-        })
-        .catch(error => {
-          console.error("Submission error:", error);
-          alert("There was an error submitting the form.");
-          document.querySelector('.tp-dialog')?.remove();
-        });
-      });
-    });
-    </script>
+    </div>
+    
+    <div class="form-result-failed hidden">
+    <div id="demo-dialog">
+    <h2>Submission failed, please try again.</h2>
+    </div>
+    </div>
+      </form>
+    </div>
 </section>
+  
+  <script>
+  $("#demo-form").on("submit", function(){
+  typeof fbq == 'function' && fbq('trackCustom', 'submit-form-landing-omada-demo-kit', {promotion: 'demo-kit_promotion'});
+  })
+  </script>
+  <script src="https://static-page.tp-link.com/landing/omada-demo-kit/script.js"></script>
+  <!-- <?php include_once($_SERVER['ROOT_DIR']."/$appFolder/footer.php"); ?> -->
 
 </main>

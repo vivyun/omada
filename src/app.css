@@ -110,8 +110,13 @@ p, li {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
+.label-text {
+  font-weight: 500;
+  font-size: clamp(0.8rem, 1vw + 0.2rem, 0.9rem);
+}
 .input {
   width: 100%;
   padding: 0.5rem 1rem;
