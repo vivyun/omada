@@ -5,23 +5,23 @@
   const features = [
     {
       icon: 'icons/graph.svg',
-      title: 'Win More Projects',
-      description: 'Competitive costs that align with your clients’ tight budgets—without compromising quality.',
+      title: 'Confidently Bid & Win More Projects',
+      description: 'With Omada, you can confidently bid for a wider range of projects — from SMBs to multi-site deployments — and stay competitive in cost-driven markets.',
     },
     {
       icon: 'icons/coin.svg',
-      title: 'Gain More Profit',
-      description: 'Competitive partner pricing to a broad product lineup and exclusive tools.',
+      title: 'Gain More Profit with Exclusive Partner Pricing',
+      description: 'Boost your margins with competitive partner pricing, a broad product lineup, and value-added tools — all designed to help you grow your business and win more deals.',
     },
     {
       icon: 'icons/rocket.svg',
-      title: 'Business-Grade Performance',
-      description: 'High-quality, high-density Wi-Fi designed for business. A steady supply chain ensures cost control and dependable quality.',
+      title: 'Reliability & High Performance Without Compromise',
+      description: 'Give your customers enterprise-grade performance they can count on — proven, reliable networking that meets real-world demands, even on tight budgets.',
     },
     {
       icon: 'icons/headset.svg',
-      title: 'Dedicated Support & Warranty',
-      description: 'Get help fast via call, email, or chat. We’re here pre- and post-sale. Extended warranties give peace of mind to you and your customers.',
+      title: 'Dedicated Tech Support & Extended Warranty',
+      description: 'Get help fast by phone, email, or chat — we’re here for you pre- and post-sale. Plus, our extended warranties provide extra peace of mind for you and your customers.',
     },
   ];
 
@@ -72,16 +72,18 @@
   const controllers = {
     cloud: {  
       image: 'images/Omada_Cloud_Essentials.png',
-      name: 'Cloud-Based Controller',
+      name: 'Omada Cloud Essentials',
+      id: 'Free',
       price: 'Free',
-      best: 'Best for Surveillance Network Houses, Home Labs, Motels, and Small Offices',
+      best: 'Best for Surveillance Networks, Home Labs, Houses, Motels, and Small Offices',
       description: 'Manage your entire network from anywhere — no hardware required. Includes free lifetime cloud access.',
       total: '$197.48',
       msrp: '$394.96',
     },
     hardware: {
       image: 'images/OC220.png',
-      name: 'Hardware Controller',
+      name: 'On-Premises Hardware Controller',
+      id: 'OC220',
       price: 'Retails for $79.99',
       best: 'Best for Hotels, Retails, MDU, Schools, Small to Medium Offices',
       description: 'Ideal for schools, hotels, and larger networks needing local control, VLANs, and advanced authentication.',
@@ -93,21 +95,21 @@
   $: controller = controllers[selected];
 
   const testimonials = [
-    {
-      logo: 'images/texas_roadhouse.svg',
-      title: 'Texas Roadhouse Trusts Omada for Reliable Network Solutions',
-      quote: 'With <span class="text-limeGreen font-extrabold">400+ restaurants</span> across the U.S., Texas Roadhouse upgraded their network using Omada switches for seamless, crash-free POS systems and stable Wi-Fi. Diners can now enjoy uninterrupted service, while the brand benefits from cost-effective, secure solutions.',
-    },
+    // {
+    //   logo: 'images/texas_roadhouse.svg',
+    //   title: 'Texas Roadhouse Trusts Omada for Reliable Network Solutions',
+    //   quote: 'With <span class="text-limeGreen font-extrabold">400+ restaurants</span> across the U.S., Texas Roadhouse upgraded their network using Omada switches for seamless, crash-free POS systems and stable Wi-Fi. Diners can now enjoy uninterrupted service, while the brand benefits from cost-effective, secure solutions.',
+    // },
     {
       logo: 'images/manchester_hall.svg',
       title: '3 Words: Reliable, Functional, and Available',
       quote: 'It’s very important for venues such as Manchester Hall that reliability of a solution, the service(s) from TP-Link (are) probably the best we’ve had from a vendor. TP-Link has a more personal approach from initial opportunity to the end sale. Three words: <span class="text-limeGreen font-extrabold">Reliable</span>, <span class="text-limeGreen font-extrabold">Functional</span>, and <span class="text-limeGreen font-extrabold">Available</span>. <br /><br />– Sam Connolly, Technical Consultant/Account Manager from LIV',
     },
-    {
-      logo: 'images/birchgrove.svg',
-      title: 'We decided to go TP-Link because of the reliability',
-      quote: 'We looked at Aruba, we looked at Cisco, but we decided to go TP-Link because of the <span class="text-limeGreen font-extrabold">reliability</span>. Having so many crucial things in the building which have to be kept working. We knew we needed something which we could reply on, and also the back-end support from TP-Link. If we need help, the ability of just pick up the phone and get an instant chat. That was the most attractive thing to us. <br /><br />- Chris Jarred, Birchgrove’s IT Director',
-    },
+    // {
+    //   logo: 'images/birchgrove.svg',
+    //   title: 'We decided to go TP-Link because of the reliability',
+    //   quote: 'We looked at Aruba, we looked at Cisco, but we decided to go TP-Link because of the <span class="text-limeGreen font-extrabold">reliability</span>. Having so many crucial things in the building which have to be kept working. We knew we needed something which we could reply on, and also the back-end support from TP-Link. If we need help, the ability of just pick up the phone and get an instant chat. That was the most attractive thing to us. <br /><br />- Chris Jarred, Birchgrove’s IT Director',
+    // },
     {
       logo: 'images/ipacket.svg',
       title: 'Omada Delivers Efficient Wi-Fi 6 Upgrades for 14,000 Resort Condominiums',
@@ -161,7 +163,7 @@
           Business-grade networking gear with lifetime free cloud management.<br />
           Built for system integrators ready to scale.
         </p>
-        <button class="btn-primary self-start">Claim My Kit Now</button>
+        <a href="#Form" class="btn-primary self-start">Claim My Kit Now</a>
       </div>
       <div class="w-full max-w-2xl relative">
         <img src="images/demo_kit_products.png" alt="Omada Cloud Essentials" />
@@ -177,11 +179,14 @@
 
   <!-- Why Omada -->
   <section id="WhyOmada" class="section-container bg-gray-100">
-    <div class="flex flex-col gap-8 max-w-[1920px] mx-auto py-16 lg:py-28 px-8 lg:px-16">
-      <h2>Why Omada?</h2>
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="flex container-row-to-col gap-8 max-w-[1920px] mx-auto py-16 lg:py-28 px-8 lg:px-16">
+      <div class="flex flex-col gap-4 w-full">
+        <h4>System Integrators & MSPs,</h4>
+        <h2>Are you struggling with low-budget clients and razor-thin margins? <span class="border-b-3 border-neonGreen">Omada is here to boost your profit.</span></h2>
+      </div>
+      <div class="w-full grid grid-cols-2 gap-8">
         {#each features as { icon, title, description }}
-          <div class="flex flex-col items-center text-center gap-2 max-w-sm mx-auto">
+          <div class="flex flex-col items-start gap-2 max-w-sm mx-auto">
             <img src={icon} alt={title} class="scale-75 lg:scale-100" />
             <h4>{title}</h4>
             <p class="text-darkGray/60">{description}</p>
@@ -250,7 +255,7 @@
           alt={controller.name} />
 
         <div class="flex flex-col gap-4 w-full">
-          <h3>{controller.name}</h3>
+          <h3>{controller.name} ({controller.id})</h3>
           <h4 class="subheading">{controller.best}</h4>
           <p>{controller.description}</p>
 
@@ -272,9 +277,9 @@
             </div>
           </div>
 
-          <button class="btn-primary self-start mt-4">
+          <a href="#Form" class="btn-primary self-start mt-4">
             Claim My Kit Now
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -282,34 +287,36 @@
 
   <section class="section-container bg-gradient-to-b from-darkGreen to-dullGreen text-white">
   <div class="flex flex-col gap-8 max-w-[1920px] mx-auto py-16 lg:py-28 px-8 lg:px-16">
-    <h2>Proven Results with Omada</h2>
-    <div class="relative">
-      <!-- Previous button -->
-        <button class="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 z-10" on:click={prev}>
-          <img src="icons/arrow.svg" alt="previous" />
+    <h2 class="border-b border-white/20 pb-6">Proven Results with Omada</h2>
+    <div>
+      <div bind:clientWidth class="overflow-hidden relative">
+        <div
+          class="flex transition-transform duration-500 ease-in-out gap-8"
+          style="transform: translateX(-{index * (100 / testimonials.length)}%); width: {testimonials.length * (100 / itemsPerSlide)}%;">
+          {#each testimonials as t}
+              <div class="flex flex-col gap-6 w-full md:w-1/2 lg:w-1/3 h-fit">
+                <img src={t.logo} alt="testimonial logo" class="h-16 mb-2 self-start" />
+                <h4>“{t.title}”</h4>
+                <p class="text-white/80">{@html t.quote}</p>
+              </div>
+          {/each}
+        </div>
+      </div>
+      <div class="flex justify-center gap-4 mt-4 subheading">
+        <!-- Previous button -->
+        <button class="lg:hidden" on:click={prev}>
+          Previous
         </button>
         <!-- Next button -->
-        <button class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 z-10" on:click={next}>
-          <img class="rotate-180" src="icons/arrow.svg" alt="next" />
+        <button class="lg:hidden" on:click={next}>
+          Next
         </button>
-        <div bind:clientWidth class="overflow-hidden relative lg:mx-24">
-          <div
-            class="flex transition-transform duration-500 ease-in-out gap-8"
-            style="transform: translateX(-{index * (100 / testimonials.length)}%); width: {testimonials.length * (100 / itemsPerSlide)}%;">
-            {#each testimonials as t}
-                <div class="flex flex-col gap-6 w-full md:w-1/2 lg:w-1/3 h-fit">
-                  <img src={t.logo} alt="testimonial logo" class="h-16 mb-2 self-start" />
-                  <h4>“{t.title}”</h4>
-                  <p class="text-white/80">{@html t.quote}</p>
-                </div>
-            {/each}
-          </div>
-        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section-container bg-gray-100">
+<section id="Form" class="section-container bg-gray-100">
     <form action="/phppage/addPromotion.php" method="post" id="demo-form" class="flex flex-col lg:flex-row gap-8 max-w-[1920px] mx-auto py-16 lg:py-28 px-8 lg:px-16">
       <!-- Hidden backend inputs -->
       <input type="hidden" name="token" value="your-token-here" />
