@@ -1,0 +1,543 @@
+
+<!DOCTYPE html>
+<html lang="$tpHrefLang" xml:lang="$tpHrefLang">
+   <script src="https://static-page.tp-link.com/landing/omada-demo-kit/script.js"></script>
+   <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="${canonical}" rel="canonical" />
+        <?php include_once($_SERVER['ROOT_DIR'] . '/productpages/staticpage-hreflang-tag/671.php'); ?><?php
+            $title = false;
+            $description = "${description}";
+            $siteId = $tpSiteId;
+            $appFolder = '$tpAppFolder';
+            include_once($_SERVER['ROOT_DIR'] . "/phppage/common-meta.php");
+        ?>
+        <title>${title}</title>
+      <link href="style.css" rel="stylesheet">
+       <!-- <style>
+        @import"https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap";/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */@layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-scale-x:1;--tw-scale-y:1;--tw-scale-z:1;--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-space-y-reverse:0;--tw-border-style:solid;--tw-gradient-position:initial;--tw-gradient-from:#0000;--tw-gradient-via:#0000;--tw-gradient-to:#0000;--tw-gradient-stops:initial;--tw-gradient-via-stops:initial;--tw-gradient-from-position:0%;--tw-gradient-via-position:50%;--tw-gradient-to-position:100%;--tw-leading:initial;--tw-font-weight:initial;--tw-backdrop-blur:initial;--tw-backdrop-brightness:initial;--tw-backdrop-contrast:initial;--tw-backdrop-grayscale:initial;--tw-backdrop-hue-rotate:initial;--tw-backdrop-invert:initial;--tw-backdrop-opacity:initial;--tw-backdrop-saturate:initial;--tw-backdrop-sepia:initial;--tw-duration:initial;--tw-ease:initial}}}@layer theme{:root,:host{--font-sans:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--color-gray-100:#f7f7f7;--color-gray-200:#f8f8f8;--color-gray-300:#e7e6e6;--color-gray-700:#333;--color-gray-900:#282828;--color-black:#000;--color-white:#fff;--spacing:.25rem;--container-sm:24rem;--container-2xl:42rem;--container-7xl:80rem;--text-3xl:1.875rem;--text-3xl--line-height: 1.2 ;--text-5xl:3rem;--text-5xl--line-height:1;--font-weight-light:300;--font-weight-normal:400;--font-weight-medium:500;--font-weight-extrabold:800;--leading-tight:1.25;--ease-in-out:cubic-bezier(.4,0,.2,1);--default-transition-duration:.15s;--default-transition-timing-function:cubic-bezier(.4,0,.2,1);--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono);--color-limeGreen:#a6ef00;--color-neonGreen:#32de9b;--color-primaryGreen:#00a870;--color-dullGreen:#2b816d;--color-darkGreen:#0a5a5a;--color-primaryBlue:#285aea}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1}@supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){::placeholder{color:currentColor}@supports (color:color-mix(in lab,red,red)){::placeholder{color:color-mix(in oklab,currentcolor 50%,transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){-webkit-appearance:button;-moz-appearance:button;appearance:button}::file-selector-button{-webkit-appearance:button;-moz-appearance:button;appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}html{color:var(--color-gray-900);font-family:Manrope,sans-serif}h1{font-size:clamp(1.75rem,5vw + 1rem,3.75rem);font-weight:300;line-height:1.1}h2{font-size:clamp(1.75rem,4vw + .8rem,3rem);font-weight:300;line-height:1.3}h3{font-size:clamp(1.5rem,3.5vw + .6rem,2.375rem);font-weight:300;line-height:1.3}h4{font-size:clamp(1.25rem,2vw + .5rem,1.5rem);font-weight:400;line-height:1.375}p,li{font-size:clamp(.875rem,1vw + .2rem,1rem);font-weight:400}.large-paragraph{font-size:clamp(.975rem,1vw + .2rem,1.25rem);font-weight:300}.small-paragraph{font-size:clamp(.8rem,1vw + .2rem,.9rem);font-weight:400}.subheading{font-size:clamp(.875rem,1vw + .2rem,1rem);font-weight:800}.link{color:var(--color-primaryBlue);text-underline-offset:4px;font-weight:400;text-decoration:underline;transition:all .2s ease-in-out}.link:hover{color:var(--color-primaryGreen)}.main-container{flex-direction:column;align-items:center;min-height:100vh;display:flex}.section-container{width:100%}.btn-primary{background-color:var(--color-primaryGreen);color:#fff;border-radius:.25rem;padding:.5rem 1rem;font-size:clamp(.975rem,1vw + .2rem,1.25rem)}.container-row-to-col{flex-direction:row;display:flex}.input-container{flex-direction:column;gap:.5rem;margin-bottom:1rem;display:flex}.label-text{font-size:clamp(.8rem,1vw + .2rem,.9rem);font-weight:500}.input{background:var(--color-gray-300);border-radius:.25rem;width:100%;padding:.5rem 1rem}@media screen and (max-width:768px){.container-row-to-col{flex-direction:column}}}@layer components;@layer utilities{.absolute{position:absolute}.relative{position:relative}.static{position:static}.inset-0{inset:calc(var(--spacing)*0)}.top-0{top:calc(var(--spacing)*0)}.top-3{top:calc(var(--spacing)*3)}.right-0{right:calc(var(--spacing)*0)}.right-2{right:calc(var(--spacing)*2)}.left-4{left:calc(var(--spacing)*4)}.z-10{z-index:10}.z-20{z-index:20}.m-auto{margin:auto}.mx-3{margin-inline:calc(var(--spacing)*3)}.mx-auto{margin-inline:auto}.mt-2{margin-top:calc(var(--spacing)*2)}.mt-4{margin-top:calc(var(--spacing)*4)}.mt-6{margin-top:calc(var(--spacing)*6)}.mt-8{margin-top:calc(var(--spacing)*8)}.mt-12{margin-top:calc(var(--spacing)*12)}.mb-2{margin-bottom:calc(var(--spacing)*2)}.mb-6{margin-bottom:calc(var(--spacing)*6)}.ml-2{margin-left:calc(var(--spacing)*2)}.block{display:block}.contents{display:contents}.flex{display:flex}.grid{display:grid}.hidden{display:none}.inline-block{display:inline-block}.h-16{height:calc(var(--spacing)*16)}.h-52{height:calc(var(--spacing)*52)}.h-fit{height:fit-content}.w-52{width:calc(var(--spacing)*52)}.w-fit{width:fit-content}.w-full{width:100%}.max-w-2xl{max-width:var(--container-2xl)}.max-w-7xl{max-width:var(--container-7xl)}.max-w-\[80\%\]{max-width:80%}.max-w-\[1920px\]{max-width:1920px}.max-w-sm{max-width:var(--container-sm)}.grow{flex-grow:1}.scale-70{--tw-scale-x:70%;--tw-scale-y:70%;--tw-scale-z:70%;scale:var(--tw-scale-x)var(--tw-scale-y)}.scale-75{--tw-scale-x:75%;--tw-scale-y:75%;--tw-scale-z:75%;scale:var(--tw-scale-x)var(--tw-scale-y)}.transform{transform:var(--tw-rotate-x,)var(--tw-rotate-y,)var(--tw-rotate-z,)var(--tw-skew-x,)var(--tw-skew-y,)}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-row{flex-direction:row}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.items-end{align-items:flex-end}.items-start{align-items:flex-start}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.gap-2{gap:calc(var(--spacing)*2)}.gap-3{gap:calc(var(--spacing)*3)}.gap-4{gap:calc(var(--spacing)*4)}.gap-6{gap:calc(var(--spacing)*6)}.gap-8{gap:calc(var(--spacing)*8)}:where(.space-y-2>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*2)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*2)*calc(1 - var(--tw-space-y-reverse)))}.self-center{align-self:center}.self-start{align-self:flex-start}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:3.40282e38px}.border{border-style:var(--tw-border-style);border-width:1px}.border-b{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.border-b-3{border-bottom-style:var(--tw-border-style);border-bottom-width:3px}.border-gray-200{border-color:var(--color-gray-200)}.border-neonGreen{border-color:var(--color-neonGreen)}.border-white\/20{border-color:#fff3}@supports (color:color-mix(in lab,red,red)){.border-white\/20{border-color:color-mix(in oklab,var(--color-white)20%,transparent)}}.bg-black\/50{background-color:#00000080}@supports (color:color-mix(in lab,red,red)){.bg-black\/50{background-color:color-mix(in oklab,var(--color-black)50%,transparent)}}.bg-dullGreen\/10{background-color:#2b816d1a}@supports (color:color-mix(in lab,red,red)){.bg-dullGreen\/10{background-color:color-mix(in oklab,var(--color-dullGreen)10%,transparent)}}.bg-gray-100{background-color:var(--color-gray-100)}.bg-gray-200{background-color:var(--color-gray-200)}.bg-gradient-to-b{--tw-gradient-position:to bottom in oklab;background-image:linear-gradient(var(--tw-gradient-stops))}.bg-\[url\(\/images\/hero_m\.png\)\]{background-image:url(images/hero_m.png)}.from-darkGreen{--tw-gradient-from:var(--color-darkGreen);--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))}.to-dullGreen{--tw-gradient-to:var(--color-dullGreen);--tw-gradient-stops:var(--tw-gradient-via-stops,var(--tw-gradient-position),var(--tw-gradient-from)var(--tw-gradient-from-position),var(--tw-gradient-to)var(--tw-gradient-to-position))}.bg-cover{background-size:cover}.bg-center{background-position:50%}.p-4{padding:calc(var(--spacing)*4)}.px-4{padding-inline:calc(var(--spacing)*4)}.px-8{padding-inline:calc(var(--spacing)*8)}.py-2{padding-block:calc(var(--spacing)*2)}.py-16{padding-block:calc(var(--spacing)*16)}.pb-6{padding-bottom:calc(var(--spacing)*6)}.pl-8{padding-left:calc(var(--spacing)*8)}.text-center{text-align:center}.text-left{text-align:left}.text-right{text-align:right}.text-3xl{font-size:var(--text-3xl);line-height:var(--tw-leading,var(--text-3xl--line-height))}.text-5xl{font-size:var(--text-5xl);line-height:var(--tw-leading,var(--text-5xl--line-height))}.leading-tight{--tw-leading:var(--leading-tight);line-height:var(--leading-tight)}.font-extrabold{--tw-font-weight:var(--font-weight-extrabold);font-weight:var(--font-weight-extrabold)}.font-light{--tw-font-weight:var(--font-weight-light);font-weight:var(--font-weight-light)}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.font-normal{--tw-font-weight:var(--font-weight-normal);font-weight:var(--font-weight-normal)}.text-black\/60{color:#0009}@supports (color:color-mix(in lab,red,red)){.text-black\/60{color:color-mix(in oklab,var(--color-black)60%,transparent)}}.text-dullGreen{color:var(--color-dullGreen)}.text-limeGreen{color:var(--color-limeGreen)}.text-neonGreen{color:var(--color-neonGreen)}.text-primaryBlue{color:var(--color-primaryBlue)}.text-primaryGreen{color:var(--color-primaryGreen)}.text-white{color:var(--color-white)}.text-white\/80{color:#fffc}@supports (color:color-mix(in lab,red,red)){.text-white\/80{color:color-mix(in oklab,var(--color-white)80%,transparent)}}.line-through{text-decoration-line:line-through}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,)}.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,)var(--tw-backdrop-brightness,)var(--tw-backdrop-contrast,)var(--tw-backdrop-grayscale,)var(--tw-backdrop-hue-rotate,)var(--tw-backdrop-invert,)var(--tw-backdrop-opacity,)var(--tw-backdrop-saturate,)var(--tw-backdrop-sepia,)}.transition{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,opacity,box-shadow,transform,translate,scale,rotate,filter,-webkit-backdrop-filter,backdrop-filter,display,visibility,content-visibility,overlay,pointer-events;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-all{transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-transform{transition-property:transform,translate,scale,rotate;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.duration-500{--tw-duration:.5s;transition-duration:.5s}.ease-in-out{--tw-ease:var(--ease-in-out);transition-timing-function:var(--ease-in-out)}@media (hover:hover){.hover\:scale-105:hover{--tw-scale-x:105%;--tw-scale-y:105%;--tw-scale-z:105%;scale:var(--tw-scale-x)var(--tw-scale-y)}}@media (min-width:48rem){.md\:block{display:block}.md\:hidden{display:none}.md\:w-1\/2{width:50%}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}:where(.md\:space-y-2>:not(:last-child)){--tw-space-y-reverse:0;margin-block-start:calc(calc(var(--spacing)*2)*var(--tw-space-y-reverse));margin-block-end:calc(calc(var(--spacing)*2)*calc(1 - var(--tw-space-y-reverse)))}.md\:self-start{align-self:flex-start}.md\:p-8{padding:calc(var(--spacing)*8)}.md\:text-left{text-align:left}}@media (min-width:64rem){.lg\:hidden{display:none}.lg\:w-1\/3{width:33.3333%}.lg\:max-w-1\/2{max-width:50%}.lg\:scale-100{--tw-scale-x:100%;--tw-scale-y:100%;--tw-scale-z:100%;scale:var(--tw-scale-x)var(--tw-scale-y)}.lg\:flex-row{flex-direction:row}.lg\:bg-\[url\(\/images\/hero\.png\)\]{background-image:url(images/hero.png)}.lg\:bg-\[url\(\/images\/hook_bg\.png\)\]{background-image:url(images/hook_bg.png)}.lg\:px-16{padding-inline:calc(var(--spacing)*16)}.lg\:py-28{padding-block:calc(var(--spacing)*28)}}@media (min-width:80rem){.xl\:max-w-\[70\%\]{max-width:70%}}}@property --tw-scale-x{syntax:"*";inherits:false;initial-value:1}@property --tw-scale-y{syntax:"*";inherits:false;initial-value:1}@property --tw-scale-z{syntax:"*";inherits:false;initial-value:1}@property --tw-rotate-x{syntax:"*";inherits:false}@property --tw-rotate-y{syntax:"*";inherits:false}@property --tw-rotate-z{syntax:"*";inherits:false}@property --tw-skew-x{syntax:"*";inherits:false}@property --tw-skew-y{syntax:"*";inherits:false}@property --tw-space-y-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-gradient-position{syntax:"*";inherits:false}@property --tw-gradient-from{syntax:"<color>";inherits:false;initial-value:#0000}@property --tw-gradient-via{syntax:"<color>";inherits:false;initial-value:#0000}@property --tw-gradient-to{syntax:"<color>";inherits:false;initial-value:#0000}@property --tw-gradient-stops{syntax:"*";inherits:false}@property --tw-gradient-via-stops{syntax:"*";inherits:false}@property --tw-gradient-from-position{syntax:"<length-percentage>";inherits:false;initial-value:0%}@property --tw-gradient-via-position{syntax:"<length-percentage>";inherits:false;initial-value:50%}@property --tw-gradient-to-position{syntax:"<length-percentage>";inherits:false;initial-value:100%}@property --tw-leading{syntax:"*";inherits:false}@property --tw-font-weight{syntax:"*";inherits:false}@property --tw-backdrop-blur{syntax:"*";inherits:false}@property --tw-backdrop-brightness{syntax:"*";inherits:false}@property --tw-backdrop-contrast{syntax:"*";inherits:false}@property --tw-backdrop-grayscale{syntax:"*";inherits:false}@property --tw-backdrop-hue-rotate{syntax:"*";inherits:false}@property --tw-backdrop-invert{syntax:"*";inherits:false}@property --tw-backdrop-opacity{syntax:"*";inherits:false}@property --tw-backdrop-saturate{syntax:"*";inherits:false}@property --tw-backdrop-sepia{syntax:"*";inherits:false}@property --tw-duration{syntax:"*";inherits:false}@property --tw-ease{syntax:"*";inherits:false}
+       </style> -->
+       <style>
+            .tab-btn {
+                background-color: var(--color-gray-200);
+                border-color: var(--color-gray-200)
+            }
+            .tab-btn.active {
+                background-color: white;
+                border-color: var(--color-neonGreen);
+            }
+            .bg-white {
+                background-color: white;
+            }
+            .bg-white-30 {
+                background-color: rgba(255, 255, 255, 0.3);
+            }
+            .dot {
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                border-radius: 100%;
+            }
+            .carousel-item {
+                flex: 0 0 100%;
+                max-width: 100%;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .carousel-wrapper {
+                display: flex;
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+            }
+        </style>
+   </head>
+   <main aria-label="To enrich screen reader interactions, please activate Accessibility in Grammarly extension settings" class="b2b" data-gr-ext-installed="" data-new-gr-c-s-check-loaded="14.1243.0" data-new-gr-c-s-loaded="14.1242.0">
+        <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+      <div style="display: contents">
+         <!--[--><!--[--><!----><!---->
+         <main class="main-container">
+            <section id="Hero" class="section-container bg-[url(/images/hero_m.png)] lg:bg-[url(/images/hero.png)] bg-center bg-cover">
+               <div class="container-row-to-col justify-between items-center max-w-[1920px] mx-auto py-16 px-8 lg:px-16">
+                  <div class="flex flex-col gap-8 text-white w-full max-w-2xl text-center md:text-left">
+                     <h1>Explore Omada’s Business-Grade Wi‑Fi 7 Demo Kit</h1>
+                     <p class="large-paragraph text-white/80">Business-grade networking gear with lifetime free cloud management.<br/> Built for system integrators ready to scale.</p>
+                     <a href="#Form" class="btn-primary self-center md:self-start">Claim My Kit Now</a>
+                  </div>
+                  <div class="w-full max-w-2xl relative">
+                     <img src="images/demo_kit_products.png" alt="Omada Cloud Essentials"/> 
+                     <div class="scale-70 lg:scale-100 absolute top-0 right-0 w-52 h-52 bg-black/50 backdrop-blur rounded-full flex flex-col items-center justify-center">
+                        <p class="text-limeGreen text-center text-3xl font-light">Get it<br/><span class="text-5xl">50%</span><br/>off!</p>
+                        <p class="text-white">Limited time only</p>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section id="WhyOmada" class="section-container bg-gray-100 lg:bg-[url(/images/hook_bg.png)] bg-cover">
+               <div class="flex container-row-to-col gap-8 max-w-[1920px] mx-auto py-16 lg:py-28 px-8 lg:px-16">
+                  <div class="flex flex-col gap-4 w-full">
+                     <h4>To System Integrators &amp; MSPs,</h4>
+                     <h2>Are you struggling with low-budget clients and razor-thin margins?<br/>Omada is here to <span class="text-primaryBlue">boost your profit</span>.</h2>
+                  </div>
+                  <div class="w-full grid grid-cols-2 gap-8">
+                     <!--[-->
+                     <div class="flex flex-col items-start gap-4 max-w-sm mx-auto">
+                        <img src="icons/graph.svg" alt="Confidently Bid &amp; Win More Projects" class="scale-75 lg:scale-100"/> 
+                        <h4>Confidently Bid &amp; Win More Projects</h4>
+                        <p class="text-darkGray/60">With Omada, you can confidently bid for a wider range of projects — from SMBs to multi-site deployments — and stay competitive in cost-driven markets.</p>
+                     </div>
+                     <div class="flex flex-col items-start gap-4 max-w-sm mx-auto">
+                        <img src="icons/coin.svg" alt="Gain More Profit with Exclusive Partner Pricing" class="scale-75 lg:scale-100"/> 
+                        <h4>Gain More Profit with Exclusive Partner Pricing</h4>
+                        <p class="text-darkGray/60">Boost your margins with competitive partner pricing, a broad product lineup, and value-added tools — all designed to help you grow your business and win more deals.</p>
+                     </div>
+                     <div class="flex flex-col items-start gap-4 max-w-sm mx-auto">
+                        <img src="icons/rocket.svg" alt="Reliability &amp; High Performance Without Compromise" class="scale-75 lg:scale-100"/> 
+                        <h4>Reliability &amp; High Performance Without Compromise</h4>
+                        <p class="text-darkGray/60">Give your customers enterprise-grade performance they can count on — proven, reliable networking that meets real-world demands, even on tight budgets.</p>
+                     </div>
+                     <div class="flex flex-col items-start gap-4 max-w-sm mx-auto">
+                        <img src="icons/headset.svg" alt="Dedicated Tech Support &amp; Extended Warranty" class="scale-75 lg:scale-100"/> 
+                        <h4>Dedicated Tech Support &amp; Extended Warranty</h4>
+                        <p class="text-darkGray/60">Get help fast by phone, email, or chat — we’re here for you pre- and post-sale. Plus, our extended warranties provide extra peace of mind for you and your customers.</p>
+                     </div>
+                     <!--]-->
+                  </div>
+               </div>
+            </section>
+            <section id="InYourKit" class="section-container">
+               <div class="flex flex-col gap-8 max-w-[1920px] items-center mx-auto py-16 lg:py-28 px-8 lg:px-16">
+                  <h2>What's In <span class="border-b-3 border-neonGreen">Your</span> Omada Wi‑Fi 7 Demo Kit?</h2>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl w-full">
+                     <!--[-->
+                     <!-- Product Card #1 -->
+                     <div class="product-card flex flex-col gap-2 hover:scale-105 transition-all">
+                        <button aria-label="Toggle product info" class="toggle-overlay-btn relative text-left">
+                           <div class="absolute top-3 right-2 z-10 flex flex-row gap-2">
+                              <p class="text-white small-paragraph text-right leading-tight">Click to<br/> view specs</p>
+                              <img src="icons/info.svg" alt="Info icon"/>
+                           </div>
+                           <p class="absolute top-3 left-4 z-20 text-white leading-tight large-paragraph">Included in <br/>your kit</p>
+                           <img class="hidden md:block w-full" src="images/ER707-M2.jpg" alt="Omada Multi-Gigabit VPN Gateway"/> <img class="block md:hidden w-full" src="images/ER707-M2_m.jpg" alt="Omada Multi-Gigabit VPN Gateway"/> <!--[!--><!--]-->
+                           
+                           <!-- Overlay -->
+                           <div class="product-overlay absolute inset-0 bg-black/50 backdrop-blur z-20 hidden justify-center p-4 md:p-8" style="opacity: 0; transition: opacity 300ms ease;">
+                                <ul class="text-white w-full md:space-y-2">
+                                    <li class="small-paragraph flex flex-row gap-2"><img src="icons/check.svg" alt="Check icon"> 2x 2.5Gbps RJ45 Ports (1x WAN, 1x LAN)</li>
+                                    <li class="small-paragraph flex flex-row gap-2"><img src="icons/check.svg" alt="Check icon"> 5x Gigabit WAN/LAN Ports (1x SFP, 4x RJ45)</li>
+                                    <li class="small-paragraph flex flex-row gap-2"><img src="icons/check.svg" alt="Check icon"> Load Balancing on up to 6 WAN ports</li>
+                                    <li class="small-paragraph flex flex-row gap-2"><img src="icons/check.svg" alt="Check icon"> SSL/ IPSec / GRE§ / WireGuard / PPTP / L2TP VPN &amp; OpenVPN</li>
+                                </ul>
+                            </div>
+                        </button>
+                        <h4 class="xl:max-w-[70%]">Omada Multi-Gigabit VPN Gateway</h4>
+                        <div class="flex flex-row gap-3">
+                           <p class="text-darkGray"><span class="text-primaryGreen">ER707-M2</span><span class="mx-3">|</span> Retails for $99.99</p>
+                        </div>
+                        <ul>
+                           <!--[-->
+                           <li class="small-paragraph flex flex-row gap-2 items-center"><img src="icons/check.svg" alt="Check icon"/> 2x 2.5Gbps RJ45 Ports (1x WAN, 1x LAN)</li>
+                           <li class="small-paragraph flex flex-row gap-2 items-center"><img src="icons/check.svg" alt="Check icon"/> 5x Gigabit WAN/LAN Ports (1x SFP, 4x RJ45)</li>
+                           <!--]-->
+                        </ul>
+                     </div>
+                     <!-- Product Card #2 -->
+                     <div class="product-card flex flex-col gap-2 hover:scale-105 transition-all">
+                        <button aria-label="Toggle product info" class="toggle-overlay-btn relative text-left">
+                           <div class="absolute top-3 right-2 z-10 flex flex-row gap-2">
+                              <p class="text-white small-paragraph text-right leading-tight">Click to<br/> view specs</p>
+                              <img src="icons/info.svg" alt="Info icon"/>
+                           </div>
+                           <p class="absolute top-3 left-4 z-20 text-white leading-tight large-paragraph">Included in <br/>your kit</p>
+                           <img class="hidden md:block w-full" src="images/EAP723.jpg" alt="Omada Dual-Band Wi-Fi 7 Ceiling Mount AP"/> <img class="block md:hidden w-full" src="images/EAP723_m.jpg" alt="Omada Dual-Band Wi-Fi 7 Ceiling Mount AP"/> <!--[!--><!--]-->
+                           
+                           <!-- Overlay -->
+                            <div class="product-overlay absolute inset-0 bg-black/50 backdrop-blur z-20 hidden justify-center p-4 md:p-8" style="opacity: 0; transition: opacity 300ms ease;">
+                                <ul class="text-white w-full md:space-y-2">
+                                    <li class="small-paragraph flex flex-row gap-2"><img src="icons/check.svg" alt="Check icon"> Next-Gen Dual-Band Wi-Fi 7</li>
+                                    <li class="small-paragraph flex flex-row gap-2"><img src="icons/check.svg" alt="Check icon"> Speeds up to 5.0 Gbps*</li>
+                                    <li class="small-paragraph flex flex-row gap-2"><img src="icons/check.svg" alt="Check icon"> 1x 2.5GbE Port &amp; 802.3at PoE</li>
+                                    <li class="small-paragraph flex flex-row gap-2"><img src="icons/check.svg" alt="Check icon"> Max Throughput &amp; Ultra-Low Latency</li>
+                                </ul>
+                            </div>
+                        </button>
+                        <h4 class="xl:max-w-[70%]">Omada Dual-Band Wi-Fi 7 Ceiling Mount AP</h4>
+                        <div class="flex flex-row gap-3">
+                           <p class="text-darkGray"><span class="text-primaryGreen">EAP723, 2 count</span><span class="mx-3">|</span> Retails for $178.98 ($89.99 x 2)</p>
+                        </div>
+                        <ul>
+                           <!--[-->
+                           <li class="small-paragraph flex flex-row gap-2 items-center"><img src="icons/check.svg" alt="Check icon"/> Next-Gen Dual-Band Wi-Fi 7</li>
+                           <li class="small-paragraph flex flex-row gap-2 items-center"><img src="icons/check.svg" alt="Check icon"/> Speeds up to 5.0 Gbps*</li>
+                           <!--]-->
+                        </ul>
+                     </div>
+                     <!-- Product Card #3 -->
+                     <div class="product-card flex flex-col gap-2 hover:scale-105 transition-all">
+                        <button aria-label="Toggle product info" class="toggle-overlay-btn relative text-left">
+                           <div class="absolute top-3 right-2 z-10 flex flex-row gap-2">
+                              <p class="text-white small-paragraph text-right leading-tight">Click to<br/> view specs</p>
+                              <img src="icons/info.svg" alt="Info icon"/>
+                           </div>
+                           <p class="absolute top-3 left-4 z-20 text-white leading-tight large-paragraph">Included in <br/>your kit</p>
+                           <img class="hidden md:block w-full" src="images/SG2210P.jpg" alt="Omada 10-Port Gigabit Smart Switch"/> <img class="block md:hidden w-full" src="images/SG2210P_m.jpg" alt="Omada 10-Port Gigabit Smart Switch"/> <!--[!--><!--]-->
+
+                           <!-- Overlay -->
+                            <div class="product-overlay absolute inset-0 bg-black/50 backdrop-blur z-20 hidden justify-center p-4 md:p-8" style="opacity: 0; transition: opacity 300ms ease;">
+                                <ul class="text-white w-full md:space-y-2">
+                                    <li class="small-paragraph flex flex-row gap-2"><img src="icons/check.svg" alt="Check icon"> 8x Gigabit 802.3af/at PoE+ ports and 2x Gigabit SFP slots</li>
+                                    <li class="small-paragraph flex flex-row gap-2"><img src="icons/check.svg" alt="Check icon"> 61 W total PoE budget with up to 30 W PoE output per port</li>
+                                    <li class="small-paragraph flex flex-row gap-2"><img src="icons/check.svg" alt="Check icon"> Centralized cloud management via the web or the Omada app</li>
+                                    <li class="small-paragraph flex flex-row gap-2"><img src="icons/check.svg" alt="Check icon"> Static Routing helps route internal traffic for higher efficiency</li>
+                                </ul>
+                            </div>
+                        </button>
+                        <h4 class="xl:max-w-[70%]">Omada 10-Port Gigabit Smart Switch</h4>
+                        <div class="flex flex-row gap-3">
+                           <p class="text-darkGray"><span class="text-primaryGreen">SG2210P</span><span class="mx-3">|</span> Retails for $114.99</p>
+                        </div>
+                        <ul>
+                           <!--[-->
+                           <li class="small-paragraph flex flex-row gap-2 items-center"><img src="icons/check.svg" alt="Check icon"/> 8x Gigabit 802.3af/at PoE+ ports and 2x Gigabit SFP slots</li>
+                           <li class="small-paragraph flex flex-row gap-2 items-center"><img src="icons/check.svg" alt="Check icon"/> 61 W total PoE budget with up to 30 W PoE output per port</li>
+                           <!--]-->
+                        </ul>
+                     </div>
+                     <!--]-->
+                  </div>
+                  <h2 class="mt-8">Choose Your Controller</h2>
+                  <div class="flex flex-wrap justify-center gap-2 mb-6">
+                     <!--[-->
+                     <button id="btn-cloud" class="px-4 py-2 rounded-full border small-paragraph tab-btn active">Omada Cloud Essentials (Free)</button>
+                     <button id="btn-hardware" class="px-4 py-2 rounded-full border small-paragraph tab-btn">On-Premises Hardware Controller (Retails for $79.99)</button>
+                     <!--]-->
+                  </div>
+                  <div id="content-cloud" class="flex flex-col lg:flex-row gap-8 w-full">
+                     <img class="max-w-[80%] lg:max-w-1/2 m-auto" src="images/Omada_Cloud_Essentials.png" alt="Omada Cloud Essentials"/> 
+                     <div class="flex flex-col gap-4 w-full">
+                        <h3>Omada Cloud Essentials (Free)</h3>
+                        <h4 class="subheading">Best for Surveillance Networks, Home Labs, Houses, Motels, and Small Offices</h4>
+                        <p>Manage your entire network from anywhere — no hardware required. Includes free lifetime cloud access.</p>
+                        <div class="mt-6 flex flex-col gap-4">
+                           <h3>Demo Kit Price</h3>
+                           <h4 class="subheading">3 Products + Omada Cloud Essentials</h4>
+                           <div class="flex items-end gap-4 mt-2">
+                              <h2 class="text-dullGreen bg-dullGreen/10 px-4 py-2">$197.48 <span class="large-paragraph ml-2 font-normal">(50% off)</span></h2>
+                              <p class="large-paragraph font-normal text-black/60">MSRP<br/> <span class="line-through">$394.96</span></p>
+                           </div>
+                        </div>
+                        <a href="#Form" class="btn-primary self-start mt-4">Claim My Kit Now</a>
+                     </div>
+                  </div>
+                  <div id="content-hardware" class="hidden lg:flex-row gap-8 w-full">
+                    <img class="max-w-[80%] lg:max-w-1/2 m-auto" src="images/OC220.png" alt="On-Premises Hardware Controller"> 
+                    <div class="flex flex-col gap-4 w-full">
+                        <h3>On-Premises Hardware Controller (OC220)</h3>
+                        <h4 class="subheading">Best for Hotels, Retails, MDU, Schools, Small to Medium Offices</h4>
+                        <p>Ideal for schools, hotels, and larger networks needing local control, VLANs, and advanced authentication.</p>
+                        <div class="mt-6 flex flex-col gap-4">
+                            <h3>Demo Kit Price</h3>
+                            <h4 class="subheading">3 Products + On-Premises Hardware Controller</h4>
+                            <div class="flex items-end gap-4 mt-2">
+                                <h2 class="text-dullGreen bg-dullGreen/10 px-4 py-2">$237.48 <span class="large-paragraph ml-2 font-normal">(50% off)</span></h2>
+                                <p class="large-paragraph font-normal text-black/60">MSRP<br> <span class="line-through">$474.95</span></p>
+                            </div>
+                        </div>
+                        <a href="#Form" class="btn-primary self-start mt-4">Claim My Kit Now</a>
+                    </div>
+                </div>
+               </div>
+            </section>
+            <section class="section-container bg-gradient-to-b from-darkGreen to-dullGreen text-white">
+               <div class="flex flex-col gap-8 max-w-[1920px] mx-auto py-16 lg:py-28 px-8 lg:px-16">
+                  <h2 class="border-b border-white/20 pb-6">Proven Results with Omada</h2>
+                  <div>
+                     <div class="carousel-wrapper overflow-hidden relative">
+                        <div id="case-carousel" class="flex transition-transform duration-500 ease-in-out">
+                           <!--[-->
+                           <div class="carousel-item container-row-to-col gap-6 w-full h-fit">
+                              <img class="w-full max-w-2xl" src="images/manchester_hall_img.jpg" alt="case study image"/>
+                              <div class="flex flex-col gap-2">
+                                <img src="images/manchester_hall.svg" alt="testimonial logo" class="h-16 mb-2 self-start"/> 
+                                <h3>Omada Powers Guest Wi-Fi Experience at Manchester Hall <span class="text-limeGreen">over 100</span> Rooms and Offices</h3>
+                                <p class="text-white/80">
+                                    <!---->"These functionalities were exactly what we'd expect from enterprise products."<br /><br />– Ben Ganley, Managing Director<!---->
+                                </p>
+                              </div>
+                           </div>
+                           <div class="carousel-item container-row-to-col gap-6 w-full h-fit">
+                              <img class="w-full max-w-2xl" src="images/ipacket_img.jpg" alt="case study image"/>
+                              <div class="flex flex-col gap-2">
+                                <img src="images/ipacket.svg" alt="testimonial logo" class="h-16 mb-2 self-start"/> 
+                                <h3>Omada Helps Streamline MSP Operations <span class="text-limeGreen">over 14,000</span> Condos and Indoor/Outdoor common areas</h3>
+                                <p class="text-white/80">
+                                    <!---->"Once the APs are plugged in, they instantly show up. We adopt them, assign a Wi-Fi profile, and voila, they're done! The controller has easily sped up our deployment time by 20 or 30 percent."<br /><br />– Luis Santos, vice president of engineering at IPacket Networks<!---->
+                                </p>
+                              </div>
+                           </div>
+                           <div class="carousel-item container-row-to-col gap-6 w-full h-fit">
+                              <img class="w-full max-w-2xl" src="images/gsd_solutions_img.jpg" alt="case study image"/>
+                              <div class="flex flex-col gap-2">
+                                <img src="images/gsd_solutions.svg" alt="testimonial logo" class="h-16 mb-2 self-start"/> 
+                                <h3>Omada PPSK Solution Powers "Excellent Features" and Greater Affordability for <span class="text-limeGreen">over 100</span> Doors</h3>
+                                <p class="text-white/80">
+                                    <!---->"The features are excellent, and we have had no issues with any of the products. We also like the fact that they can be cloud managed - PPSK, availability, pricing, and the overall solution."<br /><br />– Scott Davison, CTO GSD Solutions<!---->
+                                </p>
+                              </div>
+                           </div>
+                           <!--]-->
+                        </div>
+                     </div>
+                  </div>
+                  <div class="flex justify-center gap-2 mt-4" id="case-dots"></div>
+               </div>
+            </section>
+            <section id="Form" class="c section-container bg-gray-100">
+               <div class="contact-us-form container-row-to-col gap-8 max-w-[1920px] mx-auto py-16 lg:py-28 px-8 lg:px-16">
+                  <div class="d w-full flex flex-col gap-4">
+                     <h2>Claim Your <span class="text-primaryGreen">50% Off</span><br/>Omada Wi‑Fi 7 Demo Kit</h2>
+                     <p class="large-paragraph">Interested? Sign up using the form before our limited promotion ends.</p>
+                  </div>
+                  <form class="w-full" action="/phppage/addPromotion.php" id="demo-form" method="post" target="hidden_iframe">
+                     <iframe title="hidden_iframe" frameborder="0" id="demo-form-iframe" name="hidden_iframe" scrolling="no" style="display:none;"></iframe>  <input name="token" type="hidden" value="&lt;?php echo setToken(); ?>"/> <input name="email_subscribe" type="hidden" value="1"/> <input name="promotion_type" type="hidden" value="$tpAppFolder_promotion_202505_omada-demo-kit"/> <input name="promotion_string" type="hidden" value="From|* Company Name|* Job Title|Business Phone|Company Website"/> <input name="BySiteId" type="hidden" value="$tpSiteId"/> <input name="col_1" type="hidden" value="&lt;?php echo htmlspecialchars($_GET['utm_source'], ENT_QUOTES); ?>"/> 
+                     <div class="tp-row grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="tp-col tp-col-2 required input-container">
+                           <p class="label-text">First Name<span class="text-neonGreen">*</span></p>
+                           <input class="input" maxlength="50" name="firstName" required type="text"/>
+                        </div>
+                        <div class="tp-col tp-col-2 required input-container">
+                           <p class="label-text">Last Name<span class="text-neonGreen">*</span></p>
+                           <input class="input" maxlength="50" name="lastName" required type="text"/>
+                        </div>
+                     </div>
+                     <div class="tp-row grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="tp-col tp-col-1 required input-container">
+                           <p class="label-text">Business Email<span class="text-neonGreen">*</span></p>
+                           <input class="input" maxlength="100" name="email" required type="email"/>
+                        </div>
+                        <div class="tp-col tp-col-2 input-container">
+                           <p class="label-text">Business Phone</p>
+                           <input class="input" maxlength="50" name="col_4" type="text"/>
+                        </div>
+                     </div>
+                     <div class="tp-row grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="tp-col tp-col-1 required input-container">
+                           <p class="label-text">Company Name<span class="text-neonGreen">*</span></p>
+                           <input class="input" maxlength="100" name="col_2" required type="text"/>
+                        </div>
+                        <div class="tp-col tp-col-2 required input-container">
+                           <p class="label-text">Job Title<span class="text-neonGreen">*</span></p>
+                           <input class="input" maxlength="50" name="col_3" required type="text"/>
+                        </div>
+                     </div>
+                     <div class="tp-col tp-col-1 input-container">
+                        <p class="label-text">Company Website</p>
+                        <input class="input" maxlength="200" name="col_5" type="text"/>
+                     </div>
+                     <div class="tp-col tp-col-1 required input-container"><label for="contact-us-privacy"><input id="contact-us-privacy" required type="checkbox"/> <b class="checkbox"> </b> <span id="contact-us-privacy-text">I have read and agree to the <a class="contact-us-privacy-link link" href="https://privacy.tp-link.com/web/official/privacy-policy?region=US" target="_blank">Privacy Policy</a>.</span></label></div>
+                     <div class="tp-col tp-col-1">
+                        <div class="promotion-recaptcha"> </div>
+                     </div>
+                     <div class="submit btn-primary w-fit"><button>Submit</button></div>
+
+                     <div class="form-result-success hidden">
+                        <div id="demo-dialog">
+                           <h2>Please confirm your signup in your email!</h2>
+                           <p>Thank you for your submission! Please follow your email to complete the signup.<br/> <br/> Best Regards,<br/> Omada Team</p>
+                        </div>
+                     </div>
+                     <div class="form-result-failed hidden">
+                        <div id="demo-dialog">
+                           <h2>Submission failed, please try again.</h2>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </section>
+            <section id="Terms" class="section-container">
+                <div class="flex flex-col gap-4 max-w-[1920px] mx-auto py-16 lg:py-28 px-8 lg:px-16">
+                    <h4 class="mb-2 large-paragraph font-medium">Terms &amp; Conditions</h4>
+                    <ul class="list-disc pl-8 space-y-2 text-black/60">
+                    <li>The 50% discount on the Wi‑Fi 7 demo kit applies only to eligible partners within the United States.</li>
+                    <li>The program aims to provide easy access to Omada for targeted B2B channel partners, such as resellers, installers, and MSPs. TP-Link reserves the right to select eligible partners only for the discounted demo kit. Submission does not guarantee receipt of the demo kit.</li>
+                    <li>LIMIT 1 DISCOUNT DEMO KIT per eligible partner. Items are not allowed for resale.</li>
+                    <li>When Submit is pressed, the customer agrees to share their contact information with TP-Link and receive emails or calls from TP-Link.</li>
+                    </ul>
+                </div>
+            </section>
+            <script>
+               $("#demo-form").on("submit", function(){
+               typeof fbq == 'function' && fbq('trackCustom', 'submit-form-landing-omada-demo-kit', {promotion: 'demo-kit_promotion'});
+               })
+            </script>
+            <script src="https://static-page.tp-link.com/landing/omada-demo-kit/script.js"></script>
+            <script>
+               window.addEventListener("load", function () {
+                 const form = document.getElementById("demo-form");
+                 if (!form) return;
+               
+                 form.addEventListener("submit", function (e) {
+                   e.preventDefault();
+               
+                   const formData = new FormData(form);
+               
+                   fetch(form.action, {
+                     method: "POST",
+                     body: formData,
+                   })
+                   .then(response => response.text())
+                   .then(data => {
+                     if (data.includes("email success")) {
+                       // Remove loading modal if present
+                       document.querySelector('.tp-dialog')?.remove();
+               
+                       // Grab the content block
+                       const contentBlock = document.querySelector(".form-result-success");
+                       if (contentBlock) {
+                         const modal = document.createElement("div");
+                         modal.className = "tp-dialog";
+                         modal.setAttribute("role", "dialog");
+                         modal.setAttribute("aria-modal", "true");
+                         modal.setAttribute("title", "TP-Link Dialog");
+               
+                         modal.innerHTML = `
+                           <div class="tp-dialog-box">
+                             ${contentBlock.querySelector("#demo-dialog")?.innerHTML || ''}
+                           </div>
+                         `;
+               
+                         // Add close button
+                         const closeBtn = document.createElement("button");
+                         closeBtn.innerHTML = "&times;";
+                         closeBtn.className = "tp-dialog-close";
+                         closeBtn.addEventListener("click", () => modal.remove());
+                         modal.querySelector(".tp-dialog-box")?.appendChild(closeBtn);
+               
+                         document.body.appendChild(modal);
+                       }
+               
+                       // Simulate thank-you URL for Reddit ad tracking
+                       const basePath = '/thank-you-omada-demo-kit';
+                       const search = window.location.search;
+                       const newUrl = search ? basePath + search : basePath;
+                       window.history.pushState({}, '', newUrl);
+               
+                     } else {
+                       alert("Submission failed. Please try again.");
+                     }
+                   })
+                   .catch(error => {
+                     console.error("Submission error:", error);
+                     alert("There was an error submitting the form.");
+                     document.querySelector('.tp-dialog')?.remove();
+                   });
+                 });
+               });
+            </script>
+         </main>
+      </div>
+      <!-- Script to switch between Cloud and Hardware -->
+      <script>
+        const cloudBtn = document.getElementById('btn-cloud');
+        const hardwareBtn = document.getElementById('btn-hardware');
+        const cloudContent = document.getElementById('content-cloud');
+        const hardwareContent = document.getElementById('content-hardware');
+
+        cloudBtn.addEventListener('click', () => {
+            // Show Cloud, Hide Hardware
+            cloudContent.style.display = 'flex';
+            hardwareContent.style.display = 'none';
+
+            // Update button styles
+            cloudBtn.classList.add('active');
+            hardwareBtn.classList.remove('active');
+        });
+
+        hardwareBtn.addEventListener('click', () => {
+            // Show Hardware, Hide Cloud
+            cloudContent.style.display = 'none';
+            hardwareContent.style.display = 'flex';
+
+            // Update button styles
+            hardwareBtn.classList.add('active');
+            cloudBtn.classList.remove('active');
+        });
+        </script>
+
+        <!-- Script to toggle product overlay -->
+        <script>
+            document.querySelectorAll('.toggle-overlay-btn').forEach((btn) => {
+                btn.addEventListener('click', () => {
+                const card = btn.closest('.product-card');
+                const overlay = card.querySelector('.product-overlay');
+                if (!overlay) return;
+
+                if (overlay.classList.contains('hidden')) {
+                    // Show overlay
+                    overlay.classList.remove('hidden');
+                    requestAnimationFrame(() => {
+                    overlay.style.opacity = '1';
+                    });
+                } else {
+                    // Fade out
+                    overlay.style.opacity = '0';
+                    // Wait for transition before hiding
+                    setTimeout(() => {
+                    overlay.classList.add('hidden');
+                    }, 300); // match transition duration
+                }
+                });
+            });
+        </script>
+
+        <!-- Script for Case Carousel -->
+        <script>
+            const carousel = document.getElementById('case-carousel');
+            const items = document.querySelectorAll('#case-carousel .carousel-item');
+            const dotsContainer = document.getElementById('case-dots');
+            const total = items.length;
+            let current = 0;
+            let interval;
+
+            function updateCarousel(index) {
+                carousel.style.transform = `translateX(-${index * 100}%)`;
+                dotsContainer.querySelectorAll('button').forEach((dot, i) => {
+                dot.classList.toggle('bg-white', i === index);
+                dot.classList.toggle('bg-white-30', i !== index);
+                });
+            }
+
+            function createDots() {
+                items.forEach((_, i) => {
+                const dot = document.createElement('button');
+                dot.className = 'dot rounded-full bg-white-30';
+                dot.addEventListener('click', () => {
+                    current = i;
+                    updateCarousel(current);
+                    resetInterval();
+                });
+                dotsContainer.appendChild(dot);
+                });
+            }
+
+            function autoSlide() {
+                current = (current + 1) % total;
+                updateCarousel(current);
+            }
+
+            function resetInterval() {
+                clearInterval(interval);
+                interval = setInterval(autoSlide, 5000);
+            }
+
+            // Init
+            createDots();
+            updateCarousel(current);
+            resetInterval();
+        </script>
+
+    <?php include_once($_SERVER['ROOT_DIR']."/$appFolder/footer.php"); ?>
+    </main>
+    <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+   </body>
+</html>
