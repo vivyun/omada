@@ -4,6 +4,8 @@
       <h1>Omada Pages, Components, and Design System</h1>
       <h3 class="mt-12">SvelteKit + Tailwind</h3>
       <a class="link" href="demo-kit">Demo Kit</a>
+      <h3 class="mt-12">Vanilla</h3>
+      <a class="link" href="demo-kit-vanilla/index.html">Demo Kit Vanilla</a>
     </div>
   </section>
 </main>

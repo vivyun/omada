@@ -151,19 +151,34 @@
     return () => clearInterval(interval);
   });
 </script>
+<!-- <!DOCTYPE html>
+<html lang="$tpHrefLang" xml:lang="$tpHrefLang">
+<head>
+	<link href="${canonical}" rel="canonical" />
+  <?php include_once($_SERVER['ROOT_DIR'] . '/productpages/staticpage-hreflang-tag/671.php'); ?><?php
+    $title = false;
+    $description = "${description}";
+    $siteId = $tpSiteId;
+    $appFolder = '$tpAppFolder';
+    include_once($_SERVER['ROOT_DIR'] . "/phppage/common-meta.php");
+  ?>
+	<title>${title}</title>
+	<link href="https://static-page.tp-link.com/landing/omada-demo-kit/style.css" rel="stylesheet" />
+</head> 
+<body aria-label="To enrich screen reader interactions, please activate Accessibility in Grammarly extension settings" class="b2b" data-gr-ext-installed="" data-new-gr-c-s-check-loaded="14.1243.0" data-new-gr-c-s-loaded="14.1242.0">
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration> --> <!-- UNCOMMENT THIS IN FINAL HTML CODE -->
 
 <main class="main-container">
-
   <!-- Hero -->
   <section id="Hero" class="section-container bg-[url(/images/hero_m.png)] lg:bg-[url(/images/hero.png)] bg-center bg-cover">
     <div class="container-row-to-col justify-between items-center max-w-[1920px] mx-auto py-16 px-8 lg:px-16">
-      <div class="flex flex-col gap-8 text-white w-full max-w-2xl">
+      <div class="flex flex-col gap-8 text-white w-full max-w-2xl text-center md:text-left">
         <h1>Explore Omada’s Business-Grade Wi-Fi 7 Demo Kit</h1>
         <p class="large-paragraph text-white/80">
           Business-grade networking gear with lifetime free cloud management.<br />
           Built for system integrators ready to scale.
         </p>
-        <a href="#Form" class="btn-primary self-start">Claim My Kit Now</a>
+        <a href="#Form" class="btn-primary self-center md:self-start">Claim My Kit Now</a>
       </div>
       <div class="w-full max-w-2xl relative">
         <img src="images/demo_kit_products.png" alt="Omada Cloud Essentials" />
@@ -198,7 +213,7 @@
 
   <!-- What's In Your Demo Kit -->
   <section id="InYourKit" class="section-container">
-    <div class="flex flex-col gap-12 max-w-[1920px] items-center mx-auto py-16 lg:py-28 px-8 lg:px-16">
+    <div class="flex flex-col gap-8 max-w-[1920px] items-center mx-auto py-16 lg:py-28 px-8 lg:px-16">
       <h2>What's In <span class="border-b-3 border-neonGreen">Your</span> Omada Wi-Fi 7 Demo Kit?</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl w-full">
         {#each products as product, index}
@@ -247,7 +262,7 @@
       <div class="flex flex-wrap justify-center gap-2 mb-6">
         {#each Object.entries(controllers) as [key, data]}
           <button
-            class={`px-4 py-2 rounded-full border ${
+            class={`px-4 py-2 rounded-full border small-paragraph ${
               selected === key ? 'border-neonGreen' : 'bg-gray-200 border-gray-200'
             }`}
             on:click={() => (selected = key)}
@@ -339,9 +354,9 @@
         </ul>
       </div>
       
-      <form class="w-full" action="/phppage/addPromotion.php" id="demo-form" method="post" role="form" target="hidden_iframe">
+      <form class="w-full" action="/phppage/addPromotion.php" id="demo-form" method="post" target="hidden_iframe">
             <iframe title="hidden_iframe" frameborder="0" id="demo-form-iframe" name="hidden_iframe" scrolling="no" style="display:none;"></iframe>
-            <!-- <?php require_once($_SERVER['ROOT_DIR']."/phppage/front-vertication-code.php"); ?> -->
+            <!-- <?php require_once($_SERVER['ROOT_DIR']."/phppage/front-vertication-code.php"); ?> --> <!-- UNCOMMENT THIS IN FINAL HTML CODE -->
             <input name="token" type="hidden" value="<?php echo setToken(); ?>" />
             <input name="email_subscribe" type="hidden" value="1" />
             <input name="promotion_type" type="hidden" value="$tpAppFolder_promotion_202505_omada-demo-kit" />
@@ -422,12 +437,78 @@
     </div>
 </section>
   
-  <script>
+<script>
   $("#demo-form").on("submit", function(){
   typeof fbq == 'function' && fbq('trackCustom', 'submit-form-landing-omada-demo-kit', {promotion: 'demo-kit_promotion'});
   })
-  </script>
-  <script src="https://static-page.tp-link.com/landing/omada-demo-kit/script.js"></script>
-  <!-- <?php include_once($_SERVER['ROOT_DIR']."/$appFolder/footer.php"); ?> -->
+</script>
+<script src="https://static-page.tp-link.com/landing/omada-demo-kit/script.js"></script>
+<script>
+    window.addEventListener("load", function () {
+      const form = document.getElementById("demo-form");
+      if (!form) return;
 
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+          method: "POST",
+          body: formData,
+        })
+        .then(response => response.text())
+        .then(data => {
+          if (data.includes("email success")) {
+            // Remove loading modal if present
+            document.querySelector('.tp-dialog')?.remove();
+
+            // Grab the content block
+            const contentBlock = document.querySelector(".form-result-success");
+            if (contentBlock) {
+              const modal = document.createElement("div");
+              modal.className = "tp-dialog";
+              modal.setAttribute("role", "dialog");
+              modal.setAttribute("aria-modal", "true");
+              modal.setAttribute("title", "TP-Link Dialog");
+
+              modal.innerHTML = `
+                <div class="tp-dialog-box">
+                  ${contentBlock.querySelector("#demo-dialog")?.innerHTML || ''}
+                </div>
+              `;
+
+              // Add close button
+              const closeBtn = document.createElement("button");
+              closeBtn.innerHTML = "&times;";
+              closeBtn.className = "tp-dialog-close";
+              closeBtn.addEventListener("click", () => modal.remove());
+              modal.querySelector(".tp-dialog-box")?.appendChild(closeBtn);
+
+              document.body.appendChild(modal);
+            }
+
+            // Simulate thank-you URL for Reddit ad tracking
+            const basePath = '/thank-you-omada-demo-kit';
+            const search = window.location.search;
+            const newUrl = search ? basePath + search : basePath;
+            window.history.pushState({}, '', newUrl);
+
+          } else {
+            alert("Submission failed. Please try again.");
+          }
+        })
+        .catch(error => {
+          console.error("Submission error:", error);
+          alert("There was an error submitting the form.");
+          document.querySelector('.tp-dialog')?.remove();
+        });
+      });
+    });
+</script>
+  <!-- <?php include_once($_SERVER['ROOT_DIR']."/$appFolder/footer.php"); ?> --> <!-- UNCOMMENT THIS IN FINAL HTML CODE -->
 </main>
+
+<!-- <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</body>
+</html> --> <!-- UNCOMMENT THIS IN FINAL HTML CODE -->
