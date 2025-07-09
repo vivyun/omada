@@ -178,15 +178,15 @@
   </section>
 
   <!-- Why Omada -->
-  <section id="WhyOmada" class="section-container bg-gray-100">
+  <section id="WhyOmada" class="section-container bg-gray-100 lg:bg-[url(/images/hook_bg.png)] bg-cover">
     <div class="flex container-row-to-col gap-8 max-w-[1920px] mx-auto py-16 lg:py-28 px-8 lg:px-16">
       <div class="flex flex-col gap-4 w-full">
-        <h4>System Integrators & MSPs,</h4>
-        <h2>Are you struggling with low-budget clients and razor-thin margins? Omada is here to <span class="text-primaryBlue">boost your profit</span>.</h2>
+        <h4>To System Integrators & MSPs,</h4>
+        <h2>Are you struggling with low-budget clients and razor-thin margins?<br />Omada is here to <span class="text-primaryBlue">boost your profit</span>.</h2>
       </div>
       <div class="w-full grid grid-cols-2 gap-8">
         {#each features as { icon, title, description }}
-          <div class="flex flex-col items-start gap-2 max-w-sm mx-auto">
+          <div class="flex flex-col items-start gap-4 max-w-sm mx-auto">
             <img src={icon} alt={title} class="scale-75 lg:scale-100" />
             <h4>{title}</h4>
             <p class="text-darkGray/60">{description}</p>
@@ -215,9 +215,10 @@
             <!-- Overlay -->
             {#if activeInfoIndex === index}
               <div in:fade={{ duration: 300 }} out:fade={{ duration: 200 }} class="absolute inset-0 bg-black/50 backdrop-blur z-20 flex justify-center p-4 md:p-8">
-                <ul class="text-white list-disc w-full pl-4">
+                <ul class="text-white w-full md:space-y-2">
                   {#each product.features as feature}
-                    <li class="small-paragraph md:mb-2">
+                    <li class="small-paragraph flex flex-row gap-2">
+                      <img src="icons/check.svg" alt="Check icon" />
                       {feature}
                     </li>
                   {/each}
@@ -229,6 +230,14 @@
             <div class="flex flex-row gap-3">
                 <p class="text-darkGray"><span class="text-primaryGreen">{product.id}</span><span class="mx-3">|</span> Retails for {product.price}</p>
             </div>
+            <ul>
+            {#each product.features.slice(0, 2) as feature}
+              <li class="small-paragraph flex flex-row gap-2 items-center">
+                <img src="icons/check.svg" alt="Check icon" />
+                {feature}
+              </li>
+            {/each}
+          </ul>
           </div>
         {/each}
       </div>
