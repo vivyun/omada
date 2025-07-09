@@ -182,7 +182,7 @@
     <div class="flex container-row-to-col gap-8 max-w-[1920px] mx-auto py-16 lg:py-28 px-8 lg:px-16">
       <div class="flex flex-col gap-4 w-full">
         <h4>System Integrators & MSPs,</h4>
-        <h2>Are you struggling with low-budget clients and razor-thin margins? <span class="border-b-3 border-neonGreen">Omada is here to boost your profit.</span></h2>
+        <h2>Are you struggling with low-budget clients and razor-thin margins? Omada is here to <span class="text-primaryBlue">boost your profit</span>.</h2>
       </div>
       <div class="w-full grid grid-cols-2 gap-8">
         {#each features as { icon, title, description }}
