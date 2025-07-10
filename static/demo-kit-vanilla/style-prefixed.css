@@ -577,7 +577,7 @@
 		display: grid
 	}
 
-	.hidden {
+	.omada-landing .hidden {
 		display: none
 	}
 
@@ -786,7 +786,7 @@
 	}
 
 	.omada-landing .bg-\[url\(\/images\/hero_m\.png\)\] {
-		background-image: url(images/hero_m.png)
+		background-image: url(https://static.tp-link.com/upload/static-page/hero_m_20250710004524j.png)
 	}
 
 	.omada-landing .from-darkGreen {
@@ -981,7 +981,7 @@
 	}
 
 	@media (min-width:48rem) {
-		.md\:block {
+		.omada-landing .md\:block {
 			display: block
 		}
 
@@ -1021,7 +1021,7 @@
 	}
 
 	@media (min-width:64rem) {
-		.lg\:hidden {
+		.omada-landing .lg\:hidden {
 			display: none
 		}
 
@@ -1045,11 +1045,11 @@
 		}
 
 		.omada-landing .lg\:bg-\[url\(\/images\/hero\.png\)\] {
-			background-image: url(images/hero.png)
+			background-image: url(https://static.tp-link.com/upload/static-page/hero_20250710004054o.png)
 		}
 
 		.omada-landing .lg\:bg-\[url\(\/images\/hook_bg\.png\)\] {
-			background-image: url(images/hook_bg.png)
+			background-image: url(https://static.tp-link.com/upload/static-page/hook_bg_20250710004613z.png)
 		}
 
 		.omada-landing .lg\:px-16 {
