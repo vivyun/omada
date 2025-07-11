@@ -387,15 +387,15 @@
 
 	@media (max-width: 1920px) {
 		.omada-landing h1 {
-			font-size: clamp(1.75rem, 5vw + 1rem, 3rem);
+			font-size: clamp(1.75rem, 5vw + 1rem, 2.8rem);
 		}
 
 		.omada-landing h2 {
-			font-size: clamp(1.75rem, 3vw + .8rem, 2.5rem);
+			font-size: clamp(1.5rem, 3vw + .8rem, 2.2rem);
 		}
 
 		.omada-landing h3 {
-			font-size: clamp(1.25rem, 2vw + .6rem, 1.8rem);
+			font-size: clamp(1.25rem, 2vw + .6rem, 1.5rem);
 		}
 
 		.omada-landing h4 {
@@ -664,10 +664,6 @@
 		max-width: 1920px
 	}
 
-	/* .omada-landing .max-w-page {
-		max-width: 1580px
-	} */
-
 	.omada-landing .max-w-sm {
 		max-width: var(--container-sm)
 	}
@@ -804,7 +800,7 @@
 
 	.omada-landing .border-b-3 {
 		border-bottom-style: var(--tw-border-style);
-		border-bottom-width: 3px
+		border-bottom-width: 2px
 	}
 
 	.omada-landing .border-gray-200 {
@@ -1045,11 +1041,18 @@
             width: 95rem;
          }
 
-         @media (min-width: 1921px) {
+         @media (min-width: 1680px) {
             .omada-landing .max-w-page {
                width: 79.1666666vw;
+			   max-width: 1920px;
             }
          }
+
+		 @media (min-width: 1921px) {
+			.omada-landing .max-w-page {
+			   width: 79.1666666vw;
+			}
+		 }
 
          @media (max-width: 1680px) {
             .omada-landing .max-w-page {
@@ -1092,6 +1095,7 @@
                 width: 100%;
                 height: auto;
                 object-fit: cover;
+				margin-left: 1px;
             }
             .omada-landing .case-text {
                 width: 100%;
@@ -1126,7 +1130,11 @@
 		}
 
 		.omada-landing .md\:w-1\/2 {
-			width: 40%
+			width: 50%
+		}
+
+		.omada-landing .md\:flex-row {
+			flex-direction: row
 		}
 
 		.omada-landing .md\:grid-cols-2 {
