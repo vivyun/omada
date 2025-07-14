@@ -524,6 +524,7 @@
 
          let current = 1; // Start at 1 because of prepended clone
          let interval;
+         let isVideoPlaying = false;
 
          // Clone first and last items
          const firstClone = items[0].cloneNode(true);
@@ -549,6 +550,13 @@
 
             carousel.style.transform = `translateX(-${index * 100}%)`;
 
+            // Reset isVideoPlaying if current item has no iframe
+            const currentSlide = allItems[index];
+            if (!currentSlide.querySelector('iframe')) {
+               isVideoPlaying = false;
+               resetInterval();
+            }
+            
             // Handle dot updates
             const visibleIndex = index === 0
                ? total - 1
@@ -583,6 +591,7 @@
          }
 
          function resetInterval() {
+            if (isVideoPlaying) return;
             clearInterval(interval);
             interval = setInterval(autoSlide, 5000);
          }
@@ -687,6 +696,7 @@
 
         <!-- Script for Video Player -->
         <script>
+
          document.querySelectorAll('.click-to-play').forEach(el => {
             let startX = 0;
             let moved = false;
@@ -704,6 +714,9 @@
 
             el.addEventListener('mouseup', () => {
                if (!moved) {
+                     clearInterval(interval);
+                     isVideoPlaying = true;
+
                      const iframe = document.createElement('iframe');
                      iframe.setAttribute('src', `https://www.youtube.com/embed/00A5rLaU-R4?autoplay=1&rel=0`);
                      iframe.setAttribute('frameborder', '0');
