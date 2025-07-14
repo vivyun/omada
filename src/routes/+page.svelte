@@ -6,6 +6,9 @@
       <a class="link" href="demo-kit">Demo Kit</a>
       <h3 class="mt-12">Vanilla</h3>
       <a class="link" href="demo-kit-vanilla/index.html">Demo Kit Vanilla</a>
+      <h3 class="mt-12">Existing Pages</h3>
+      <a class="link" href="long-range/index.html">Long Range</a>
+      <a class="link" href="long-range/old.html">Long Range - Old</a>
     </div>
   </section>
 </main>
