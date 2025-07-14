@@ -10,6 +10,7 @@
       <a class="link" href="long-range/index.html">Long Range</a>
       <a class="link" href="long-range/old.html">Long Range - Old</a>
       <a class="link" href="outdoor/index.html">Outdoor</a>
+      <a class="link" href="case-studies/index.html">Case Studies</a>
     </div>
   </section>
 </main>
