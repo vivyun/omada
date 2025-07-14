@@ -9,6 +9,7 @@
       <h3 class="mt-12">Existing Pages</h3>
       <a class="link" href="long-range/index.html">Long Range</a>
       <a class="link" href="long-range/old.html">Long Range - Old</a>
+      <a class="link" href="outdoor/index.html">Outdoor</a>
     </div>
   </section>
 </main>
