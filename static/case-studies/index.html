@@ -53,18 +53,120 @@
         max-width: 100%;
         display: flex;
         flex-direction: row;
+        gap: 2em;
     }
     .tp-list .tp-list-title h2 {
         font-size: 2em;
         font-weight: 300;
+        border-bottom: 1px solid rgba(54,68,75,.16);
+        padding-bottom: 0.5em;
+        margin-bottom: 0.5em;
     }
     .tp-case-study {
         font-size: 16px;
         background-color: #ffffff;
+        color: #282828;
+        margin-top: 20px;
     }
     .tp-case-study .case-study-filter-item {
         display: flex;
         flex-direction: column; 
+        gap: 0.5em;
+    }
+    .tp-case-study .case-study-filter-item .case-study-filter-title {
+        font-size: 1.25em;
+        font-weight: 400;
+    }
+    .tp-case-study .case-study-filter .case-study-filter-box {
+        padding: 0em;
+    }
+    .tp-case-study .case-study-filter-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .tp-case-study .case-study-filter-heading {
+        font-size: 2em;
+        font-weight: 300;
+        border-bottom: 1px solid rgba(54,68,75,.16);
+        padding-bottom: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    .tp-case-study .tp-list {
+        margin: 0em;
+    }
+    .case-study-filter-result .case-study-filter-result-title {
+        float: left;
+        font-weight: 500;
+        margin-right: 0;
+        font-size: 1.25em;
+    }
+    .tp-case-study .case-study-filter-result-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75em;
+    }
+    .tp-case-study .case-study-filter-result-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .case-study-filter-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .case-study-filter-result .case-study-filter-result-reset {
+        color: #0069CB;
+    }
+    .tp-list .tp-list-box-des-learn a {
+        text-transform: capitalize;
+    }
+    .tp-list .tp-list-box-des-container {
+        padding: 1.125em 0 1.25em
+    }
+    .tp-list .tp-list-box {
+        background: none;
+        border-radius: 0px;
+    }
+    .case-study-filter .case-study-filter-list input:checked+.checkbox {
+        background-image: none;
+        background-color: #00a870;
+        border-radius: 2px;
+    }
+    .tp-case-study-content {
+        width: 100%;
+    }
+    .tp-container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    .tp-container .tp-banner-slider-title {
+        color: #ffffff;
+        font-size: 3.75em;
+        font-weight: 300;
+    }
+    .tp-banner-slider-item {
+        padding: 20px;
+        background-size: cover;
+        
+    }
+    @media (max-width: 736px) {
+        .tp-case-study .tp-case-study-container {
+            flex-direction: column;
+        }
+        .tp-container .tp-banner-slider-title {
+            font-size: 3em;
+        }
+        .tp-case-study .tp-list .tp-list-box {
+            background: none;
+        }
+        .case-study-filter-mobile .case-study-filter-mobile-bottom button {
+            color: #00a870;
+            border: 1px solid #00a870;
+        }
+        .case-study-filter-mobile .case-study-filter-mobile-bottom button.case-study-filter-mobile-submit {
+            background: #00a870;
+            color: #ffffff;
+        }
     }
 </style>
 <div class="widgets-top-banner " data-pc="https://static.tp-link.com/upload/menu/2507_Omada_Demo_Kit_Top_Banner_2560x80_20250702173550g.png" data-mobile="https://static.tp-link.com/upload/menu/2507_Omada_Demo_Kit_Top_Banner_640x128_20250702173558k.png">
@@ -1268,61 +1370,17 @@
   })
 </script>
       <style>
-    #tp-banner-slider{font-size:16px;line-height:1.5;position:relative;color:#fff;}
-  #tp-banner-slider.news,
-  #tp-banner-slider.awards{text-align:center;text-transform:uppercase;}
-  #tp-banner-slider .tp-banner-slider-title{font-size:3.75em;font-weight:300;line-height:1.1;}
-  #tp-banner-slider .tp-banner-slider-title .tp-banner-slider-title-white{font-size:1.2em;color:#fff;}
-  #tp-banner-slider .tp-banner-slider-title .tp-banner-slider-title-black{font-size:1.2em;color:#000;}
-  #tp-banner-slider.awards .tp-banner-slider-title{padding-top:2.5em;}
-  #tp-banner-slider .tp-banner-slider-desc{margin-top:1em;}
-  #tp-banner-slider .tp-banner-slider-desc .tp-banner-slider-desc-white{font-size:1.5em;color:#fff;}
-  #tp-banner-slider .tp-banner-slider-desc .tp-banner-slider-desc-white a{color:#fff;}
-  #tp-banner-slider .tp-banner-slider-desc .tp-banner-slider-desc-white a:hover{color:#4acbd6;}
-  #tp-banner-slider .tp-banner-slider-desc .tp-banner-slider-desc-black{font-size:1.5em;color:#000;}
-  #tp-banner-slider .tp-banner-slider-desc .tp-banner-slider-desc-black a,
-  #tp-banner-slider .tp-banner-slider-desc .tp-banner-slider-desc-black a:hover{color:#4acbd6;}
-  #tp-banner-slider .tp-banner-slider-item,
-  #tp-banner-slider .tp-banner-slider-wrapper{height:100%;}
-  #tp-banner-slider .tp-banner-slider-item{height:23.4375em;margin:0 auto;background-position:50% 0;background-size:cover;background-repeat:no-repeat;}
-  #tp-banner-slider .tp-banner-slider-wrapper:after{content:'';display:inline-block;vertical-align:middle;height:100%;}
-  #tp-banner-slider .tp-banner-slider-box{padding:0 20px;box-sizing:border-box;display:inline-block;vertical-align:middle;width:62.5em;max-width:95%;}
-  #tp-banner-slider .tp-banner-slider-link{position:absolute;top:0;left:0;right:0;bottom:0;text-decoration:none;}
-  @media (max-width:1440px){
-    #tp-banner-slider{font-size:1.111111vw;}
-  }
-  @media (max-width:736px){
-    #tp-banner-slider{font-size:12px;color:#000;}
-    #tp-banner-slider .tp-banner-slider-desc{font-size:1.25em;}
-    #tp-banner-slider .tp-banner-slider-item{height:auto;}
-    #tp-banner-slider .tp-banner-slider-wrapper{padding:2em 0 1em;}
-    #tp-banner-slider .tp-banner-slider-wrapper:after{display:none;}
-    #tp-banner-slider .tp-banner-slider-box{display:block;max-width:none;width:auto;}
-    #tp-banner-slider .tp-banner-slider-title{font-size:2em;}
-    #tp-banner-slider .tp-banner-slider-title .tp-banner-slider-title-white,
-    #tp-banner-slider .tp-banner-slider-title .tp-banner-slider-title-black,
-    #tp-banner-slider .tp-banner-slider-desc .tp-banner-slider-desc-white,
-    #tp-banner-slider .tp-banner-slider-desc .tp-banner-slider-desc-black{font-size:1em;color:#000;}
-    #tp-banner-slider .tp-banner-slider-desc .tp-banner-slider-desc-white a,
-    #tp-banner-slider .tp-banner-slider-desc .tp-banner-slider-desc-black a{color:#4acbd6;}
-  }
-  /* special page */
-  #tp-banner-slider.special .tp-banner-slider-box{vertical-align:top;margin-top:3em;max-width:60%;color:#000;font-weight:400;}
-  #tp-banner-slider.special .tp-banner-slider-title{font-size:2em;}
-  @media (max-width:736px){
-    #tp-banner-slider.special .tp-banner-slider-item{padding-top:50%;background-size:257%;background-position:66% 0;}
-    #tp-banner-slider.special .tp-banner-slider-box{margin:0;max-width:none;}
-    #tp-banner-slider.special .tp-banner-slider-wrapper{padding-bottom:0;}
-  }
+
 </style>
 <div id="tp-banner-slider" class="">
-  <div class="tp-banner-slider-item" data-w1920="https://static.tp-link.com/banner-trainning-center_1471593386122x.jpg" data-w736="https://static.tp-link.com/banner-trainning-center_1471677962161q.jpg">
+    <div class="tp-banner-slider-item" data-w1920="https://static.tp-link.com/banner-trainning-center_1471593386122x.jpg" data-w736="https://static.tp-link.com/banner-trainning-center_1471677962161q.jpg">
         <div class="tp-container tp-banner-slider-wrapper">
-      <div class="tp-banner-slider-box">
-        <h1 class="tp-banner-slider-title">Case Studies</h1>      </div>
+            <div class="tp-banner-slider-box">
+                <h1 class="tp-banner-slider-title">Case Studies</h1>
+            </div>
+        </div>
     </div>
-      </div>
-  </div>
+</div>
 <script>
   $(function(){
     var $item = $("#tp-banner-slider .tp-banner-slider-item");
@@ -1347,7 +1405,7 @@
             // }
             $item.css({ "background-image": srcStr, "height": img.height / 16 + "em" });
           }else{
-            $item.css({ "background-image": srcStr, "background-size": "100%", "padding-top": img.height * 100 / img.width + "%" });
+            $item.css({ "background-image": srcStr, "padding-top": img.height * 100 / img.width + "%" });
           }
         };
         img.src = src;
@@ -1365,6 +1423,8 @@
               <div class="case-study-filter">
                 <div class="case-study-filter-box">
                   <div class="case-study-filter-wrapper">
+                    <h2 class="case-study-filter-heading">Filter</h2>
+                    <div class="divider"></div>
                     <div class="case-study-filter-item">
                       <div class="case-study-filter-title">
                         <span>Industry</span>
@@ -1431,12 +1491,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="case-study-select">
-                <button>Filters</button>
-                <i class="case-study-select-icon">&nbsp;</i>
-              </div>
-              <div style="">
+                <div style="">
                 <div class="case-study-filter-result">
                   <div class="case-study-filter-result-box">
                     <div class="case-study-filter-result-wrapper">
@@ -1449,6 +1504,11 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              </div>
+              <div class="case-study-select">
+                <button>Filters</button>
+                <i class="case-study-select-icon">&nbsp;</i>
               </div>
               <div class="tp-case-study-content">
                 <div class="tp-list" data-industry="Small and Mid Office">
