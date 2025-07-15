@@ -1035,7 +1035,35 @@
 		      display: flex;
          }
 
-		 .omada-landing .tab-btn {
+         @media screen and (max-width: 64rem) {
+            .omada-landing .hero-container {
+               flex-direction: column;
+            }
+         }
+
+         .omada-landing .max-w-page {
+            width: 95rem;
+         }
+
+         @media (min-width: 1680px) {
+            .omada-landing .max-w-page {
+               width: 79.1666666vw;
+			   max-width: 1920px;
+            }
+         }
+
+		 @media (min-width: 1921px) {
+			.omada-landing .max-w-page {
+			   width: 79.1666666vw;
+			}
+		 }
+
+         @media (max-width: 1680px) {
+            .omada-landing .max-w-page {
+               width: 80%;
+            }
+         }
+            .omada-landing .tab-btn {
                 background-color: var(--color-gray-200);
                 border-color: var(--color-gray-200);
             }
@@ -1086,41 +1114,6 @@
                 transition: transform 0.5s ease-in-out;
                 will-change: transform;
             }
-
-         @media screen and (max-width: 64rem) {
-            .omada-landing .hero-container {
-               flex-direction: column;
-            }
-         }
-
-         .omada-landing .max-w-page {
-            width: 95rem;
-         }
-
-         @media (min-width: 1680px) {
-            .omada-landing .max-w-page {
-               width: 79.1666666vw;
-			   max-width: 1920px;
-            }
-         }
-
-		 @media (min-width: 1921px) {
-			.omada-landing .max-w-page {
-			   width: 79.1666666vw;
-			}
-		 }
-
-         @media (max-width: 1680px) {
-            .omada-landing .max-w-page {
-               width: 80%;
-            }
-         }
-
-		 @media (max-width: 768px) {
-			.omada-landing .max-w-page {
-			   width: 90%;
-			}
-		 }
 
 	@media (hover:hover) {
 		.hover\:scale-105:hover {
