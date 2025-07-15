@@ -90,6 +90,7 @@
         border-bottom: 1px solid rgba(54,68,75,.16);
         padding-bottom: 0.5em;
         margin-bottom: 0.5em;
+        line-height: 1.5;
     }
     .tp-case-study .tp-list {
         margin: 0em;
@@ -129,6 +130,9 @@
     .case-study-filter .case-study-filter-list input:checked+.checkbox {
         background-image: url(https://static.tp-link.com/assets/images/icon/checkbox-omada-checked.svg)
     }
+    .case-study-filter-mobile .case-study-filter-mobile-li input:checked+.checkbox {
+        background-image: url(https://static.tp-link.com/assets/images/icon/checkbox-omada-checked.svg)
+    }
     .tp-case-study-content {
         width: 100%;
     }
@@ -147,6 +151,10 @@
         background-size: cover;
         
     }
+    .case-study-filter-result-reset {
+      margin-top: 1rem;
+    }
+    
     @media (max-width: 736px) {
         .tp-case-study .tp-case-study-container {
             flex-direction: column;
@@ -1371,7 +1379,7 @@
 
 </style>
 <div id="tp-banner-slider" class="">
-    <div class="tp-banner-slider-item" data-w1920="https://static.tp-link.com/banner-trainning-center_1471593386122x.jpg" data-w736="https://static.tp-link.com/banner-trainning-center_1471677962161q.jpg">
+    <div class="tp-banner-slider-item" data-w1920="https://static.tp-link.com/upload/static-page/casestudies_hero_20250715174656o.jpg" data-w736="https://static.tp-link.com/upload/static-page/casestudies_hero_20250715174656o.jpg">
         <div class="tp-container tp-banner-slider-wrapper">
             <div class="tp-banner-slider-box">
                 <h1 class="tp-banner-slider-title">Case Studies</h1>
@@ -1401,7 +1409,7 @@
             // }else{
             //   $item.css({ "background-image": srcStr, "height": img.height / 16 + "em" });
             // }
-            $item.css({ "background-image": srcStr, "height": img.height / 16 + "em" });
+            $item.css({ "background-image": srcStr, "height": img.height / 32 + "em" });
           }else{
             $item.css({ "background-image": srcStr, "padding-top": img.height * 100 / img.width + "%" });
           }
@@ -1418,7 +1426,7 @@
         <div class="tp-container">
           <div class="tp-container-inner">
             <div class="tp-case-study-container">
-              <div class="case-study-filter">
+              <div class="tp-list case-study-filter">
                 <div class="case-study-filter-box">
                   <div class="case-study-filter-wrapper">
                     <h2 class="case-study-filter-heading">Filter</h2>
