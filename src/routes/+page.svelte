@@ -7,10 +7,12 @@
       <h3 class="mt-12">Vanilla</h3>
       <a class="link" href="demo-kit-vanilla/index.html">Demo Kit Vanilla</a>
       <h3 class="mt-12">Existing Pages</h3>
-      <a class="link" href="long-range/index.html">Long Range</a>
-      <a class="link" href="long-range/old.html">Long Range - Old</a>
-      <a class="link" href="outdoor/index.html">Outdoor</a>
-      <a class="link" href="case-studies/index.html">Case Studies</a>
+      <a class="link" href="long-range/index.html">Long Range (source code)</a>
+      <a class="link" href="long-range/old.html">Long Range (old source code)</a>
+      <a class="link" href="outdoor/index.html">Outdoor (source code)</a>
+      <a class="link" href="case-studies/index.html">Case Studies (from page source)</a>
+      <a class="link" href="contact/index.html">Contact (source code)</a>
+      <a class="link" href="contact/live.html">Contact (from page source)</a>
     </div>
   </section>
 </main>

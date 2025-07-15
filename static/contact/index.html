@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="$tpHrefLang" xml:lang="$tpHrefLang">
+<head>
+	<link href="${canonical}" rel="canonical" /><?php include_once($_SERVER['ROOT_DIR'] . '/productpages/staticpage-hreflang-tag/479.php'); ?>
+	<title>${title}</title>
+	<?php
+    $siteId = $tpSiteId;
+    $appFolder = "$tpAppFolder";
+    $title = false;
+    $description = "${description}";
+    include_once($_SERVER['ROOT_DIR'] . '/phppage/common-meta.php');
+  ?>
+	<link href="https://static-page.tp-link.com/business-networking/consult/bootstrap.min.css" rel="stylesheet" />
+	<link href="https://static-page.tp-link.com/business-networking/consult/bootstrap-select.min.css" rel="stylesheet" />
+	<link href="https://static-page.tp-link.com/business-networking/consult/style.css?20231102" rel="stylesheet" />
+</head>
+<body class="no-viewport b2b">
+<div class="page-content-wrapper"><?php include_once($_SERVER['ROOT_DIR'] . '/' . $appFolder . '/smb-header.php'); ?>
+<div class="contact-us">
+<div class="contact-us-container">
+<div class="tp-container-inner">
+<div class="contact-us-box">
+<div class="contact-us-head">
+<h2>Thank you for your interest in TP-Link!</h2>
+
+<p>Please fill out the form below. We will contact you shortly.</p>
+</div>
+
+<div class="contact-us-form-box">
+<div class="contact-us-form">
+<div class="button-box">
+<ul class="button-list" style="display:none">
+	<li class="button-item"><a class="active" href="javascript:;">Get Info</a></li>
+	<li class="button-item"><a href="https://partner.tp-link.com/us/#apply">Become a Partner</a></li>
+	<li class="button-item"><a href="/us/where-to-buy/#Reseller%20Partners">Find a Reseller</a></li>
+	<li class="button-item"><a href="$tpRootUrlsupport/contact-technical-support/">Technical Support</a></li>
+</ul>
+
+<h1 style="font-size:2em; font-weight:500; text-align:center">Get Information</h1>
+</div>
+
+<form action="/phppage/addPromotion.php" id="contact-form" method="post" role="form" target="hidden_iframe"><iframe frameborder="0" id="ifr" name="hidden_iframe" scrolling="no" style="display:none;"></iframe><?php require_once($_SERVER['ROOT_DIR'] . "/phppage/front-vertication-code.php"); ?><input name="token" type="hidden" value="<?php echo setToken(); ?>" /> <input name="promotion_type" type="hidden" value="$tpAppFolder_202311_consult" /> <input name="promotion_string" type="hidden" value="" /> <input name="BySiteId" type="hidden" value="<?php echo $siteId; ?>" />
+<div class="tp-row">
+<div class="tp-col tp-col-1 required">
+<p class="title"><span style="color:red;">*</span> Business Category</p>
+<select class="hidden business-type" data-header="" name="col_1" required=""><option value="">-</option><option value="Distributor/Wholesaler">Distributor/Wholesaler</option><option value="Reseller/Retailer/VAR">Reseller/Retailer/VAR</option><option value="MSP">MSP</option><option value="Solution Provider/Consulting">Solution Provider/Consulting</option><option value="System Integrator/Installer">System Integrator/Installer</option><option value="Contractor">Contractor</option><option value="ISP">ISP</option><option value="End User">End User</option><option value="Other">Other</option> </select></div>
+</div>
+
+<div class="tp-row">
+<div class="tp-col tp-col-2 required">
+<p class="title"><span style="color:red;">*</span> First Name</p>
+<input maxlength="50" name="firstName" required="" type="text" /></div>
+
+<div class="tp-col tp-col-2 required">
+<p class="title"><span style="color:red;">*</span> Last Name</p>
+<input maxlength="50" name="lastName" required="" type="text" /></div>
+</div>
+
+<div class="tp-row">
+<div class="tp-col tp-col-1 required">
+<p class="title"><span style="color:red;">*</span> Email</p>
+<input maxlength="100" name="email" required="" type="text" /></div>
+</div>
+
+<div class="tp-row">
+<div class="tp-col tp-col-1 required">
+<p class="title"><span style="color:red;">*</span> Phone</p>
+<input maxlength="50" name="col_2" required="" type="text" /></div>
+</div>
+
+<div class="tp-row">
+<div class="tp-col tp-col-1 required">
+<p class="title"><span style="color:red;">*</span> Country/Region</p>
+<input maxlength="50" name="col_3" required="" type="text" /></div>
+</div>
+
+<div class="tp-row">
+<div class="tp-col tp-col-1 required">
+<p class="title"><span style="color:red;">*</span> <span class="business-type-title">What&rsquo;s Your Project Interest, or How We Can Best Help You?</span></p>
+<textarea class="business-type-textarea" maxlength="800" name="col_4" placeholder="" required="" rows="10"></textarea>
+
+<div class="business-type-title-placeholder" style="display:none;">
+<div>What&rsquo;s Your Project Interest, or How We Can Best Help You?</div>
+
+<div>What&rsquo;s Your Interest, or How We Can Best Help You?</div>
+
+<div>What&rsquo;s Your Project Interest, or How We Can Best Help You?</div>
+
+<div>What&rsquo;s Your Project Interest, or How We Can Best Help You?</div>
+
+<div>What&rsquo;s Your Project Interest, or How We Can Best Help You?</div>
+
+<div>What&rsquo;s Your Project Interest, or How We Can Best Help You?</div>
+
+<div>What&rsquo;s Your Project Interest, or How We Can Best Help You?</div>
+
+<div>What&rsquo;s Your Interest, or How We Can Best Help You?</div>
+
+<div>What&rsquo;s Your Interest, or How We Can Best Help You?</div>
+</div>
+
+<div class="business-type-textarea-placeholder" style="display:none;">
+<div>Briefly outline your interest or project requirements, such as project background, application scenario, involved devices, scales, budget, and other information.</div>
+
+<div>Briefly outline your interest or project requirements, such as background, involved devices, scales, budget, and other information.<br />
+For technical support, please click &lsquo;Technical Support&rsquo;.</div>
+
+<div>Briefly outline your interest or project requirements, such as project background, application scenario, involved devices, scales, budget, and other information.<br />
+For being TP-Link&rsquo;s partner, please click &lsquo;Become a Partner&rsquo;.<br />
+For purchasing products, please click &lsquo;Find a Reseller&rsquo; or &lsquo;TP-Link Partner Shop&rsquo;.<br />
+For technical support, please click &lsquo;Technical Support&rsquo;.</div>
+
+<div>Briefly outline your interest or project requirements, such as project background, application scenario, involved devices, scales, budget, and other information.<br />
+For being TP-Link&rsquo;s partner, please click &lsquo;Become a Partner&rsquo;.<br />
+For purchasing products, please click &lsquo;Find a Reseller&rsquo; or &lsquo;TP-Link Partner Shop&rsquo;.<br />
+For technical support, please click &lsquo;Technical Support&rsquo;.</div>
+
+<div>Briefly outline your interest or project requirements, such as project background, application scenario, involved devices, scales, budget, and other information.<br />
+For being TP-Link&rsquo;s partner, please click &lsquo;Become a Partner&rsquo;.<br />
+For purchasing products, please click &lsquo;Find a Reseller&rsquo; or &lsquo;TP-Link Partner Shop&rsquo;.<br />
+For technical support, please click &lsquo;Technical Support&rsquo;.</div>
+
+<div>Briefly outline your interest or project requirements, such as project background, application scenario, involved devices, scales, budget, and other information.<br />
+For purchasing products, please click &lsquo;Find a Reseller&rsquo;.</div>
+
+<div>Briefly outline your interest or project requirements, such as project background, application scenario, involved devices, scales, budget, and other information.<br />
+For technical support, please click &lsquo;Technical Support&rsquo;.</div>
+
+<div>Briefly outline your interest.<br />
+For purchasing products, please go to online stores or local retail stores, or find a local Installer/System Integrator/MSP/ISP.<br />
+For technical support, please click &lsquo;Technical Support&rsquo;.</div>
+
+<div>Briefly outline your interest.<br />
+For information about Home networking products and Smart Home products, please visit TP-Link&rsquo;s Home and Smart Home website.</div>
+</div>
+</div>
+</div>
+
+<div class="tp-row">
+<div class="tp-col tp-col-1">
+<p class="title">Company</p>
+<input maxlength="100" name="col_5" type="text" /></div>
+</div>
+
+<div class="tp-row">
+<div class="tp-col tp-col-1">
+<p class="title">Industry</p>
+<input maxlength="100" name="col_6" type="text" /></div>
+</div>
+
+<div class="tp-row">
+<div class="tp-col tp-col-1 required"><label for="contact-us-privacy"><input id="contact-us-privacy" name="col_7" required="" style="display:inline-block;width:1px;opacity:0;min-width:auto;margin-right:-4px;" type="checkbox" /> <b class="checkbox">&nbsp;</b> <span>I have read and agree to the <a class="contact-us-privacy-link" href="https://privacy.tp-link.com/web/official/privacy-policy?region=US" target="_blank">Privacy Policy</a>.</span> </label></div>
+</div>
+
+<p class="center submit"><button>Submit</button></p>
+
+<div class="form-result hidden">
+<h2>Submit Successfully</h2>
+
+<p>Thanks for contacting us. We &#39;ll get back to you as soon as possible.</p>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://static-page.tp-link.com/business-networking/consult/popper.min.js"></script><script src="https://static-page.tp-link.com/business-networking/consult/bootstrap.min.js"></script><script src="https://static-page.tp-link.com/business-networking/consult/bootstrap-select.min.js"></script><script src="https://static-page.tp-link.com/business-networking/consult/script.js?20231102"></script><?php include_once($_SERVER['ROOT_DIR'] . '/' . $appFolder . '/footer.php'); ?></div>
+</body>
+</html>
