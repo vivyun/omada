@@ -7,6 +7,7 @@
           <h3>Demo Kit</h3>
           <a class="link" href="demo-kit">SvelteKit Page</a>
           <a class="link" href="demo-kit-vanilla/index.html">Live Vanilla Page</a>
+          <a class="link" href="demo-kit-vanilla/thankyou.html?form=1">Thank You Page</a>
         </div>
         <div class="flex flex-col gap-4">
           <h3>PtP & PtMP Wireless Bridges</h3>
