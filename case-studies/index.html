@@ -56,11 +56,12 @@
         gap: 2em;
     }
     .tp-list .tp-list-title h2 {
-        font-size: 2em;
+        font-size: 1.75em;
         font-weight: 300;
         border-bottom: 1px solid rgba(54,68,75,.16);
         padding-bottom: 0.5em;
         margin-bottom: 0.5em;
+        line-height: 1.2;
     }
     .tp-case-study {
         font-size: 16px;
@@ -85,15 +86,16 @@
         flex-direction: column;
     }
     .tp-case-study .case-study-filter-heading {
-        font-size: 2em;
+        font-size: 1.75em;
         font-weight: 300;
         border-bottom: 1px solid rgba(54,68,75,.16);
         padding-bottom: 0.5em;
         margin-bottom: 0.5em;
-        line-height: 1.5;
+        line-height: 1.2;
     }
     .tp-case-study .tp-list {
         margin: 0em;
+        margin-bottom: 2em;
     }
     .case-study-filter-result .case-study-filter-result-title {
         float: left;
@@ -145,16 +147,31 @@
         color: #ffffff;
         font-size: 3.75em;
         font-weight: 300;
+        line-height: 1.2;
     }
     .tp-banner-slider-item {
         padding: 20px;
         background-size: cover;
         
     }
+    .case-study-filter-result-item {
+      background-color: #00805510;
+      color: #2B816D;
+      border-radius: 0.25rem;
+      padding: 0.25rem 0.5rem;
+      margin-bottom: 0.5rem;
+      width: fit-content;
+    }
+    .case-study-filter-result-item:last-child {
+      background-color: transparent;
+    }
     .case-study-filter-result-reset {
       margin-top: 1rem;
     }
-    
+    .case-study-filter-result .case-study-filter-result-item-close {
+      filter: invert(35%) sepia(77%) saturate(500%) hue-rotate(120deg) brightness(80%) contrast(90%);
+    }
+
     @media (max-width: 736px) {
         .tp-case-study .tp-case-study-container {
             flex-direction: column;

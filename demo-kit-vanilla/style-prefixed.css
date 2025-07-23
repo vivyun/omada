@@ -58,8 +58,9 @@
 		--color-white: #fff;
 		--spacing: .25rem;
 		--container-sm: 24rem;
-		--container-md: 36rem;
-		--container-lg: 48rem;
+		--container-md: 28rem;
+		--container-lg: 32rem;
+		--container-xl: 36rem;
 		--container-2xl: 42rem;
 		--container-3xl: 48rem;
 		--container-4xl: 56rem;
@@ -366,7 +367,7 @@
 	}
 
 	.omada-landing h1 {
-		font-size: clamp(1.75rem, 5vw + 1rem, 3.75rem);
+		font-size: clamp(1.75rem, 2vw + 1rem, 3.75rem);
 		font-weight: 300;
 		line-height: 1.1
 	}
@@ -391,7 +392,7 @@
 
 	@media (max-width: 1920px) {
 		.omada-landing h1 {
-			font-size: clamp(1.75rem, 5vw + 1rem, 2.8rem);
+			font-size: clamp(2.2rem, 2.5vw + .8rem, 2.8rem);
 		}
 
 		.omada-landing h2 {
@@ -548,6 +549,10 @@
 		z-index: 20
 	}
 
+	.omada-landing .z-30 {
+		z-index: 30
+	}
+
 	.omada-landing .m-auto {
 		margin: auto
 	}
@@ -648,6 +653,9 @@
 		height: 100%
 	}
 
+	.omada-landing .max-w-xl {
+		max-width: var(--container-xl)
+	}
 	.omada-landing .max-w-2xl {
 		max-width: var(--container-2xl)
 	}
@@ -708,6 +716,14 @@
 
 	.omada-landing .grid-cols-2 {
 		grid-template-columns: repeat(2, minmax(0, 1fr))
+	}
+
+	.omada-landing .grid-cols-3 {
+		grid-template-columns: repeat(3, minmax(0, 1fr))
+	}
+
+	.omada-landing .grid-cols-4 {
+		grid-template-columns: repeat(4, minmax(0, 1fr))
 	}
 
 	.omada-landing .flex-col {
@@ -823,15 +839,19 @@
 		border-color: #fff3
 	}
 
-	.bg-black\/50 {
+	.omada-landing .bg-black\/50 {
 		background-color: #00000080
 	}
+	
+	.omada-landing .bg-gray-900 {
+		background-color: var(--color-gray-900)
+	}
 
-	.bg-dullGreen\/10 {
+	.omada-landing .bg-dullGreen\/10 {
 		background-color: #2b816d1a
 	}
 
-	.bg-gray-100 {
+	.omada-landing .bg-gray-100 {
 		background-color: var(--color-gray-100)
 	}
 
@@ -1129,6 +1149,19 @@
 			--tw-scale-z: 105%;
 			scale: var(--tw-scale-x) var(--tw-scale-y)
 		}
+		.hover\:z-30:hover {
+			z-index: 30
+		}
+	}
+
+	@media (min-width:40rem) {
+		.omada-landing .sm\:block {
+			display: block
+		}
+
+		.omada-landing .sm\:hidden {
+			display: none
+		}
 	}
 
 	@media (min-width:48rem) {
@@ -1234,8 +1267,23 @@
 	}
 
 	@media (min-width:80rem) {
-		.xl\:max-w-\[70\%\] {
+		.omada-landing .xl\:max-w-\[70\%\] {
 			max-width: 70%
+		}
+		.omada-landing .\xl\:grid-cols-4 {
+			grid-template-columns: repeat(4, minmax(0, 1fr))
+		}
+	}
+
+	@media (min-width:100rem) {
+		.omada-landing .\32xl\:grid-cols-2 {
+			grid-template-columns: repeat(2, minmax(0, 1fr))
+		}
+		.omada-landing .\32xl\:flex-row {
+			flex-direction: row
+		}
+		.omada-landing .\32xl\:bg-\[url\(\/images\/hook_bg\.png\)\] {
+			background-image: url(https://static.tp-link.com/upload/static-page/hook_bg_20250710004613z.png)
 		}
 	}
 
