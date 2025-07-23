@@ -367,7 +367,7 @@
 	}
 
 	.omada-landing h1 {
-		font-size: clamp(1.75rem, 5vw + 1rem, 3.75rem);
+		font-size: clamp(1.75rem, 2vw + 1rem, 3.75rem);
 		font-weight: 300;
 		line-height: 1.1
 	}
@@ -392,7 +392,7 @@
 
 	@media (max-width: 1920px) {
 		.omada-landing h1 {
-			font-size: clamp(1.75rem, 5vw + 1rem, 2.8rem);
+			font-size: clamp(2.2rem, 2.5vw + .8rem, 2.8rem);
 		}
 
 		.omada-landing h2 {
@@ -1151,6 +1151,16 @@
 		}
 		.hover\:z-30:hover {
 			z-index: 30
+		}
+	}
+
+	@media (min-width:40rem) {
+		.omada-landing .sm\:block {
+			display: block
+		}
+
+		.omada-landing .sm\:hidden {
+			display: none
 		}
 	}
 
