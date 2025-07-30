@@ -462,6 +462,12 @@
 		font-size: clamp(.975rem, 1vw + .2rem, 1rem);
 		width: fit-content;
 		text-wrap: nowrap;
+		transition: .2s ease-in-out;
+	}
+
+	.omada-landing .btn-primary:hover {
+		background-color: var(--color-dullGreen);
+		transition: .2s ease-in-out;
 	}
 
 	.omada-landing .container-row-to-col {
