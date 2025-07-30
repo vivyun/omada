@@ -27,6 +27,10 @@
           <a class="link" href="contact/index.html">Source code</a>
           <a class="link" href="contact/live.html">Page source</a>
         </div>
+        <div class="flex flex-col gap-4">
+          <h3>CEDIA</h3>
+          <a class="link" href="cedia-preview/index.html">Teaser Page</a>
+        </div>
       </div>
     </div>
   </section>
