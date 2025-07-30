@@ -38,11 +38,11 @@
    <?php include_once($_SERVER['ROOT_DIR']."/$appFolder/smb-header.php"); ?>
    <div style="display: contents">
       <main class="main-container text-white relative" style="overflow: hidden; background: linear-gradient(#000000, var(--color-gray-900));">
-         <img src="images/green_lighting.png" class="absolute hidden xl:block floor-bg" alt="" />
+         <img src="images/green_lighting.webp" class="absolute hidden xl:block floor-bg" alt="" />
          <section class="section-container section-float">
             <div class="flex flex-col lg:flex-row justify-between max-w-page mx-auto py-16 lg:py-28 relative">
                <div class="w-full flex flex-col gap-6 xl:py-28">
-                  <img class="block xl:hidden" style="width: 100%;" src="images/kv_transparent_mobile.png" alt="Omada & VIGI at CEDIA" />
+                  <img class="block xl:hidden" style="width: 100%;" src="images/kv_transparent_mobile.webp" alt="Omada & VIGI at CEDIA" />
                   <img style="width: 30%; max-width: 200px" src="images/omada vigi logo.svg" alt="Omada & VIGI Logo" />
                   <h1>Meet us at<br/> <span class="text-neonGreen">CEDIA Expo 2025</span></h1>
                   <p class="large-paragraph">Join Omada & VIGI for a FREE Expo Pass<span class="text-neonGreen">*</span></p>
@@ -69,7 +69,7 @@
                      </div>
                   </div>
                </div>
-               <img class="absolute hidden xl:block" style="top: 50%; left: 50%; transform: translate(-50%, -50%) translate(10%, 15%);max-width: 1500px; width: 100%;" src="images/kv_transparent.png" alt="Omada & VIGI at CEDIA" />
+               <img class="absolute hidden xl:block" style="top: 50%; left: 50%; transform: translate(-50%, -50%) translate(10%, 15%);max-width: 1500px; width: 100%;" src="images/kv_transparent.webp" alt="Omada & VIGI at CEDIA" />
             </div>
          </section>
          <section class="section-container section-float">
@@ -113,25 +113,25 @@
                <h2 class="text-center">What You’ll Experience at <span class="mb-2 border-b-2 border-primaryGreen" style="text-wrap: nowrap;">Booth #929</span></h2>
                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-12">
                   <div class="flex flex-col gap-2 w-full">
-                     <img class="mb-6" src="images/omada central.png" alt="Omada Central" />
+                     <img class="mb-6" src="images/omada central.webp" alt="Omada Central" />
                      <p class="text-neonGreen">Cloud Platform</p>
                      <h4>Omada Central</h4>
                      <p class="text-white/60">A game-changing unified cloud management platform for networking and surveillance.</p>
                   </div>
                   <div class="flex flex-col gap-2 w-full">
-                     <img class="mb-6" src="images/unified solution.png" alt="Unified Solution" />
+                     <img class="mb-6" src="images/unified solution.webp" alt="Unified Solution" />
                      <p class="text-neonGreen">Unified Solution</p>
                      <h4 style="text-wrap: pretty;">Unified Networking and Surveillance Solutions for Single-Family Homes and MDUs</h4>
                      <p class="text-white/60">One cloud-powered solution that combines Omada networking, VIGI surveillance, and centralized management—built for smarter residential networking and security.</p>
                   </div>
                   <div class="flex flex-col gap-2 w-full">
-                     <img class="mb-6" src="images/omada networking solution.png" alt="Omada Networking Solution" />
+                     <img class="mb-6" src="images/omada networking solution.webp" alt="Omada Networking Solution" />
                      <p class="text-neonGreen">Wi-Fi 7 Ready</p>
                      <h4>Omada Networking Solution</h4>
                      <p class="text-white/60">Features Wi-Fi 7 solutions and Agile Series easy-managed PoE switches with free cloud access.</p>
                   </div>
                   <div class="flex flex-col gap-2 w-full">
-                     <img class="mb-6" src="images/vigi surveillance system.png" alt="VIGI Surveillance System" />
+                     <img class="mb-6" src="images/vigi surveillance system.webp" alt="VIGI Surveillance System" />
                      <p class="text-neonGreen">Smart Surveillance</p>
                      <h4>VIGI Surveillance Solution</h4>
                      <p class="text-white/60">Includes free VIGI Cloud VMS Essentials, solar power systems, cameras, NVRs, and NPU-powered AI detection for smarter, more dependable security.</p>
@@ -181,79 +181,80 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
    
    <script>
-  const targetDate = new Date("September 4, 2025 09:00:00").getTime();
+   const targetDate = new Date("September 4, 2025 09:00:00").getTime();
 
-  function animateTick(id) {
-   gsap.fromTo(`#${id}`,
-      { opacity: 0, scale: 0.98 },
-      { opacity: 1, scale: 1, duration: 0.8, ease: "power1.out" }
-   );
+   function animateTick(id) {
+      gsap.fromTo(`#${id}`,
+         { opacity: 0, scale: 0.98 },
+         { opacity: 1, scale: 1, duration: 0.8, ease: "power1.out" }
+      );
+      }
+
+      gsap.utils.toArray(".section-float").forEach((section) => {
+      gsap.from(section, {
+         scrollTrigger: section,
+         y: 50,
+         opacity: 0,
+         duration: 1,
+         ease: "power2.out"
+      });
+      });
+
+   function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const timeUnits = {
+         days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+         hours: Math.floor((distance / (1000 * 60 * 60)) % 24),
+         minutes: Math.floor((distance / (1000 * 60)) % 60),
+         seconds: Math.floor((distance / 1000) % 60)
+      };
+
+      for (let unit in timeUnits) {
+         const el = document.getElementById(unit);
+         const newValue = String(timeUnits[unit]).padStart(2, "0");
+
+         if (el.textContent !== newValue) {
+         el.textContent = newValue;
+         animateTick(unit);
+         }
+      }
    }
 
-   gsap.utils.toArray(".section-float").forEach((section) => {
-   gsap.from(section, {
-      scrollTrigger: section,
+   updateCountdown();
+   setInterval(updateCountdown, 1000);
+
+   gsap.from("#countdown", {
       y: 50,
       opacity: 0,
-      duration: 1,
+      duration: 1.2,
       ease: "power2.out"
    });
-   });
 
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
-
-    const timeUnits = {
-      days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((distance / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((distance / (1000 * 60)) % 60),
-      seconds: Math.floor((distance / 1000) % 60)
-    };
-
-    for (let unit in timeUnits) {
-      const el = document.getElementById(unit);
-      const newValue = String(timeUnits[unit]).padStart(2, "0");
-
-      if (el.textContent !== newValue) {
-        el.textContent = newValue;
-        animateTick(unit);
-      }
-    }
-  }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-
-  gsap.from("#countdown", {
-    y: 50,
-    opacity: 0,
-    duration: 1.2,
-    ease: "power2.out"
-  });
-
-  gsap.to(".floor-bg", {
-  y: 400,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".floor-bg",
-    start: "top bottom",
-    end: "bottom top",
-    scrub: true
-   }
-   });
-
-   gsap.from(".and-more", {
+   gsap.to(".floor-bg", {
+   y: 400,
+   ease: "none",
    scrollTrigger: {
-      trigger: ".and-more",
+      trigger: ".floor-bg",
       start: "top bottom",
-      toggleActions: "play none none none"
-   },
-   opacity: 0,
-   scale: 1,
-   y: 50,
-   duration: 1
-});
+      end: "bottom top",
+      scrub: true
+      }
+      });
+
+      gsap.from(".and-more", {
+      scrollTrigger: {
+         trigger: ".and-more",
+         start: "top bottom",
+         toggleActions: "play none none none"
+      },
+      opacity: 0,
+      scale: 1,
+      y: 50,
+      duration: 1
+   });
 </script>
+
 </body>
 </html>
