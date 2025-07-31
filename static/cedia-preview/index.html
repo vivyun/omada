@@ -34,6 +34,15 @@
          width: 100%;
          scale: 1.5;
       }
+
+      @media screen and (max-width: 80rem) {
+         .omada-landing .floor-bg-mobile {
+            bottom: -50%;
+            left: 0;
+            z-index: -1;
+         }
+         
+      }
     </style>
 </head>
 
@@ -43,9 +52,12 @@
       <main class="main-container text-white relative" style="overflow: hidden; background: linear-gradient(#000000, var(--color-gray-900));">
          <img src="images/green_lighting.webp" class="absolute hidden xl:block floor-bg" alt="" />
          <section class="section-container section-float">
-            <div class="flex flex-col lg:flex-row justify-between max-w-page mx-auto py-16 lg:py-28 relative">
+            <div class="relative" style="padding-top: 4rem;">
+               <img src="images/green_lighting_mobile.webp" class="absolute block xl:hidden floor-bg-mobile" alt="" />
+               <img class="block xl:hidden" style="width: 100%;" src="images/kv_transparent_mobile.webp" alt="Omada & VIGI at CEDIA" />
+            </div>
+            <div class="flex flex-col lg:flex-row justify-between max-w-page mx-auto py-16 lg:py-28 relative" style="padding-top: 0;">
                <div class="w-full flex flex-col gap-6 xl:py-28">
-                  <img class="block xl:hidden" style="width: 100%;" src="images/kv_transparent_mobile.webp" alt="Omada & VIGI at CEDIA" />
                   <img style="width: 30%; max-width: 200px" src="images/omada vigi logo.svg" alt="Omada & VIGI Logo" />
                   <h1>Meet Us at<br/> <span class="text-neonGreen">CEDIA Expo 2025</span></h1>
                   <p class="large-paragraph">Join Omada & VIGI for a FREE Expo Pass<span class="text-neonGreen">*</span></p>
