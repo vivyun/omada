@@ -34,6 +34,7 @@
         <div class="flex flex-col gap-4">
           <h4>VIGI Solar Power System</h4>
           <a class="link" href="vigi-solar/index.html">New code</a>
+          <a class="link" href="vigi-solar/original.html">Original code</a>
         </div>
       </div>
     </div>
