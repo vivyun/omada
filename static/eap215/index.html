@@ -1,0 +1,2975 @@
+
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+  body,
+body > .page-content-wrapper,
+html {
+  overflow: visible !important;
+}
+
+/* old */
+.eap-img-box {
+  font-size: 16px;
+  max-width: 1200px;
+  width: 75em;
+  margin: 0 auto;
+}
+.eap-img-box img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.eap-img-box img.m-hide {
+  display: block;
+}
+.eap-img-box img.m-show {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .eap-img-box {
+    font-size: 10px;
+  }
+}
+@media (max-width: 736px) {
+  .eap-img-box {
+    font-size: 10.35px;
+    max-width: 100vw;
+    width: 100vw;
+  }
+  .eap-img-box img.m-show {
+    display: block;
+    width: 100%;
+  }
+  .eap-img-box img.m-hide {
+    display: none;
+  }
+}
+@media (max-width: 414px) {
+  .eap-img-box {
+    font-size: 2.5vw;
+  }
+}
+
+/* new */
+.overview-content sup {
+  font-size: 0.5556em;
+}
+.overview-content .white {
+  color: #fff;
+}
+.overview-content .omada-green {
+  color: #008055;
+}
+.overview-content .omada-light-green {
+  color: #00e194;
+}
+.overview-content .omada-deep-green {
+  color: #0a5a5a;
+}
+.overview-content .tp-color {
+  color: #4acbd6;
+}
+.overview-content .smb-color {
+  color: #005564;
+}
+.overview-content .no-wrap {
+  white-space: nowrap;
+}
+.overview-content .m-show {
+  display: none;
+}
+@media (max-width: 736px) {
+  .overview-content .m-show {
+    display: block;
+  }
+  .overview-content .m-hide {
+    display: none;
+  }
+}
+
+.overview-content {
+  color: #2b2b2b;
+}
+
+.overview-content .eap-banner {
+  font-size: 16px;
+  max-width: 1200px;
+  height: 30em;
+  margin: 0 auto;
+  background: url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/a.jpg?2) top / 75em no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.overview-content .eap-banner .w-container {
+  width: 65em;
+  margin: 0 auto;
+  position: relative;
+}
+
+.overview-content .eap-banner .text {
+  padding: 0 52% 4em 0;
+  color: #2b2b2b;
+}
+
+.overview-content .eap-banner h2 {
+  font-size: 2.25em;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0 0 1em 0.2em;
+}
+
+.overview-content .eap-banner h3 {
+  font-size: 1.125em;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 0 0 1.5em 0.4em;
+}
+
+.overview-content .eap-banner p .model {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1;
+  color: #fff;
+  padding: 0.75em 1.375em;
+  margin-left: 0.5em;
+  border-radius: 5px;
+  background-color: #008055;
+}
+
+@media (max-width: 1024px) {
+  .overview-content .eap-banner {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 736px) {
+  .overview-content .eap-banner {
+    font-size: 10.35px;
+    max-width: 85.186vw;
+    height: 118vw;
+    /* padding-bottom: 65vw; */
+    background: #afcbf3 url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/m/a.jpg?3) bottom / 100% no-repeat;
+    display: block;
+  }
+
+  .overview-content .eap-banner .w-container {
+    width: auto;
+  }
+
+  .overview-content .eap-banner .text {
+    padding: 6vw 0vw 0 7.407407vw;
+  }
+
+  .overview-content .eap-banner h2 {
+    font-size: 6.67vw;
+    padding: 0 0 5.625vw;
+    line-height: 1.333333;
+    font-weight: 500;
+  }
+
+  .overview-content .eap-banner h3 {
+    font-size: 3.25vw;
+    padding: 0 0 3.5vw;
+  }
+
+  .overview-content .eap-banner p .model {
+    font-size: 3.5vw;
+    margin: 0;
+  }
+}
+
+@media (max-width: 414px) {
+  .overview-content .eap-banner {
+    font-size: 2.5vw;
+  }
+}
+
+.overview-content .eap-selling-points {
+  font-size: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.overview-content .eap-selling-points .w-container {
+  width: 50em;
+  margin: 0 auto;
+}
+
+.overview-content .eap-selling-points .text {
+  padding: 5em 0 0;
+  color: #2b2b2b;
+}
+
+.overview-content .eap-selling-points p {
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.overview-content .eap-selling-points p.title {
+  font-weight: 400;
+}
+
+.overview-content .eap-selling-points ul {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.overview-content .eap-selling-points ul li {
+  width: 25%;
+  margin: 2em 0;
+}
+
+.overview-content .eap-selling-points ul li .icon {
+  display: block;
+  width: 2.25em;
+  height: 2.25em;
+  margin: 0 auto 0.75em;
+  background-position: top;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+.overview-content .eap-selling-points ul li .icon img {
+  width: 2em;
+  height: 2em;
+}
+
+.overview-content .eap-selling-points ul li .desc {
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .overview-content .eap-selling-points {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 736px) {
+  .overview-content .eap-selling-points {
+    font-size: 10.35px;
+    max-width: 85.186vw;
+  }
+
+  .overview-content .eap-selling-points .w-container {
+    width: auto;
+  }
+  .overview-content .eap-selling-points ul li .icon img {
+    width: 6vw;
+    height: 6vw;
+  }
+  .overview-content .eap-selling-points .text {
+    padding: 16.3vw 0 0;
+  }
+
+  .overview-content .eap-selling-points p {
+    font-size: 3.5vw;
+  }
+
+  .overview-content .eap-selling-points ul {
+    width: 100%;
+  }
+
+  .overview-content .eap-selling-points ul li {
+    vertical-align: top;
+    width: 48%;
+    margin: 7.41vw 2vw 0 0;
+  }
+
+  .overview-content .eap-selling-points ul .li-1,
+  .overview-content .eap-selling-points ul .li-3,
+  .overview-content .eap-selling-points ul .li-5,
+  .overview-content .eap-selling-points ul .li-7 {
+    width: 48%;
+    margin-right: 1%;
+  }
+
+  .overview-content .eap-selling-points ul .li-2,
+  .overview-content .eap-selling-points ul .li-4,
+  .overview-content .eap-selling-points ul .li-6,
+  .overview-content .eap-selling-points ul .li-8 {
+    width: 48%;
+    margin-right: 0;
+  }
+
+  .overview-content .eap-selling-points ul li .icon {
+    width: 6vw;
+    height: 6vw;
+    margin-bottom: 3.7vw;
+  }
+}
+
+@media (max-width: 414px) {
+  .overview-content .eap-selling-points {
+    font-size: 2.5vw;
+  }
+}
+
+.overview-content .eap-scenarios {
+  font-size: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.overview-content .eap-scenarios .w-container {
+  width: 64em;
+  margin: 0 auto;
+}
+
+.overview-content .eap-scenarios .text {
+  padding: 6.25em 0 3.125em;
+  text-align: center;
+  color: #2b2b2b;
+}
+
+.overview-content .eap-scenarios h2 {
+  font-size: 2.25em;
+  line-height: 1.3333;
+  padding: 0;
+}
+
+.overview-content .eap-scenarios p {
+  font-size: 1.125em;
+  font-weight: 300;
+  line-height: 1.3333;
+}
+
+.overview-content .eap-scenarios p.title {
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.3333;
+  color: #2b2b2b;
+}
+
+.overview-content .eap-scenarios .ul-scenarios {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.overview-content .eap-scenarios .ul-scenarios li {
+  display: block;
+  width: 23.5%;
+}
+
+.overview-content .eap-scenarios .ul-scenarios li .scenario-img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.overview-content .eap-scenarios .ul-scenarios li .scenario-txt {
+  padding: 1.875em 0 0;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .overview-content .eap-scenarios {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 736px) {
+  .overview-content .eap-scenarios {
+    font-size: 10.35px;
+    max-width: 85.186vw;
+  }
+
+  .overview-content .eap-scenarios .w-container {
+    width: auto;
+  }
+
+  .overview-content .eap-scenarios .text {
+    padding: 20vw 0 9.26vw;
+    text-align: center;
+  }
+
+  .overview-content .eap-scenarios h2 {
+    font-size: 6.67vw;
+    padding: 0;
+  }
+
+  .overview-content .eap-scenarios p {
+    font-size: 3.5vw;
+  }
+
+  .overview-content .eap-scenarios p.title {
+    font-size: 3.5vw;
+  }
+
+  .overview-content .eap-scenarios .ul-scenarios li {
+    width: 48%;
+  }
+
+  .overview-content .eap-scenarios .ul-scenarios li .scenario-txt {
+    padding: 2vw 0 4vw;
+  }
+}
+
+@media (max-width: 414px) {
+  .overview-content .eap-scenarios {
+    font-size: 2.5vw;
+  }
+}
+
+.overview-content .eap-transmission {
+  font-size: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.overview-content .eap-transmission .w-container {
+  width: 75em;
+  margin: 0 auto;
+}
+
+.overview-content .eap-transmission .text {
+  padding: 4.25em 0 2.5em;
+  text-align: center;
+  color: #2b2b2b;
+}
+
+.overview-content .eap-transmission h2 {
+  font-size: 2.25em;
+  line-height: 1.3333;
+  padding: 0 0 0.5em;
+}
+
+.overview-content .eap-transmission p {
+  font-size: 1.125em;
+  font-weight: 300;
+  line-height: 1.3333;
+}
+
+.overview-content .eap-transmission .bg {
+  position: relative;
+  width: 75em;
+  height: 26em;
+  margin: 0 auto;
+  background: url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/d.jpg) 50% 100% / 75em no-repeat;
+  color: #2b2b2b;
+}
+
+.overview-content .eap-transmission .bg .desc-div {
+  position: absolute;
+}
+
+.overview-content .eap-transmission .bg .desc-text {
+  font-weight: 500;
+  font-size: 1.125em;
+  line-height: 1.2;
+}
+.overview-content .eap-transmission .bg .desc-a {
+  top: 0.25em;
+  left: 4.5em;
+  width: 8em;
+}
+
+.overview-content .eap-transmission .bg .desc-b {
+  top: 4.3em;
+  left: 4.5em;
+  width: 8em;
+}
+
+.overview-content .eap-transmission .bg .desc-c {
+  top: 15em;
+  left: 6em;
+  transform: translate(-50%, 0);
+}
+
+.overview-content .eap-transmission .bg .desc-d {
+  top: 17.4em;
+  left: 6em;
+  transform: translate(-50%, 0);
+}
+
+.overview-content .eap-transmission .bg .desc-e {
+  top: 23.5em;
+  left: 6em;
+  transform: translate(-50%, 0);
+}
+
+.overview-content .eap-transmission .bg .desc-f {
+  top: 3.2em;
+  left: 20em;
+  text-align: center;
+  width: 14em;
+  transform: translate(-50%, 0);
+}
+
+.overview-content .eap-transmission .bg .desc-g {
+  top: 23.5em;
+  left: 23em;
+}
+
+.overview-content .eap-transmission .bg .desc-h {
+  top: 9em;
+  left: 43.5em;
+  transform: translate(-50%, -50%);
+}
+
+.overview-content .eap-transmission .bg .desc-i {
+  top: 3.2em;
+  left: 66.3em;
+  width: 14em;
+  text-align: center;
+  transform: translate(-50%, 0);
+}
+
+.overview-content .eap-transmission .bg .desc-j {
+  top: 15.8em;
+  left: 59.3em;
+}
+
+.overview-content .eap-transmission .bg .desc-k {
+  top: 15.2em;
+  left: 13.5em;
+  color: #fff;
+  width: 5em;
+  text-align: center;
+}
+
+.overview-content .eap-transmission .bg .desc-l {
+  top: 17.25em;
+  left: 65em;
+}
+
+.overview-content .eap-transmission .bg .desc-m {
+  top: 20.8em;
+  left: 59.3em;
+}
+
+.overview-content .eap-transmission .bg .desc-n {
+  top: 22.5em;
+  left: 65em;
+}
+
+.overview-content .eap-transmission .bg .desc-o {
+  top: 23.5em;
+  left: 55em;
+}
+
+.overview-content .eap-transmission .bg .desc-f-2 {
+  font-weight: 400;
+}
+.overview-content .eap-transmission .bg .desc-h-1 {
+  font-size: 2em;
+  font-weight: 700;
+}
+.overview-content .eap-transmission .bg .desc-i-2 {
+  font-weight: 400;
+}
+.overview-content .eap-transmission .bg .desc-g-1 {
+  font-weight: 600;
+}
+.overview-content .eap-transmission .bg .desc-o-1 {
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .overview-content .eap-transmission {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 736px) {
+  .overview-content .eap-transmission {
+    font-size: 10.35px;
+    max-width: 100%;
+  }
+
+  .overview-content .eap-transmission .w-container {
+    width: auto;
+  }
+
+  .overview-content .eap-transmission .text {
+    padding: 23.7vw 0 9.26vw;
+    text-align: center;
+  }
+
+  .overview-content .eap-transmission h2 {
+    font-size: 6.67vw;
+    padding: 0;
+  }
+
+  .overview-content .eap-transmission p {
+    font-size: 3.5vw;
+  }
+
+  .overview-content .eap-transmission .bg {
+    width: 85.186vw;
+    height: 128vw;
+    background: url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/m/d.jpg) 50% 100%/ 100% no-repeat;
+  }
+  .overview-content .eap-transmission .bg .desc-text {
+    font-size: 3.3vw;
+  }
+  .overview-content .eap-transmission .bg .desc-a {
+    top: 8vw;
+    left: 60vw;
+    width: 25vw;
+  }
+
+  .overview-content .eap-transmission .bg .desc-b {
+    top: 17.3vw;
+    left: 60vw;
+    width: 22vw;
+  }
+
+  .overview-content .eap-transmission .bg .desc-c {
+    top: 19vw;
+    left: 12vw;
+  }
+
+  .overview-content .eap-transmission .bg .desc-d {
+    top: 12vw;
+    left: 22vw;
+  }
+
+  .overview-content .eap-transmission .bg .desc-e {
+    top: 19vw;
+    left: 38vw;
+  }
+
+  .overview-content .eap-transmission .bg .desc-f {
+    top: 53vw;
+    left: 22vw;
+    width: 35vw;
+  }
+
+  .overview-content .eap-transmission .bg .desc-g {
+    top: 119vw;
+    left: 16vw;
+    transform: translate(-50%, 0);
+  }
+
+  .overview-content .eap-transmission .bg .desc-h {
+    top: 86.3vw;
+    left: 46.5vw;
+    width: 35vw;
+    text-align: center;
+  }
+
+  .overview-content .eap-transmission .bg .desc-i {
+    top: 53vw;
+    left: 71vw;
+    width: 35vw;
+  }
+
+  .overview-content .eap-transmission .bg .desc-j {
+    top: 24.4vw;
+    left: 67vw;
+  }
+
+  .overview-content .eap-transmission .bg .desc-k {
+    top: 36.5vw;
+    left: 15.2vw;
+    width: 13vw;
+  }
+
+  .overview-content .eap-transmission .bg .desc-l {
+    top: 102vw;
+    left: 51vw;
+    transform: translate(-50%, 0);
+  }
+
+  .overview-content .eap-transmission .bg .desc-m {
+    top: 32.8vw;
+    left: 67vw;
+  }
+
+  .overview-content .eap-transmission .bg .desc-n {
+    top: 113vw;
+    left: 51vw;
+    transform: translate(-50%, 0);
+  }
+
+  .overview-content .eap-transmission .bg .desc-o {
+    top: 119vw;
+    left: 66vw;
+    transform: translate(-50%, 0);
+    text-align: center;
+    width: 20vw;
+  }
+
+  .overview-content .eap-transmission .bg .desc-f-2 {
+    font-size: 3vw;
+    line-height: 1;
+  }
+  .overview-content .eap-transmission .bg .desc-h-1 {
+    font-size: 4.25vw;
+  }
+  .overview-content .eap-transmission .bg .desc-i-2 {
+    font-size: 3vw;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 414px) {
+  .overview-content .eap-transmission {
+    font-size: 2.5vw;
+  }
+}
+
+.overview-content .eap-designed-for-outdoors {
+  font-size: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.overview-content .eap-designed-for-outdoors .w-container {
+  width: 60em;
+  margin: 0 auto;
+}
+
+.overview-content .eap-designed-for-outdoors .text {
+  padding: 6.25em 0 3.125em;
+  text-align: center;
+  color: #2b2b2b;
+}
+
+.overview-content .eap-designed-for-outdoors h2 {
+  font-size: 2.25em;
+  line-height: 1.3333;
+  padding: 0;
+}
+
+.overview-content .eap-designed-for-outdoors p {
+  font-size: 1.125em;
+  font-weight: 300;
+  line-height: 1.3333;
+}
+
+.overview-content .eap-designed-for-outdoors p.title {
+  font-size: 1.125em;
+  font-weight: 300;
+  line-height: 1.3333;
+  color: #2b2b2b;
+}
+
+.overview-content .eap-designed-for-outdoors .ul-features {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.overview-content .eap-designed-for-outdoors .ul-features li {
+  display: block;
+  width: 47.5%;
+  padding-bottom: 2em;
+}
+
+.overview-content .eap-designed-for-outdoors .ul-features li .icon {
+  display: block;
+  width: 2.25em;
+  height: auto;
+  margin: 0 auto;
+}
+
+.overview-content .eap-designed-for-outdoors .ul-features li .icon-txt {
+  padding: 0.5em 0 0;
+  text-align: center;
+  color: #fff;
+}
+
+.overview-content .eap-designed-for-outdoors .img {
+  width: 60em;
+  height: 21.75em;
+  margin: 0 auto;
+  background: url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/f.jpg) top / 60em no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overview-content .eap-designed-for-outdoors .txt {
+  padding: 1.5em 16% 0 48%;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .overview-content .eap-designed-for-outdoors {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 736px) {
+  .overview-content .eap-designed-for-outdoors {
+    font-size: 10.35px;
+    max-width: 85.186vw;
+  }
+
+  .overview-content .eap-designed-for-outdoors .w-container {
+    width: auto;
+  }
+
+  .overview-content .eap-designed-for-outdoors .text {
+    padding: 23.7vw 0 9.26vw;
+    text-align: center;
+  }
+
+  .overview-content .eap-designed-for-outdoors h2 {
+    font-size: 6.67vw;
+    padding: 0;
+  }
+
+  .overview-content .eap-designed-for-outdoors h3 {
+    font-size: 4.375vw;
+    padding: 0 0 1vw;
+  }
+
+  .overview-content .eap-designed-for-outdoors p {
+    font-size: 3.5vw;
+  }
+
+  .overview-content .eap-designed-for-outdoors p.title {
+    font-size: 3.5vw;
+  }
+
+  .overview-content .eap-designed-for-outdoors .ul-features li {
+    width: 49.5%;
+    padding-bottom: 4vw;
+  }
+
+  .overview-content .eap-designed-for-outdoors .ul-features li .icon {
+    width: 8vw;
+  }
+
+  .overview-content .eap-designed-for-outdoors .ul-features li .icon-txt {
+    padding: 1vw 0 0;
+  }
+
+  .overview-content .eap-designed-for-outdoors .ul-features li .icon-txt p {
+    font-size: 3.25vw;
+  }
+
+  .overview-content .eap-designed-for-outdoors .img {
+    width: 85.186vw;
+    height: 67vw;
+    background: url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/m/f.jpg) top / 100% no-repeat;
+  }
+
+  .overview-content .eap-designed-for-outdoors .txt {
+    padding: 4vw 3vw 0 29vw;
+  }
+}
+
+@media (max-width: 414px) {
+  .overview-content .eap-designed-for-outdoors {
+    font-size: 2.5vw;
+  }
+}
+
+.overview-content .eap-sdn {
+  font-size: 16px;
+  max-width: 1200px;
+  margin: 0 auto 5em;
+}
+
+.overview-content .eap-sdn .w-container {
+  width: 60em;
+  margin: 0 auto;
+}
+
+.overview-content .eap-sdn .text {
+  padding: 6.25em 0 2em;
+  text-align: center;
+  color: #2b2b2b;
+}
+
+.overview-content .eap-sdn h2 {
+  font-size: 2.25em;
+  line-height: 1.3333;
+  padding-bottom: 0;
+}
+
+.overview-content .eap-sdn h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.3333;
+  padding-bottom: 0.5em;
+}
+
+.overview-content .eap-sdn p {
+  font-size: 1.125em;
+  font-weight: 300;
+  line-height: 1.3333;
+}
+
+.overview-content .eap-sdn .link {
+  margin: 0 auto;
+  padding-bottom: 2.5em;
+  text-align: center;
+}
+
+.overview-content .eap-sdn .link a {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.3333;
+  color: #005564;
+  text-decoration: none;
+}
+
+.overview-content .eap-sdn .img {
+  position: relative;
+  width: 75em;
+  height: 34em;
+  margin: 0 auto;
+  background: url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/g.jpg) top / 75em no-repeat;
+}
+
+.overview-content .eap-sdn .img .desc {
+  position: absolute;
+  text-align: center;
+  line-height: normal;
+}
+
+.overview-content .eap-sdn .img .desc-m {
+  display: block;
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #2b2b2b;
+}
+
+.overview-content .eap-sdn .img .desc-s {
+  display: block;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #2b2b2b;
+}
+
+.overview-content .eap-sdn .img .semiBold {
+  font-weight: 600;
+}
+
+.overview-content .eap-sdn .img .internet {
+  display: block;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.overview-content .eap-sdn .img .desc-1 {
+  left: 7em;
+  top: 5.75em;
+  width: 16.25em;
+}
+
+.overview-content .eap-sdn .img .desc-2 {
+  left: 14.1em;
+  top: 11em;
+  width: 2em;
+}
+
+.overview-content .eap-sdn .img .desc-3 {
+  left: 7em;
+  top: 17.75em;
+  width: 16.25em;
+}
+
+.overview-content .eap-sdn .img .desc-4 {
+  left: 7em;
+  top: 22em;
+  width: 16.25em;
+}
+
+.overview-content .eap-sdn .img .desc-5 {
+  left: 7.5em;
+  top: 12.7em;
+  width: 6em;
+}
+
+.overview-content .eap-sdn .img .desc-6 {
+  left: 16.6em;
+  top: 12.7em;
+  width: 6.5em;
+}
+
+.overview-content .eap-sdn .img .desc-7 {
+  left: 24.5em;
+  top: 5.75em;
+  width: 11em;
+}
+
+.overview-content .eap-sdn .img .desc-8 {
+  left: 25.25em;
+  top: 13.1em;
+  width: 10em;
+}
+
+.overview-content .eap-sdn .img .desc-9 {
+  left: 25.25em;
+  top: 20.5em;
+  width: 10em;
+}
+
+.overview-content .eap-sdn .img .desc-10 {
+  left: 28em;
+  top: 27.25em;
+  width: 4em;
+}
+
+.overview-content .eap-sdn .img .desc-11 {
+  left: 34.5em;
+  top: 28.5em;
+  width: 10em;
+}
+
+.overview-content .eap-sdn .img .desc-12 {
+  left: 45.75em;
+  top: 28.5em;
+  width: 6.4em;
+}
+
+.overview-content .eap-sdn .img .desc-13 {
+  left: 52.5em;
+  top: 28.5em;
+  width: 7.25em;
+}
+
+.overview-content .eap-sdn .img .desc-14 {
+  left: 37.5em;
+  top: 13em;
+  width: 10em;
+}
+
+.overview-content .eap-sdn .img .desc-15 {
+  left: 56.5em;
+  top: 13em;
+  width: 10em;
+}
+
+.overview-content .eap-sdn .img .desc-16 {
+  left: 66.5em;
+  top: 13em;
+  width: 6em;
+}
+
+@media (max-width: 1024px) {
+  .overview-content .eap-sdn {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 736px) {
+  .overview-content .eap-sdn {
+    font-size: 10.35px;
+    max-width: 85.186vw;
+    margin: 0 auto 10vw;
+  }
+
+  .overview-content .eap-sdn .w-container {
+    width: auto;
+  }
+
+  .overview-content .eap-sdn .text {
+    padding: 23.7vw 2vw 9.26vw;
+    text-align: center;
+  }
+
+  .overview-content .eap-sdn h2 {
+    font-size: 6.67vw;
+    padding: 0;
+  }
+
+  .overview-content .eap-sdn h3 {
+    font-size: 4.375vw;
+    padding: 0 0 3.125vw;
+  }
+
+  .overview-content .eap-sdn p {
+    font-size: 3.5vw;
+  }
+
+  .overview-content .eap-sdn p.title {
+    font-size: 3.25vw;
+  }
+
+  .overview-content .eap-sdn p.note {
+    font-size: 3vw;
+    padding-top: 2vw;
+  }
+
+  .overview-content .eap-sdn .link {
+    margin: 0 auto;
+    padding: 0 0 5.625vw;
+  }
+
+  .overview-content .eap-sdn .link a {
+    font-size: 3.5vw;
+  }
+
+  .overview-content .eap-sdn .img {
+    width: 100%;
+    height: 189vw;
+    background: url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/m/g.jpg) top / 100% no-repeat;
+  }
+
+  .overview-content .eap-sdn .img .desc-m {
+    font-size: 3.33vw;
+  }
+
+  .overview-content .eap-sdn .img .desc-s {
+    font-size: 3vw;
+  }
+
+  .overview-content .eap-sdn .img .internet {
+    font-size: 3.3vw;
+  }
+
+  .overview-content .eap-sdn .img .desc-1 {
+    left: 4vw;
+    top: 18vw;
+    width: 22vw;
+  }
+
+  .overview-content .eap-sdn .img .desc-2 {
+    left: 4vw;
+    top: 45vw;
+    width: 22vw;
+  }
+
+  .overview-content .eap-sdn .img .desc-3 {
+    left: 4vw;
+    top: 78vw;
+    width: 22vw;
+  }
+
+  .overview-content .eap-sdn .img .desc-4 {
+    left: 4vw;
+    top: 91vw;
+    width: 22vw;
+  }
+
+  .overview-content .eap-sdn .img .desc-5 {
+    left: 4vw;
+    top: 35vw;
+    width: 22vw;
+  }
+
+  .overview-content .eap-sdn .img .desc-6 {
+    left: 4vw;
+    top: 65vw;
+    width: 22vw;
+  }
+
+  .overview-content .eap-sdn .img .desc-7 {
+    left: 30vw;
+    top: 22vw;
+    width: 21vw;
+  }
+
+  .overview-content .eap-sdn .img .desc-8 {
+    left: 31vw;
+    top: 50vw;
+    width: 18vw;
+  }
+
+  .overview-content .eap-sdn .img .desc-9 {
+    left: 30vw;
+    top: 72vw;
+    width: 21vw;
+  }
+
+  .overview-content .eap-sdn .img .desc-10 {
+    left: 34vw;
+    top: 94vw;
+    width: 13vw;
+  }
+
+  .overview-content .eap-sdn .img .desc-11 {
+    left: 28vw;
+    top: 104vw;
+    width: 11vw;
+    text-align: right;
+  }
+
+  .overview-content .eap-sdn .img .desc-12 {
+    left: 32vw;
+    top: 128.2vw;
+    width: 16vw;
+  }
+
+  .overview-content .eap-sdn .img .desc-13 {
+    left: 32vw;
+    top: 149vw;
+    width: 16vw;
+  }
+
+  .overview-content .eap-sdn .img .desc-14 {
+    left: 52vw;
+    top: 52vw;
+    width: 28vw;
+  }
+
+  .overview-content .eap-sdn .img .desc-15 {
+    /* left: 58vw; */
+    /* top: 151vw; */
+    /* width: 21vw; */
+    left: 52vw;
+    top: 124vw;
+    width: 28vw;
+  }
+
+  .overview-content .eap-sdn .img .desc-16 {
+    left: 53vw;
+    top: 149vw;
+    width: 25vw;
+  }
+}
+
+@media (max-width: 414px) {
+  .overview-content .eap-sdn {
+    font-size: 2.5vw;
+  }
+}
+
+.overview-content .optimized-wired-performance {
+  font-size: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.overview-content .optimized-wired-performance .box {
+  position: relative;
+}
+
+.overview-content .optimized-wired-performance .des {
+  padding: 6em 0 0;
+  text-align: center;
+}
+
+.overview-content .optimized-wired-performance h2 {
+  font-size: 2.25em;
+  line-height: 1.3333;
+  padding: 0 16em 1.38em;
+  text-align: center;
+}
+
+.overview-content .optimized-wired-performance .menu {
+  text-align: center;
+  max-width: 120em;
+  width: auto;
+  margin: 0 auto;
+  padding: 0 0 4em;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.overview-content .optimized-wired-performance .menu li {
+  cursor: pointer;
+  min-width: 15em;
+  color: #2b2b2b;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-radius: 0.5em;
+}
+
+.overview-content .optimized-wired-performance .menu li:nth-child(2) {
+  margin-left: 1.5em;
+}
+
+.overview-content .optimized-wired-performance .menu li .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 100%;
+  color: unset;
+}
+
+.overview-content .optimized-wired-performance .menu li span {
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0.6875em 1.11em;
+  flex: 1;
+}
+
+.overview-content .optimized-wired-performance .menu li.active {
+  background-color: #e5f6f0;
+  border: 2px solid #00a870;
+  color: #0a5a5a;
+}
+
+.overview-content .optimized-wired-performance .fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.overview-content .optimized-wired-performance .absolute {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.overview-content .optimized-wired-performance .img {
+  height: 28em;
+  position: relative;
+}
+
+.overview-content .optimized-wired-performance .bg {
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 75em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity linear 500ms;
+  -webkit-transition: opacity linear 500ms;
+  -moz-transition: opacity linear 500ms;
+}
+
+.overview-content .optimized-wired-performance .bg.active {
+  opacity: 1;
+}
+
+.overview-content .optimized-wired-performance .bg.img1 {
+  background-image: url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/e1.jpg);
+}
+
+.overview-content .optimized-wired-performance .bg.img2 {
+  background-image: url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/e2.jpg);
+}
+
+.overview-content .optimized-wired-performance .w-container {
+  width: 75em;
+  margin: 0 auto;
+  position: relative;
+}
+
+.overview-content .optimized-wired-performance .img .desc {
+  position: absolute;
+  text-align: center;
+}
+
+.overview-content .optimized-wired-performance .img .desc-b {
+  display: block;
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.3333;
+}
+
+.overview-content .optimized-wired-performance .img .desc-m {
+  display: block;
+  font-size: 1.125em;
+  font-weight: 300;
+  line-height: 1.3333;
+}
+
+.overview-content .optimized-wired-performance .img .desc-1 {
+  top: 19.9em;
+  left: 31em;
+  width: 14em;
+}
+
+.overview-content .optimized-wired-performance .img .desc-2 {
+  top: 5em;
+  left: 47.75em;
+  width: 24em;
+}
+
+@media (max-width: 1024px) {
+  .overview-content .optimized-wired-performance {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 736px) {
+  .overview-content .optimized-wired-performance {
+    font-size: 10.35px;
+    max-width: 85.186vw;
+    margin: 0 auto;
+  }
+
+  .overview-content .optimized-wired-performance .des {
+    padding: 13vw 0 0;
+  }
+
+  .overview-content .optimized-wired-performance .menu {
+    display: none;
+  }
+
+  .overview-content .optimized-wired-performance h2 {
+    font-size: 6.67vw;
+    padding: 0 0 9.7vw;
+  }
+
+  .overview-content .optimized-wired-performance .w-container {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 10vw;
+  }
+
+  .overview-content .optimized-wired-performance .img {
+    height: auto;
+  }
+
+  .overview-content .optimized-wired-performance .bg {
+    position: relative;
+    background-position: 50% 100%;
+  }
+
+  .overview-content .optimized-wired-performance .bg {
+    background-size: 90vw;
+  }
+
+  .overview-content .optimized-wired-performance .bg.img1 {
+    background-image: url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/m/e1.jpg);
+    padding-bottom: 167vw;
+  }
+
+  .overview-content .optimized-wired-performance .bg.img2 {
+    background-image: url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/m/e2.jpg);
+    padding-bottom: 74vw;
+    padding-top: 15.6vw;
+  }
+
+  .overview-content .optimized-wired-performance .w-container .menu-li {
+    cursor: pointer;
+    min-width: unset;
+    text-align: center;
+    border-radius: 0.5em;
+    background-color: #e5f6f0;
+    border: 1px solid #00a870;
+    color: #0a5a5a;
+    width: auto;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 2.5vw 3.6vw;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .overview-content .optimized-wired-performance .w-container .menu-li span {
+    font-size: 3.5vw;
+  }
+
+  .overview-content .optimized-wired-performance .img .desc-b {
+    font-size: 3.5vw;
+  }
+
+  .overview-content .optimized-wired-performance .img .desc-m {
+    font-size: 3vw;
+  }
+
+  .overview-content .optimized-wired-performance .img .desc-1 {
+    top: unset;
+    left: 32vw;
+    width: 21vw;
+    bottom: -97vw;
+  }
+
+  .overview-content .optimized-wired-performance .img .desc-2 {
+    top: auto;
+    bottom: 51vw;
+    left: 54vw;
+    width: 32vw;
+  }
+}
+
+@media (max-width: 414px) {
+  .overview-content .optimized-wired-performance {
+    font-size: 2.5vw;
+  }
+}
+
+.overview-content .eap-easy-use {
+  font-size: 16px;
+  max-width: 1200px;
+  margin: 0 auto 0em;
+}
+
+.overview-content .eap-easy-use .w-container {
+  width: 60em;
+  margin: 0 auto;
+}
+
+.overview-content .eap-easy-use .text {
+  padding: 6.25em 0 3em;
+  text-align: center;
+  color: #2b2b2b;
+}
+
+.overview-content .eap-easy-use h2 {
+  font-size: 2.25em;
+  line-height: 1.3333;
+  padding-bottom: 0.5em;
+}
+
+.overview-content .eap-easy-use h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.3333;
+  padding-bottom: 0.5em;
+}
+
+.overview-content .eap-easy-use p {
+  font-size: 1.125em;
+  font-weight: 300;
+  line-height: 1.3333;
+}
+
+.overview-content .eap-easy-use .link {
+  margin: 0 auto;
+  padding-bottom: 2.5em;
+  text-align: center;
+}
+
+.overview-content .eap-easy-use .link a {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.3333;
+  color: #005564;
+  text-decoration: none;
+}
+
+.overview-content .eap-easy-use .img {
+  position: relative;
+  width: 63.75em;
+  height: 40em;
+  margin: 0 auto;
+  background: url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/h.jpg) top / 63.75em no-repeat;
+}
+
+.overview-content .eap-easy-use .img .desc {
+  position: absolute;
+  text-align: center;
+  line-height: normal;
+}
+
+.overview-content .eap-easy-use .img .desc-m {
+  display: block;
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #2b2b2b;
+}
+
+.overview-content .eap-easy-use .img .desc-s {
+  display: block;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #2b2b2b;
+}
+
+.overview-content .eap-easy-use .img .internet {
+  display: block;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.overview-content .eap-easy-use .img .desc-1 {
+  left: 7em;
+  top: 5.5em;
+  width: 16.25em;
+}
+
+.overview-content .eap-easy-use .img .desc-2 {
+  left: 45.75em;
+  top: 3.25em;
+  width: 13em;
+}
+
+.overview-content .eap-easy-use .img .desc-3 {
+  left: 15em;
+  top: 23.25em;
+  width: 5em;
+}
+
+.overview-content .eap-easy-use .img .desc-4 {
+  left: 3em;
+  top: 34em;
+  width: 12.25em;
+}
+
+.overview-content .eap-easy-use .img .desc-5 {
+  left: 7.5em;
+  top: 11em;
+  width: 6em;
+  left: 15em;
+  top: 31em;
+  width: 5.25em;
+}
+
+.overview-content .eap-easy-use .img .desc-6 {
+  left: 17em;
+  top: 11em;
+  width: 6.5em;
+  left: 18em;
+  top: 34em;
+  width: 12.25em;
+}
+
+.overview-content .eap-easy-use .img .desc-7 {
+  left: 10.5em;
+  top: 38.75em;
+  width: 11em;
+}
+
+.overview-content .eap-easy-use .img .desc-8 {
+  left: 25.25em;
+  top: 13em;
+  width: 10em;
+  left: 35em;
+  top: 34em;
+  width: 10.75em;
+}
+
+.overview-content .eap-easy-use .img .desc-9 {
+  left: 25.25em;
+  top: 20.5em;
+  width: 10em;
+  left: 44em;
+  top: 31em;
+  width: 5.25em;
+}
+
+.overview-content .eap-easy-use .img .desc-10 {
+  left: 28em;
+  top: 27em;
+  width: 4em;
+  left: 48em;
+  top: 34em;
+  width: 14.75em;
+}
+
+.overview-content .eap-easy-use .img .desc-11 {
+  left: 34.5em;
+  top: 28.5em;
+  width: 10em;
+  left: 32.5em;
+  top: 38.75em;
+  width: 31em;
+}
+
+.overview-content .eap-easy-use .img .desc-12 {
+  left: 45.75em;
+  top: 28.5em;
+  width: 6.4em;
+}
+
+.overview-content .eap-easy-use .img .desc-13 {
+  left: 52.5em;
+  top: 28.5em;
+  width: 7.25em;
+}
+
+.overview-content .eap-easy-use .img .desc-14 {
+  left: 37.5em;
+  top: 12.75em;
+  width: 10em;
+}
+
+.overview-content .eap-easy-use .img .desc-15 {
+  left: 57.5em;
+  top: 12.75em;
+  width: 10em;
+}
+
+.overview-content .eap-easy-use .img .desc-16 {
+  left: 51em;
+  top: 10em;
+  width: 3em;
+}
+
+.overview-content .eap-easy-use .img .desc-16 > span {
+  color: #0a5a5a;
+}
+
+@media (max-width: 1024px) {
+  .overview-content .eap-easy-use {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 736px) {
+  .overview-content .eap-easy-use {
+    font-size: 10.35px;
+    max-width: 85.186vw;
+    margin: 0 auto 13vw;
+  }
+
+  .overview-content .eap-easy-use .w-container {
+    width: auto;
+  }
+
+  .overview-content .eap-easy-use .text {
+    padding: 23.7vw 2vw 10.1vw;
+    text-align: center;
+  }
+
+  .overview-content .eap-easy-use h2 {
+    font-size: 6.67vw;
+    padding: 0 0;
+  }
+
+  .overview-content .eap-easy-use h3 {
+    font-size: 4.375vw;
+    padding: 0 0 3.125vw;
+  }
+
+  .overview-content .eap-easy-use p {
+    font-size: 3.5vw;
+  }
+
+  .overview-content .eap-easy-use p.title {
+    font-size: 3.25vw;
+  }
+
+  .overview-content .eap-easy-use p.note {
+    font-size: 3vw;
+    padding-top: 2vw;
+  }
+
+  .overview-content .eap-easy-use .link {
+    margin: 0 auto;
+    padding: 0 0 5.625vw;
+  }
+
+  .overview-content .eap-easy-use .link a {
+    font-size: 3.5vw;
+  }
+
+  .overview-content .eap-easy-use .img {
+    width: 100%;
+    height: 81vw;
+    background: url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/m/h.jpg) top / 100% no-repeat;
+  }
+
+  .overview-content .eap-easy-use .img .desc-m {
+    font-size: 3.5vw;
+  }
+
+  .overview-content .eap-easy-use .img .desc-s {
+    font-size: 3vw;
+  }
+
+  .overview-content .eap-easy-use .img .internet {
+    font-size: 3vw;
+  }
+
+  .overview-content .eap-easy-use .img .desc-1 {
+    left: 3vw;
+    top: 14vw;
+    width: 22vw;
+  }
+
+  .overview-content .eap-easy-use .img .desc-2 {
+    left: 64vw;
+    top: 2vw;
+    width: 26vw;
+    text-align: left;
+  }
+
+  .overview-content .eap-easy-use .img .desc-3 {
+    left: 4vw;
+    top: 46.5vw;
+    width: 16vw;
+  }
+
+  .overview-content .eap-easy-use .img .desc-4 {
+    /* left: 3vw; */
+    /* top: 122vw; */
+    /* width: 22vw; */
+    left: 2.5vw;
+    top: 66vw;
+    width: 19vw;
+  }
+
+  .overview-content .eap-easy-use .img .desc-5 {
+    /* left: 3vw; */
+    /* top: 31vw; */
+    /* width: 22vw; */
+    left: 59vw;
+    top: 62vw;
+    width: 8vw;
+  }
+
+  .overview-content .eap-easy-use .img .desc-6 {
+    left: 24.5vw;
+    top: 66vw;
+    width: 18vw;
+  }
+
+  .overview-content .eap-easy-use .img .desc-7 {
+    left: 10vw;
+    top: 85vw;
+    width: 21vw;
+  }
+
+  .overview-content .eap-easy-use .img .desc-8 {
+    /* left: 29vw; */
+    /* top: 47vw; */
+    /* width: 21vw; */
+    left: 46vw;
+    top: 66vw;
+    width: 14vw;
+  }
+
+  .overview-content .eap-easy-use .img .desc-9 {
+    left: 20vw;
+    top: 62vw;
+    width: 8vw;
+  }
+
+  .overview-content .eap-easy-use .img .desc-10 {
+    left: 67vw;
+    top: 66vw;
+    width: 17vw;
+  }
+
+  .overview-content .eap-easy-use .img .desc-11 {
+    /* left: 27vw; */
+    /* top: 102vw; */
+    /* width: 11vw; */
+    left: 43vw;
+    top: 85vw;
+    width: 43vw;
+    text-align: center;
+  }
+
+  .overview-content .eap-easy-use .img .desc-12 {
+    left: 31vw;
+    top: 129.2vw;
+    width: 16vw;
+  }
+
+  .overview-content .eap-easy-use .img .desc-13 {
+    left: 31vw;
+    top: 149vw;
+    width: 16vw;
+  }
+
+  .overview-content .eap-easy-use .img .desc-14 {
+    left: 58vw;
+    top: 57vw;
+    width: 21vw;
+  }
+
+  .overview-content .eap-easy-use .img .desc-15 {
+    left: 58vw;
+    top: 151vw;
+    width: 21vw;
+  }
+
+  .overview-content .eap-easy-use .img .desc-16 {
+    left: 56vw;
+    top: 105vw;
+    width: 16vw;
+  }
+}
+
+@media (max-width: 414px) {
+  .overview-content .eap-easy-use {
+    font-size: 2.5vw;
+  }
+}
+.overview-content .plug-and-play {
+  font-size: 16px;
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.overview-content .smart-auto-empty-Dock {
+  font-size: 16px;
+  /* max-width: 1920px; */
+  margin: 0 auto;
+  position: relative;
+}
+.overview-content .smart-auto-empty-Dock .des {
+  padding: 6.25em 0 0em;
+  text-align: center;
+  max-width: 75em;
+  margin: 0 auto;
+}
+.overview-content .smart-auto-empty-Dock .menu {
+  text-align: center;
+
+  max-width: 120em;
+
+  width: auto;
+
+  margin: 0 auto;
+
+  padding: 0 0 3.4375em;
+
+  display: flex;
+
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.overview-content .smart-auto-empty-Dock .mobile-text {
+  display: none;
+}
+
+.overview-content .smart-auto-empty-Dock .menu li {
+  /* width: 18.5%; */
+  cursor: pointer;
+
+  min-width: 15em;
+  color: #2b2b2b;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-radius: 0.5em;
+}
+.overview-content .smart-auto-empty-Dock .menu li:nth-child(2) {
+  margin-left: 1.5em;
+}
+.overview-content .smart-auto-empty-Dock .menu li .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* padding: 1.4em 0 1em; */
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 100%;
+  color: unset;
+}
+.overview-content .smart-auto-empty-Dock .menu li span {
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1;
+  padding: 0.6875em 1.11em;
+  flex: 1;
+}
+
+.overview-content .smart-auto-empty-Dock .menu li.active {
+  color: #005eac;
+  /* border-bottom: 5px solid #005eac; */
+  background-color: #e5f6f0;
+  border: 2px solid #00a870;
+  color: #0a5a5a;
+}
+
+.overview-content .smart-auto-empty-Dock .text {
+  text-align: center;
+  padding: 5.5em 15em 2em;
+}
+
+.overview-content .smart-auto-empty-Dock .fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.overview-content .smart-auto-empty-Dock .absolute {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.overview-content .smart-auto-empty-Dock .img {
+  height: 28em;
+  position: relative;
+}
+
+.overview-content .smart-auto-empty-Dock .bg {
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 75em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity linear 500ms;
+  -webkit-transition: opacity linear 500ms;
+  -moz-transition: opacity linear 500ms;
+}
+
+.overview-content .smart-auto-empty-Dock .bg.active {
+  opacity: 1;
+}
+
+.overview-content .smart-auto-empty-Dock .bg.img0 {
+  background-image: url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/i-1.jpg?1);
+}
+
+.overview-content .smart-auto-empty-Dock .bg.img1 {
+  background-image: url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/i-2.jpg?1);
+}
+
+.overview-content .smart-auto-empty-Dock .txt {
+  position: absolute;
+  z-index: 10;
+  top: 1em;
+}
+
+.overview-content .smart-auto-empty-Dock .text {
+  padding: 4em 0 2em;
+  text-align: center;
+}
+
+.overview-content .smart-auto-empty-Dock h2 {
+  /* font-size: 3.125em; */
+  /* font-weight: 500; */
+  /* line-height: 1.2; */
+  /* padding-bottom: 0.5em; */
+  /* padding-top: 1em; */
+  text-align: center;
+  font-size: 2.25em;
+  line-height: 1.3333;
+  padding: 0 7em 2em;
+}
+
+.overview-content .smart-auto-empty-Dock h3 {
+  display: none;
+}
+
+.overview-content .smart-auto-empty-Dock .text {
+  padding: 2em 1em;
+}
+
+.overview-content .smart-auto-empty-Dock .w-container {
+  width: 75em;
+  margin: 0 auto;
+  position: relative;
+}
+
+.overview-content .smart-auto-empty-Dock .img .desc {
+  position: absolute;
+  font-weight: 300;
+}
+.overview-content .smart-auto-empty-Dock .img .desc span {
+  font-size: 1.125em;
+}
+
+.overview-content .smart-auto-empty-Dock .img0 .desc1 {
+  left: 5em;
+  top: 22em;
+  width: 21em;
+  text-align: center;
+}
+.overview-content .smart-auto-empty-Dock .img0 .desc2 {
+  left: 29em;
+  top: 10.5em;
+  width: 30em;
+  text-align: center;
+}
+.overview-content .smart-auto-empty-Dock .img0 .desc2 span {
+  font-size: 2.9em;
+  font-weight: 500;
+}
+.overview-content .smart-auto-empty-Dock .img1 .desc0 {
+  left: 0em;
+  top: 18.5em;
+  width: 5em;
+  text-align: center;
+  /* rotate: -16deg; */
+  font-weight: 400;
+}
+.overview-content .smart-auto-empty-Dock .img1 .desc1 {
+  left: 5em;
+  top: 7.5em;
+  width: 20em;
+  text-align: center;
+  rotate: -16deg;
+  font-weight: 500;
+}
+.overview-content .smart-auto-empty-Dock .img1 .desc2 {
+  /* left: 29em; */
+  /* top: 10.5em; */
+  /* width: 30em; */
+  /* text-align: center; */
+  left: 5em;
+  top: 17.8em;
+  width: 20em;
+  text-align: center;
+  rotate: 16deg;
+  font-weight: 500;
+}
+.overview-content .smart-auto-empty-Dock .img1 .desc3 {
+  left: 20em;
+  top: 9.5em;
+  width: 14em;
+  text-align: center;
+  /* rotate: -16deg; */
+  font-weight: 400;
+}
+.overview-content .smart-auto-empty-Dock .img1 .desc4 {
+  left: 20em;
+  top: 26em;
+  width: 14em;
+  text-align: center;
+  /* rotate: -16deg; */
+  font-weight: 400;
+}
+.overview-content .smart-auto-empty-Dock .img1 .desc5 {
+  left: 38em;
+
+  top: 2em;
+
+  width: 20em;
+
+  text-align: left;
+
+  /* rotate: -16deg; */
+
+  font-weight: 400;
+}
+.overview-content .smart-auto-empty-Dock .img1 .desc6 {
+  left: 40em;
+  top: 5.5em;
+  width: 15em;
+  text-align: left;
+  /* rotate: -16deg; */
+  font-weight: 400;
+}
+.overview-content .smart-auto-empty-Dock .img1 .desc7 {
+  left: 57em;
+  top: 5.5em;
+  width: 17em;
+  text-align: left;
+  /* rotate: -16deg; */
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  .overview-content .smart-auto-empty-Dock {
+    font-size: 10px;
+  }
+}
+@media (max-width: 736px) {
+  .overview-content .smart-auto-empty-Dock .des {
+    padding: 19vw 0 0vw;
+  }
+  .overview-content .smart-auto-empty-Dock {
+    font-size: 10.35px;
+  }
+  .overview-content .smart-auto-empty-Dock .menu {
+    display: none;
+  }
+  .overview-content .smart-auto-empty-Dock .img {
+    height: auto;
+  }
+  .overview-content .smart-auto-empty-Dock .bg {
+    position: relative;
+    background-position: 50% 100%;
+    /* background-color: red; */
+  }
+  .overview-content .smart-auto-empty-Dock .bg.img0 {
+    background-image: url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/m/i-1.jpg?2);
+    padding-bottom: 46vw;
+  }
+
+  .overview-content .smart-auto-empty-Dock .bg.img1 {
+    background-image: url(https://static-product.tp-link.com/eap215-bridge-kit_v3/en/m/i-2.jpg?1);
+    padding-bottom: 198vw;
+    padding-top: 15.6vw;
+  }
+  .overview-content .smart-auto-empty-Dock .w-container {
+    width: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .overview-content .smart-auto-empty-Dock .bg {
+    background-size: 90vw;
+  }
+  .overview-content .smart-auto-empty-Dock .img .desc span {
+    font-size: 3.5vw;
+  }
+  .overview-content .smart-auto-empty-Dock .img0 .desc1 {
+    left: 6vw;
+    top: 52vw;
+    width: 21vw;
+    text-align: center;
+  }
+  .overview-content .smart-auto-empty-Dock .img0 .desc2 {
+    left: 40vw;
+    top: 34vw;
+    width: 43vw;
+    text-align: center;
+  }
+  .overview-content .smart-auto-empty-Dock .img0 .desc2 span {
+    font-size: 5vw;
+  }
+  .overview-content .smart-auto-empty-Dock .w-container .menu-li {
+    cursor: pointer;
+    min-width: unset;
+    text-align: center;
+    border-radius: 0.5em;
+    background-color: #e5f6f0;
+    border: 1px solid #00a870;
+    color: #0a5a5a;
+    width: auto;
+    display: inline-block;
+    /* white-space-collapse: preserve-breaks; */
+    margin: 0 auto;
+    padding: 2.5vw 3.6vw;
+    font-weight: 400;
+    line-height: 1;
+  }
+  .overview-content .smart-auto-empty-Dock .w-container .menu-li span {
+    font-size: 3.5vw;
+  }
+  .overview-content .smart-auto-empty-Dock .text {
+    padding: 0 0 1.5em;
+    text-align: left;
+  }
+
+  .overview-content .smart-auto-empty-Dock .mobile-text {
+    padding: 0 0 1.5em;
+  }
+
+  .overview-content .smart-auto-empty-Dock .img .desc {
+    /* display: none; */
+  }
+
+  .overview-content .smart-auto-empty-Dock h2 {
+    font-size: 6.67vw;
+    padding: 0 0 9.7vw;
+  }
+  .overview-content .smart-auto-empty-Dock .img1 .desc1 {
+    left: 20vw;
+    top: 40vw;
+    width: 60vw;
+    text-align: center;
+    rotate: -12deg;
+    font-weight: 500;
+  }
+  .overview-content .smart-auto-empty-Dock .img1 .desc2 {
+    left: 20vw;
+    top: 68vw;
+    width: 60vw;
+    text-align: center;
+    rotate: 12deg;
+    font-weight: 500;
+  }
+  .overview-content .smart-auto-empty-Dock .img1 .desc3 {
+    right: 3vw;
+    left: unset;
+    top: 48vw;
+    width: 19vw;
+    text-align: center;
+    /* rotate: -16deg; */
+    font-weight: 400;
+  }
+  .overview-content .smart-auto-empty-Dock .img1 .desc4 {
+    right: 3vw;
+    left: unset;
+    top: 92vw;
+    width: 19vw;
+    text-align: center;
+    /* rotate: -16deg; */
+    font-weight: 400;
+  }
+  .overview-content .smart-auto-empty-Dock .img1 .desc5 {
+    left: 13vw;
+    top: 117vw;
+    width: 75vw;
+    text-align: left;
+    /* rotate: -16deg; */
+    font-weight: 400;
+  }
+  .overview-content .smart-auto-empty-Dock .img1 .desc6 {
+    left: 16vw;
+    top: 126vw;
+    width: 28vw;
+    text-align: left;
+    /* rotate: -16deg; */
+    font-weight: 300;
+  }
+  .overview-content .smart-auto-empty-Dock .img1 .desc7 {
+    left: 51vw;
+    top: 126vw;
+    width: 37vw;
+    text-align: left;
+    /* rotate: -16deg; */
+    font-weight: 300;
+  }
+  .overview-content .smart-auto-empty-Dock .img1 .desc0 {
+    left: 3vw;
+    right: auto;
+    top: 72vw;
+    width: 19vw;
+    text-align: center;
+    /* rotate: -16deg; */
+    font-weight: 400;
+  }
+  .overview-content .smart-auto-empty-Dock h3 span {
+    font-size: 4.44vw;
+  }
+  .overview-content .smart-auto-empty-Dock h3 {
+    padding: 3.33vw 0 6.66vw;
+  }
+}
+
+@media (max-width: 414px) {
+  .overview-content .smart-auto-empty-Dock {
+    font-size: 2.5vw;
+  }
+}
+
+
+</style>
+<link rel="stylesheet" href="https://static.tp-link.com/assets/css/common-omada.css?202506">
+</head>
+
+<body class="overview-content">
+<div class="eap215-bridge-kit_v3">
+<div class="section highlights active" data-id="highlights">
+<section class="eap-banner">
+<div class="w-container">
+<div class="text">
+<h2>Omada 5 GHz 867 Mbps<br class="m-hide" />
+<span class="omada-green">Long-Range PtMP &amp; PtP</span><br class="m-hide" />
+Indoor/Outdoor<br />
+Wireless Bridge</h2>
+
+<p><span class="model">EAP215-Bridge KIT</span></p>
+</div>
+</div>
+</section>
+
+<section class="eap-selling-points">
+<div class="w-container">
+<div class="text">
+<ul>
+	<li class="li-1">
+	<div class="icon"><img alt="" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/b1.png" /></div>
+
+	<div class="desc">
+	<p class="title">Up to 3.1 mi (5 km)<br />
+	Wi-Fi Transmission</p>
+	</div>
+	</li>
+	<li class="li-2">
+	<div class="icon"><img alt="" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/b2.png" /></div>
+
+	<div class="desc">
+	<p class="title">Auto-Pairing with Preconfigured Kit</p>
+	</div>
+	</li>
+	<li class="li-3">
+	<div class="icon"><img alt="" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/b3.png" /></div>
+
+	<div class="desc">
+	<p class="title">Effortless App-Guided Alignment</p>
+	</div>
+	</li>
+	<li class="li-4">
+	<div class="icon"><img alt="" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/b4.png" /></div>
+
+	<div class="desc">
+	<p class="title">Instant Multi-Bridge Auto-Pairing</p>
+	</div>
+	</li>
+	<li class="li-5">
+	<div class="icon"><img alt="" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/b5.png" /></div>
+
+	<div class="desc">
+	<p class="title">802.3af PoE/12 V<br />
+	DC/24 V Passive PoE</p>
+	</div>
+	</li>
+	<li class="li-6">
+	<div class="icon"><img alt="" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/b6.png" /></div>
+
+	<div class="desc">
+	<p class="title">3&times; Gigabit<br />
+	Ethernet Ports</p>
+	</div>
+	</li>
+	<li class="li-7">
+	<div class="icon"><img alt="" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/b7.png" /></div>
+
+	<div class="desc">
+	<p class="title">IP65 Weatherproof &amp;<br />
+	6 kV Lightning<br class="m-show" />
+	Protection</p>
+	</div>
+	</li>
+	<li class="li-8">
+	<div class="icon"><img alt="" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/b8.png" /></div>
+
+	<div class="desc">
+	<p class="title">Centralized<br class="m-show" />
+	Management via<br />
+	Web or App**</p>
+	</div>
+	</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="eap-transmission">
+<div class="w-container">
+<div class="text">
+<h2>Long-Range Wi-Fi Extension<br class="m-hide" />
+Expand Networks &amp;<br class="m-show" />
+Monitor Remotely</h2>
+</div>
+
+<div class="bg">
+<div class="desc-div desc-a">
+<div class="desc-text desc-a-1">PoE (Power over Ethernet)</div>
+</div>
+
+<div class="desc-div desc-b">
+<div class="desc-text desc-b-1">Data</div>
+</div>
+
+<div class="desc-div desc-c">
+<div class="desc-text desc-c-1">Omada App</div>
+</div>
+
+<div class="desc-div desc-d">
+<div class="desc-text desc-d-1">OR</div>
+</div>
+
+<div class="desc-div desc-e">
+<div class="desc-text desc-e-1">Web Portal</div>
+</div>
+
+<div class="desc-div desc-f">
+<div class="desc-text desc-f-1">Versatile Power</div>
+
+<div class="desc-text desc-f-2">(PoE Switch, Passive PoE, 12 V DC supported)</div>
+</div>
+
+<div class="desc-div desc-g">
+<div class="desc-text desc-g-1">Main Site</div>
+</div>
+
+<div class="desc-div desc-h">
+<div class="desc-text desc-h-1">Up to 5 km/3.1 mi</div>
+</div>
+
+<div class="desc-div desc-i">
+<div class="desc-text desc-i-1">Versatile Power</div>
+
+<div class="desc-text desc-i-2">(PoE Switch, Passive PoE, 12 V DC supported)</div>
+</div>
+
+<div class="desc-div desc-k">
+<div class="desc-text desc-k-1">Internet</div>
+</div>
+
+<div class="desc-div desc-l">
+<div class="desc-text desc-l-1">IP Camera</div>
+</div>
+
+<div class="desc-div desc-n">
+<div class="desc-text desc-n-1">IP Camera</div>
+</div>
+
+<div class="desc-div desc-o">
+<div class="desc-text desc-o-1">Remote Site</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="eap-scenarios">
+<div class="w-container">
+<div class="text">
+<h2>Perfect for Surveillance<br class="m-show" />
+and More</h2>
+</div>
+</div>
+
+<ul class="ul-scenarios">
+	<li class="li-1"><img alt="Farms / Orchards / Ranches" class="scenario-img" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/c1.jpg" />
+	<div class="scenario-txt">
+	<p class="title">Farms / Orchards / Ranches</p>
+	</div>
+	</li>
+	<li class="li-2"><img alt="Additional Offices" class="scenario-img" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/c2.jpg" />
+	<div class="scenario-txt">
+	<p class="title">Additional Offices</p>
+	</div>
+	</li>
+	<li class="li-3"><img alt="Construction Sites" class="scenario-img" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/c3.jpg" />
+	<div class="scenario-txt">
+	<p class="title">Construction Sites</p>
+	</div>
+	</li>
+	<li class="li-4"><img alt="Parking Lots" class="scenario-img" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/c4.jpg" />
+	<div class="scenario-txt">
+	<p class="title">Parking Lots</p>
+	</div>
+	</li>
+</ul>
+</section>
+
+<section class="smart-auto-empty-Dock">
+<div class="box">
+<div class="des">
+<h2><span class="omada-green">Omada SmartBridging:</span><br />
+The Most Effortless Bridge Setup Ever</h2>
+
+<ul class="menu m-hide ul-menu" role="tablist">
+	<li class="active omada-tab li-1" role="presentation"><button aria-controls="plug-and-play-preconfigured-kit-desc" aria-selected="true" class="header" id="plug-and-play-preconfigured-kit-tab" role="tab" tabindex="0"><span class="option">Auto-Pairing with Preconfigured Kit</span></button></li>
+	<li class="omada-tab li-2"><button aria-controls="plug-and-play-ptmp-desc" aria-selected="true" class="header" id="plug-and-play-ptmp-tab" role="tab" tabindex="0"><span class="option">Multi-Bridge Auto-Pairing</span></button></li>
+</ul>
+</div>
+
+<div class="img">
+<div aria-labelledby="preconfigured-kit-tab" class="bg img0 active" id="plug-and-play-preconfigured-kit-desc" role="tabpanel" tabindex="0">
+<div class="w-container">
+<p class="menu-li m-show"><span>Auto-Pairing with Preconfigured Kit</span></p>
+
+<div class="descs">
+<p class="desc desc1"><span>LED Signal Indicators</span></p>
+
+<p class="desc desc2 omada-deep-green"><span>Auto-Pairing</span></p>
+</div>
+</div>
+</div>
+
+<div aria-labelledby="ptmp-tab" class="bg img1" id="plug-and-play-ptmp-desc" role="tabpanel" tabindex="0">
+<div class="w-container">
+<p class="menu-li m-show"><span>PtMP Auto-Pairing Switch</span></p>
+
+<div class="descs">
+<p class="desc desc0 omada-deep-green"><span>Main AP</span></p>
+
+<p class="desc desc1 omada-deep-green"><span>Auto-Pairing</span></p>
+
+<p class="desc desc2 omada-deep-green"><span>Auto-Pairing</span></p>
+
+<p class="desc desc3 omada-deep-green"><span>Client AP</span></p>
+
+<p class="desc desc4 omada-deep-green"><span>Additional Client AP</span></p>
+
+<p class="desc desc5"><span>Multiple Bridges Auto-Pairing:</span></p>
+
+<p class="desc desc6"><span>Step 1:<br />
+Switch to Client AP Mode</span></p>
+
+<p class="desc desc7"><span>Step 2:<br />
+Press the pair button to initiate auto pairing with the main AP</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="optimized-wired-performance">
+<div class="box">
+<div class="des">
+<ul class="menu m-hide ul-menu" role="tablist">
+	<li class="active omada-tab li-1" role="presentation"><button aria-controls="alignment-desc" aria-selected="true" class="header" id="alignment-tab" role="tab" tabindex="0"><span class="option">App-Guided Alignment</span></button></li>
+	<li class="omada-tab li-2" role="presentation"><button aria-controls="speed-testing-desc" aria-selected="false" class="header" id="speed-testing-tab" role="tab" tabindex="-1"><span class="option">Instant Speed Testing</span></button></li>
+</ul>
+</div>
+
+<div class="img">
+<div aria-labelledby="alignment-tab" class="bg img1 active" id="alignment-desc" role="tabpanel" tabindex="0">
+<div class="w-container">
+<p class="menu-li m-show">&nbsp;</p>
+
+<div class="bg-txt">
+<div class="desc desc-1"><span class="desc-b white">After Alignment</span></div>
+</div>
+</div>
+</div>
+
+<div aria-labelledby="speed-testing-tab" class="bg img2" id="speed-testing-desc" role="tabpanel" tabindex="0">
+<div class="w-container">
+<p class="menu-li m-show">&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="eap-easy-use">
+<div class="w-container">
+<div class="text">
+<h2>Versatile Power &amp; Connectivity for Expanded Surveillance</h2>
+</div>
+</div>
+
+<div class="img">
+<div class="bg-text">
+<div class="desc desc-2">
+<p class="desc-m">3&times; Gigabit Ethernet Ports</p>
+</div>
+
+<div class="desc desc-3">
+<p class="desc-m">PoE</p>
+</div>
+
+<div class="desc desc-4">
+<p class="desc-m">PoE Switch</p>
+</div>
+
+<div class="desc desc-5">
+<p class="desc-m">or</p>
+</div>
+
+<div class="desc desc-6">
+<p class="desc-m">PoE Injector</p>
+</div>
+
+<div class="desc desc-7">
+<p class="desc-m">PoE In</p>
+</div>
+
+<div class="desc desc-8">
+<p class="desc-m">DC Power</p>
+</div>
+
+<div class="desc desc-9">
+<p class="desc-m">or</p>
+</div>
+
+<div class="desc desc-10">
+<p class="desc-m">Solar Power System</p>
+</div>
+
+<div class="desc desc-11">
+<p class="desc-m">DC Power (Compatible with Solar Power System)</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="eap-designed-for-outdoors">
+<div class="w-container">
+<div class="text">
+<h2>Robust Outdoor Design for Long-Lasting Reliability</h2>
+</div>
+
+<div class="img">
+<div class="txt">
+<ul class="ul-features">
+	<li class="li-1"><img alt="IP65 Weatherproof" class="icon" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/f1.png" />
+	<div class="icon-txt">
+	<p class="icon-title">IP65<br />
+	Weatherproof</p>
+	</div>
+	</li>
+	<li class="li-2"><img alt="6 kV Lightning Protection" class="icon" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/f2.png" />
+	<div class="icon-txt">
+	<p class="icon-title">6 kV Lightning<br />
+	Protection</p>
+	</div>
+	</li>
+	<li class="li-3"><img alt="-40 °C-70 °C Working Range" class="icon" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/f3.png" />
+	<div class="icon-txt">
+	<p class="icon-title">-40 &deg;C-70 &deg;C<br />
+	（-40 &deg;F-158 &deg;F）<br />
+	Working Range</p>
+	</div>
+	</li>
+	<li class="li-4"><img alt="Wind Resistance" class="icon" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/f4.png" />
+	<div class="icon-txt">
+	<p class="icon-title">Wind<br />
+	Resistance</p>
+	</div>
+	</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section class="eap-sdn">
+<div class="w-container">
+<div class="text">
+<h2>Seamless Integration into Omada SDN</h2>
+</div>
+</div>
+
+<div class="img">
+<div class="bg-txt">
+<div class="desc desc-1">
+<p class="desc-m">On-Premises Controllers</p>
+</div>
+
+<div class="desc desc-2">
+<p class="desc-m">Or</p>
+</div>
+
+<div class="desc desc-3">
+<p class="desc-m">Or</p>
+</div>
+
+<div class="desc desc-4">
+<p class="desc-m"><span class="no-wrap">Omada Central (Cloud-Based)</span></p>
+</div>
+
+<div class="desc desc-5">
+<p class="desc-m">Hardware</p>
+</div>
+
+<div class="desc desc-6">
+<p class="desc-m">Software</p>
+</div>
+
+<div class="desc desc-7">
+<p class="desc-m">Network Video<br />
+Recorder</p>
+</div>
+
+<div class="desc desc-8">
+<p class="desc-m">Omada Switch</p>
+</div>
+
+<div class="desc desc-9">
+<p class="desc-m">Omada Gateway</p>
+</div>
+
+<div class="desc desc-10">
+<p class="internet">Internet</p>
+</div>
+
+<div class="desc desc-11">
+<p class="desc-m">Cloud Access</p>
+</div>
+
+<div class="desc desc-12">
+<p class="desc-m">Omada App</p>
+</div>
+
+<div class="desc desc-13">
+<p class="desc-m">Web Browser</p>
+</div>
+
+<div class="desc desc-14"><span class="desc-m"><span class="semiBold">EAP215-Bridge</span><br />
+Long-Range<br />
+Wireless Bridge </span></div>
+
+<div class="desc desc-15"><span class="desc-m"><span class="semiBold">EAP215-Bridge</span><br />
+Long-Range<br />
+Wireless Bridge</span></div>
+
+<div class="desc desc-16"><span class="desc-m">IP Cameras </span></div>
+</div>
+</div>
+</section>
+</div>
+</div>
+
+</body>
+
+<script>
+    (function ($) {
+  // 滚动导航插件
+  $.fn.scrollNavigation = function (options) {
+    // 默认配置
+    const defaults = {
+      range: 500,
+      animationDuration: 500,
+      mobileBreakpoint: 736,
+      // DOM选择器
+      boxSelector: ".box",
+      bgSelector: ".bg",
+      imgSelector: ".img",
+      menuSelector: ".ul-menu",
+      menuItemSelector: ".menu li",
+      tabSelector: "button",
+      // CSS类名配置
+      classes: {
+        tabWrapper: "omada-tab", // 标签包装器的类名
+        active: "active", // 激活状态的类名
+        fixed: "fixed", // 固定定位的类名
+        absolute: "absolute", // 绝对定位的类名
+      },
+    };
+
+    // 合并用户配置和默认配置
+    const settings = $.extend(true, {}, defaults, options);
+
+    // 对每个匹配的元素应用插件
+    return this.each(function () {
+      const $d = $(this);
+      const $dBox = $d.find(settings.boxSelector);
+      const $bg = $d.find(settings.bgSelector);
+      const $tabList = $d.find(settings.menuSelector);
+      const $tabs = $tabList.find(settings.tabSelector);
+      const $menuItems = $d.find(settings.menuItemSelector);
+
+      // 重置高度函数
+      const resetHeight = function () {
+        $dBox
+          .removeClass(settings.classes.fixed)
+          .removeClass(settings.classes.absolute);
+        $d.height($dBox.outerHeight(true) + settings.range * ($bg.length - 1));
+      };
+
+      // 更新标签状态函数
+      function updateTabState($tab, focus = true) {
+        $tabs.attr("aria-selected", "false").prop("tabIndex", -1);
+        $tabs
+          .closest("." + settings.classes.tabWrapper)
+          .removeClass(settings.classes.active);
+        $tab.attr("aria-selected", "true").prop("tabIndex", 0);
+        if (focus) {
+          $tab.focus();
+        }
+        $tab
+          .closest("." + settings.classes.tabWrapper)
+          .addClass(settings.classes.active);
+      }
+
+      // 滚动处理函数
+      const hardwareScroll = function () {
+        const dTop = $d[0].getBoundingClientRect().top;
+
+        if (dTop > 0) {
+          $dBox.removeClass(settings.classes.fixed);
+        } else {
+          if (dTop <= $dBox.outerHeight(true) - $d.outerHeight(true)) {
+            $dBox
+              .removeClass(settings.classes.fixed)
+              .addClass(settings.classes.absolute);
+          } else {
+            let index = Math.round(-dTop / settings.range);
+            index = index >= $bg.length ? $bg.length - 1 : index;
+            if (index != $bg.filter("." + settings.classes.active).index()) {
+              $bg
+                .removeClass(settings.classes.active)
+                .eq(index)
+                .addClass(settings.classes.active);
+              $menuItems
+                .removeClass(settings.classes.active)
+                .eq(index)
+                .addClass(settings.classes.active);
+              updateTabState($tabs.eq(index), false);
+            }
+            $dBox
+              .addClass(settings.classes.fixed)
+              .removeClass(settings.classes.absolute);
+          }
+        }
+      };
+
+      // 窗口大小改变处理函数
+      const hardwareResize = function () {
+        resetHeight();
+      };
+
+      // 初始化函数
+      const init = function () {
+        if (window != top) {
+          return;
+        }
+
+        if ($(window).width() <= settings.mobileBreakpoint) {
+          $bg.addClass(settings.classes.active);
+          $dBox.height("auto");
+        } else {
+          // 窗口大小改变事件
+          $(window).on("resize", hardwareResize);
+
+          // 滚动事件
+          $(window).on("scroll", hardwareScroll);
+
+          // 标签点击事件
+          $tabs.on("click", function (event) {
+            const index = $tabs.index($(this));
+            const scrollPosition = $d.offset().top + index * settings.range + 1;
+
+            $("html, body").animate(
+              {
+                scrollTop: scrollPosition,
+              },
+              settings.animationDuration
+            );
+
+            updateTabState($(this));
+          });
+
+          // 键盘导航事件
+          $tabs.on("keydown", function (event) {
+            const key = event.key;
+            const $currentTab = $(this);
+            const currentIndex = $tabs.index($currentTab);
+            let nextIndex;
+
+            if (key === "ArrowLeft") {
+              nextIndex = currentIndex - 1;
+              if (nextIndex < 0) {
+                nextIndex = $tabs.length - 1;
+              }
+            } else if (key === "ArrowRight") {
+              nextIndex = currentIndex + 1;
+              if (nextIndex >= $tabs.length) {
+                nextIndex = 0;
+              }
+            } else {
+              return;
+            }
+
+            const $nextTab = $tabs.eq(nextIndex);
+            const scrollPosition =
+              $d.offset().top + nextIndex * settings.range + 1;
+
+            $("html, body").animate(
+              {
+                scrollTop: scrollPosition,
+              },
+              settings.animationDuration
+            );
+
+            updateTabState($nextTab);
+          });
+
+          // 初始化
+          setTimeout(hardwareResize, 300);
+        }
+      };
+
+      // 执行初始化
+      init();
+    });
+  };
+
+  // 文档就绪时初始化sections
+  $(function () {
+    if (window != top) {
+      return;
+    }
+
+    // 初始化第一个section
+    $(".smart-auto-empty-Dock").scrollNavigation();
+
+    // 初始化optimized-wired-performance section
+    $(".optimized-wired-performance").scrollNavigation({
+      range: 500,
+      animationDuration: 500,
+    });
+  });
+})(jQuery);
+
+</script>

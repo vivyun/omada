@@ -1,40 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="$tpHrefLang" xml:lang="$tpHrefLang">
 <head>
-	<link href="${canonical}" rel="canonical" /><?php include_once($_SERVER['ROOT_DIR'] . '/productpages/staticpage-hreflang-tag/568.php'); ?>
+	<link href="${canonical}" rel="canonical" /><?php include_once($_SERVER['ROOT_DIR'] . '/productpages/staticpage-hreflang-tag/568.php'); ?><?php
+		$title = false;
+		$description = "${description}";
+		$productCategoryType = $_GET['type'] == 'omada-pro' ? 'B2B-ENTERPRISE' : 'B2B-SMB';
+		$siteId = $tpSiteId;
+		$appFolder = "$tpAppFolder";
+		// $siteId = 1;
+		// $appFolder = "en";
+		include_once($_SERVER['ROOT_DIR'] . "/phppage/common-meta.php");
+		?>
 	<title>${title}</title>
-	<?php
-  $title = false;
-  $description = "${description}";
-  $siteId = $tpSiteId;
-  $appFolder = "$tpAppFolder";
-  $productCategoryType = $_GET['type'] == 'omada-pro' ? 'B2B-ENTERPRISE' : 'B2B-SMB';
-  include_once($_SERVER['ROOT_DIR'] . "/phppage/common-meta.php");
-  ?><script src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/script.js"></script>
-	<link href="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/style.css?3" rel="stylesheet" />
-    <link href="https://static.tp-link.com/assets/css/common-omada.css?202506" rel="stylesheet" />
-	<style id="_goober" type="text/css">.go1475592160{height:0;}.go1671063245{height:auto;}.go1888806478{display:flex;flex-wrap:wrap;flex-grow:1;}@media (min-width:600px){.go1888806478{flex-grow:initial;min-width:288px;}}.go167266335{background-color:#313131;font-size:0.875rem;line-height:1.43;letter-spacing:0.01071em;color:#fff;align-items:center;padding:6px 16px;border-radius:4px;box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);}.go3162094071{padding-left:20px;}.go3844575157{background-color:#313131;}.go1725278324{background-color:#43a047;}.go3651055292{background-color:#d32f2f;}.go4215275574{background-color:#ff9800;}.go1930647212{background-color:#2196f3;}.go946087465{display:flex;align-items:center;padding:8px 0;}.go703367398{display:flex;align-items:center;margin-left:auto;padding-left:16px;margin-right:-8px;}.go3963613292{width:100%;position:relative;transform:translateX(0);top:0;right:0;bottom:0;left:0;min-width:288px;}.go1141946668{box-sizing:border-box;display:flex;max-height:100%;position:fixed;z-index:1400;height:auto;width:auto;transition:top 300ms ease 0ms,right 300ms ease 0ms,bottom 300ms ease 0ms,left 300ms ease 0ms,max-width 300ms ease 0ms;pointer-events:none;max-width:calc(100% - 40px);}.go1141946668 .notistack-CollapseWrapper{padding:6px 0px;transition:padding 300ms ease 0ms;}@media (max-width:599.95px){.go1141946668{width:100%;max-width:calc(100% - 32px);}}.go3868796639 .notistack-CollapseWrapper{padding:2px 0px;}.go3118922589{top:14px;flex-direction:column;}.go1453831412{bottom:14px;flex-direction:column-reverse;}.go4027089540{left:20px;}@media (min-width:600px){.go4027089540{align-items:flex-start;}}@media (max-width:599.95px){.go4027089540{left:16px;}}.go2989568495{right:20px;}@media (min-width:600px){.go2989568495{align-items:flex-end;}}@media (max-width:599.95px){.go2989568495{right:16px;}}.go4034260886{left:50%;transform:translateX(-50%);}@media (min-width:600px){.go4034260886{align-items:center;}}
-	</style>
+	<link href="https://www.tp-link.com/res/style/css/main.css" rel="stylesheet" type="text/css" /><script src="https://www.tapo.com/res/js/jquery/jquery-3.4.1.min.js "></script>
+	<link href="https://static.tp-link.com/assets/js/plugins/swiper-5.4.1/swiper.min.css" rel="stylesheet" /><script src="https://static.tp-link.com/assets/js/plugins/swiper-5.4.1/swiper.min.js"></script>
+	<link href="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/style.css" rel="stylesheet" />
 </head>
 <body class="b2b">
-<div class="page-content-wrapper"><?php include_once($_SERVER['ROOT_DIR'] . '/' . $appFolder . '/smb-header.php'); ?>
-<div class="omada-bridge-products">
-<section class="a">
-<div class="w-container">
+<div class="page-content-wrapper"><?php include_once($_SERVER['ROOT_DIR'] . "/$appFolder/smb-header.php"); ?>
+<div class="solutiondetail-page omada">
+<div class="page-section solutiondetail-banner">
+<div class="omada-container">
 <div class="text">
-<h2>Long-Range PtMP &amp; PtP Wi-Fi Transmission, Perfect for Surveillance and More</h2>
+<h2>Upgraded Connectivity, Effortless Setup</h2>
 
-<p><strong><a href="http://www.omadanetworks.com/us/business-networking/consult/">Contact Sales</a></strong></p>
+<p>Omada Outdoor Long-Range Wireless PtP &amp; PtMP Bridge Solution</p>
 </div>
 </div>
-</section>
+</div>
 
-<section class="b">
+<div class="solutiondetail-navigation">
+<div class="omada-container">
+<div class="sticky-wrapper">
+<div class="sticky-box">
+<ul class="ul-menu" style="top: 0px;">
+	<li class="li-1 active" data-target="solutiondetail-feature"><a aria-label="to Overview Section" class="ga-click" data-vars-event-category="Omada-Front-SolutionDetail_Overview" href="#solutiondetail-feature">Overview</a></li>
+	<li class="li-2" data-target="solutiondetail-benefits"><a aria-label="to Benefits Section" class="ga-click" data-vars-event-category="Omada-Front-SolutionDetail_Benefits" href="#solutiondetail-benefits">Benefits</a></li>
+	<li class="li-3" data-target="solutiondetail-products"><a aria-label="to Products and Resources Section" class="ga-click" data-vars-event-category="Omada-Front-SolutionDetail_Products-and-Resources" href="#solutiondetail-products">Products</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section-box">
+<section class="section-nav solutiondetail-feature" id="solutiondetail-feature">
 <div class="w-container">
 <div class="text">
 <ul>
 	<li class="li-1">
-	<div class="img-container"><img alt="Up to 3.1 Miles Range" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/b-icon-1.png" /></div>
+	<div class="img-container"><img alt="Up to 3.1 Miles Range" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/b-icon-1.png" /></div>
 
 	<div class="text-container">
 	<h2>Up to 3.1mi (5km) Distance</h2>
@@ -47,18 +62,27 @@
 	</div>
 	</li>
 	<li>
-	<div class="img-container"><img alt="Up to 70° Beamwidth for Wider Deployment" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/b-icon-2.png" /></div>
+	<div class="img-container"><img alt="Up to 70° Beamwidth for Wider Deployment" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/b-icon-2.png" /></div>
 
 	<div class="text-container">
-	<h2>Up to 70&deg; Beamwidth for Wider Deployment</h2>
+	<h2>Upgraded High-Gain Antennas</h2>
 
-	<p>One central AP covers more distributed APs and cameras, eliminating the need for multiple central APs.</p>
+	<p>Boasts up to 14 dBi for stronger, more reliable signal strength.</p>
 
-	<p class="note">*EAP211-Bridge: 70&deg; x 70&deg; beamwidth; EAP215-Bridge &amp; EAP115-Bridge: 35&deg; x 35&deg;</p>
+	<p class="note">*EAP211-Bridge: 60&deg; &times; 30&deg; beamwidth; EAP215-Bridge &amp; EAP115-Bridge: 43&deg; &times; 18&deg;</p>
 	</div>
 	</li>
 	<li>
-	<div class="img-container"><img alt="Three Ports for More Devices" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/b-icon-3.png" /></div>
+	<div class="img-container"><img alt="Three Ports for More Devices" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/b-icon-3.png" /></div>
+
+	<div class="text-container">
+	<h2>Enhanced Bandwidth Performance</h2>
+
+	<p>Delivers up to 300 Mbps with enhanced bandwidth within a 3.1 mi (5 km) range using EAP215-Bridge.*</p>
+	</div>
+	</li>
+	<li>
+	<div class="img-container"><img alt="IP65 Weatherproof for Outdoor Use" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/b-icon-4.png" /></div>
 
 	<div class="text-container">
 	<h2>Three Ports for More Devices</h2>
@@ -67,7 +91,7 @@
 	</div>
 	</li>
 	<li>
-	<div class="img-container"><img alt="IP65 Weatherproof for Outdoor Use" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/b-icon-4.png" /></div>
+	<div class="img-container"><img alt="Standalone or Omada SDN Mode" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/b-icon-5.png" /></div>
 
 	<div class="text-container">
 	<h2>IP65 Weatherproof for Outdoor Use</h2>
@@ -75,13 +99,163 @@
 	<p>Durable performance with IP65 rating and operating range of -40&deg;F to 158&deg;F (-40&deg;C to 70&deg;C).</p>
 	</div>
 	</li>
-	<li>
-	<div class="img-container"><img alt="Standalone or Omada SDN Mode" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/b-icon-5.png" /></div>
+</ul>
+</div>
+</div>
+</section>
 
-	<div class="text-container">
-	<h2>Standalone or Omada SDN Mode</h2>
+<div class="section-nav solutiondetail-benefits" id="solutiondetail-benefits">
+<section class="smartbridging">
+<div class="w-container">
+<div class="text">
+<div class="page-section-header-underline">
+<h2>Omada SmartBridging&mdash;The Most Effortless Bridge Setup Ever</h2>
+</div>
+</div>
 
-	<p>Flexible dual modes for batch deployment and remote management via the Omada app or Web UI.</p>
+<h3>Plug-and-Play Effortless Installation</h3>
+
+<ul class="ul-scenarios">
+	<li class="li-1 bg1"><img alt="Warehouse Shelving Areas" class="scenario-img m-hide" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/plug1.png" /> <img alt="Warehouse Shelving Areas" class="scenario-img m-show" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/m/plug1.png" />
+	<div class="scenario-txt">
+	<p class="desc desc1 omada-green"><span>Auto-Pairing</span></p>
+
+	<p class="desc desc2"><span>LED Signal Indicators</span></p>
+	</div>
+
+	<div class="note">
+	<p class="h4">Auto-Pairing with Preconfigured Kit</p>
+
+	<p class="description">Seamlessly connects with preconfigured devices for quick and hassle-free setup.</p>
+	</div>
+	</li>
+	<li class="li-2 bg2"><img alt="Storehouses" class="scenario-img m-hide" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/plug2.png" /> <img alt="Warehouse Shelving Areas" class="scenario-img m-show" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/m/plug2.png" />
+	<div class="scenario-txt">
+	<p class="desc desc1"><span class="omada-green">Main AP</span></p>
+
+	<p class="desc desc2"><span class="omada-green">Client AP</span></p>
+
+	<p class="desc desc3"><span class="omada-green">Auto-Pairing</span></p>
+
+	<p class="desc desc4"><span class="omada-green">Auto-Pairing</span></p>
+
+	<p class="desc desc5"><span class="omada-green">Additional Client AP</span></p>
+
+	<p class="desc desc6"><span class="omada-gray">Client AP</span></p>
+
+	<p class="desc desc8"><span>Multiple bridges auto-pairing:</span></p>
+
+	<p class="desc desc9"><span><b>Step 1:</b><br />
+	Switch to Client AP Mode</span></p>
+
+	<p class="desc desc10"><span><b>Step 2:</b><br />
+	Press the pair button to initiate auto pairing with the main AP</span></p>
+
+	<p class="desc desc11"><span class="omada-green">Additional Client AP</span></p>
+	</div>
+
+	<div class="note">
+	<p class="h4">PtMP Auto-Pairing Switch</p>
+
+	<p class="description">Auto-pairs additional bridges with zero setup or logins for seamless PtMP connections.</p>
+	</div>
+	</li>
+</ul>
+
+<h3>App-Guided Alignment for Optimal Performance</h3>
+
+<ul class="app-guided app-guided1">
+	<li class="img-li"><img alt="Storehouses" class="app-guided-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/app-guided1.png" /></li>
+	<li class="text-li">
+	<p class="h4">App-Guided Alignment for Long-Distance Setups</p>
+
+	<p>Simplify bridge alignment with real-time signal strength visualization on the Omada app. Perfect for installations where bridges are far apart, this feature ensures optimal alignment and connectivity.</p>
+	</li>
+</ul>
+
+<ul class="app-guided app-guided2">
+	<li class="text-li">
+	<p class="h4">Instant Speed Testing for Installation Verification at Your Fingertips</p>
+
+	<p>The Omada app allows users to easily verify installations, test transmission speeds, and troubleshoot connections for optimal performance.</p>
+	</li>
+	<li class="img-li"><img alt="Storehouses" class="app-guided-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/app-guided2.png" /></li>
+</ul>
+</div>
+</section>
+
+<section class="unique-designs">
+<div class="w-container">
+<div class="text">
+<div class="page-section-header-underline">
+<h2>Versatile Power &amp; Connectivity for Expanded Surveillance</h2>
+</div>
+
+<ul>
+	<li class="li-1"><img alt="" aria-hidden="true" class="m-hide" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/unique-1.jpg" /> <img alt="" aria-hidden="true" class="m-show" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/m/unique-1.jpg" />
+	<div class="bg-text">
+	<p class="desc desc1"><span>LED Signal Indicators</span></p>
+	</div>
+
+	<div class="note">
+	<h3>LED Signal Indicators</h3>
+
+	<p>Adjust position and angle using LED signal strength displays for optimal reception.</p>
+	</div>
+	</li>
+	<li class="li-2"><img alt="" aria-hidden="true" class="m-hide" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/unique-2.jpg" /> <img alt="" aria-hidden="true" class="m-show" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/m/unique-2.jpg" />
+	<div class="bg-text">
+	<div class="desc desc-1">
+	<p class="desc-m">3&times; Ethernet LAN Ports</p>
+	</div>
+
+	<div class="desc desc-2">
+	<p class="desc-m">Flexible Mode<br />
+	Switching Design</p>
+	</div>
+
+	<div class="desc desc-3">
+	<p class="desc-m">PoE</p>
+	</div>
+
+	<div class="desc desc-4">
+	<p class="desc-m">PoE Switch</p>
+	</div>
+
+	<div class="desc desc-5">
+	<p class="desc-m">or</p>
+	</div>
+
+	<div class="desc desc-6">
+	<p class="desc-m">PoE Injector</p>
+	</div>
+
+	<div class="desc desc-7">
+	<p class="desc-m">PoE In</p>
+	</div>
+
+	<div class="desc desc-8">
+	<p class="desc-m">DC Power</p>
+	</div>
+
+	<div class="desc desc-9">
+	<p class="desc-m">or</p>
+	</div>
+
+	<div class="desc desc-10">
+	<p class="desc-m">Solar Power System</p>
+	</div>
+
+	<div class="desc desc-11">
+	<p class="desc-m">DC Power<br />
+	(Compatible with Solar Power System)</p>
+	</div>
+	</div>
+
+	<div class="note">
+	<h3>Versatile Power Options</h3>
+
+	<p>Supports 802.3af PoE, 24V Passive PoE, and 12V DC for flexible deployment in any environment.</p>
 	</div>
 	</li>
 </ul>
@@ -89,42 +263,85 @@
 </div>
 </section>
 
-<section class="c">
+<section class="ptp-network">
 <div class="w-container">
 <div class="text">
-<h2>Point-to-Point (PtP) Network Expansion or Remote Camera Monitoring</h2>
+<div class="page-section-header-underline">
+<h2>Point-to-Point (PtP) Network Expansion or<br class="m-hide" />
+Remote Camera Monitoring</h2>
+</div>
 </div>
 
 <div class="bg">
-<div class="desc desc1"><span>Up to 5 km</span></div>
+<div class="desc desc1"><span>Up to 5 km/3.1 mi</span></div>
 
-<div class="desc desc2"><span>Main Building</span></div>
+<div class="desc desc2"><span>Main Site</span></div>
 
-<div class="desc desc3"><span>Remote Building</span></div>
+<div class="desc desc3"><span>Remote Site</span></div>
+
+<div class="desc desc4">
+<p>Omada App</p>
+
+<p><b>OR</b></p>
+
+<p>Web Portal</p>
+</div>
+
+<div class="desc desc5"><span class="desc-l">Versatile Power</span><br />
+<span class="desc-m">(PoE Switch, Passive PoE, DC12V supported)</span></div>
+
+<div class="desc desc6"><span>PoE (Power over Ethernet)</span></div>
+
+<div class="desc desc7"><span>Data</span></div>
+
+<div class="desc desc8"><span class="desc-l">Versatile Power</span><br />
+<span class="desc-m">(PoE Switch, Passive PoE, DC12V supported)</span></div>
+
+<div class="desc desc9"><span>Internet</span></div>
+
+<div class="desc desc10"><span>Power</span></div>
+
+<div class="desc desc11"><span>Power</span></div>
+
+<div class="desc desc12"><span>IP Camera</span></div>
+
+<div class="desc desc13"><span>IP Camera</span></div>
+
+<div class="desc desc14"><span>EAP215-Bridge Kit &amp;<br class="m-show" />
+EAP115-Bridge Kit: 3.1 mi (5 km);</span><br />
+<span>EAP211-Bridge Kit: 0.62 mi (5 km)</span></div>
 </div>
 </div>
 </section>
 
-<section class="d">
+<section class="outdoor-ptp">
 <div class="w-container">
 <div class="text">
+<div class="page-section-header-underline">
 <h2>Outdoor PtP (Point-to-Point) Wi-Fi Connection</h2>
+</div>
 
 <ul>
-	<li class="li-1"><img alt="" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/d-1.png" />
+	<li class="li-1"><img alt="" aria-hidden="true" class="m-hide" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/d-1.png" /> <img alt="" aria-hidden="true" class="m-show" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/m/d-1.png" />
+	<div class="text-container">
 	<h3>Extend Wi-Fi to Additional Buildings</h3>
 
 	<p>Extend your home network or Wi-Fi to your shop, barn, garage, farm, storehouse, guesthouse, or RV.</p>
+	</div>
 	</li>
-	<li class="li-2"><img alt="" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/d-2.png" />
+	<li class="li-2"><img alt="" aria-hidden="true" class="m-hide" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/d-2.png" /> <img alt="" aria-hidden="true" class="m-show" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/m/d-2.png" />
+	<div class="text-container">
 	<h3>Extend Wi-Fi to Additional Offices</h3>
 
-	<p>Provide 550Mbps bandwidth within a 328ft (100m) range using the EAP215-Bridge KIT or EAP211-Bridge KIT.*</p>
+	<p>Provide 550 Mbps bandwidth within a 328 ft (100 m) range using the EAP215-Bridge KIT or EAP211-Bridge KIT.*</p>
+	</div>
 	</li>
-	<li class="li-3"><img alt="" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/d-3.png" />
+	<li class="li-3"><img alt="" aria-hidden="true" class="m-hide" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/d-3.png" /> <img alt="" aria-hidden="true" class="m-show" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/m/d-3.png" />
+	<div class="text-container">
 	<h3>Elevator PtP Wi-Fi for Surveillance</h3>
 
 	<p>Record real-time video to an NVR with virtually no hardwiring required</p>
+	</div>
 	</li>
 </ul>
 
@@ -133,214 +350,164 @@
 </div>
 </section>
 
-<section class="e">
+<section class="ptmp">
 <div class="w-container">
 <div class="text">
-<h2>Point-to-Multipoint (PtMP) Connections with Higher Beamwidth for Distributed Cameras</h2>
+<div class="page-section-header-underline">
+<h2>Point-to-Multipoint (PtMP) Connections with Higher<br />
+Beamwidth for Distributed Cameras</h2>
 </div>
-</div>
-</section>
-
-<section class="f">
-<div class="w-container">
-<div class="text">
-<h2>Outdoor PtMP (Point-to-Multipoint) Wi-Fi for Surveillance</h2>
-
-<ul>
-	<li class="li-1"><img alt="" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/f-1.jpg" />
-	<h3>Parking Lots</h3>
-
-	<p>Remotely connect cameras to<br />
-	reduce crime and accidents</p>
-	</li>
-	<li class="li-2"><img alt="" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/f-2.jpg" />
-	<h3>Farms / Orchards</h3>
-
-	<p>Remotely connect cameras to protect<br />
-	your property</p>
-	</li>
-	<li class="li-3"><img alt="" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/f-3.jpg" />
-	<h3>Construction Sites</h3>
-
-	<p>Rapidly deploy wireless networks to remotely monitor construction progress in real time or manage logistics.</p>
-	</li>
-</ul>
-</div>
-</div>
-</section>
-
-<section class="g">
-<div class="w-container">
-<div class="text">
-<h2>Easy Setup and Installation</h2>
-
-<ul>
-	<li>
-	<div class="img-container"><img alt="" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/g-1.jpg" /> <span class="desc desc1">Auto- Pairing</span></div>
-
-	<div class="text-container">
-	<h3>Auto-Pairing to<br />
-	Reduce Setup Time</h3>
-
-	<p>*Auto pairing works for the original kit. Three or more bridges require manual setup.</p>
-	</div>
-	</li>
-	<li>
-	<div class="img-container"><img alt="" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/g-2.jpg" /> <span class="desc desc2">Signal Strength LEDs</span></div>
-
-	<div class="text-container">
-	<h3>LED Signal Indicator<br />
-	for Easy Alignment</h3>
-	</div>
-	</li>
-	<li>
-	<div class="img-container"><img alt="" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/g-3.jpg" /></div>
-
-	<div class="text-container">
-	<h3>Pole/Wall Mount for Easy Installation</h3>
-
-	<p>*Pole mounting accessories are included, while the wall mounting accessories require purchase separately.</p>
-	</div>
-	</li>
-</ul>
-</div>
-</div>
-</section>
-
-<section class="h">
-<div class="w-container">
-<ul>
-	<li class="li-1">
-	<h2>Standalone Mode</h2>
-
-	<h3>Simple Setup for Individual Scenarios</h3>
-
-	<div class="img-container"><img alt="" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/h-1.jpg" /> <span class="desc desc1">1. Power on both bridges and connect one to the network via cable to make it the main bridge. </span> <span class="desc desc2">2. Set up the main bridge using the Omada App or Web UI, then configure the sub-bridge step by step.</span> <span class="desc desc3">3. Deploy the sub-bridge at the remote location, align it using the signal LED, and optimize with the app if needed. </span></div>
-	</li>
-	<li class="li-2">
-	<h2>Works with Omada SDN</h2>
-
-	<h3>Faster Batch Deployment and Remote Management</h3>
-
-	<div class="img-container"><img alt="" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/h-2.jpg" /> <span class="desc desc4">Omada bridges integrate with Omada SDN for centralized management and remote access, enabling faster batch deployment of multiple bridge pairs, using batch provisioning.</span> <span class="desc desc5">*Omada SDN centralized and remote management requires the use of Omada SDN controller. </span> <span class="desc desc6">Batch Provisioning</span> <span class="desc desc7">Centralized and Remote Management</span></div>
-	</li>
-</ul>
-</div>
-</section>
-
-<section class="i">
-<div class="w-container">
-<div class="text">
-<h2>Designed for Outdoors</h2>
-</div>
-
-<div class="bg"><span class="desc desc1">IP65 Weatherproof </span> <span class="desc desc2">6kV Lightning Protection </span> <span class="desc desc3">-40 &deg;F-158 &deg;F Working Range </span> <span class="desc desc4">Wind<br />
-Resistance </span></div>
-</div>
-</section>
-
-<section class="j">
-<div class="w-container">
-<div class="text">
-<h2>Dedicated Hardware Design</h2>
 </div>
 
 <div class="bg">
-<div class="desc desc1">
-<p class="title">Outdoor Ready</p>
+<div class="desc desc1"><span>EAP211-Bridge: 60&deg; and up to 1km distance<br />
+EAP215-Bridge &amp; EAP115-Bridge: 43&deg; and up to 5km distance</span></div>
 
-<p>&middot; IP65 Weatherproof</p>
+<div class="desc desc2"><span>Distance &lt; 1km / 0.62mi</span></div>
 
-<p>&middot; 6kV Lightning</p>
-
-<p>&middot; Wind Resistant</p>
-
-<p>&middot; -40~70&deg;C (-40~158&deg;F) Operating Temperature</p>
-</div>
-
-<div class="desc desc2">
-<p class="title">Stable HD Video Transmission on 5 GHz</p>
-
-<p>&middot; EAP215-Bridge &amp; &nbsp;&nbsp;EAP211-Bridge: 867 Mbps</p>
-
-<p>&middot; EAP115-Bridge: 300 Mbps</p>
-</div>
-
-<div class="desc desc3">
-<p>224 mm</p>
-</div>
+<div class="desc desc3"><span>Up to 70&deg;</span></div>
 
 <div class="desc desc4">
-<p>60 mm</p>
+<p>Omada App</p>
+
+<p><b>OR</b></p>
+
+<p>Web Portal</p>
 </div>
 
-<div class="desc desc5">
-<p>&middot; Pole Mounting (Accessories included)</p>
+<div class="desc desc5"><span>Versatile Power</span><br />
+<span class="desc-s">(PoE Switch, Passive PoE, 12 V DC supported)</span></div>
 
-<p>&middot; Wall Mounting (Optional)</p>
-</div>
+<div class="desc desc6"><span>PoE (Power over Ethernet)</span></div>
 
-<div class="desc desc6">
-<p>Signal Strength LEDs</p>
-</div>
+<div class="desc desc7"><span>Data</span></div>
 
-<div class="desc desc7">
-<p>LAN LEDs</p>
-</div>
-
-<div class="desc desc8">
-<p>System LED</p>
-</div>
-
-<div class="desc desc9">
-<p>Waterproof Cover</p>
-</div>
-
-<div class="desc desc10">
-<p>79 mm</p>
-</div>
-
-<div class="desc desc11">
-<p>Reset Button</p>
-</div>
-
-<div class="desc desc12">
-<p>Grounding Terminal</p>
-</div>
-
-<div class="desc desc13">
-<p class="title">Passive PoE In</p>
-
-<p>(Power adapter included in the box)</p>
-</div>
-
-<div class="desc desc14">
-<p>12V DC</p>
-</div>
-
-<div class="desc desc15">
-<p class="title">3&times; Shielded Ethernet LAN Ports</p>
-
-<p>EAP215-Bridge &amp; EAP211-Bridge: Gigabit EAP115-Bridge: 10/100Mbps</p>
-</div>
+<div class="desc desc8"><span class="white">Internet</span></div>
 </div>
 </div>
 </section>
 
-<section class="k">
+<section class="outdoor-ptmp">
+<div class="w-container">
+<div class="text">
+<div class="page-section-header-underline">
+<h2>Outdoor PtMP (Point-to-Multipoint) Wi-Fi for Surveillance</h2>
+</div>
+
+<ul>
+	<li class="li-1"><img alt="" aria-hidden="true" class="m-hide" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/f-1.png" /> <img alt="" aria-hidden="true" class="m-show" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/m/f-1.png" />
+	<div class="text-container">
+	<h3>Parking Lots</h3>
+
+	<p>Remotely connect cameras to reduce crime and accidents</p>
+	</div>
+	</li>
+	<li class="li-2"><img alt="" aria-hidden="true" class="m-hide" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/f-2.png" /> <img alt="" aria-hidden="true" class="m-show" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/m/f-2.png" />
+	<div class="text-container">
+	<h3>Farms / Orchards</h3>
+
+	<p>Remotely connect cameras to protect your property</p>
+	</div>
+	</li>
+	<li class="li-3"><img alt="" aria-hidden="true" class="m-hide" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/f-3.png" /> <img alt="" aria-hidden="true" class="m-show" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/m/f-3.png" />
+	<div class="text-container">
+	<h3>Construction Sites</h3>
+
+	<p>Rapidly deploy wireless networks to remotely monitor construction progress in real time or manage logistics.</p>
+	</div>
+	</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="dual-control">
+<div class="w-container">
+<div class="text">
+<div class="page-section-header-underline">
+<h2>Dual Control Modes</h2>
+</div>
+
+<p>Standalone Simplicity or Omada SDN for Batch Deployment and Remote Management</p>
+</div>
+
+<ul>
+	<li class="li-1">
+	<h3>Standalone Mode</h3>
+
+	<p class="h4">Simple Setup for Individual Scenarios</p>
+
+	<div class="img-container"><img alt="" aria-hidden="true" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/h-1.jpg" /> <span class="desc desc1">1. Power on both bridges and connect one to the network via cable to make it the main bridge.</span> <span class="desc desc2">2. Set up the main bridge using the Omada app or Web UI, then configure the sub-bridge step by step.</span> <span class="desc desc3">3. Deploy the sub-bridge at the remote location, align it using the LED Signal Indicators, and optimize with the app if needed.</span> <span class="desc desc10">Sub-bridge</span> <span class="desc desc4">Main Bridge</span> <span class="desc desc5">Auto-Pairing</span> <span class="desc desc6">LAN1 (POE IN)</span> <span class="desc desc7">PoE</span> <span class="desc desc8">Main Bridge</span> <span class="desc desc9">Sub-bridge</span></div>
+	</li>
+	<li class="li-2">
+	<h3>Works with Omada SDN</h3>
+
+	<p class="h4">Faster Batch Deployment and Remote Management</p>
+
+	<div class="img-container"><img alt="" aria-hidden="true" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/h-2.jpg" /> <span class="desc desc13">and more </span> <span class="desc desc4">Omada bridges integrate with Omada SDN for centralized management and remote access, enabling faster batch deployment of multiple bridge pairs, using batch provisioning.</span> <span class="desc desc5">*Omada SDN centralized and remote management requires the use of Omada SDN controller. </span> <span class="desc desc6">Batch Provisioning</span> <span class="desc desc7">Centralized and Remote Management</span> <span class="desc desc8">Cloud</span></div>
+	</li>
+</ul>
+</div>
+</section>
+
+<section class="eap-designed-for-outdoors">
+<div class="w-container">
+<div class="text">
+<div class="page-section-header-underline">
+<h2>Robust Outdoor Design for Long-Lasting Reliability</h2>
+</div>
+</div>
+
+<div class="img">
+<div class="txt">
+<ul class="ul-features">
+	<li class="li-1"><img alt="IP65 Weatherproof" class="icon" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/img/f1.png" />
+	<div class="icon-txt">
+	<p class="icon-title">IP65<br />
+	Weatherproof</p>
+	</div>
+	</li>
+	<li class="li-2"><img alt="6kV Lightning Protection" class="icon" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/img/f2.png" />
+	<div class="icon-txt">
+	<p class="icon-title">6kV Lightning<br />
+	Protection</p>
+	</div>
+	</li>
+	<li class="li-3"><img alt="-40 °C-70 °C Working Range" class="icon" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/img/f3.png" />
+	<div class="icon-txt">
+	<p class="icon-title">-40 &deg;C-70 &deg;C<br />
+	(-40 &deg;F-158 &deg;C)<br />
+	Working Range</p>
+	</div>
+	</li>
+	<li class="li-4"><img alt="Wind Resistance" class="icon" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/img/f4.png" />
+	<div class="icon-txt">
+	<p class="icon-title">Wind<br />
+	Resistance</p>
+	</div>
+	</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<section class="section-nav solutiondetail-products" id="solutiondetail-products">
 <div class="w-container">
 <div class="product-table">
-<table>
+<table class="m-hide">
 	<tbody>
 		<tr class="first-tr">
-			<td class="first-td"><img alt="NDAA Compliant" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/k-icon.png" /></td>
-			<td><img alt="EAP215-Bridge KIT" class="product-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/k-1.png" /></td>
-			<td><img alt="EAP211-Bridge KIT" class="product-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/k-2.png" /></td>
-			<td><img alt="EAP115-Bridge KIT" class="product-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge/img/k-3.png" /></td>
+			<td class="first-td">&nbsp;</td>
+			<td><a aria-label="to eap215-bridge-kit" class="ga-click" data-vars-event-category="Omada-Product" href="$tpRootUrlbusiness-networking/omada-wifi-wireless-bridge/eap215-bridge-kit/"><img alt="EAP215-Bridge KIT" class="product-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/k-1.png" /> </a></td>
+			<td><a aria-label="to eap211-bridge-kit" class="ga-click" data-vars-event-category="Omada-Product" href="$tpRootUrlbusiness-networking/omada-wifi-wireless-bridge/eap211-bridge-kit/"><img alt="EAP211-Bridge KIT" class="product-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/k-2.png" /></a></td>
+			<td><a aria-label="to eap115-bridge-kit" class="ga-click" data-vars-event-category="Omada-Product" href="$tpRootUrlbusiness-networking/omada-wifi-wireless-bridge/eap115-bridge-kit/"><img alt="EAP115-Bridge KIT" class="product-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/k-3.png" /></a></td>
+			<td><a aria-label="to eap100-bridge-kit" class="ga-click" data-vars-event-category="Omada-Product" href="$tpRootUrlbusiness-networking/omada-wifi-wireless-bridge/eap100-bridge-kit/"><img alt="EAP100-Bridge KIT" class="product-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/k-4.png" /></a></td>
 		</tr>
-		<tr>
+		<tr class="model-name">
 			<td class="first-td">
-			<p class="model-title">Model</p>
+			<p class="model-title">Omada Model</p>
 			</td>
 			<td>
 			<p class="product">EAP215-Bridge KIT</p>
@@ -351,33 +518,8 @@ Resistance </span></div>
 			<td>
 			<p class="product">EAP115-Bridge KIT</p>
 			</td>
-		</tr>
-		<tr>
-			<td class="first-td">
-			<p class="title">&nbsp;</p>
-			</td>
 			<td>
-			<div class="link"><a class="button ga-click" data-vars-event-category="bridge_Products" href="$tpRootUrlbusiness-networking/omada-wifi-outdoor/eap215-bridge-kit/"><span>Learn More &gt;</span></a></div>
-			</td>
-			<td>
-			<div class="link"><a class="button ga-click" data-vars-event-category="bridge_Products" href="$tpRootUrlbusiness-networking/omada-wifi-outdoor/eap211-bridge-kit/"><span>Learn More &gt;</span></a></div>
-			</td>
-			<td>
-			<div class="link"><a class="button ga-click" data-vars-event-category="bridge_Products" href="$tpRootUrlbusiness-networking/omada-wifi-outdoor/eap115-bridge-kit/"><span>Learn More &gt;</span></a></div>
-			</td>
-		</tr>
-		<tr>
-			<td class="first-td">
-			<p class="title">Frequency</p>
-			</td>
-			<td>
-			<p>5 GHz</p>
-			</td>
-			<td>
-			<p>5 GHz</p>
-			</td>
-			<td>
-			<p>5 GHz</p>
+			<p class="product">EAP100-Bridge KIT</p>
 			</td>
 		</tr>
 		<tr>
@@ -385,13 +527,16 @@ Resistance </span></div>
 			<p class="title">Max Wireless Speed*</p>
 			</td>
 			<td>
-			<p>AC867 Mbps</p>
+			<p>Wi-Fi 5 AC867</p>
 			</td>
 			<td>
-			<p>AC867 Mbps</p>
+			<p>Wi-Fi 5 AC867</p>
 			</td>
 			<td>
-			<p>N300 Mbps</p>
+			<p>Wi-Fi 4 N300</p>
+			</td>
+			<td>
+			<p>Wi-Fi 4 N300</p>
 			</td>
 		</tr>
 		<tr>
@@ -407,19 +552,29 @@ Resistance </span></div>
 			<td>
 			<p>3.1 mi / 5 km</p>
 			</td>
+			<td>
+			<p>0.31 mi / 500 m</p>
+			</td>
 		</tr>
 		<tr>
 			<td class="first-td">
-			<p class="title">Beamwidth (Vertical &times; Horizontal)</p>
+			<p class="title">Beamwidth</p>
 			</td>
 			<td>
-			<p>35&deg;&times;35&deg;</p>
+			<p>Horizontal: 43&deg;,<br />
+			Vertical: 18&deg;</p>
 			</td>
 			<td>
-			<p>70&deg;&times;70&deg;</p>
+			<p>Horizontal: 60&deg;,<br />
+			Vertical: 30&deg;</p>
 			</td>
 			<td>
-			<p>35&deg;&times;35&deg;</p>
+			<p>Horizontal: 43&deg;,<br />
+			Vertical: 18&deg;</p>
+			</td>
+			<td>
+			<p>Horizontal: 70&deg;,<br />
+			Vertical: 70&deg;</p>
 			</td>
 		</tr>
 		<tr>
@@ -427,13 +582,16 @@ Resistance </span></div>
 			<p class="title">Antenna Gain</p>
 			</td>
 			<td>
-			<p>11.0 dBi</p>
+			<p>5 GHz: 14.0 dBi</p>
 			</td>
 			<td>
-			<p>7.0 dBi</p>
+			<p>5 GHz: 10.0 dBi</p>
 			</td>
 			<td>
-			<p>11.0 dBi</p>
+			<p>5 GHz: 14.0 dBi</p>
+			</td>
+			<td>
+			<p>2.4 GHz: 8.0 dBi</p>
 			</td>
 		</tr>
 		<tr>
@@ -449,20 +607,31 @@ Resistance </span></div>
 			<td>
 			<p>3&times; 10/100 Mbps</p>
 			</td>
+			<td>
+			<p>3&times; 10/100 Mbps</p>
+			</td>
 		</tr>
 		<tr>
 			<td class="first-td">
-			<p class="title">Power Supply Method</p>
+			<p class="title">Power Supply</p>
 			</td>
-			<td colspan="3">
-			<p>12V DC / 24V Passive PoE (Passive PoE adapter included in the box)</p>
+			<td colspan="4">
+			<p>1. Support 802.3at PoE 2. Passive PoE 3. 12V DC (Compatiblewith TP-Link Solar Power Supply System)</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">PtMP &amp; PtP Auto-Pairing</p>
+			</td>
+			<td colspan="4">
+			<p>Yes</p>
 			</td>
 		</tr>
 		<tr>
 			<td class="first-td">
 			<p class="title">Mount</p>
 			</td>
-			<td colspan="3">
+			<td colspan="4">
 			<p>Pole Mounting (Accessories included)<br />
 			Wall Mounting (Optional)</p>
 			</td>
@@ -471,58 +640,375 @@ Resistance </span></div>
 			<td class="first-td">
 			<p class="title">Weatherproof Enclosure</p>
 			</td>
-			<td colspan="3">
+			<td colspan="4">
 			<p>IP65</p>
-			</td>
-		</tr>
-		<tr>
-			<td class="first-td">
-			<p class="title">Operating Temperature</p>
-			</td>
-			<td colspan="3">
-			<p>-40℃~70℃ (-40℉~158℉)</p>
-			</td>
-		</tr>
-		<tr>
-			<td class="first-td">
-			<p class="title">Lightning Protection</p>
-			</td>
-			<td colspan="3">
-			<p>6 kV (the access point and the included power adapter)</p>
 			</td>
 		</tr>
 		<tr>
 			<td class="first-td">
 			<p class="title">Wind Resistance</p>
 			</td>
-			<td colspan="3">
-			<p>&radic;</p>
+			<td colspan="4">
+			<p>Yes</p>
 			</td>
 		</tr>
 		<tr>
 			<td class="first-td">
-			<p class="title">Centralized Cloud Management</p>
+			<p class="title">Lightning Protection</p>
 			</td>
-			<td colspan="3">
-			<p>Omada App; Omada Cloud Web UI</p>
+			<td colspan="4">
+			<p>6kV</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Operating Temperature</p>
+			</td>
+			<td colspan="4">
+			<p>-40℃~70℃ (-40℉~158℉)</p>
 			</td>
 		</tr>
 		<tr>
 			<td class="first-td">
 			<p class="title">Standalone Management</p>
 			</td>
-			<td colspan="3">
-			<p>Omada App; Local Management Web UI</p>
+			<td colspan="4">
+			<p>Omada App, Local Management Web UI</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Centralized Cloud Management</p>
+			</td>
+			<td colspan="4">
+			<p>Omada App, Omada Cloud</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Dimensions</p>
+			</td>
+			<td>
+			<p>3.1 &times; 2.4 &times; 10.9 in<br />
+			(79 &times; 60 &times; 276 mm)</p>
+			</td>
+			<td>
+			<p>3.1 &times; 2.4 &times; 8.8 in<br />
+			(79 &times; 60 &times; 224 mm)</p>
+			</td>
+			<td>
+			<p>3.1 &times; 2.4 &times; 10.9 in<br />
+			(79 &times; 60 &times; 276 mm)</p>
+			</td>
+			<td>
+			<p>3.1 &times; 2.4 &times; 8.8 in<br />
+			(79 &times; 60 &times; 224 mm)</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table class="m-show">
+	<tbody>
+	</tbody>
+	<thead class="pic-row">
+		<tr>
+			<td class="first-td">&nbsp;</td>
+			<td><img alt="EAP215-Bridge KIT" class="product-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/k-1.png" /></td>
+			<td><img alt="EAP211-Bridge KIT" class="product-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/k-2.png" /></td>
+			<td><img alt="EAP115-Bridge KIT" class="product-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/k-3.png" /></td>
+			<td><img alt="EAP100-Bridge KIT" class="product-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/k-4.png" /></td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="first-td">
+			<p class="model-title">Omada Model</p>
+			</td>
+			<td>
+			<p class="product">EAP215-Bridge KIT</p>
+			</td>
+			<td>
+			<p class="product">EAP211-Bridge KIT</p>
+			</td>
+			<td>
+			<p class="product">EAP115-Bridge KIT</p>
+			</td>
+			<td>
+			<p class="product">EAP100-Bridge KIT</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Max Wireless Speed*</p>
+			</td>
+			<td>
+			<p>Wi-Fi 5 AC867</p>
+			</td>
+			<td>
+			<p>Wi-Fi 5 AC867</p>
+			</td>
+			<td>
+			<p>Wi-Fi 4 N300</p>
+			</td>
+			<td>
+			<p>Wi-Fi 4 N300</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Max Transmission Distance*</p>
+			</td>
+			<td>
+			<p>3.1 mi / 5 km</p>
+			</td>
+			<td>
+			<p>0.62 mi / 1 km</p>
+			</td>
+			<td>
+			<p>3.1 mi / 5 km</p>
+			</td>
+			<td>
+			<p>0.31 mi / 500 m</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Beamwidth</p>
+			</td>
+			<td>
+			<p>Horizontal: 43&deg;,<br />
+			Vertical: 18&deg;</p>
+			</td>
+			<td>
+			<p>Horizontal: 60&deg;,<br />
+			Vertical: 30&deg;</p>
+			</td>
+			<td>
+			<p>Horizontal: 43&deg;,<br />
+			Vertical: 18&deg;</p>
+			</td>
+			<td>
+			<p>Horizontal: 70&deg;,<br />
+			Vertical: 70&deg;</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Antenna Gain</p>
+			</td>
+			<td>
+			<p>5 GHz: 14.0 dBi</p>
+			</td>
+			<td>
+			<p>5 GHz: 10.0 dBi</p>
+			</td>
+			<td>
+			<p>5 GHz: 14.0 dBi</p>
+			</td>
+			<td>
+			<p>2.4 GHz: 8.0 dBi</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Ethernet Ports</p>
+			</td>
+			<td>
+			<p>3&times; Gigabit</p>
+			</td>
+			<td>
+			<p>3&times; Gigabit</p>
+			</td>
+			<td>
+			<p>3&times; 10/100 Mbps</p>
+			</td>
+			<td>
+			<p>3&times; 10/100 Mbps</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Power Supply</p>
+			</td>
+			<td>
+			<p>1. Support 802.3at PoE 2. Passive PoE 3. 12V DC (Compatiblewith TP-Link Solar Power Supply System)</p>
+			</td>
+			<td>
+			<p>1. Support 802.3at PoE 2. Passive PoE 3. 12V DC (Compatiblewith TP-Link Solar Power Supply System)</p>
+			</td>
+			<td>
+			<p>1. Support 802.3at PoE 2. Passive PoE 3. 12V DC (Compatiblewith TP-Link Solar Power Supply System)</p>
+			</td>
+			<td>
+			<p>1. Support 802.3at PoE 2. Passive PoE 3. 12V DC (Compatiblewith TP-Link Solar Power Supply System)</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">PtMP &amp; PtP Auto-Pairing</p>
+			</td>
+			<td>
+			<p>Yes</p>
+			</td>
+			<td>
+			<p>Yes</p>
+			</td>
+			<td>
+			<p>Yes</p>
+			</td>
+			<td>
+			<p>Yes</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Mount</p>
+			</td>
+			<td>
+			<p>Pole Mounting (Accessories included)<br />
+			Wall Mounting (Optional)</p>
+			</td>
+			<td>
+			<p>Pole Mounting (Accessories included)<br />
+			Wall Mounting (Optional)</p>
+			</td>
+			<td>
+			<p>Pole Mounting (Accessories included)<br />
+			Wall Mounting (Optional)</p>
+			</td>
+			<td>
+			<p>Pole Mounting (Accessories included)<br />
+			Wall Mounting (Optional)</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Weatherproof Enclosure</p>
+			</td>
+			<td>
+			<p>IP65</p>
+			</td>
+			<td>
+			<p>IP65</p>
+			</td>
+			<td>
+			<p>IP65</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Wind Resistance</p>
+			</td>
+			<td>
+			<p>Yes</p>
+			</td>
+			<td>
+			<p>Yes</p>
+			</td>
+			<td>
+			<p>Yes</p>
+			</td>
+			<td>
+			<p>Yes</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Lightning Protection</p>
+			</td>
+			<td>
+			<p>6kV</p>
+			</td>
+			<td>
+			<p>6kV</p>
+			</td>
+			<td>
+			<p>6kV</p>
+			</td>
+			<td>
+			<p>6kV</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Operating Temperature</p>
+			</td>
+			<td>
+			<p>-40℃~70℃ (-40℉~158℉)</p>
+			</td>
+			<td>
+			<p>-40℃~70℃ (-40℉~158℉)</p>
+			</td>
+			<td>
+			<p>-40℃~70℃ (-40℉~158℉)</p>
+			</td>
+			<td>
+			<p>-40℃~70℃ (-40℉~158℉)</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Standalone Management</p>
+			</td>
+			<td>
+			<p>Omada App, Local Management Web UI</p>
+			</td>
+			<td>
+			<p>Omada App, Local Management Web UI</p>
+			</td>
+			<td>
+			<p>Omada App, Local Management Web UI</p>
+			</td>
+			<td>
+			<p>Omada App, Local Management Web UI</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Centralized Cloud Management</p>
+			</td>
+			<td>
+			<p>Omada App, Omada Cloud</p>
+			</td>
+			<td>
+			<p>Omada App, Omada Cloud</p>
+			</td>
+			<td>
+			<p>Omada App, Omada Cloud</p>
+			</td>
+			<td>
+			<p>Omada App, Omada Cloud</p>
+			</td>
+		</tr>
+		<tr class="last-row">
+			<td class="first-td">
+			<p class="title">Dimensions</p>
+			</td>
+			<td>
+			<p>3.1 &times; 2.4 &times; 10.9 in<br />
+			(79 &times; 60 &times; 276 mm)</p>
+			</td>
+			<td>
+			<p>3.1 &times; 2.4 &times; 8.8 in<br />
+			(79 &times; 60 &times; 224 mm)</p>
+			</td>
+			<td>
+			<p>3.1 &times; 2.4 &times; 10.9 in<br />
+			(79 &times; 60 &times; 276 mm)</p>
+			</td>
+			<td>
+			<p>3.1 &times; 2.4 &times; 8.8 in<br />
+			(79 &times; 60 &times; 224 mm)</p>
 			</td>
 		</tr>
 	</tbody>
 </table>
 </div>
-
-<p class="note">*Maximum wireless signal rates are the physical rates derived from IEEE Standard 802.11 specifications. The max ranges of products are tested in real outdoor environments. Actual range and throughput are not guaranteed and will vary as a result of network conditions, and depend on the transmission power and environmental factors such as wireless interference, obstacles, weather, etc.</p>
 </div>
 </section>
 </div>
-<?php include_once($_SERVER["ROOT_DIR"] . "/$tpAppFolder/footer.php"); ?></div>
+</div>
+<script type="text/javascript" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/script.js"></script><?php include_once($_SERVER['ROOT_DIR'] . "/$appFolder/footer.php"); ?></div>
 </body>
 </html>

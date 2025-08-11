@@ -10,11 +10,6 @@
           <a class="link" href="demo-kit-vanilla/thankyou.html?form=1">Thank You Page</a>
         </div>
         <div class="flex flex-col gap-4">
-          <h4>PtP & PtMP Wireless Bridges</h4>
-          <a class="link" href="long-range/index.html">Source code</a>
-          <a class="link" href="long-range/old.html">Old source code (template)</a>
-        </div>
-        <div class="flex flex-col gap-4">
           <h4>Outdoor Wi-Fi</h4>
           <a class="link" href="outdoor/index.html">Source code</a>
         </div>
@@ -36,6 +31,22 @@
           <h4>VIGI Solar Power System</h4>
           <a class="link" href="vigi-solar/index.html">New code</a>
           <a class="link" href="vigi-solar/original.html">Original code</a>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h4>EAP211 Bridge Kit V3</h4>
+          <a class="link" href="eap211/index.html">Edits for US (V3)</a>
+          <a class="link" href="eap211/original.html">Original code (V3)</a>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h4>EAP115 Bridge Kit V3</h4>
+          <a class="link" href="eap115/index.html">Edits for US (V3)</a>
+          <a class="link" href="eap115/original.html">Original code (V3)</a>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h4>PtP & PtMP Wireless Bridges</h4>
+          <a class="link" href="long-range/index.html">Edits for US (V3)</a>
+          <a class="link" href="long-range/original_en.html">Original code (V3)</a>
+          <a class="link" href="long-range/us.html">US code (V2)</a>
         </div>
       </div>
     </div>
