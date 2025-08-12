@@ -14,11 +14,8 @@
   <!-- NEW: TABLE CSS, EDITS -->
   <style>
   /* NEW CSS START */
-  .overview-content .eap-transmission h3 {
-    font-size: 1.35em;
-    font-weight: 400;
-    line-height: 1.3333;
-    padding: 0 0 0.5em;
+  .solutiondetail-products .is-hidden { 
+    display: none !important; 
   }
   .overview-content .smart-auto-empty-Dock .img1 .desc8 {
     right: 5em;
@@ -30,6 +27,9 @@
   /* NEW CSS END */
 
   /* OVERRIDDEN CSS START*/
+  .overview-content .eap-transmission h2 {
+      padding: 0 0 0.5em;
+    }
   .overview-content .smart-auto-empty-Dock .bg.img1 {
     background-image: url(https://static.tp-link.com/upload/static-page/i-2_20250812005733k.jpg);
   }
@@ -44,6 +44,23 @@
   }
   .overview-content .smart-auto-empty-Dock .img1 .desc7 {
     left: 39.5em;
+  }
+  @media (max-width: 1680px) {
+    .overview-content .smart-auto-empty-Dock {
+      font-size: 16px;
+    }
+    .overview-content .optimized-wired-performance {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    .overview-content .smart-auto-empty-Dock {
+      font-size: 16px;
+    }
+    .overview-content .optimized-wired-performance {
+      font-size: 16px;
+    }
   }
   /* OVERRIDDEN CSS END*/
 
@@ -251,29 +268,30 @@
   @media (max-width: 736px) {
     /* MOBILE OVERRIDDEN CSS START */
     .overview-content .smart-auto-empty-Dock .bg.img1 {
-      background-image: url(https://static.tp-link.com/upload/static-page/m_i-2_20250812000031d.jpg);
-      padding-bottom: 105vw;
+      background-image: url(https://static.tp-link.com/upload/static-page/m_i-2_20250812203932w.jpg);
+      padding-bottom: 115vw;
       padding-top: 15.6vw;
     }
     .overview-content .eap-sdn .img .desc-15 {
       top: 125vw;
     }
     .overview-content .smart-auto-empty-Dock .img1 .desc5 {
-      left: 8em;
-      top: 11em;
+      left: 12vw;
+      top: 22vw;
+    width: 80vw;
     }
     .overview-content .smart-auto-empty-Dock .img1 .desc6 {
-      top: 15.6em;
-      left: 8em;
+      top: 30vw;
+      left: 16vw;
     }
     .overview-content .smart-auto-empty-Dock .img1 .desc7 {
-      top: 15.6em;
-      left: 25em;
+      top: 30vw;
+      left: 51vw;
     }
     .overview-content .smart-auto-empty-Dock .img1 .desc8 {
-      top: 50.5em;
-      left: 5em;
-      width: 40em;
+      top: 110vw;
+      left: 11vw;
+      width: 80vw;
     }
     /* MOBILE OVERRIDDEN CSS END */
   }
@@ -284,7 +302,6 @@
 <body class="overview-content">
  <!-- RELEVANT CODE STARTS HERE-->
 <div class="eap215-bridge-kit_v3">
-<div class="section highlights active" data-id="highlights">
 <section class="eap-banner">
 <div class="w-container">
 <div class="text">
@@ -490,7 +507,7 @@ The Most Effortless Bridge Setup Ever</h2>
 <div class="descs">
 <p class="desc desc1"><span>LED Signal Indicators</span></p>
 
-<p class="desc desc2 omada-deep-green"><span>Auto-Pairing</span></p>
+<p class="desc desc2 omada-green"><span>Auto-Pairing</span></p>
 </div>
 </div>
 </div>
@@ -500,17 +517,9 @@ The Most Effortless Bridge Setup Ever</h2>
 <p class="menu-li m-show"><span>PtMP Auto-Pairing Switch</span></p>
 
 <div class="descs">
-<p class="desc desc0 omada-deep-green"><span>Main AP</span></p>
+<p class="desc desc5"><span>Up to 1-to-4 Multiple-Bridge Auto-Pairing</span></p>
 
-<p class="desc desc1 omada-deep-green"><span>Auto-Pairing</span></p>
-
-<p class="desc desc2 omada-deep-green"><span>Auto-Pairing</span></p>
-
-<p class="desc desc3 omada-deep-green"><span>Client AP</span></p>
-
-<p class="desc desc4 omada-deep-green"><span>Additional Client AP</span></p>
-
-<p class="desc desc5"><span>Multiple Bridges Auto-Pairing:</span></p>
+<p class="desc desc8"><span>Note: This function requires firmware v1.1.2 or later.</span></p>
 
 <p class="desc desc6"><span>Step 1:<br />
 Switch to Client AP Mode</span></p>
@@ -536,7 +545,7 @@ Press the pair button to initiate auto pairing with the main AP</span></p>
 <div class="img">
 <div aria-labelledby="alignment-tab" class="bg img1 active" id="alignment-desc" role="tabpanel" tabindex="0">
 <div class="w-container">
-<p class="menu-li m-show">&nbsp;</p>
+<p class="menu-li m-show"><span>Effortless App-Guided Alignment</span></p>
 
 <div class="bg-txt">
 <div class="desc desc-1"><span class="desc-b white">After Alignment</span></div>
@@ -546,7 +555,7 @@ Press the pair button to initiate auto pairing with the main AP</span></p>
 
 <div aria-labelledby="speed-testing-tab" class="bg img2" id="speed-testing-desc" role="tabpanel" tabindex="0">
 <div class="w-container">
-<p class="menu-li m-show">&nbsp;</p>
+<p class="menu-li m-show"><span>Instant Speed Testing</span></p>
 </div>
 </div>
 </div>
@@ -719,26 +728,489 @@ Wireless Bridge</span></div>
 </div>
 </div>
 </section>
+
+<!--NEW SECTION: COMPARISON TABLE-->
+<section class="section-nav solutiondetail-products" id="solutiondetail-products">
+<div class="w-container">
+<div class="product-table">
+<table class="m-hide">
+	<tbody>
+		<tr class="first-tr">
+			<td class="first-td">&nbsp;</td>
+			<td><a aria-label="to eap215-bridge-kit" class="ga-click" data-vars-event-category="Omada-Product" href="$tpRootUrlbusiness-networking/omada-wifi-wireless-bridge/eap215-bridge-kit/"><img alt="EAP215-Bridge KIT" class="product-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/k-1.png" /> </a></td>
+			<td><a aria-label="to eap211-bridge-kit" class="ga-click" data-vars-event-category="Omada-Product" href="$tpRootUrlbusiness-networking/omada-wifi-wireless-bridge/eap211-bridge-kit/"><img alt="EAP211-Bridge KIT" class="product-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/k-2.png" /></a></td>
+			<td><a aria-label="to eap115-bridge-kit" class="ga-click" data-vars-event-category="Omada-Product" href="$tpRootUrlbusiness-networking/omada-wifi-wireless-bridge/eap115-bridge-kit/"><img alt="EAP115-Bridge KIT" class="product-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/k-3.png" /></a></td>
+		</tr>
+		<tr class="model-name">
+			<td class="first-td">
+			<p class="model-title">Omada Model</p>
+			</td>
+			<td>
+			<p class="product">EAP215-Bridge KIT</p>
+			</td>
+			<td>
+			<p class="product">EAP211-Bridge KIT</p>
+			</td>
+			<td>
+			<p class="product">EAP115-Bridge KIT</p>
+			</td>
+
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Max Wireless Speed*</p>
+			</td>
+			<td>
+			<p>Wi-Fi 5 AC867</p>
+			</td>
+			<td>
+			<p>Wi-Fi 5 AC867</p>
+			</td>
+			<td>
+			<p>Wi-Fi 4 N300</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Max Transmission Distance*</p>
+			</td>
+			<td>
+			<p>3.1 mi / 5 km</p>
+			</td>
+			<td>
+			<p>0.62 mi / 1 km</p>
+			</td>
+			<td>
+			<p>3.1 mi / 5 km</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Beamwidth</p>
+			</td>
+			<td>
+			<p>Horizontal: 43&deg;,<br />
+			Vertical: 18&deg;</p>
+			</td>
+			<td>
+			<p>Horizontal: 60&deg;,<br />
+			Vertical: 30&deg;</p>
+			</td>
+			<td>
+			<p>Horizontal: 43&deg;,<br />
+			Vertical: 18&deg;</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Antenna Gain</p>
+			</td>
+			<td>
+			<p>5 GHz: 14.0 dBi</p>
+			</td>
+			<td>
+			<p>5 GHz: 10.0 dBi</p>
+			</td>
+			<td>
+			<p>5 GHz: 14.0 dBi</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Ethernet Ports</p>
+			</td>
+			<td>
+			<p>3&times; Gigabit</p>
+			</td>
+			<td>
+			<p>3&times; Gigabit</p>
+			</td>
+			<td>
+			<p>3&times; 10/100 Mbps</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Power Supply</p>
+			</td>
+			<td colspan="4">
+			<p>1. Support 802.3at PoE 2. Passive PoE 3. 12V DC (Compatible with TP-Link Solar Power Supply System)</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">PtMP &amp; PtP Auto-Pairing</p>
+			</td>
+			<td colspan="4">
+			<p>Yes</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Mount</p>
+			</td>
+			<td colspan="4">
+			<p>Pole Mounting (Accessories included)<br />
+			Wall Mounting (Optional)</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Weatherproof Enclosure</p>
+			</td>
+			<td colspan="4">
+			<p>IP65</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Wind Resistance</p>
+			</td>
+			<td colspan="4">
+			<p>Yes</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Lightning Protection</p>
+			</td>
+			<td colspan="4">
+			<p>6kV</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Operating Temperature</p>
+			</td>
+			<td colspan="4">
+			<p>-40℃~70℃ (-40℉~158℉)</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Standalone Management</p>
+			</td>
+			<td colspan="4">
+			<p>Omada App, Local Management Web UI</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Centralized Cloud Management</p>
+			</td>
+			<td colspan="4">
+			<p>Omada App, Omada Cloud</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Dimensions</p>
+			</td>
+			<td>
+			<p>3.1 &times; 2.4 &times; 10.9 in<br />
+			(79 &times; 60 &times; 276 mm)</p>
+			</td>
+			<td>
+			<p>3.1 &times; 2.4 &times; 8.8 in<br />
+			(79 &times; 60 &times; 224 mm)</p>
+			</td>
+			<td>
+			<p>3.1 &times; 2.4 &times; 10.9 in<br />
+			(79 &times; 60 &times; 276 mm)</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table class="m-show">
+	<tbody>
+	</tbody>
+	<thead class="pic-row">
+		<tr>
+			<td class="first-td">&nbsp;</td>
+			<td><img alt="EAP215-Bridge KIT" class="product-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/k-1.png" /></td>
+			<td><img alt="EAP211-Bridge KIT" class="product-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/k-2.png" /></td>
+			<td><img alt="EAP115-Bridge KIT" class="product-img" src="https://static-page.tp-link.com/solution/omada-long-distance-wireless-bridge_v2/img/k-3.png" /></td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="first-td">
+			<p class="model-title">Omada Model</p>
+			</td>
+			<td>
+			<p class="product">EAP215-Bridge KIT</p>
+			</td>
+			<td>
+			<p class="product">EAP211-Bridge KIT</p>
+			</td>
+			<td>
+			<p class="product">EAP115-Bridge KIT</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Max Wireless Speed*</p>
+			</td>
+			<td>
+			<p>Wi-Fi 5 AC867</p>
+			</td>
+			<td>
+			<p>Wi-Fi 5 AC867</p>
+			</td>
+			<td>
+			<p>Wi-Fi 4 N300</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Max Transmission Distance*</p>
+			</td>
+			<td>
+			<p>3.1 mi / 5 km</p>
+			</td>
+			<td>
+			<p>0.62 mi / 1 km</p>
+			</td>
+			<td>
+			<p>3.1 mi / 5 km</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Beamwidth</p>
+			</td>
+			<td>
+			<p>Horizontal: 43&deg;,<br />
+			Vertical: 18&deg;</p>
+			</td>
+			<td>
+			<p>Horizontal: 60&deg;,<br />
+			Vertical: 30&deg;</p>
+			</td>
+			<td>
+			<p>Horizontal: 43&deg;,<br />
+			Vertical: 18&deg;</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Antenna Gain</p>
+			</td>
+			<td>
+			<p>5 GHz: 14.0 dBi</p>
+			</td>
+			<td>
+			<p>5 GHz: 10.0 dBi</p>
+			</td>
+			<td>
+			<p>5 GHz: 14.0 dBi</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Ethernet Ports</p>
+			</td>
+			<td>
+			<p>3&times; Gigabit</p>
+			</td>
+			<td>
+			<p>3&times; Gigabit</p>
+			</td>
+			<td>
+			<p>3&times; 10/100 Mbps</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Power Supply</p>
+			</td>
+			<td>
+			<p>1. Support 802.3at PoE 2. Passive PoE 3. 12V DC (Compatible with TP-Link Solar Power Supply System)</p>
+			</td>
+			<td>
+			<p>1. Support 802.3at PoE 2. Passive PoE 3. 12V DC (Compatible with TP-Link Solar Power Supply System)</p>
+			</td>
+			<td>
+			<p>1. Support 802.3at PoE 2. Passive PoE 3. 12V DC (Compatible with TP-Link Solar Power Supply System)</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">PtMP &amp; PtP Auto-Pairing</p>
+			</td>
+			<td>
+			<p>Yes</p>
+			</td>
+			<td>
+			<p>Yes</p>
+			</td>
+			<td>
+			<p>Yes</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Mount</p>
+			</td>
+			<td>
+			<p>Pole Mounting (Accessories included)<br />
+			Wall Mounting (Optional)</p>
+			</td>
+			<td>
+			<p>Pole Mounting (Accessories included)<br />
+			Wall Mounting (Optional)</p>
+			</td>
+			<td>
+			<p>Pole Mounting (Accessories included)<br />
+			Wall Mounting (Optional)</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Weatherproof Enclosure</p>
+			</td>
+			<td>
+			<p>IP65</p>
+			</td>
+			<td>
+			<p>IP65</p>
+			</td>
+      <td>
+			<p>IP65</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Wind Resistance</p>
+			</td>
+			<td>
+			<p>Yes</p>
+			</td>
+			<td>
+			<p>Yes</p>
+			</td>
+			<td>
+			<p>Yes</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Lightning Protection</p>
+			</td>
+			<td>
+			<p>6kV</p>
+			</td>
+			<td>
+			<p>6kV</p>
+			</td>
+			<td>
+			<p>6kV</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Operating Temperature</p>
+			</td>
+			<td>
+			<p>-40℃~70℃ (-40℉~158℉)</p>
+			</td>
+			<td>
+			<p>-40℃~70℃ (-40℉~158℉)</p>
+			</td>
+			<td>
+			<p>-40℃~70℃ (-40℉~158℉)</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Standalone Management</p>
+			</td>
+			<td>
+			<p>Omada App, Local Management Web UI</p>
+			</td>
+			<td>
+			<p>Omada App, Local Management Web UI</p>
+			</td>
+			<td>
+			<p>Omada App, Local Management Web UI</p>
+			</td>
+		</tr>
+		<tr>
+			<td class="first-td">
+			<p class="title">Centralized Cloud Management</p>
+			</td>
+			<td>
+			<p>Omada App, Omada Cloud</p>
+			</td>
+			<td>
+			<p>Omada App, Omada Cloud</p>
+			</td>
+			<td>
+			<p>Omada App, Omada Cloud</p>
+			</td>
+		</tr>
+		<tr class="last-row">
+			<td class="first-td">
+			<p class="title">Dimensions</p>
+			</td>
+			<td>
+			<p>3.1 &times; 2.4 &times; 10.9 in<br />
+			(79 &times; 60 &times; 276 mm)</p>
+			</td>
+			<td>
+			<p>3.1 &times; 2.4 &times; 8.8 in<br />
+			(79 &times; 60 &times; 224 mm)</p>
+			</td>
+			<td>
+			<p>3.1 &times; 2.4 &times; 10.9 in<br />
+			(79 &times; 60 &times; 276 mm)</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
 </div>
+</div>
+</section>
 </div>
 
 <!-- SCRIPT FOR TABLE MOBILE VERSION -->
 <script>
-   $(function(){
-tp.showTable($(".solutiondetail-products table.m-show"), $(".tp-omada-header-main,.tp-omada-header-main+.tp-omada-product"), $(".tp-omada-header"));
-    $(".solutiondetail-products .sticky-table-next").on("click",function(){
-      // console.log(111)
-      if($(".solutiondetail-products .sticky-th-2").hasClass("active")){
-        $(".solutiondetail-products .sticky-table-next").css("display","none")
-        // console.log(1211)
+;(() => {
+  // run only after everything has attached
+  function onLoad() {
+    const $ = window.jQuery;
+    const tp = window.tp;
+    if (!$ || !tp || typeof tp.showTable !== 'function') return;
+
+    const $root = $('.solutiondetail-products');
+    if (!$root.length) return;
+
+    const $table = $root.find('table.m-show');
+    const $headerTargets = $('.tp-omada-header-main, .tp-omada-header-main + .tp-omada-product');
+    const $header = $('.tp-omada-header');
+
+    // isolate failures inside this block
+    try { tp.showTable($table, $headerTargets, $header); } catch (e) {}
+
+    // clear only our namespace on this root, never global handlers
+    $root.off('.tp'); 
+
+    // delegate clicks (safe if buttons are re-rendered by other code)
+    $root.on('click.tp', '.sticky-table-next', function () {
+      if ($root.find('.sticky-th-3').hasClass('active')) {
+        $root.find('.sticky-table-next').addClass('is-hidden');
       }
-    })
-        $(".solutiondetail-products .sticky-table-prev").on("click",function(){
-      // if($(".sticky-th-6").hasClass("active")){
-        $(".solutiondetail-products .sticky-table-next").css("display","block")
-      // }
-    })
-  })
+    });
+
+    $root.on('click.tp', '.sticky-table-prev', function () {
+      $root.find('.sticky-table-next').removeClass('is-hidden');
+    });
+  }
+
+  if (document.readyState === 'complete') onLoad();
+  else window.addEventListener('load', onLoad, { once: true });
+})();
 </script>
 
 </body>
