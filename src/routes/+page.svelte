@@ -39,6 +39,11 @@
           <a class="link" href="eap211/original.html">Original code (V3)</a>
         </div>
         <div class="flex flex-col gap-4">
+          <h4>EAP215 Bridge Kit V3</h4>
+          <a class="link" href="eap215/index.html">Edits for US (V3)</a>
+          <a class="link" href="eap215/original.html">Original code (V3)</a>
+        </div>
+        <div class="flex flex-col gap-4">
           <h4>EAP115 Bridge Kit V3</h4>
           <a class="link" href="eap115/index.html">Edits for US (V3)</a>
           <a class="link" href="eap115/original.html">Original code (V3)</a>
