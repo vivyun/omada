@@ -13,9 +13,6 @@
 <!-- NEW: TABLE CSS, EDITS -->
 <style>
 /* NEW CSS START */
-.solutiondetail-products .is-hidden { 
-	display: none !important; 
-}
 .overview-content .eap-transmission h3 {
   font-size: 1.35em;
   font-weight: 400;
@@ -676,7 +673,6 @@ EAP211-Bridge</span></div>
 </div>
 </section>
 
-<!--NEW SECTION: COMPARISON TABLE-->
 <section class="section-nav solutiondetail-products" id="solutiondetail-products">
 <div class="w-container">
 <div class="product-table">
@@ -1126,41 +1122,21 @@ EAP211-Bridge</span></div>
 
 <!-- SCRIPT FOR TABLE MOBILE VERSION -->
 <script>
-;(() => {
-  // run only after everything has attached
-  function onLoad() {
-    const $ = window.jQuery;
-    const tp = window.tp;
-    if (!$ || !tp || typeof tp.showTable !== 'function') return;
-
-    const $root = $('.solutiondetail-products');
-    if (!$root.length) return;
-
-    const $table = $root.find('table.m-show');
-    const $headerTargets = $('.tp-omada-header-main, .tp-omada-header-main + .tp-omada-product');
-    const $header = $('.tp-omada-header');
-
-    // isolate failures inside this block
-    try { tp.showTable($table, $headerTargets, $header); } catch (e) {}
-
-    // clear only our namespace on this root, never global handlers
-    $root.off('.tp'); 
-
-    // delegate clicks (safe if buttons are re-rendered by other code)
-    $root.on('click.tp', '.sticky-table-next', function () {
-      if ($root.find('.sticky-th-3').hasClass('active')) {
-        $root.find('.sticky-table-next').addClass('is-hidden');
+   $(function(){
+tp.showTable($(".solutiondetail-products table.m-show"), $(".tp-omada-header-main,.tp-omada-header-main+.tp-omada-product"), $(".tp-omada-header"));
+    $(".solutiondetail-products .sticky-table-next").on("click",function(){
+      // console.log(111)
+      if($(".solutiondetail-products .sticky-th-2").hasClass("active")){
+        $(".solutiondetail-products .sticky-table-next").css("display","none")
+        // console.log(1211)
       }
-    });
-
-    $root.on('click.tp', '.sticky-table-prev', function () {
-      $root.find('.sticky-table-next').removeClass('is-hidden');
-    });
-  }
-
-  if (document.readyState === 'complete') onLoad();
-  else window.addEventListener('load', onLoad, { once: true });
-})();
+    })
+        $(".solutiondetail-products .sticky-table-prev").on("click",function(){
+      // if($(".sticky-th-6").hasClass("active")){
+        $(".solutiondetail-products .sticky-table-next").css("display","block")
+      // }
+    })
+  })
 </script>
 
 </body>

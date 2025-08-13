@@ -9,14 +9,11 @@
 
   <!--LOCAL: From OverviewStyle -->
   <link rel="stylesheet" href="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/style.css" />
-  <script type="text/javascript" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/script.js"></script>
+  <script type="text/javascript" src="https://static-product.tp-link.com/eap211-bridge-kit_v3/20250701062529/script.js"></script>
 
   <!-- NEW: TABLE CSS, EDITS -->
   <style>
   /* NEW CSS START */
-  .solutiondetail-products .is-hidden { 
-    display: none !important; 
-  }
   .overview-content .smart-auto-empty-Dock .img1 .desc8 {
     right: 5em;
     top: 22em;
@@ -345,7 +342,7 @@ Wireless Bridge</h2>
 	<div class="icon"><img alt="" src="https://static-product.tp-link.com/eap215-bridge-kit_v3/en/img/b4.png" /></div>
 
 	<div class="desc">
-	<p class="title">Instant Multi-Bridge Auto-Pairing</p>
+	<p class="title">Simple Multi-Bridge Auto-Pairing</p>
 	</div>
 	</li>
 	<li class="li-5">
@@ -729,7 +726,6 @@ Wireless Bridge</span></div>
 </div>
 </section>
 
-<!--NEW SECTION: COMPARISON TABLE-->
 <section class="section-nav solutiondetail-products" id="solutiondetail-products">
 <div class="w-container">
 <div class="product-table">
@@ -923,8 +919,6 @@ Wireless Bridge</span></div>
 </table>
 
 <table class="m-show">
-	<tbody>
-	</tbody>
 	<thead class="pic-row">
 		<tr>
 			<td class="first-td">&nbsp;</td>
@@ -1175,42 +1169,23 @@ Wireless Bridge</span></div>
 </div>
 
 <!-- SCRIPT FOR TABLE MOBILE VERSION -->
+
 <script>
-;(() => {
-  // run only after everything has attached
-  function onLoad() {
-    const $ = window.jQuery;
-    const tp = window.tp;
-    if (!$ || !tp || typeof tp.showTable !== 'function') return;
-
-    const $root = $('.solutiondetail-products');
-    if (!$root.length) return;
-
-    const $table = $root.find('table.m-show');
-    const $headerTargets = $('.tp-omada-header-main, .tp-omada-header-main + .tp-omada-product');
-    const $header = $('.tp-omada-header');
-
-    // isolate failures inside this block
-    try { tp.showTable($table, $headerTargets, $header); } catch (e) {}
-
-    // clear only our namespace on this root, never global handlers
-    $root.off('.tp'); 
-
-    // delegate clicks (safe if buttons are re-rendered by other code)
-    $root.on('click.tp', '.sticky-table-next', function () {
-      if ($root.find('.sticky-th-3').hasClass('active')) {
-        $root.find('.sticky-table-next').addClass('is-hidden');
+   $(function(){
+tp.showTable($(".solutiondetail-products table.m-show"), $(".tp-omada-header-main,.tp-omada-header-main+.tp-omada-product"), $(".tp-omada-header"));
+    $(".solutiondetail-products .sticky-table-next").on("click",function(){
+      // console.log(111)
+      if($(".solutiondetail-products .sticky-th-2").hasClass("active")){
+        $(".solutiondetail-products .sticky-table-next").css("display","none")
+        // console.log(1211)
       }
-    });
-
-    $root.on('click.tp', '.sticky-table-prev', function () {
-      $root.find('.sticky-table-next').removeClass('is-hidden');
-    });
-  }
-
-  if (document.readyState === 'complete') onLoad();
-  else window.addEventListener('load', onLoad, { once: true });
-})();
+    })
+        $(".solutiondetail-products .sticky-table-prev").on("click",function(){
+      // if($(".sticky-th-6").hasClass("active")){
+        $(".solutiondetail-products .sticky-table-next").css("display","block")
+      // }
+    })
+  })
 </script>
 
 </body>
