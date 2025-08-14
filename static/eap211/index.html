@@ -12,12 +12,49 @@
 
 <!-- BODY TAG SHOULD NOT BE INCLUDED IN CODE BUT IS NEEDED FOR STYLES TO WORK LOCALLY -->
 <body class="overview-content">
-<!-- RELEVANT CODE STARTS HERE-->
+
+	<style>
+		.overview-content .smart-bridging-video {
+			text-decoration: none;
+			position: relative;
+		}
+		.overview-content .smart-bridging-video .icon-play-video {
+			content:'';
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%, -50%);
+			width:4em;
+			height:4em;
+			background:url(https://static-page.tp-link.com/omada/home/img/icon-play-video.svg) center / 100% no-repeat;
+		}
+		@media (max-width: 1440px) {
+			.overview-content .smart-auto-empty-Dock, .overview-content .optimized-wired-performance {
+				font-size: 10px;
+			}
+		}
+
+		@media (max-width: 1024px) {
+			.overview-content .smart-auto-empty-Docks, .overview-content .optimized-wired-performance {
+				font-size: 10px;
+			}
+		}
+		@media (max-width: 736px) {
+			.overview-content .smart-auto-empty-Docks, .overview-content .optimized-wired-performance {
+				font-size: 10.35px;
+				max-width: 85.186vw;
+			}
+		}
+	</style>
+
 <div class="eap211-bridge-kit_v3">
 <div class="eap211-bridge-kit_v3">
 <div class="eap211-bridge-kit_v3">
-<a aria-label="Video" class="ga-click link-video" data-embed-url="https://www.youtube-nocookie.com/embed/clGXgPeAhQM?si=YgK7VT57SfMMn_IP" data-vars-event-category="Omada-Front-Home_watch-the-case-study-video" href="https://www.youtube-nocookie.com/embed/clGXgPeAhQM?si=YgK7VT57SfMMn_IP"></a>
+
+<a class="smart-bridging-video" href="https://www.youtube-nocookie.com/embed/clGXgPeAhQM?si=YgK7VT57SfMMn_IP">
+
 <section class="eap-banner">
+<img src="https://static-page.tp-link.com/omada/home/img/icon-play-video.svg" alt="" class="icon-play-video" />
 <div class="w-container">
 <div class="text">
 <h2>Omada 5 GHz 867 Mbps<br />
@@ -29,6 +66,12 @@ Indoor/Outdoor Wireless Bridge</h2>
 </div>
 </section>
 </a>
+<script>
+	$(function(){
+	tp.playVideo($("a.smart-bridging-video"))
+	})
+</script>
+
 <section class="eap-selling-points">
 <div class="w-container">
 <div class="text">
@@ -384,7 +427,7 @@ EAP211-Bridge</span></div>
 </div>
 </section>
 
-<section class="section-nav solutiondetail-products" id="solutiondetail-products">
+<!-- <section class="section-nav solutiondetail-products" id="solutiondetail-products">
 <div class="w-container">
 <div class="product-table">
 <table class="m-hide">
@@ -825,7 +868,7 @@ EAP211-Bridge</span></div>
 </table>
 </div>
 </div>
-</section>
+</section> -->
 
 </div>
 </div>
