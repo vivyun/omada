@@ -13,39 +13,42 @@
 <!-- BODY TAG SHOULD NOT BE INCLUDED IN CODE BUT IS NEEDED FOR STYLES TO WORK LOCALLY -->
 <body class="overview-content">
 
-	<style>
-		.overview-content .smart-bridging-video {
-			text-decoration: none;
-			position: relative;
+<style>
+	.overview-content .smart-bridging-video {
+		text-decoration: none;
+		position: relative;
+	}
+	.overview-content .smart-bridging-video .icon-play-video {
+		content:'';
+		position: absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%, -50%);
+		width:4em;
+		height:4em;
+		background:url(https://static-page.tp-link.com/omada/home/img/icon-play-video.svg) center / 100% no-repeat;
+	}
+	@media (max-width: 1440px) {
+		.overview-content .smart-auto-empty-Dock, .overview-content .optimized-wired-performance {
+			font-size: 10px;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		.overview-content .smart-auto-empty-Docks, .overview-content .optimized-wired-performance {
+			font-size: 10px;
+		}
+	}
+	@media (max-width: 736px) {
+		.overview-content .smart-auto-empty-Docks, .overview-content .optimized-wired-performance {
+			font-size: 10.35px;
+			max-width: 85.186vw;
 		}
 		.overview-content .smart-bridging-video .icon-play-video {
-			content:'';
-			position: absolute;
-			top:50%;
-			left:50%;
-			transform:translate(-50%, -50%);
-			width:4em;
-			height:4em;
-			background:url(https://static-page.tp-link.com/omada/home/img/icon-play-video.svg) center / 100% no-repeat;
+			top: 70%;
 		}
-		@media (max-width: 1440px) {
-			.overview-content .smart-auto-empty-Dock, .overview-content .optimized-wired-performance {
-				font-size: 10px;
-			}
-		}
-
-		@media (max-width: 1024px) {
-			.overview-content .smart-auto-empty-Docks, .overview-content .optimized-wired-performance {
-				font-size: 10px;
-			}
-		}
-		@media (max-width: 736px) {
-			.overview-content .smart-auto-empty-Docks, .overview-content .optimized-wired-performance {
-				font-size: 10.35px;
-				max-width: 85.186vw;
-			}
-		}
-	</style>
+	}
+</style>
 
 <div class="eap211-bridge-kit_v3">
 <div class="eap211-bridge-kit_v3">

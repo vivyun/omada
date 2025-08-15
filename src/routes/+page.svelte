@@ -24,8 +24,8 @@
         </div>
         <div class="flex flex-col gap-4">
           <h4>CEDIA</h4>
-          <a class="link" href="cedia-preview/index.html">Teaser Page (Original code)</a>
           <a class="link" href="cedia-preview/live.html">Teaser Page (Live code)</a>
+          <a class="link" href="cedia-lp/index.html">Landing Page</a>
           <a class="link" href="cedia-lp/iscwest.html">ISC West (Reference)</a>
         </div>
         <div class="flex flex-col gap-4">

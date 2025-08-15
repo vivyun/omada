@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="$tpHrefLang" xml:lang="$tpHrefLang">
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link href="${canonical}" rel="canonical" /><?php include_once($_SERVER['ROOT_DIR'] . '/productpages/staticpage-hreflang-tag/671.php'); ?>
+        <?php
+            $title = false;
+            $description = "${description}";
+            $siteId = $tpSiteId;
+            $appFolder = '$tpAppFolder';
+            include_once($_SERVER['ROOT_DIR'] . "/phppage/common-meta.php");
+        ?>
+   <title>${title}</title>
+   <link href="https://static-page.tp-link.com/landing/cedia-2025/us/style.css" rel="stylesheet" />
+
+    <style type="text/css">
+    html {
+        background: black;
+    }
+
+    .omada-landing h4 {
+		font-size: clamp(1.25rem, 0.5vw + .75rem, 1.5rem);
+	}
+
+    .omada-landing img {
+        -khtml-user-select: none;
+        -o-user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        pointer-events: auto;
+        -webkit-user-drag: none;
+        user-drag: none;
+    }
+
+    .omada-landing .floor-bg {
+        top: 500px;
+        left: 0;
+        width: 100%;
+        scale: 1.5;
+    }
+
+    .omada-landing .input {
+        background: none;
+        border-radius: 0%;
+        border-bottom: 1px solid #FFFFFF60;
+        transition: border-color 0.3s ease;
+        
+    }
+
+    .omada-landing .input:focus {
+        outline: none;
+        border-bottom: 1px solid var(--color-neonGreen);
+    }
+    @media screen and (max-width: 80rem) {
+        .omada-landing .floor-bg-mobile {
+        bottom: -50%;
+        left: 0;
+        z-index: -1;
+        }
+    }
+
+    /* Navbar Start */
+    .omada-landing .sr-only {
+        position: absolute !important;
+        width: 1px; height: 1px;
+        padding: 0; margin: -1px; overflow: hidden;
+        clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+    .omada-landing .site-nav {
+        position: fixed; top: 0; z-index: 50;
+        background: rgba(0,0,0,0.6);
+        backdrop-filter: saturate(120%) blur(6px);
+    }
+    .omada-landing .site-nav__container {
+        padding: 1.5rem 0;
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .omada-landing .site-nav__brand { 
+        display: inline-flex; 
+        align-items: center; 
+        gap: 1rem; 
+        text-decoration: none; 
+    }
+    .omada-landing .site-nav__logo { 
+        height: 28px; 
+        user-select: none; 
+        -webkit-user-drag: none; 
+    }
+    .omada-landing .site-nav__brand-text { 
+        color: #fff; 
+        font-weight: 600; 
+        font-size: 1rem; 
+    }
+    .omada-landing .site-nav__toggle {
+        display: inline-flex; 
+        align-items: center; 
+        justify-content: center;
+        width: 35px; height: 35px;
+        background: transparent; 
+        color: #fff; 
+        border: 1px solid rgba(255,255,255,0.18);
+        cursor: pointer;
+    }
+    .omada-landing .site-nav__toggle:hover { 
+        background: rgba(255,255,255,0.06); 
+    }
+    .omada-landing .site-nav__menu {
+        list-style: none; 
+        margin: 0; 
+        padding: 0;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .omada-landing .site-nav__menu.is-open { 
+        display: flex; 
+    }
+    .omada-landing .site-nav__menu > li:first-child { 
+        border-top: 0; 
+    }
+    .omada-landing .site-nav__link {
+        display: block; 
+        padding: 1rem 0;
+        color: #ffffffac; 
+        text-decoration: none; 
+        font-weight: 400;
+    }
+    .omada-landing .site-nav__link:focus { 
+        color: var(--color-neonGreen); 
+        outline: none;
+    }
+    .omada-landing .site-nav__link:hover { 
+        color: var(--color-white); 
+        outline: none; 
+    }
+    .omada-landing .site-nav__link.btn-cedia {
+        display: block; 
+        padding: .75rem 1rem;
+        background: var(--color-neonGreen);
+        color: var(--color-black);
+        text-decoration: none; 
+        font-weight: 500;
+    }
+    .omada-landing .site-nav__link.btn-cedia:hover, .omada-landing .site-nav__link.btn-cedia:focus { 
+        background: var(--color-dullGreen);
+        color: var(--color-white); 
+        outline: none; 
+    }
+    @media (min-width: 1280px) {
+    .omada-landing .site-nav__toggle { 
+        display: none; 
+    }
+    .omada-landing .site-nav__menu {
+        position: static; 
+        display: flex; 
+        flex-direction: row;
+        background: transparent; 
+        border: 0;
+        gap: 2rem; 
+        align-items: center;
+    }
+    .omada-landing .site-nav__menu > li { 
+        border: 0; 
+    }
+    .omada-landing .site-nav__link { 
+        padding: .25rem 0; 
+    }
+    .omada-landing .site-nav__container {
+        flex-direction: row;
+    }
+    }
+    /* Navbar End */
+
+    /* Carousel Start */
+    .omada-landing .cedia-carousel {
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .omada-landing .cedia-carousel .cc-viewport {
+        overflow: hidden;
+    }
+    .omada-landing .cedia-carousel .cc-track {
+        display: flex;
+        will-change: transform;
+    }
+    .omada-landing .cedia-carousel .cc-slide {
+        position: relative;
+        flex: 0 0 100%;
+        border-radius: 6px;
+        overflow: hidden;
+        background: #0b0b0b;
+    }
+    .omada-landing .cedia-carousel .cc-slide img {
+        width: 100%; height: 500px; object-fit: cover; display: block;
+        transform: translateZ(0);
+    }
+    .omada-landing .cedia-carousel .cc-overlay {
+        display: flex;
+        position: absolute; inset: 0;
+        color: #fff;
+        background: linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.15) 55%, rgba(0,0,0,0) 100%);
+    }
+    .omada-landing .cedia-carousel .cc-overlay > * {
+        background: rgba(0, 0, 0, 0.155);
+        backdrop-filter: saturate(120%) blur(6px);
+        padding: clamp(1rem, 4vw, 3rem);
+        max-width: 600px;
+    }
+    .omada-landing .cedia-carousel .cc-overlay h3 {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    .omada-landing .cedia-carousel .cc-overlay p {
+        font-weight: 300;
+    }
+
+    .omada-landing .cedia-carousel .cc-arrow {
+        min-width: 56px; max-width: 56px; min-height: 56px; max-height: 56px;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        background: transparent; 
+        border: 1px solid rgba(255,255,255,.25);
+        cursor: pointer;
+        transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+        z-index: 2;
+    }
+    .omada-landing .cedia-carousel .cc-prev { left: 0.75rem; }
+    .omada-landing .cedia-carousel .cc-next { right: 0.75rem; }
+    .omada-landing .cedia-carousel .cc-arrow:hover {
+        background: rgba(255,255,255,.08);
+        border-color: rgba(255,255,255,.45);
+        color: #fff;
+    }
+    .omada-landing .cedia-carousel .cc-dots {
+        display: flex; gap: 8px; justify-content: center; align-items: center;
+        margin-top: 14px;
+    }
+    .omada-landing .cedia-carousel .cc-dots button {
+        width: 6px; height: 6px; border-radius: 999px; border: 0;
+        background: rgba(255,255,255,.4); cursor: pointer;
+        transition: transform 150ms ease, background 150ms ease, width 150ms ease;
+    }
+    .omada-landing .cedia-carousel .cc-dots button[aria-selected="true"] {
+        background: var(--color-neonGreen, #00e387);
+        width: 22px; transform: none; border-radius: 999px;
+    }
+    @media (max-width: 960px) {
+    .omada-landing .cedia-carousel .cc-overlay {
+        background: linear-gradient(0deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.2) 55%, rgba(0,0,0,0) 100%);
+    }
+    .omada-landing .cedia-carousel .cc-overlay > * {
+        margin-top: auto;
+        width: 100%;
+    }
+    .omada-landing .cedia-carousel .cc-arrow { 
+        display: none;
+    }
+    }
+    /* Carousel End */
+    </style>
+</head>
+
+<body class="b2b omada-landing" data-gr-ext-installed="" data-new-gr-c-s-check-loaded="14.1243.0"
+   data-new-gr-c-s-loaded="14.1242.0">
+<?php include_once($_SERVER['ROOT_DIR']."/$appFolder/smb-header.php"); ?>
+
+   <div style="display: contents">
+      <main class="main-container text-white relative"
+         style="overflow: hidden; background: linear-gradient(#000000, var(--color-gray-900));">
+         <img alt=""
+            class="absolute hidden xl:block floor-bg"
+            src="https://static-page.tp-link.com/landing/cedia-2025/us/images/green_lighting.webp" />
+
+
+        <nav class="site-nav section-container" role="navigation" aria-label="Primary">
+            <div class="site-nav__container justify-between max-w-page mx-auto relative">
+                <div class="flex flex-row items-center justify-between">
+                <a class="site-nav__brand" href="/">
+                <img alt="Omada &amp; VIGI Logo" src="https://static.tp-link.com/upload/static-page/omada_vigi_logo_20250801155754l.svg" style="width: 40%; max-width: 200px">
+                <p>at</p>
+                <img alt="CEDIA Logo" src="https://static.tp-link.com/upload/static-page/cedia_logo_20250801155830e.svg" style="width: 20%; max-width: 100px">
+                </a>
+                <button class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav-menu">
+                <span class="sr-only">Open main menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><path d="M222,128a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12H216A6,6,0,0,1,222,128ZM40,70H216a6,6,0,0,0,0-12H40a6,6,0,0,0,0,12ZM216,186H40a6,6,0,0,0,0,12H216a6,6,0,0,0,0-12Z"></path></svg>
+                </button>
+                </div>
+
+                <ul id="site-nav-menu" class="site-nav__menu">
+                <li><a class="site-nav__link" href="#highlights">Highlights</a></li>
+                <li><a class="site-nav__link" href="#solutions">Featured Solutions</a></li>
+                <li><a class="site-nav__link" href="#cases">Case Studies</a></li>
+                <li><a class="site-nav__link btn-primary btn-cedia" href="">Download All Flyers</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div style="height:20vw; max-height: 60px;"></div>
+
+         <section class="section-container section-float">
+            <div class="relative" style="padding-top: 4rem;"><img alt=""
+                  class="absolute block xl:hidden floor-bg-mobile"
+                  src="https://static-page.tp-link.com/landing/cedia-2025/us/images/green_lighting_mobile.webp" /> <img
+                  alt="Omada &amp; VIGI at CEDIA" class="block xl:hidden"
+                  src="https://static-page.tp-link.com/landing/cedia-2025/us/images/kv_transparent_mobile.webp"
+                  style="width: 100%;" /></div>
+
+            <div class="flex flex-col lg:flex-row justify-between max-w-page mx-auto py-16 lg:py-28 relative"
+               style="padding-top: 0;">
+               <div class="w-full flex flex-col gap-6 xl:py-28">
+                <img alt="Omada &amp; VIGI Logo"
+                     src="https://static.tp-link.com/upload/static-page/omada_vigi_logo_20250801155754l.svg"
+                     style="width: 30%; max-width: 200px" />
+                  <h1>Welcome to<br />
+                     <span class="text-neonGreen">CEDIA Expo 2025</span></h1>
+
+                  <h4 class="max-w-xl">Networking and Surveillance Solutions for Residential Homes & MDUs</h4>
+
+                  <div class="flex flex-col gap-2">
+                     <div class="flex flex-row gap-2 items-center"><svg fill="#ffffff90" height="16"
+                           viewbox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z">
+                           </path>
+                        </svg>
+
+                        <p class="text-white/60 small-paragraph">Colorado Convention Center, Denver, Colorado</p>
+                     </div>
+
+                     <div class="flex flex-row gap-2 items-center"><svg fill="#ffffff90" height="16"
+                           viewbox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z">
+                           </path>
+                        </svg>
+
+                        <p class="text-white/60 small-paragraph">September 4-6, 2025</p>
+                     </div>
+
+                     <div class="flex flex-row gap-2 items-center"><svg fill="#ffffff90" height="16"
+                           viewbox="0 0 256 256" width="16" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M232,96a7.89,7.89,0,0,0-.3-2.2L217.35,43.6A16.07,16.07,0,0,0,202,32H54A16.07,16.07,0,0,0,38.65,43.6L24.31,93.8A7.89,7.89,0,0,0,24,96h0v16a40,40,0,0,0,16,32v72a8,8,0,0,0,8,8H208a8,8,0,0,0,8-8V144a40,40,0,0,0,16-32V96ZM54,48H202l11.42,40H42.61Zm50,56h48v8a24,24,0,0,1-48,0Zm-16,0v8a24,24,0,0,1-35.12,21.26,7.88,7.88,0,0,0-1.82-1.06A24,24,0,0,1,40,112v-8ZM200,208H56V151.2a40.57,40.57,0,0,0,8,.8,40,40,0,0,0,32-16,40,40,0,0,0,64,0,40,40,0,0,0,32,16,40.57,40.57,0,0,0,8-.8Zm4.93-75.8a8.08,8.08,0,0,0-1.8,1.05A24,24,0,0,1,168,112v-8h48v8A24,24,0,0,1,204.93,132.2Z">
+                           </path>
+                        </svg>
+
+                        <p class="text-white/60 small-paragraph">Booth #929</p>
+                     </div>
+                  </div>
+               </div>
+               <img alt="Omada &amp; VIGI at CEDIA" class="absolute hidden xl:block"
+                  src="https://static-page.tp-link.com/landing/cedia-2025/us/images/kv_transparent.webp"
+                  style="top: 50%; left: 50%; transform: translate(-50%, -50%) translate(10%, 15%);max-width: 1500px; width: 100%;" />
+            </div>
+         </section>
+
+         <section id="highlights" class="section-container section-float">
+            <div class="flex flex-col justify-between items-center gap-12 max-w-page mx-auto py-16 lg:py-28">
+                <div class="flex flex-col gap-4 items-center">
+                    <p class="large-paragraph text-neonGreen">Highlights</p>
+                    <h2 class="text-center">What’s on Show</h2>
+                </div>
+                    <div class="cedia-carousel" data-autoplay="7000" aria-roledescription="carousel">
+                        <div class="flex flex-row items-center gap-12">
+                        <button class="cc-arrow cc-prev" aria-label="Previous slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256"><path d="M164.24,203.76a6,6,0,1,1-8.48,8.48l-80-80a6,6,0,0,1,0-8.48l80-80a6,6,0,0,1,8.48,8.48L88.49,128Z"></path></svg>
+                        </button>
+                        <div class="cc-viewport" aria-live="polite">
+                        <ul class="cc-track">
+                            <li class="cc-slide is-active">
+                                <img src="https://static.tp-link.com/upload/static-page/cedia_luxury_20250815025043q.webp"
+                                    alt="High-Performance Networking & Surveillance for Large Homes"
+                                    loading="eager" />
+                            <div class="cc-overlay">
+                                <div class="flex flex-col gap-4">
+                                    <h3>High-Performance Networking &amp; Surveillance Solution for Large Homes and Villages</h3>
+                                    <p class="large-paragraph">Seamless Roaming, Ultra&#8209;Stable Connectivity, Always&#8209;On Protection</p>
+                                    <a href="#solutions" class="btn-primary btn-cedia">Learn More</a>
+                                </div>
+                            </div>
+                            </li>
+                            <li class="cc-slide">
+                                <img src="https://static.tp-link.com/upload/static-page/cedia_mdu_20250815025059a.webp"
+                                    alt="Future-Ready Solution for Multi-Dwelling Units (MDUs)"
+                                    loading="lazy" />
+                            <div class="cc-overlay">
+                                <div class="flex flex-col gap-4">
+                                    <h3>Future-Ready Solution for Multi&#8209;Dwelling Units (MDUs)</h3>
+                                    <p class="large-paragraph">Always Connected, Built-in Security, Centralized Management, Quick Setup</p>
+                                    <a href="#more" class="btn-primary btn-cedia">Learn More</a>
+                                </div>
+                            </div>
+                            </li>
+                            <li class="cc-slide">
+                                <img src="https://static.tp-link.com/upload/static-page/cedia_outdoor_20250815025110k.webp"
+                                    alt="Reliable Wi-Fi for the Outdoors"
+                                    loading="lazy" />
+                            <div class="cc-overlay">
+                                <div class="flex flex-col gap-4">
+                                    <h3>Reliable Wi-Fi Solution for the Outdoors</h3>
+                                    <p class="large-paragraph">Centralized Management, Long-Range Coverage, All&#8209;Day Weather Protection</p>
+                                    <a href="#cases" class="btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                            </li>
+                        </ul>
+                        </div>
+                        <button class="cc-arrow cc-next" aria-label="Next slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256"><path d="M180.24,132.24l-80,80a6,6,0,0,1-8.48-8.48L167.51,128,91.76,52.24a6,6,0,0,1,8.48-8.48l80,80A6,6,0,0,1,180.24,132.24Z"></path></svg>
+                        </button>
+                        </div>
+
+                        <div class="cc-dots" role="tablist" aria-label="Slide pagination"></div>
+                    </div>
+            </div>
+         </section>
+
+         <section id="solutions" class="section-container section-float">
+            <div class="flex flex-col justify-between max-w-page mx-auto py-16 lg:py-28 gap-12 items-center"
+               style="padding-top: 0;">
+                <div class="flex flex-col gap-4 items-center">
+                    <p class="large-paragraph text-neonGreen">Solutions</p>
+                    <h2 class="text-center">Explore All Our Solutions</h2>
+                </div>
+
+               <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-12">
+                  <div class="flex flex-col gap-2 w-full"><img alt="Omada Central" class="mb-6"
+                        src="https://static.tp-link.com/upload/static-page/omada_cloud_management_20250812185722z.webp" />
+                     <p class="text-neonGreen">Cloud Platform</p>
+                     <h4>Centralized Cloud Management for Networking</h4>
+                  </div>
+
+                  <div class="flex flex-col gap-2 w-full"><img alt="Unified Solution" class="mb-6"
+                        src="https://static.tp-link.com/upload/static-page/solution_20250812185732i.webp" />
+                     <p class="text-neonGreen">Easy & Affordable</p>
+                     <h4 style="text-wrap: pretty;">Centralized Management for Surveillance</h4>
+                  </div>
+
+                  <div class="flex flex-col gap-2 w-full"><img alt="Omada Networking Solution" class="mb-6"
+                        src="https://static.tp-link.com/upload/static-page/omada_networking_solution_20250801155939a.webp" />
+                     <p class="text-neonGreen">Wi-Fi 7 Ready</p>
+                     <h4>Omada Wi&#8209;Fi 7</h4>
+                  </div>
+
+                  <div class="flex flex-col gap-2 w-full"><img alt="Omada Networking Solution" class="mb-6"
+                        src="https://static.tp-link.com/upload/static-page/omada_networking_solution_20250801155939a.webp" />
+                     <p class="text-neonGreen">Wi-Fi 7 Ready</p>
+                     <h4>Omada Long-Range PtP & PtMP Wireless Bridge Solution</h4>
+                  </div>
+
+                  <div class="flex flex-col gap-2 w-full"><img alt="Unified Solution" class="mb-6"
+                        src="https://static.tp-link.com/upload/static-page/solution_20250812185732i.webp" />
+                     <p class="text-neonGreen">Easy & Affordable</p>
+                     <h4 style="text-wrap: pretty;">Omada Easy & Affordable Networking for Surveillance</h4>
+                  </div>
+
+                  <div class="flex flex-col gap-2 w-full"><img alt="Omada Networking Solution" class="mb-6"
+                        src="https://static.tp-link.com/upload/static-page/omada_networking_solution_20250801155939a.webp" />
+                     <p class="text-neonGreen">Wi-Fi 7 Ready</p>
+                     <h4>Omada PoE Switches for Surveillance</h4>
+                  </div>
+
+                  <div class="flex flex-col gap-2 w-full"><img alt="Omada Networking Solution" class="mb-6"
+                        src="https://static.tp-link.com/upload/static-page/omada_networking_solution_20250801155939a.webp" />
+                     <p class="text-neonGreen">Wi-Fi 7 Ready</p>
+                     <h4>Omada Future-Proof Multi-Gigabit Network Solution</h4>
+                  </div>
+
+                  <div class="flex flex-col gap-2 w-full"><img alt="Omada Central" class="mb-6"
+                        src="https://static.tp-link.com/upload/static-page/omada_cloud_management_20250812185722z.webp" />
+                     <p class="text-neonGreen">Cloud Platform</p>
+                     <h4>Omada End-to-End Solution</h4>
+                  </div>
+
+                  <div class="flex flex-col gap-2 w-full"><img alt="VIGI Surveillance System" class="mb-6"
+                        src="https://static.tp-link.com/upload/static-page/vigi_surveillance_system_20250801160035g.webp" />
+                     <p class="text-neonGreen">Smart Surveillance</p>
+                     <h4>VIGI Solution</h4>
+                  </div>
+
+                  <div class="flex flex-col gap-2 w-full"><img alt="VIGI Surveillance System" class="mb-6"
+                        src="https://static.tp-link.com/upload/static-page/vigi_surveillance_system_20250801160035g.webp" />
+                     <p class="text-neonGreen">Smart Surveillance</p>
+                     <h4>VIGI Solar Power Security Solution</h4>
+                  </div>
+
+                  <div class="flex flex-col gap-2 w-full"><img alt="VIGI Surveillance System" class="mb-6"
+                        src="https://static.tp-link.com/upload/static-page/vigi_surveillance_system_20250801160035g.webp" />
+                     <p class="text-neonGreen">Smart Surveillance</p>
+                     <h4>VIGI LightPro Night Vision Technology</h4>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- <section class="relative section-container section-float">
+            <svg class="absolute inset-0 w-full h-full" style="z-index: -1; pointer-events: none;"
+               viewBox="0 0 1920 751" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="0" y="0" width="1920" height="751" fill="url(#paint0_linear_animated)" />
+               <defs>
+                  <linearGradient id="paint0_linear_animated" x1="0%" y1="50%" x2="100%" y2="50%">
+                     <stop offset="0%" stop-color="#00A870">
+                        <animate attributeName="stop-color" values="#32796B;#0D3834;#32796B" dur="8s"
+                           repeatCount="indefinite" />
+                     </stop>
+                     <stop offset="100%" stop-color="#0D3834">
+                        <animate attributeName="stop-color" values="#0D3834;#32796B;#0D3834" dur="8s"
+                           repeatCount="indefinite" />
+                     </stop>
+                  </linearGradient>
+               </defs>
+            </svg>
+
+            <div class="flex flex-col max-w-page mx-auto py-16 lg:py-28 gap-8">
+               <div class="flex flex-col gap-8 w-full text-center items-center mx-auto">
+                  <h2 style="text-wrap: pretty;">See it all live at CEDIA Expo 2025 &mdash; <a class="text-limeGreen"
+                        onclick="openModal()">Register now</a> for your free pass.
+                  </h2>
+
+                  <div class="flex flex-col gap-2">
+                     <p class="text-white/80 large-paragraph">Enter your exclusive promo code, and save up to $275!</p>
+                     <p class="text-white/60 small-paragraph">Promo code must be manually entered at registration and
+                        cannot be retroactively applied.</p>
+                  </div>
+                  <button onclick="openModal()" class="btn-primary">Get the Code &amp; Register for Free</button>
+               </div>
+            </div>
+         </section> -->
+      </main>
+   </div>
+   <?php include_once($_SERVER['ROOT_DIR']."/$appFolder/footer.php"); ?>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+   <script>
+        (() => {
+        const toggle = document.querySelector('.site-nav__toggle');
+        const menu = document.getElementById('site-nav-menu');
+
+        if (toggle && menu) {
+            toggle.addEventListener('click', () => {
+            const open = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', String(!open));
+            menu.classList.toggle('is-open');
+            });
+
+            // Close on resize up to desktop to avoid stuck state
+            window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                menu.classList.remove('is-open');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+            });
+
+            // Optional: close when a link is clicked (mobile)
+            menu.addEventListener('click', (e) => {
+            if (e.target.closest('a')) {
+                menu.classList.remove('is-open');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+            });
+        }
+        })();
+    </script>
+
+   <script>
+      function animateTick(id) {
+         gsap.fromTo(`#${id}`, {
+            opacity: 0,
+            scale: 0.98
+         }, {
+            opacity: 1,
+            scale: 1,
+            duration: 0.8,
+            ease: "power1.out"
+         });
+      }
+      gsap.utils.toArray(".section-float").forEach((section) => {
+         gsap.from(section, {
+            scrollTrigger: section,
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            ease: "power2.out"
+         });
+      });
+
+      gsap.to(".floor-bg", {
+         y: 400,
+         ease: "none",
+         scrollTrigger: {
+            trigger: ".floor-bg",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+         }
+      });
+
+   </script>
+   <script>
+(() => {
+  const root = document.querySelector('.cedia-carousel');
+  if (!root) return;
+
+  const viewport = root.querySelector('.cc-viewport');
+  const track    = root.querySelector('.cc-track');
+  const slides   = Array.from(root.querySelectorAll('.cc-slide'));
+  const prevBtn  = root.querySelector('.cc-prev');
+  const nextBtn  = root.querySelector('.cc-next');
+  const dotsWrap = root.querySelector('.cc-dots');
+  const autoplayMs = parseInt(root.dataset.autoplay, 10) || 0;
+  const prefersNoMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Build dots
+  const dots = slides.map((_, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('role', 'tab');
+    b.setAttribute('aria-label', `Go to slide ${i + 1}`);
+    b.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(b);
+    return b;
+  });
+
+  let index = 0;
+  let slideW = viewport.clientWidth;
+  let xCurrent = 0;              // current track x (px)
+  let autoId = null;
+
+  // Layout / resize
+  function layout() {
+    slideW = viewport.clientWidth;
+    gsap.set(track, { x: -index * slideW });
+    xCurrent = -index * slideW;
+  }
+  new ResizeObserver(layout).observe(viewport);
+  layout();
+
+  function setActive(i) {
+    slides.forEach((s, k) => s.classList.toggle('is-active', k === i));
+    dots.forEach((d, k) => d.setAttribute('aria-selected', String(k === i)));
+  }
+
+  function goTo(i, animate = true) {
+    index = (i + slides.length) % slides.length;
+    const toX = -index * slideW;
+    xCurrent = toX;
+    if (animate && !prefersNoMotion) {
+      gsap.to(track, { x: toX, duration: 0.6, ease: 'power2.out' });
+    } else {
+      gsap.set(track, { x: toX });
+    }
+    setActive(index);
+    revealFor(index);
+  }
+
+  let slideTl = null;
+
+function revealFor(i){
+  if (slideTl) slideTl.kill();
+  const slide   = slides[i];
+  const img     = slide.querySelector('img');
+  const blocks  = slide.querySelectorAll('.cc-overlay > *');
+
+  gsap.set(img,    {scale: 1.3, transformOrigin: '50% 50%', willChange:'transform'});
+
+  slideTl = gsap.timeline({defaults:{duration:0.6, ease:'power2.out'}})
+    .to(img,    {scale:1, duration:7, ease:'none'}, 0); // subtle Ken Burns-in
+}
+
+
+  function next() { goTo(index + 1); }
+  function prev() { goTo(index - 1); }
+
+  // Buttons
+  nextBtn.addEventListener('click', next);
+  prevBtn.addEventListener('click', prev);
+
+  // Autoplay
+  function play() {
+    if (!autoplayMs) return;
+    stop();
+    autoId = setInterval(next, autoplayMs);
+  }
+  function stop() {
+    if (autoId) clearInterval(autoId);
+    autoId = null;
+  }
+//   root.addEventListener('mouseenter', stop);
+//   root.addEventListener('mouseleave', play);
+//   root.addEventListener('focusin', stop);
+//   root.addEventListener('focusout', play);
+  play();
+
+  // Drag / swipe
+  let pointerDown = false, startX = 0, startTrackX = 0, moved = false;
+  const setX = gsap.quickSetter(track, 'x', 'px');
+
+  function onDown(e) {
+    pointerDown = true;
+    moved = false;
+    stop();
+    startX = (e.touches ? e.touches[0].clientX : e.clientX);
+    startTrackX = xCurrent;
+    root.classList.add('is-dragging');
+  }
+  function onMove(e) {
+    if (!pointerDown) return;
+    const clientX = (e.touches ? e.touches[0].clientX : e.clientX);
+    const dx = clientX - startX;
+    if (Math.abs(dx) > 3) moved = true;
+
+    // edge resistance
+    const atStart = startTrackX >= 0 && dx > 0;
+    const atEnd   = startTrackX <= -slideW * (slides.length - 1) && dx < 0;
+    const damp = (atStart || atEnd) ? 0.35 : 1;
+
+    xCurrent = startTrackX + dx * damp;
+    setX(xCurrent);
+    e.preventDefault();
+  }
+  function onUp() {
+    if (!pointerDown) return;
+    pointerDown = false;
+    root.classList.remove('is-dragging');
+
+    const delta = xCurrent - startTrackX; // +right / -left
+    const threshold = Math.min(120, slideW * 0.12);
+
+    if (moved && delta > threshold) {
+      prev();
+    } else if (moved && delta < -threshold) {
+      next();
+    } else {
+      // snap back
+      goTo(index);
+    }
+    play();
+  }
+
+  viewport.addEventListener('pointerdown', onDown);
+  window.addEventListener('pointermove', onMove, { passive: false });
+  window.addEventListener('pointerup', onUp);
+  // touch fallback if PointerEvent not supported
+  viewport.addEventListener('touchstart', onDown, { passive: true });
+  window.addEventListener('touchmove', onMove, { passive: false });
+  window.addEventListener('touchend', onUp);
+
+  // Initialize
+  setActive(0);
+  revealFor(0);
+})();
+</script>
+
+</body>
+
+</html>
