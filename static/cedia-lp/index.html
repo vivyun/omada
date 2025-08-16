@@ -122,7 +122,7 @@
     .omada-landing .site-nav__link {
         display: block; 
         padding: 1rem 0;
-        color: #ffffffac; 
+        color: #ffffffc8; 
         text-decoration: none; 
         font-weight: 400;
     }
@@ -198,7 +198,7 @@
         width: 100%; height: 500px; object-fit: cover; display: block;
         transform: translateZ(0);
     }
-    .omada-landing .cedia-carousel .cc-overlay {
+    .omada-landing #highlights .cedia-carousel .cc-overlay {
         display: flex;
         position: absolute; inset: 0;
         color: #fff;
@@ -237,7 +237,7 @@
         color: #fff;
     }
     .omada-landing .cedia-carousel .cc-dots {
-        display: flex; gap: 8px; justify-content: center; align-items: center;
+        display: flex; gap: 0.5rem; justify-content: center; align-items: center;
         margin-top: 14px;
     }
     .omada-landing .cedia-carousel .cc-dots button {
@@ -246,8 +246,8 @@
         transition: transform 150ms ease, background 150ms ease, width 150ms ease;
     }
     .omada-landing .cedia-carousel .cc-dots button[aria-selected="true"] {
-        background: var(--color-neonGreen, #00e387);
-        width: 22px; transform: none; border-radius: 999px;
+        background: var(--color-primaryGreen);
+        width: 30px; transform: none; border-radius: 999px;
     }
     @media (max-width: 960px) {
     .omada-landing .cedia-carousel .cc-overlay {
@@ -263,13 +263,76 @@
     }
     /* Carousel End */
 
+    /* Case Studies Start */
+    /* Container */
+    .cs { padding: clamp(2rem, 3vw, 4rem) 0; background: linear-gradient(160deg,#0b0b0c,#0e1a17 60%,#0b0b0c); color:#fff; }
+    .cs__wrap { width: 100%; }
+
+    /* Head */
+    .cs__tabs { display:flex; justify-content: space-between; align-items:center; flex-wrap:wrap; gap:2rem; }
+    .cs__tabs button { background:#182421; border:1px solid #28443b; color:#a6ffde; padding:.35rem .75rem; border-radius:999px; cursor:pointer; }
+    .cs__tabs button.is-active { background: var(--color-neonGreen); color:var(--color-gray-900); border-color: transparent; }
+    .cs__tabs .cs__all { color:#a7b6b1; text-decoration:none; }
+
+    /* Grid */
+    .cs__grid { display:grid; grid-template-columns: 280px 1fr; gap: clamp(1rem, 3vw, 2rem); margin-top: 2rem; }
+    @media (max-width: 960px){ .cs__grid { grid-template-columns: 1fr; } }
+
+    /* Left rail */
+    .cs__rail { position: relative; }
+    @media (min-width: 961px){ .cs__rail { position: sticky; top: 100px; align-self:start; } }
+    .cs__stats { list-style:none; padding:0; margin:0 0 1.5rem 0; }
+    .cs__stats li { border-left:2px solid #2c4e43; padding-left:.75rem; margin:.75rem 0; }
+    .cs__stats strong { font-size:1.75rem; display:block; }
+    .cs__stats span { color:#9fb2ad; font-size:.9rem; }
+    .cs__products h6 { margin:1rem 0; color:white; }
+    .cs__products ul { list-style:none; padding:0; margin:0; }
+    .cs__products li { display:flex; align-items:center; gap:.5rem; color:#b9c7c3; margin:.35rem 0; }
+    .cs__products .dot { width:.6rem; height:.6rem; background:#37e29f; border-radius:50%; display:inline-block; }
+    .cs__products .muted { opacity:.7; }
+
+    /* Main / slider */
+    .cs__viewport { overflow:hidden; border-radius:6px; }
+    .cs__track { display:flex; will-change:transform; }
+    .cs__slide { flex:0 0 100%; padding:0; }
+    .cs__controls { display:flex; align-items:center; justify-content:center; gap:.5rem; margin:.75rem 0 1rem; }
+
+    /* Card */
+    .cs-card { position:relative; min-height:360px; overflow:hidden; background:#0b0f0e; box-shadow: 0 20px 40px rgba(0,0,0,.35); }
+    .cs-card__img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+    .cs-card__overlay { position:absolute; inset:0; background: linear-gradient(180deg, rgba(7,14,12,0.05) 0%, rgba(7,14,12,0.25) 20%, rgba(7,14,12,.9) 100%); }
+    .cs-card__logo { position:absolute; top:14px; left:16px; }
+    .cs-card__logo img { height:24px; filter: brightness(100); }
+    .cs-card__body { position:absolute; left:20px; right:20px; bottom:16px; display:flex; flex-direction:column; gap:.5rem; }
+
+    /* Progress bar */
+    .cs__progress { height: 4px; background:#1a2522; border-radius:999px; overflow:hidden; margin:.75rem 0 0; }
+    .cs__bar { height:100%; width:0%; background:#37e29f; transform-origin: left center; }
+    .cs__rail #prodList { list-style:none; padding:0; margin:0; }
+    .cs__rail #prodList li { display:flex; align-items:center; gap:.5rem; color:#b9c7c3; margin:.35rem 0; }
+    .cs__rail #prodList li::before { content:""; width:.3rem; height:.3rem; border-radius:50%; background:#37e29f; display:inline-block; }
+
+    /* Case Studies End */
+
     .omada-landing #solutions h4 {
-		font-size: clamp(1.25rem, 0.5vw + .75rem, 1.5rem);
+		font-size: clamp(1.25rem, 0.5vw + .75rem, 1.4rem);
 	}
 
     .omada-landing .solution-button {
         transition: all 0.2s ease-in-out;
+        margin-bottom: 1rem;
     }
+
+    .omada-landing .solution-button img {
+        border-radius: 6px;
+    }
+
+    .omada-landing .solution-button:hover p {
+        text-decoration-line: underline;
+        text-underline-offset: 6px;
+        text-decoration-thickness: 0.5px;
+    }
+
     .omada-landing .solution-button:hover {
         scale: 1.02;
         transition: all 0.2s ease-in-out;
@@ -306,7 +369,7 @@
                 <ul id="site-nav-menu" class="site-nav__menu">
                 <li><a class="site-nav__link" href="#highlights">Highlights</a></li>
                 <li><a class="site-nav__link" href="#solutions">Featured Solutions</a></li>
-                <li><a class="site-nav__link" href="#cases">Case Studies</a></li>
+                <li><a class="site-nav__link" href="#case-studies">Case Studies</a></li>
                 <li><a class="site-nav__link btn-primary btn-cedia" href="">Download All Flyers</a></li>
                 </ul>
             </div>
@@ -389,9 +452,11 @@
                                     alt="High-Performance Networking & Surveillance for Large Homes"
                                     loading="eager" />
                             <div class="cc-overlay">
-                                <div class="flex flex-col gap-4">
-                                    <h3>High-Performance Networking &amp; Surveillance Solution for Large Homes and Villages</h3>
-                                    <p class="large-paragraph">Seamless Roaming, Ultra&#8209;Stable Connectivity, Always&#8209;On Protection</p>
+                                <div class="flex flex-col gap-8">
+                                    <div class="flex flex-col gap-4">
+                                        <h3>High-Performance Networking &amp; Surveillance Solution for Large Homes and Villages</h3>
+                                        <p class="large-paragraph">Seamless Roaming, Ultra&#8209;Stable Connectivity, Always&#8209;On Protection</p>
+                                    </div>
                                     <a href="#solutions" class="btn-primary btn-cedia">Learn More</a>
                                 </div>
                             </div>
@@ -401,9 +466,11 @@
                                     alt="Future-Ready Solution for Multi-Dwelling Units (MDUs)"
                                     loading="lazy" />
                             <div class="cc-overlay">
-                                <div class="flex flex-col gap-4">
-                                    <h3>Future-Ready Solution for Multi&#8209;Dwelling Units (MDUs)</h3>
-                                    <p class="large-paragraph">Always Connected, Built-in Security, Centralized Management, Quick Setup</p>
+                                <div class="flex flex-col gap-8">
+                                    <div class="flex flex-col gap-4">
+                                        <h3>Future-Ready Solution for Multi&#8209;Dwelling Units (MDUs)</h3>
+                                        <p class="large-paragraph">Always Connected, Built-in Security, Centralized Management, Quick Setup</p>
+                                    </div>
                                     <a href="#more" class="btn-primary btn-cedia">Learn More</a>
                                 </div>
                             </div>
@@ -413,9 +480,11 @@
                                     alt="Reliable Wi-Fi for the Outdoors"
                                     loading="lazy" />
                             <div class="cc-overlay">
-                                <div class="flex flex-col gap-4">
-                                    <h3>Reliable Wi-Fi Solution for the Outdoors</h3>
-                                    <p class="large-paragraph">Centralized Management, Long-Range Coverage, All&#8209;Day Weather Protection</p>
+                                <div class="flex flex-col gap-8">
+                                    <div class="flex flex-col gap-4">
+                                        <h3>Reliable Wi-Fi Solution for the Outdoors</h3>
+                                        <p class="large-paragraph">Centralized Management, Long-Range Coverage, All&#8209;Day Weather Protection</p>
+                                    </div>
                                     <a href="#cases" class="btn-primary">Learn More</a>
                                 </div>
                             </div>
@@ -433,82 +502,250 @@
          </section>
 
          <section id="solutions" class="section-container section-float">
-            <div class="flex flex-col justify-between max-w-page mx-auto py-16 lg:py-28 gap-12 items-center"
-               style="padding-top: 0;">
+            <div class="flex flex-col justify-between max-w-page mx-auto py-16 lg:py-28 gap-12 items-center" style="padding-top: 0;">
                 <div class="flex flex-col gap-4 items-center">
                     <p class="large-paragraph text-neonGreen">Solutions</p>
                     <h2 class="text-center">Explore All Our Solutions</h2>
                 </div>
 
-               <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-12">
-                  <a class="solution-button flex flex-col gap-2 w-full"><img alt="Omada Central" class="mb-6"
-                        src="https://static.tp-link.com/upload/static-page/omada_cloud_management_20250812185722z.webp" />
-                     <p class="text-neonGreen">Cloud Platform</p>
-                     <h4>Centralized Cloud Management for Networking</h4>
+               <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4" style="max-width: 106rem; gap: clamp(1rem, 1vw + 0.5rem, 2rem);">
+                  <a href="https://www.vigi.com" target="_blank" class="solution-button flex flex-col gap-2 w-full"><img alt="Omada Cloud Image" style="margin-bottom: 1rem;"
+                        src="https://static.tp-link.com/upload/static-page/omada_cloud_management_20250815182830j.webp" />
+                     <!-- <p class="text-neonGreen">Omada Cloud</p> -->
+                    <h4>Centralized Cloud Management for Networking</h4>
+                    <div class="flex flex-row items-center">
+                        <p class="text-neonGreen">Learn More</p>
+                        <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                    </div>
+                    </a>
+
+                  <a href="https://www.vigi.com" target="_blank" class="solution-button flex flex-col gap-2 w-full"><img alt="VIGI VMS Image" style="margin-bottom: 1rem;"
+                        src="https://static.tp-link.com/upload/static-page/vigi_vms_20250815182929c.webp" />
+                     <!-- <p class="text-neonGreen">VIGI VMS</p> -->
+                     <h4>Centralized Management for Surveillance</h4>
+                     <div class="flex flex-row items-center">
+                        <p class="text-neonGreen">Learn More</p>
+                        <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                    </div>
                   </a>
 
-                  <a class="solution-button flex flex-col gap-2 w-full"><img alt="Unified Solution" class="mb-6"
-                        src="https://static.tp-link.com/upload/static-page/solution_20250812185732i.webp" />
-                     <p class="text-neonGreen">Easy & Affordable</p>
-                     <h4 style="text-wrap: pretty;">Centralized Management for Surveillance</h4>
-                  </a>
-
-                  <a class="solution-button flex flex-col gap-2 w-full"><img alt="Omada Networking Solution" class="mb-6"
-                        src="https://static.tp-link.com/upload/static-page/omada_networking_solution_20250801155939a.webp" />
-                     <p class="text-neonGreen">Wi-Fi 7 Ready</p>
+                  <a href="https://www.vigi.com" target="_blank" class="solution-button flex flex-col gap-2 w-full"><img alt="Wi-Fi 7 Visual" style="margin-bottom: 1rem;"
+                        src="https://static.tp-link.com/upload/static-page/omada_networking_solution_20250815183032u.webp" />
+                     <!-- <p class="text-neonGreen">Next-Gen Wi-Fi</p> -->
                      <h4>Omada Wi&#8209;Fi 7</h4>
+                     <div class="flex flex-row items-center">
+                        <p class="text-neonGreen">Learn More</p>
+                        <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                    </div>
                   </a>
 
-                  <a class="solution-button flex flex-col gap-2 w-full"><img alt="Omada Networking Solution" class="mb-6"
-                        src="https://static.tp-link.com/upload/static-page/omada_networking_solution_20250801155939a.webp" />
-                     <p class="text-neonGreen">Wi-Fi 7 Ready</p>
+                  <a href="https://www.vigi.com" target="_blank" class="solution-button flex flex-col gap-2 w-full"><img alt="Omada Long-Range Visual" style="margin-bottom: 1rem;"
+                        src="https://static.tp-link.com/upload/static-page/ptp_ptmp_20250815184350t.webp" />
+                     <!-- <p class="text-neonGreen">Outdoor Wireless</p> -->
                      <h4>Omada Long-Range PtP & PtMP Wireless Bridge Solution</h4>
+                     <div class="flex flex-row items-center">
+                        <p class="text-neonGreen">Learn More</p>
+                        <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                    </div>
                   </a>
 
-                  <a class="solution-button flex flex-col gap-2 w-full"><img alt="Unified Solution" class="mb-6"
-                        src="https://static.tp-link.com/upload/static-page/solution_20250812185732i.webp" />
-                     <p class="text-neonGreen">Easy & Affordable</p>
+                  <a href="https://www.vigi.com" target="_blank" class="solution-button flex flex-col gap-2 w-full"><img alt="Networking Solution" style="margin-bottom: 1rem;"
+                        src="https://static.tp-link.com/upload/static-page/solution_20250815185504x.webp" />
+                     <!-- <p class="text-neonGreen">Affordable Solutions</p> -->
                      <h4 style="text-wrap: pretty;">Omada Easy & Affordable Networking for Surveillance</h4>
+                     <div class="flex flex-row items-center">
+                        <p class="text-neonGreen">Learn More</p>
+                        <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                    </div>
                   </a>
 
-                  <a class="solution-button flex flex-col gap-2 w-full"><img alt="Omada Networking Solution" class="mb-6"
-                        src="https://static.tp-link.com/upload/static-page/omada_networking_solution_20250801155939a.webp" />
-                     <p class="text-neonGreen">Wi-Fi 7 Ready</p>
+                  <a href="https://www.vigi.com" target="_blank" class="solution-button flex flex-col gap-2 w-full"><img alt="Omada Networking Solution" style="margin-bottom: 1rem;"
+                        src="https://static.tp-link.com/upload/static-page/poe_20250815185039f.webp" />
+                     <!-- <p class="text-neonGreen">PoE Infrastructure</p> -->
                      <h4>Omada PoE Switches for Surveillance</h4>
+                     <div class="flex flex-row items-center">
+                        <p class="text-neonGreen">Learn More</p>
+                        <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                    </div>
                   </a>
 
-                  <a class="solution-button flex flex-col gap-2 w-full"><img alt="Omada Networking Solution" class="mb-6"
-                        src="https://static.tp-link.com/upload/static-page/omada_networking_solution_20250801155939a.webp" />
-                     <p class="text-neonGreen">Wi-Fi 7 Ready</p>
+                  <a href="https://www.vigi.com" target="_blank" class="solution-button flex flex-col gap-2 w-full"><img alt="Omada Networking Solution" style="margin-bottom: 1rem;"
+                        src="https://static.tp-link.com/upload/static-page/futureproof_20250815202734d.webp" />
+                     <!-- <p class="text-neonGreen">High-Speed Networks</p> -->
                      <h4>Omada Future-Proof Multi-Gigabit Network Solution</h4>
+                     <div class="flex flex-row items-center">
+                        <p class="text-neonGreen">Learn More</p>
+                        <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                    </div>
                   </a>
 
-                  <a class="solution-button flex flex-col gap-2 w-full"><img alt="Omada Central" class="mb-6"
-                        src="https://static.tp-link.com/upload/static-page/omada_cloud_management_20250812185722z.webp" />
-                     <p class="text-neonGreen">Cloud Platform</p>
+                  <a href="https://www.vigi.com" target="_blank" class="solution-button flex flex-col gap-2 w-full"><img alt="Omada Central" style="margin-bottom: 1rem;"
+                        src="https://static.tp-link.com/upload/static-page/endtoend_20250815214042g.webp" />
+                     <!-- <p class="text-neonGreen">SolutionX Partner</p> -->
                      <h4>Omada End-to-End Solution</h4>
+                     <div class="flex flex-row items-center">
+                        <p class="text-neonGreen">Learn More</p>
+                        <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                    </div>
                   </a>
 
-                  <a class="solution-button flex flex-col gap-2 w-full"><img alt="VIGI Surveillance System" class="mb-6"
-                        src="https://static.tp-link.com/upload/static-page/vigi_surveillance_system_20250801160035g.webp" />
-                     <p class="text-neonGreen">Smart Surveillance</p>
+                  <a href="https://www.vigi.com" target="_blank" class="solution-button flex flex-col gap-2 w-full"><img alt="VIGI Surveillance System" style="margin-bottom: 1rem;"
+                        src="https://static.tp-link.com/upload/static-page/vigi_solution_20250815200843d.webp" />
+                     <!-- <p class="text-neonGreen">Security Systems</p> -->
                      <h4>VIGI Solution</h4>
+                     <div class="flex flex-row items-center">
+                        <p class="text-neonGreen">Learn More</p>
+                        <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                    </div>
                   </a>
 
-                  <a class="solution-button flex flex-col gap-2 w-full"><img alt="VIGI Surveillance System" class="mb-6"
-                        src="https://static.tp-link.com/upload/static-page/vigi_surveillance_system_20250801160035g.webp" />
-                     <p class="text-neonGreen">Smart Surveillance</p>
+                  <a href="https://www.vigi.com" target="_blank" class="solution-button flex flex-col gap-2 w-full"><img alt="VIGI Surveillance System" style="margin-bottom: 1rem;"
+                        src="https://static.tp-link.com/upload/static-page/vigi_solar_20250815193805x.webp" />
+                     <!-- <p class="text-neonGreen">Solar-Powered Security</p> -->
                      <h4>VIGI Solar Power Security Solution</h4>
+                     <div class="flex flex-row items-center">
+                        <p class="text-neonGreen">Learn More</p>
+                        <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                    </div>
                   </a>
 
-                  <a class="solution-button flex flex-col gap-2 w-full"><img alt="VIGI Surveillance System" class="mb-6"
-                        src="https://static.tp-link.com/upload/static-page/vigi_surveillance_system_20250801160035g.webp" />
-                     <p class="text-neonGreen">Smart Surveillance</p>
+                  <a href="https://www.vigi.com" target="_blank" class="solution-button flex flex-col gap-2 w-full"><img alt="VIGI Surveillance System" style="margin-bottom: 1rem;"
+                        src="https://static.tp-link.com/upload/static-page/lightpro_20250815193723u.webp" />
+                     <!-- <p class="text-neonGreen">Night Vision Tech</p> -->
                      <h4>VIGI LightPro Night Vision Technology</h4>
+                     <div class="flex flex-row items-center">
+                        <p class="text-neonGreen">Learn More</p>
+                        <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                    </div>
                   </a>
                </div>
             </div>
          </section>
+
+         <section id="case-studies" class="cs section-container section-float">
+            <div class="flex flex-col justify-between items-center gap-8 max-w-page mx-auto py-16 lg:py-28" style="max-width: 106rem;">
+                <div class="flex flex-col gap-4 w-full">
+                <p class="large-paragraph text-neonGreen">Case Studies</p>
+                <h2>Proven Results in Action</h2>
+                </div>
+
+                <div class="cs__wrap">
+                <!-- Tabs -->
+                <nav class="cs__tabs" aria-label="Customer size">
+                    <div class="flex flex-wrap gap-2">
+                        <button class="is-active" data-seg="ipacket">iPacket Networks</button>
+                        <button data-seg="tokyo">Tokyo Toyosu</button>
+                        <button data-seg="turk">Türk Telekom</button>
+                        <button data-seg="jnets">JNETS Co., Ltd.</button>
+                    </div>
+                    <a class="cs__all" href="https://www.omadanetworks.com/us/business-networking/case-study/">All Case Studies</a>
+                </nav>
+
+                <div class="cs__grid">
+                    <!-- Left rail (auto-filled by JS per slide) -->
+                    <aside class="cs__rail">
+                    <ul class="cs__stats">
+                        <li><strong id="stat1Value">—</strong><span id="stat1Label">—</span></li>
+                        <li><strong id="stat2Value">—</strong><span id="stat2Label">—</span></li>
+                    </ul>
+                    <div class="cs__products">
+                        <h6>Products used</h6>
+                        <ul id="prodList"></ul>
+                    </div>
+                    </aside>
+
+                    <!-- Slider -->
+                    <div class="cs__main">
+                    <div class="cs__viewport" aria-live="polite">
+                        <ul class="cs__track">
+                        <!-- SLIDE 1 -->
+                        <li class="cs__slide is-active"
+                            data-seg="ipacket"
+                            data-stat1-value="14,000"
+                            data-stat1-label="Units upgraded to Wi-Fi 6"
+                            data-stat2-value="20-30%"
+                            data-stat2-label="Sped up in deployment time"
+                            data-products="EAP615-Wall,EAP610,EAP660 HD,EAP610-Outdoor,Omada Software Controller">
+                            <article class="cs-card">
+                            <img class="cs-card__img" src="https://static.tp-link.com/upload/static-page/cedia_luxury_20250815025043q.webp" alt="Laptop dashboard">
+                            <div class="cs-card__overlay"></div>
+                            <div class="cs-card__logo"></div>
+                            <div class="cs-card__body">
+                                <h3>Omada Helps iPacket Networks Upgrade to Wi-Fi 6 Across <span class="text-limeGreen">14,000</span> Condominium Units and Indoor/Outdoor Common Areas</h3>
+                                <p>“Once the APs are plugged in, they instantly show up. We adopt them, assign a Wi-Fi profile, and voila, they’re done! The controller has easily sped up our deployment time by 20 or 30 percent.”</p>
+                            </div>
+                            </article>
+                        </li>
+
+                        <!-- SLIDE 2 -->
+                        <li class="cs__slide"
+                            data-seg="tokyo"
+                            data-stat1-value="200+ devices"
+                            data-stat1-label="Ensure seamless coverage"
+                            data-stat2-value="34,000"
+                            data-stat2-label="Square meters covered"
+                            data-products="OC300,EAP670,EAP245,EAP615-Wall,EAP650-Outdoor,and more!">
+                            <article class="cs-card">
+                            <img class="cs-card__img" src="https://static.tp-link.com/upload/static-page/cedia_mdu_20250815025059a.webp" alt="Office monitors">
+                            <div class="cs-card__overlay"></div>
+                            <div class="cs-card__logo"></div>
+                            <div class="cs-card__body">
+                                <h3>Omada Delivers a Seamless Wi-Fi 6 Solution with Centralized Management for <span class="text-limeGreen">380+</span> Apartments</h3>
+                                <p>Omada delivers a whole-building Wi-Fi 6 solution covering 34,000 square meters for Tokyo Toyosu Manyo Club Co., Ltd. in Japan.</p>
+                            </div>
+                            </article>
+                        </li>
+
+                        <!-- SLIDE 3 -->
+                        <li class="cs__slide"
+                            data-seg="turk"
+                            data-stat1-value="27,905"
+                            data-stat1-label="Devices connected"
+                            data-stat2-value="200+"
+                            data-stat2-label="Sites covered"
+                            data-products="OC300,EAP670,EAP245,EAP615-Wall,EAP650-Outdoor,and more!">
+                            <article class="cs-card">
+                            <img class="cs-card__img" src="https://static.tp-link.com/upload/static-page/cedia_outdoor_20250815025110k.webp" alt="City night">
+                            <div class="cs-card__overlay"></div>
+                            <div class="cs-card__logo"></div>
+                            <div class="cs-card__body">
+                                <h3>Omada Supports Türk Telekom in Delivering Wi-Fi 6 Solution for <span class="text-limeGreen">200,000</span> Earthquake Resettlement Container Homes</h3>
+                                <p>Omada delivered over 14,000 TB of downloads and 1,330 TB of uploads for 200,000 container houses, supporting over 17,000 daily online client devices in earthquake resettlement container cities.</p>
+                            </div>
+                            </article>
+                        </li>
+
+                        <!-- SLIDE 4 -->
+                        <li class="cs__slide"
+                            data-seg="jnets"
+                            data-stat1-value="4,000+"
+                            data-stat1-label="Devices connected"
+                            data-stat2-value="Reduced"
+                            data-stat2-label="Vacancy rates"
+                            data-products="SG108PE,AP615-WE Wall,VIGI NVR1016H,VIGI C345 Camera">
+                            <article class="cs-card">
+                            <img class="cs-card__img" src="https://static.tp-link.com/upload/static-page/cedia_mdu_20250815025059a.webp" alt="City night">
+                            <div class="cs-card__overlay"></div>
+                            <div class="cs-card__logo"></div>
+                            <div class="cs-card__body">
+                                <h3>Omada and VIGI Deploy 4,000+ Devices to Power Wi-Fi 6 and Surveillance in Japan</h3>
+                                <p>Omada and VIGI delivered a high-performance Wi-Fi 6 and surveillance solution for all units in a new Tokyo property, boosting value and reducing vacancy rates for owners.</p>
+                            </div>
+                            </article>
+                        </li>
+                        </ul>
+                    </div>
+
+                    <!-- Autoplay progress bar -->
+                    <div class="cs__progress" aria-hidden="true">
+                        <div class="cs__bar"></div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
 
          <!-- <section class="relative section-container section-float">
             <svg class="absolute inset-0 w-full h-full" style="z-index: -1; pointer-events: none;"
@@ -561,7 +798,6 @@
             menu.classList.toggle('is-open');
             });
 
-            // Close on resize up to desktop to avoid stuck state
             window.addEventListener('resize', () => {
             if (window.innerWidth >= 768) {
                 menu.classList.remove('is-open');
@@ -569,7 +805,6 @@
             }
             });
 
-            // Optional: close when a link is clicked (mobile)
             menu.addEventListener('click', (e) => {
             if (e.target.closest('a')) {
                 menu.classList.remove('is-open');
@@ -616,102 +851,87 @@
    </script>
    <script>
 (() => {
-  const root = document.querySelector('.cedia-carousel');
-  if (!root) return;
+  // init every carousel on the page
+  document.querySelectorAll('.cedia-carousel').forEach(initCarousel);
 
-  const viewport = root.querySelector('.cc-viewport');
-  const track    = root.querySelector('.cc-track');
-  const slides   = Array.from(root.querySelectorAll('.cc-slide'));
-  const prevBtn  = root.querySelector('.cc-prev');
-  const nextBtn  = root.querySelector('.cc-next');
-  const dotsWrap = root.querySelector('.cc-dots');
-  const autoplayMs = parseInt(root.dataset.autoplay, 10) || 0;
-  const prefersNoMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function initCarousel(root) {
+    const viewport = root.querySelector('.cc-viewport');
+    const track    = root.querySelector('.cc-track');
+    const slides   = Array.from(root.querySelectorAll('.cc-slide'));
+    const prevBtn  = root.querySelector('.cc-prev');
+    const nextBtn  = root.querySelector('.cc-next');
+    const dotsWrap = root.querySelector('.cc-dots');
+    const autoplayMs = parseInt(root.dataset.autoplay, 10) || 0;
+    const prefersNoMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Build dots
-  const dots = slides.map((_, i) => {
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.setAttribute('role', 'tab');
-    b.setAttribute('aria-label', `Go to slide ${i + 1}`);
-    b.addEventListener('click', () => goTo(i));
-    dotsWrap.appendChild(b);
-    return b;
-  });
+    // Build dots for this instance
+    const dots = slides.map((_, i) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('role', 'tab');
+      b.setAttribute('aria-label', `Go to slide ${i + 1}`);
+      b.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(b);
+      return b;
+    });
 
-  let index = 0;
-  let slideW = viewport.clientWidth;
-  let xCurrent = 0;              // current track x (px)
-  let autoId = null;
+    let index = 0;
+    let slideW = viewport.clientWidth;
+    let xCurrent = 0;
+    let autoId = null;
 
-  // Layout / resize
-  function layout() {
-    slideW = viewport.clientWidth;
-    gsap.set(track, { x: -index * slideW });
-    xCurrent = -index * slideW;
-  }
-  new ResizeObserver(layout).observe(viewport);
-  layout();
-
-  function setActive(i) {
-    slides.forEach((s, k) => s.classList.toggle('is-active', k === i));
-    dots.forEach((d, k) => d.setAttribute('aria-selected', String(k === i)));
-  }
-
-  function goTo(i, animate = true) {
-    index = (i + slides.length) % slides.length;
-    const toX = -index * slideW;
-    xCurrent = toX;
-    if (animate && !prefersNoMotion) {
-      gsap.to(track, { x: toX, duration: 0.6, ease: 'power2.out' });
-    } else {
-      gsap.set(track, { x: toX });
+    // Layout / resize just for this carousel
+    function layout() {
+      slideW = viewport.clientWidth;
+      gsap.set(track, { x: -index * slideW });
+      xCurrent = -index * slideW;
     }
-    setActive(index);
-    revealFor(index);
-  }
+    new ResizeObserver(layout).observe(viewport);
+    layout();
 
-  let slideTl = null;
+    function setActive(i) {
+      slides.forEach((s, k) => s.classList.toggle('is-active', k === i));
+      dots.forEach((d, k) => d.setAttribute('aria-selected', String(k === i)));
+    }
 
-function revealFor(i){
-  if (slideTl) slideTl.kill();
-  const slide   = slides[i];
-  const img     = slide.querySelector('img');
-  const blocks  = slide.querySelectorAll('.cc-overlay > *');
+    let slideTl = null;
+    function revealFor(i) {
+      if (slideTl) slideTl.kill();
+      const slide = slides[i];
+      const img   = slide.querySelector('img');
+      gsap.set(img, { scale: 1.15, transformOrigin: '50% 50%', willChange: 'transform' });
+      slideTl = gsap.timeline({ defaults: { duration: 0.6, ease: 'power2.out' } })
+        .to(img, { scale: 1, duration: 7, ease: 'none' }, 0);
+    }
 
-  gsap.set(img,    {scale: 1.15, transformOrigin: '50% 50%', willChange:'transform'});
+    function goTo(i, animate = true) {
+      index = (i + slides.length) % slides.length;
+      const toX = -index * slideW;
+      xCurrent = toX;
+      if (animate && !prefersNoMotion) {
+        gsap.to(track, { x: toX, duration: 0.6, ease: 'power2.out' });
+      } else {
+        gsap.set(track, { x: toX });
+      }
+      setActive(index);
+      revealFor(index);
+    }
 
-  slideTl = gsap.timeline({defaults:{duration:0.6, ease:'power2.out'}})
-    .to(img,    {scale:1, duration:7, ease:'none'}, 0);
-}
+    function next() { goTo(index + 1); }
+    function prev() { goTo(index - 1); }
 
+    // Buttons (scoped to this root)
+    prevBtn.addEventListener('click', prev);
+    nextBtn.addEventListener('click', next);
 
-  function next() { goTo(index + 1); }
-  function prev() { goTo(index - 1); }
+    // Autoplay (per instance)
+    function play() { if (autoplayMs) { stop(); autoId = setInterval(next, autoplayMs); } }
+    function stop() { if (autoId) clearInterval(autoId); autoId = null; }
+    play();
 
-  // Buttons
-  nextBtn.addEventListener('click', next);
-  prevBtn.addEventListener('click', prev);
-
-  // Autoplay
-  function play() {
-    if (!autoplayMs) return;
-    stop();
-    autoId = setInterval(next, autoplayMs);
-  }
-  function stop() {
-    if (autoId) clearInterval(autoId);
-    autoId = null;
-  }
-//   root.addEventListener('mouseenter', stop);
-//   root.addEventListener('mouseleave', play);
-//   root.addEventListener('focusin', stop);
-//   root.addEventListener('focusout', play);
-  play();
-
-  // Drag / swipe
-  let pointerDown = false, startX = 0, startTrackX = 0, moved = false;
-  const setX = gsap.quickSetter(track, 'x', 'px');
+    // Drag / swipe (instance-scoped flags)
+    let pointerDown = false, startX = 0, startTrackX = 0, moved = false;
+    const setX = gsap.quickSetter(track, 'x', 'px');
 
   function onDown(e) {
     pointerDown = true;
@@ -727,47 +947,219 @@ function revealFor(i){
     const dx = clientX - startX;
     if (Math.abs(dx) > 3) moved = true;
 
-    // edge resistance
-    const atStart = startTrackX >= 0 && dx > 0;
-    const atEnd   = startTrackX <= -slideW * (slides.length - 1) && dx < 0;
-    const damp = (atStart || atEnd) ? 0.35 : 1;
+      const atStart = startTrackX >= 0 && dx > 0;
+      const atEnd   = startTrackX <= -slideW * (slides.length - 1) && dx < 0;
+      const damp = (atStart || atEnd) ? 0.35 : 1;
 
-    xCurrent = startTrackX + dx * damp;
-    setX(xCurrent);
-    e.preventDefault();
-  }
-  function onUp() {
-    if (!pointerDown) return;
-    pointerDown = false;
-    root.classList.remove('is-dragging');
-
-    const delta = xCurrent - startTrackX; // +right / -left
-    const threshold = Math.min(120, slideW * 0.12);
-
-    if (moved && delta > threshold) {
-      prev();
-    } else if (moved && delta < -threshold) {
-      next();
-    } else {
-      // snap back
-      goTo(index);
+      xCurrent = startTrackX + dx * damp;
+      setX(xCurrent);
+      e.preventDefault();
     }
-    play();
-  }
+    function onUp() {
+      if (!pointerDown) return;
+      pointerDown = false;
+      root.classList.remove('is-dragging');
 
-  viewport.addEventListener('pointerdown', onDown);
-  window.addEventListener('pointermove', onMove, { passive: false });
-  window.addEventListener('pointerup', onUp);
-  // touch fallback if PointerEvent not supported
-  viewport.addEventListener('touchstart', onDown, { passive: true });
-  window.addEventListener('touchmove', onMove, { passive: false });
-  window.addEventListener('touchend', onUp);
+      const delta = xCurrent - startTrackX;
+      const threshold = Math.min(120, slideW * 0.12);
+
+      if (moved && delta > threshold) prev();
+      else if (moved && delta < -threshold) next();
+      else goTo(index);
+
+      play();
+    }
+
+    viewport.addEventListener('pointerdown', onDown);
+    window.addEventListener('pointermove', onMove, { passive: false });
+    window.addEventListener('pointerup', onUp);
+    // touch fallback
+    viewport.addEventListener('touchstart', onDown, { passive: true });
+    window.addEventListener('touchmove', onMove, { passive: false });
+    window.addEventListener('touchend', onUp);
 
   // Initialize
   setActive(0);
   revealFor(0);
 })();
 </script>
+<script>
+(() => {
+  const root = document.getElementById('case-studies');
+  if (!root) return;
+
+  // Elements
+  const viewport = root.querySelector('.cs__viewport');
+  const track    = root.querySelector('.cs__track');
+  const allSlides = Array.from(root.querySelectorAll('.cs__slide'));
+  const tabs     = Array.from(root.querySelectorAll('.cs__tabs [data-seg]'));
+  const bar      = root.querySelector('.cs__bar');
+
+  // Left rail fields
+  const stat1V = root.querySelector('#stat1Value');
+  const stat1L = root.querySelector('#stat1Label');
+  const stat2V = root.querySelector('#stat2Value');
+  const stat2L = root.querySelector('#stat2Label');
+  const prodUl = root.querySelector('#prodList');
+
+  const AUTOPLAY_MS = 7000;
+  const prefersNoMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let visibleSlides = [];
+  let idx = 0, w = viewport.clientWidth, x = 0;
+  const setX = gsap.quickSetter(track, 'x', 'px');
+  let timer = null, barTween = null;
+
+  // Helpers
+  const matchesSeg = (slide, seg) => seg ? slide.dataset.seg === seg : true;
+
+  function setFilter(seg){
+    // Update tab state
+    tabs.forEach(t => t.classList.toggle('is-active', t.dataset.seg === seg));
+    // Show/hide slides
+    allSlides.forEach(s => s.classList.toggle('is-hidden', !matchesSeg(s, seg)));
+    visibleSlides = allSlides.filter(s => !s.classList.contains('is-hidden'));
+    // Reset index to first visible
+    idx = 0;
+    layout();
+    goTo(0, false);
+  }
+
+  function layout(){
+    w = viewport.clientWidth;
+    gsap.set(track, {x: -idx * w});
+    x = -idx * w;
+  }
+  new ResizeObserver(layout).observe(viewport);
+
+  function syncRail(slide){
+    if (!slide) return;
+    stat1V.textContent = slide.dataset.stat1Value || '—';
+    stat1L.textContent = slide.dataset.stat1Label || '—';
+    stat2V.textContent = slide.dataset.stat2Value || '—';
+    stat2L.textContent = slide.dataset.stat2Label || '—';
+
+    // products
+    prodUl.innerHTML = '';
+    (slide.dataset.products || '')
+      .split(',')
+      .map(s => s.trim())
+      .filter(Boolean)
+      .forEach(p => {
+        const li = document.createElement('li');
+        li.textContent = p;
+        prodUl.appendChild(li);
+      });
+  }
+
+  function reveal(i){
+    const slide = visibleSlides[i];
+    if (!slide) return;
+    const card = slide.querySelector('.cs-card');
+    const overlay = card.querySelector('.cs-card__overlay');
+    const body = card.querySelector('.cs-card__body');
+
+    gsap.fromTo(overlay, {opacity: 0}, {opacity: 1, duration:.5, ease:'power2.out'});
+    gsap.fromTo(body, {y: 18, opacity: 0}, {y:0, opacity:1, duration:.6, ease:'power2.out', delay:.05});
+  }
+
+  function goTo(i, animate = true){
+    if (!visibleSlides.length) return;
+    idx = (i + visibleSlides.length) % visibleSlides.length;
+    const to = -idx * w;
+    x = to;
+    if (animate && !prefersNoMotion) {
+      gsap.to(track, {x: to, duration:.6, ease:'power2.out'});
+    } else {
+      gsap.set(track, {x: to});
+    }
+    visibleSlides.forEach((s,k)=>s.classList.toggle('is-active', k===idx));
+    syncRail(visibleSlides[idx]);
+    reveal(idx);
+    restartProgress();
+  }
+
+  function next(){ goTo(idx + 1); }
+
+  // Progress bar
+  function restartProgress(){
+    if (barTween) barTween.kill();
+    gsap.set(bar, {width: '0%'});
+    barTween = gsap.to(bar, {
+      width: '100%',
+      duration: AUTOPLAY_MS / 1000,
+      ease: 'none'
+    });
+  }
+
+  function play(){
+    stop();
+    if (prefersNoMotion) return;
+    timer = setInterval(next, AUTOPLAY_MS);
+    restartProgress();
+  }
+  function stop(){
+    if (timer) clearInterval(timer);
+    timer = null;
+    if (barTween) barTween.kill();
+    gsap.set(bar, {width:'0%'});
+  }
+
+  // Hover pause (optional)
+  viewport.addEventListener('mouseenter', stop);
+  viewport.addEventListener('mouseleave', play);
+
+  // Tabs -> filter
+  tabs.forEach(btn => btn.addEventListener('click', () => setFilter(btn.dataset.seg)));
+
+  // Drag / swipe
+  let pointerDown = false, startX = 0, startTrackX = 0, moved = false;
+  function onDown(e){
+    if (!visibleSlides.length) return;
+    pointerDown = true; moved = false; stop();
+    startX = (e.touches ? e.touches[0].clientX : e.clientX);
+    startTrackX = x;
+    root.classList.add('is-dragging');
+  }
+  function onMove(e){
+    if (!pointerDown) return;
+    const clientX = (e.touches ? e.touches[0].clientX : e.clientX);
+    const dx = clientX - startX;
+    if (Math.abs(dx) > 3) moved = true;
+
+    const atStart = startTrackX >= 0 && dx > 0;
+    const atEnd   = startTrackX <= -w * (visibleSlides.length - 1) && dx < 0;
+    const damp = (atStart || atEnd) ? 0.35 : 1;
+
+    x = startTrackX + dx * damp;
+    setX(x);
+    e.preventDefault();
+  }
+  function onUp(){
+    if (!pointerDown) return;
+    pointerDown = false; root.classList.remove('is-dragging');
+    const delta = x - startTrackX;
+    const threshold = Math.min(120, w * 0.12);
+
+    if (moved && delta > threshold) goTo(idx - 1);
+    else if (moved && delta < -threshold) goTo(idx + 1);
+    else goTo(idx, false);
+
+    play();
+  }
+
+  viewport.addEventListener('pointerdown', onDown);
+  window.addEventListener('pointermove', onMove, {passive:false});
+  window.addEventListener('pointerup', onUp);
+  viewport.addEventListener('touchstart', onDown, {passive:true});
+  window.addEventListener('touchmove', onMove, {passive:false});
+  window.addEventListener('touchend', onUp);
+
+  // Init: default to Startup
+  setFilter('ipacket');
+  play();
+})();
+</script>
+
 
 </body>
 

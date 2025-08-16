@@ -19,7 +19,7 @@
 		position: relative;
 	}
 	.overview-content .smart-bridging-video .icon-play-video {
-		content:'';
+		display: block;
 		position: absolute;
 		top:50%;
 		left:50%;
@@ -28,6 +28,17 @@
 		height:4em;
 		background:url(https://static-page.tp-link.com/omada/home/img/icon-play-video.svg) center / 100% no-repeat;
 	}
+
+	.overview-content .eap-sdn .img .desc-16 {
+		left: 65em;
+		top: 13em;
+		width: 10em;
+	}
+
+	.overview-content .eap-sdn .img .desc-16 > span {
+		color: inherit;
+	}
+
 	@media (max-width: 1440px) {
 		.overview-content .smart-auto-empty-Dock, .overview-content .optimized-wired-performance {
 			font-size: 10px;
@@ -45,7 +56,12 @@
 			max-width: 85.186vw;
 		}
 		.overview-content .smart-bridging-video .icon-play-video {
-			top: 70%;
+			display: none;
+		}
+		 .overview-content .eap-sdn .img .desc-16 {
+			left: 52vw;
+			top: 147vw;
+			width: 28vw;
 		}
 	}
 </style>
@@ -426,6 +442,8 @@ EAP211-Bridge</span></div>
 <div class="desc desc-15"><span class="desc-m">Long-Range<br />
 Wireless Bridge<br />
 EAP211-Bridge</span></div>
+
+<div class="desc desc-16"><span class="desc-m">IP<br />Cameras</span></div>
 </div>
 </div>
 </section>
