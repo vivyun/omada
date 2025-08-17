@@ -53,7 +53,7 @@
     .omada-landing .cedia-carousel .cc-track {display: flex;will-change: transform;}
     .omada-landing .cedia-carousel .cc-slide {position: relative;flex: 0 0 100%;border-radius: 6px;overflow: hidden;background: #0b0b0b;}
     .omada-landing .cedia-carousel .cc-slide img {width: 100%; height: 500px; object-fit: cover; display: block;transform: translateZ(0);}
-    .omada-landing #highlights .cedia-carousel .cc-overlay {display: flex;position: absolute; inset: 0;color: #fff;background: linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.15) 55%, rgba(0,0,0,0) 100%);}
+    .omada-landing .cedia-carousel .cc-overlay {display: flex;position: absolute; inset: 0;color: #fff;background: linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.15) 55%, rgba(0,0,0,0) 100%);}
     .omada-landing .cedia-carousel .cc-overlay > * {background: rgba(0, 0, 0, 0.155);backdrop-filter: saturate(120%) blur(6px);padding: clamp(1rem, 4vw, 3rem);max-width: 600px;}
     .omada-landing .cedia-carousel .cc-overlay h3 {font-size: clamp(1.5rem, 4vw, 2.5rem);}
     .omada-landing .cedia-carousel .cc-overlay p {font-weight: 300;}
@@ -75,18 +75,14 @@
     /* Container */
     .omada-landing .cs { background: linear-gradient(160deg,#0b0b0c,#0e1a17 60%,#0b0b0c);}
     .omada-landing .cs__wrap { width: 100%; }
-
-    /* Head */
     .omada-landing .cs__tabs { display:flex; justify-content: space-between; align-items:center; flex-wrap:wrap; gap:2rem; }
     .omada-landing .cs__tabs button { background:#182421; border:1px solid #28443b; color:#a6ffde; padding:.35rem .75rem; border-radius:999px; cursor:pointer; }
     .omada-landing .cs__tabs button.is-active { background: var(--color-neonGreen); color:var(--color-gray-900); border-color: transparent; }
     .omada-landing .cs__tabs .cs__all:hover { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 0.5px; }
-
-    /* Grid */
-    .cs__grid { display:grid; grid-template-columns: 280px 1fr; gap: clamp(1rem, 3vw, 2rem); margin-top: 2rem; }
-    @media (max-width: 960px){ .cs__grid { grid-template-columns: 1fr; } }
-
-    /* Left rail */
+    .cs__grid { display:grid; grid-template-columns: 280px 1fr; gap: clamp(1rem, 3vw, 2rem); margin-top: 2rem; grid-template-areas: "rail main"; }
+    .cs__grid .cs__rail { grid-area: rail; }
+    .cs__grid .cs__main { grid-area: main; }
+    @media (max-width: 960px){ .cs__grid { grid-template-columns: 1fr; grid-template-areas: "main" "rail"; } }
     .omada-landing .cs__rail { position: relative; }
     @media (min-width: 961px){ .omada-landing .cs__rail { position: sticky; top: 100px; align-self:start; } }
     .omada-landing .cs__stats { list-style:none; padding:0; margin:0 0 1.5rem 0; }
@@ -98,23 +94,18 @@
     .omada-landing .cs__products li { display:flex; align-items:center; gap:.5rem; color:#b9c7c3; margin:.35rem 0; }
     .omada-landing .cs__products .dot { width:.6rem; height:.6rem; background:#37e29f; border-radius:50%; display:inline-block; }
     .omada-landing .cs__products .muted { opacity:.7; }
-
-    /* Main / slider */
     .omada-landing .cs__viewport { overflow:hidden; border-radius:6px; }
     .omada-landing .cs__track { display:flex; will-change:transform; }
     .omada-landing .cs__slide { flex:0 0 100%; padding:0; }
     .omada-landing .cs__slide.is-hidden { display: none; }
     .omada-landing .cs__controls { display:flex; align-items:center; justify-content:center; gap:.5rem; margin:.75rem 0 1rem; }
-
-    /* Card */
     .omada-landing .cs-card { position:relative; min-height:360px; overflow:hidden; background:#0b0f0e; box-shadow: 0 20px 40px rgba(0,0,0,.35); }
     .omada-landing .cs-card__img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
     .omada-landing .cs-card__overlay { position:absolute; inset:0; background: linear-gradient(180deg, rgba(7,14,12,0.05) 0%, rgba(7,14,12,0.25) 20%, rgba(7,14,12,.9) 100%); }
+    @media (max-width: 960px) {.omada-landing .cs-card__overlay { background: rgba(7, 14, 12, 0.7); }}
     .omada-landing .cs-card__logo { position:absolute; top:14px; left:16px; }
     .omada-landing .cs-card__logo img { height:24px; filter: brightness(100); }
-    .omada-landing .cs-card__body { position:absolute; left:20px; right:20px; bottom:16px; display:flex; flex-direction:column; gap:.5rem; }
-
-    /* Progress bar */
+    .omada-landing .cs-card__body { position:absolute; left:20px; right:20px; bottom:16px; display:flex; flex-direction:column; gap:0.75rem; }
     .omada-landing .cs__progress { height: 4px; background:#1a2522; border-radius:999px; overflow:hidden; margin:.75rem 0 0; }
     .omada-landing .cs__bar { height:100%; width:0%; background:var(--color-dullGreen); transform-origin: left center; }
     .omada-landing .cs__rail #prodList { list-style:none; padding:0; margin:0; }
@@ -224,7 +215,7 @@
          </section>
 
          <section id="highlights" class="section-container section-float">
-            <div class="flex flex-col justify-between items-center gap-12 max-w-page mx-auto py-16 lg:py-28">
+            <div class="flex flex-col justify-between items-center gap-12 max-w-page mx-auto py-16 lg:py-28" style="padding-top: 0;">
                 <div class="flex flex-col gap-4 items-center">
                     <p class="large-paragraph text-neonGreen">Highlights</p>
                     <h2 class="text-center">What’s on Show</h2>
@@ -419,7 +410,7 @@
             </div>
          </section>
 
-         <section id="case-studies" class="cs section-container section-float">
+         <section id="case-studies" class="cs section-container">
             <div class="flex flex-col justify-between items-center gap-8 max-w-page mx-auto py-16 lg:py-28" style="max-width: 106rem;">
                 <div class="flex flex-col gap-4 w-full">
                 <p class="large-paragraph text-neonGreen">Case Studies</p>
@@ -473,6 +464,7 @@
                             <div class="cs-card__body">
                                 <h3>Omada Helps iPacket Networks Upgrade to Wi-Fi 6 Across <span class="text-limeGreen">14,000</span> Condominium Units and Indoor/Outdoor Common Areas</h3>
                                 <p>“Once the APs are plugged in, they instantly show up. We adopt them, assign a Wi-Fi profile, and voila, they’re done! The controller has easily sped up our deployment time by 20 or 30 percent.”</p>
+                                <a target="_blank" href="https://static.tp-link.com/upload/case-study/2023/202307/20230726/B2B_IPacketNetwork_Case%20Study_Final.pdf" class="btn-primary" style="margin-top: 0.5rem;">Read Case Study</a>
                             </div>
                             </article>
                         </li>
@@ -492,6 +484,7 @@
                             <div class="cs-card__body">
                                 <h3>Omada Delivers a Seamless Wi-Fi 6 Solution with Centralized Management for <span class="text-limeGreen">380+</span> Apartments</h3>
                                 <p>Omada delivers a whole-building Wi-Fi 6 solution covering 34,000 square meters for Tokyo Toyosu Manyo Club Co., Ltd. in Japan.</p>
+                                <a target="_blank" href="https://static.tp-link.com/upload/case-study/2025/202505/20250526/final-Hotel-Tokyo%20Toyosu%20Manyo%20Club%20CO.,%20Ltd.%20-Japan-0526.pdf" class="btn-primary" style="margin-top: 0.5rem;">Read Case Study</a>
                             </div>
                             </article>
                         </li>
@@ -511,6 +504,7 @@
                             <div class="cs-card__body">
                                 <h3>Omada Supports Türk Telekom in Delivering Wi-Fi 6 Solution for <span class="text-limeGreen">200,000</span> Earthquake Resettlement Container Homes</h3>
                                 <p>Omada delivered over 14,000 TB of downloads and 1,330 TB of uploads for 200,000 container houses, supporting over 17,000 daily online client devices in earthquake resettlement container cities.</p>
+                                <a target="_blank" href="https://static.tp-link.com/upload/case-study/2024/202412/20241218/MDU-Case%20Study-Turkey-11.6.pdf" class="btn-primary" style="margin-top: 0.5rem;">Read Case Study</a>
                             </div>
                             </article>
                         </li>
@@ -530,6 +524,7 @@
                             <div class="cs-card__body">
                                 <h3>Omada and VIGI Deploy <span class="text-limeGreen">4,000+</span> Devices to Power Wi-Fi 6 and Surveillance in Japan</h3>
                                 <p>Omada and VIGI delivered a high-performance Wi-Fi 6 and surveillance solution for all units in a new Tokyo property, boosting value and reducing vacancy rates for owners.</p>
+                                <a target="_blank" href="https://static.tp-link.com/upload/case-study/2025/202505/20250526/final-MDU-JNETS%20Co.,%20Ltd.-Japan%20-0526.pdf" class="btn-primary" style="margin-top: 0.5rem;">Read Case Study</a>
                             </div>
                             </article>
                         </li>
