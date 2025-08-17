@@ -52,19 +52,20 @@
     .omada-landing .cedia-carousel .cc-viewport {overflow: hidden;}
     .omada-landing .cedia-carousel .cc-track {display: flex;will-change: transform;}
     .omada-landing .cedia-carousel .cc-slide {position: relative;flex: 0 0 100%;border-radius: 6px;overflow: hidden;background: #0b0b0b;}
-    .omada-landing .cedia-carousel .cc-slide img {width: 100%; height: 500px; object-fit: cover; display: block;transform: translateZ(0);}
-    .omada-landing .cedia-carousel .cc-overlay {display: flex;position: absolute; inset: 0;color: #fff;background: linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.15) 55%, rgba(0,0,0,0) 100%);}
-    .omada-landing .cedia-carousel .cc-overlay > * {background: rgba(0, 0, 0, 0.155);backdrop-filter: saturate(120%) blur(6px);padding: clamp(1rem, 4vw, 3rem);max-width: 600px;}
+    .omada-landing .cedia-carousel .cc-slide img {width: 100%; height: 450px; object-fit: cover; display: block;transform: translateZ(0);}
+    .omada-landing #highlights .cedia-carousel .cc-overlay {display: flex;position: absolute; inset: 0;color: #fff;background: linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.15) 55%, rgba(0,0,0,0) 100%);}
+    .omada-landing .cedia-carousel .cc-overlay > * {background: rgba(0, 0, 0, 0.155);backdrop-filter: saturate(120%) blur(6px);padding: clamp(1rem, 4vw, 2rem);max-width: 600px;}
     .omada-landing .cedia-carousel .cc-overlay h3 {font-size: clamp(1.5rem, 4vw, 2.5rem);}
     .omada-landing .cedia-carousel .cc-overlay p {font-weight: 300;}
-    .omada-landing .cedia-carousel .cc-arrow {min-width: 56px; max-width: 56px; min-height: 56px; max-height: 56px;display: flex;align-items: center; justify-content: center;background: transparent; border: 1px solid rgba(255,255,255,.25);cursor: pointer;transition: 180ms ease;z-index: 2;}
-    .omada-landing .cedia-carousel .cc-prev { left: 0.75rem; }
-    .omada-landing .cedia-carousel .cc-next { right: 0.75rem; }
+    .omada-landing .cedia-carousel .cc-arrow { position: absolute; top: 50%; transform: translateY(-50%); min-width: 56px; max-width: 56px; min-height: 56px; max-height: 56px;display: flex;align-items: center; justify-content: center;background: transparent; border: 1px solid rgba(255,255,255,.25);cursor: pointer;transition: 180ms ease;z-index: 2;}
+    .omada-landing .cedia-carousel .cc-prev { left: -5rem; }
+    .omada-landing .cedia-carousel .cc-next { right: -5rem; }
     .omada-landing .cedia-carousel .cc-arrow:hover {background: rgba(255,255,255,.08);border-color: rgba(255,255,255,.45);color: #fff;}
     .omada-landing .cedia-carousel .cc-dots {display: flex; gap: 0.5rem; justify-content: center; align-items: center;margin-top: 14px;}
     .omada-landing .cedia-carousel .cc-dots button {width: 6px; height: 6px; border-radius: 999px; border: 0;background: rgba(255,255,255,.4); cursor: pointer;transition: 150ms ease;}
-    .omada-landing .cedia-carousel .cc-dots button[aria-selected="true"] {background: var(--color-primaryGreen);width: 30px; transform: none; border-radius: 999px;}
+    .omada-landing .cedia-carousel .cc-dots button[aria-selected="true"] {background: var(--color-neonGreen);width: 30px; transform: none; border-radius: 999px;}
     @media (max-width: 960px) {
+    .omada-landing .cedia-carousel .cc-slide img {height: 600px; }
     .omada-landing .cedia-carousel .cc-overlay {background: linear-gradient(0deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.2) 55%, rgba(0,0,0,0) 100%);}
     .omada-landing .cedia-carousel .cc-overlay > * {margin-top: auto;width: 100%;}
     .omada-landing .cedia-carousel .cc-arrow { display: none;}
@@ -72,12 +73,11 @@
     /* Carousel End */
 
     /* Case Studies Start */
-    /* Container */
-    .omada-landing .cs { background: linear-gradient(160deg,#0b0b0c,#0e1a17 60%,#0b0b0c);}
+    .omada-landing .cs { background: linear-gradient(160deg,#0b0b0c,#1c201f 60%,#0b0b0c);}
     .omada-landing .cs__wrap { width: 100%; }
     .omada-landing .cs__tabs { display:flex; justify-content: space-between; align-items:center; flex-wrap:wrap; gap:2rem; }
-    .omada-landing .cs__tabs button { background:#182421; border:1px solid #28443b; color:#a6ffde; padding:.35rem .75rem; border-radius:999px; cursor:pointer; }
-    .omada-landing .cs__tabs button.is-active { background: var(--color-neonGreen); color:var(--color-gray-900); border-color: transparent; }
+    .omada-landing .cs__tabs button { border:1px solid #28443b; color:#ffffffc8; padding:.6rem 1.25rem; cursor:pointer; border-radius: 999px; }
+    .omada-landing .cs__tabs button.is-active { color:var(--color-white); border-color: var(--color-neonGreen); }
     .omada-landing .cs__tabs .cs__all:hover { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 0.5px; }
     .cs__grid { display:grid; grid-template-columns: 280px 1fr; gap: clamp(1rem, 3vw, 2rem); margin-top: 2rem; grid-template-areas: "rail main"; }
     .cs__grid .cs__rail { grid-area: rail; }
@@ -87,9 +87,9 @@
     @media (min-width: 961px){ .omada-landing .cs__rail { position: sticky; top: 100px; align-self:start; } }
     .omada-landing .cs__stats { list-style:none; padding:0; margin:0 0 1.5rem 0; }
     .omada-landing .cs__stats li { border-left:2px solid #2c4e43; padding-left:.75rem; margin:.75rem 0; }
-    .omada-landing .cs__stats strong { font-size:1.75rem; display:block; }
+    .omada-landing .cs__stats strong { font-size:1.75rem; display:block;}
     .omada-landing .cs__stats span { color:#9fb2ad; font-size:.9rem; }
-    .omada-landing .cs__products h6 { margin:1rem 0; color:white; }
+    .omada-landing .cs__products h6 { margin:1rem 0; color:white; font-size: clamp(1.25rem, 0.5vw + .75rem, 1.4rem); }
     .omada-landing .cs__products ul { list-style:none; padding:0; margin:0; }
     .omada-landing .cs__products li { display:flex; align-items:center; gap:.5rem; color:#b9c7c3; margin:.35rem 0; }
     .omada-landing .cs__products .dot { width:.6rem; height:.6rem; background:#37e29f; border-radius:50%; display:inline-block; }
@@ -106,8 +106,10 @@
     .omada-landing .cs-card__logo { position:absolute; top:14px; left:16px; }
     .omada-landing .cs-card__logo img { height:24px; filter: brightness(100); }
     .omada-landing .cs-card__body { position:absolute; left:20px; right:20px; bottom:16px; display:flex; flex-direction:column; gap:0.75rem; }
-    .omada-landing .cs__progress { height: 4px; background:#1a2522; border-radius:999px; overflow:hidden; margin:.75rem 0 0; }
-    .omada-landing .cs__bar { height:100%; width:0%; background:var(--color-dullGreen); transform-origin: left center; }
+    .omada-landing .cs-card__body .cs-card__link {margin-top: 0.5rem;}
+    .omada-landing .cs-card__body:hover .cs-card__link {margin-top: 0.5rem; text-decoration-line: underline;text-underline-offset: 6px;text-decoration-thickness: 0.5px;}
+    .omada-landing .cs__progress { height: 1px; background:#1a2522; overflow:hidden; margin:.75rem 0 0 0; }
+    .omada-landing .cs__bar { height:100%; width:0%; background:var(--color-neonGreen); transform-origin: left center; }
     .omada-landing .cs__rail #prodList { list-style:none; padding:0; margin:0; }
     .omada-landing .cs__rail #prodList li { display:flex; align-items:center; gap:.5rem; color:#b9c7c3; margin:.35rem 0; }
     .omada-landing .cs__rail #prodList li::before { content:""; width:.3rem; height:.3rem; border-radius:50%; background:#37e29f; display:inline-block; }
@@ -221,13 +223,12 @@
                     <h2 class="text-center">What’s on Show</h2>
                 </div>
                     <div class="cedia-carousel" data-autoplay="7000" aria-roledescription="carousel">
-                        <div class="flex flex-row items-center gap-12">
                         <button class="cc-arrow cc-prev" aria-label="Previous slide">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256"><path d="M164.24,203.76a6,6,0,1,1-8.48,8.48l-80-80a6,6,0,0,1,0-8.48l80-80a6,6,0,0,1,8.48,8.48L88.49,128Z"></path></svg>
                         </button>
                         <div class="cc-viewport" aria-live="polite">
                         <ul class="cc-track">
-                            <li class="cc-slide is-active">
+                            <li class="cc-slide is-active" data-src-desktop="images/cedia_luxury.webp" data-src-mobile="images/m_cedia_luxury.webp">
                             <!-- <img src="https://static.tp-link.com/upload/static-page/cedia_luxury_20250815025043q.webp" alt="High-Performance Networking & Surveillance for Large Homes" loading="eager" /> -->
                             <img src="images/cedia_luxury.webp" alt="High-Performance Networking & Surveillance for Large Homes" loading="eager" />
                             <div class="cc-overlay">
@@ -240,7 +241,7 @@
                                 </div>
                             </div>
                             </li>
-                            <li class="cc-slide">
+                            <li class="cc-slide" data-src-desktop="images/cedia_mdu.webp" data-src-mobile="images/m_cedia_mdu.webp">
                             <!-- <img src="https://static.tp-link.com/upload/static-page/cedia_mdu_20250815025059a.webp" alt="Future-Ready Solution for Multi-Dwelling Units (MDUs)" loading="lazy" /> -->
                             <img src="images/cedia_mdu.webp" alt="Future-Ready Solution for Multi-Dwelling Units (MDUs)" loading="lazy" />
                             <div class="cc-overlay">
@@ -253,7 +254,7 @@
                                 </div>
                             </div>
                             </li>
-                            <li class="cc-slide">
+                            <li class="cc-slide" data-src-desktop="images/cedia_outdoor.webp" data-src-mobile="images/m_cedia_outdoor.webp">
                             <!-- <img src="https://static.tp-link.com/upload/static-page/cedia_outdoor_20250815025110k.webp" alt="Reliable Wi-Fi for the Outdoors" loading="lazy" /> -->
                             <img src="images/cedia_outdoor.webp" alt="Reliable Wi-Fi for the Outdoors" loading="lazy" />
                             <div class="cc-overlay">
@@ -271,7 +272,6 @@
                         <button class="cc-arrow cc-next" aria-label="Next slide">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256"><path d="M180.24,132.24l-80,80a6,6,0,0,1-8.48-8.48L167.51,128,91.76,52.24a6,6,0,0,1,8.48-8.48l80,80A6,6,0,0,1,180.24,132.24Z"></path></svg>
                         </button>
-                        </div>
 
                         <div class="cc-dots" role="tablist" aria-label="Slide pagination"></div>
                     </div>
@@ -285,7 +285,7 @@
                     <h2 class="text-center">Explore All Our Solutions</h2>
                 </div>
 
-               <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4" style="max-width: 106rem; gap: clamp(1rem, 1vw + 0.5rem, 2rem);">
+               <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4" style="gap: clamp(1rem, 1vw + 0.5rem, 2rem);">
                   <a href="https://www.vigi.com" target="_blank" class="solution-button flex flex-col gap-2 w-full">
                     <!-- <img alt="Omada Cloud Image" style="margin-bottom: 1rem;" src="https://static.tp-link.com/upload/static-page/omada_cloud_management_20250815182830j.webp" /> -->
                     <img alt="Omada Cloud Image" style="margin-bottom: 1rem;" src="images/omada_cloud_management.webp" />
@@ -410,8 +410,8 @@
             </div>
          </section>
 
-         <section id="case-studies" class="cs section-container">
-            <div class="flex flex-col justify-between items-center gap-8 max-w-page mx-auto py-16 lg:py-28" style="max-width: 106rem;">
+         <section id="case-studies" class="cs section-container section-float">
+            <div class="flex flex-col justify-between items-center gap-8 max-w-page mx-auto py-16 lg:py-28">
                 <div class="flex flex-col gap-4 w-full">
                 <p class="large-paragraph text-neonGreen">Case Studies</p>
                 <h2>Proven Results in Action</h2>
@@ -422,13 +422,13 @@
                 <nav class="cs__tabs" aria-label="Customer size">
                     <div class="flex flex-wrap gap-2">
                         <button class="is-active" data-seg="ipacket">iPacket Networks</button>
-                        <button data-seg="tokyo">Tokyo Toyosu Manyo Club Co., Ltd.</button>
+                        <button data-seg="tokyo">Tokyo Toyosu Manyo Club</button>
                         <button data-seg="turk">Türk Telekom</button>
                         <button data-seg="jnets">JNETS Co., Ltd.</button>
                     </div>
                     <div class="flex flex-row items-center">
-                        <a target="_blank" href="https://www.omadanetworks.com/us/business-networking/case-study/" class=" cs__all text-neonGreen">All Case Studies</a>
-                        <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                        <a target="_blank" href="https://www.omadanetworks.com/us/business-networking/case-study/" class=" cs__all text-white">All Case Studies</a>
+                        <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
                     </div>
                 </nav>
 
@@ -457,16 +457,21 @@
                             data-stat2-value="20-30%"
                             data-stat2-label="Sped up deployment time"
                             data-products="EAP615-Wall,EAP610,EAP660 HD,EAP610-Outdoor,Omada Software Controller">
+                            <a href="https://static.tp-link.com/upload/case-study/2023/202307/20230726/B2B_IPacketNetwork_Case%20Study_Final.pdf" target="_blank">
                             <article class="cs-card">
-                            <img class="cs-card__img" src="images/cedia_ipacket.webp" alt="Laptop dashboard">
-                            <div class="cs-card__overlay"></div>
-                            <div class="cs-card__logo"></div>
-                            <div class="cs-card__body">
-                                <h3>Omada Helps iPacket Networks Upgrade to Wi-Fi 6 Across <span class="text-limeGreen">14,000</span> Condominium Units and Indoor/Outdoor Common Areas</h3>
-                                <p>“Once the APs are plugged in, they instantly show up. We adopt them, assign a Wi-Fi profile, and voila, they’re done! The controller has easily sped up our deployment time by 20 or 30 percent.”</p>
-                                <a target="_blank" href="https://static.tp-link.com/upload/case-study/2023/202307/20230726/B2B_IPacketNetwork_Case%20Study_Final.pdf" class="btn-primary" style="margin-top: 0.5rem;">Read Case Study</a>
-                            </div>
-                            </article>
+                                <img class="cs-card__img" src="images/cedia_ipacket.webp" alt="iPacket Networks">
+                                <div class="cs-card__overlay"></div>
+                                <div class="cs-card__logo"></div>
+                                <div class="cs-card__body">
+                                    <h3>Omada Helps iPacket Networks Upgrade to Wi-Fi 6 Across <span class="text-neonGreen">14,000</span> Condominium Units and Indoor/Outdoor Common Areas</h3>
+                                    <p class="text-white/60">“Once the APs are plugged in, they instantly show up. We adopt them, assign a Wi-Fi profile, and voila, they’re done! The controller has easily sped up our deployment time by 20 or 30 percent.”</p>
+                                    <div class="flex flex-row items-center">
+                                        <p class="cs-card__link text-white">Read Case Study</p>
+                                        <svg style="margin-top: 0.5rem; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    </div>
+                                </div>
+                                </article>
+                            </a>
                         </li>
 
                         <!-- SLIDE 2 -->
@@ -477,16 +482,21 @@
                             data-stat2-value="34,000"
                             data-stat2-label="Square meters covered"
                             data-products="OC300,EAP670,EAP245,EAP615-Wall,EAP650-Outdoor,and more!">
-                            <article class="cs-card">
-                            <img class="cs-card__img" src="images/cedia_tokyo.webp" alt="Office monitors">
-                            <div class="cs-card__overlay"></div>
-                            <div class="cs-card__logo"></div>
-                            <div class="cs-card__body">
-                                <h3>Omada Delivers a Seamless Wi-Fi 6 Solution with Centralized Management for <span class="text-limeGreen">380+</span> Apartments</h3>
-                                <p>Omada delivers a whole-building Wi-Fi 6 solution covering 34,000 square meters for Tokyo Toyosu Manyo Club Co., Ltd. in Japan.</p>
-                                <a target="_blank" href="https://static.tp-link.com/upload/case-study/2025/202505/20250526/final-Hotel-Tokyo%20Toyosu%20Manyo%20Club%20CO.,%20Ltd.%20-Japan-0526.pdf" class="btn-primary" style="margin-top: 0.5rem;">Read Case Study</a>
-                            </div>
-                            </article>
+                            <a href="https://static.tp-link.com/upload/case-study/2025/202505/20250526/final-Hotel-Tokyo%20Toyosu%20Manyo%20Club%20CO.,%20Ltd.%20-Japan-0526.pdf" target="_blank">
+                                <article class="cs-card">
+                                <img class="cs-card__img" src="images/cedia_tokyo.webp" alt="Tokyo Toyosu Manyo Club">
+                                <div class="cs-card__overlay"></div>
+                                <div class="cs-card__logo"></div>
+                                <div class="cs-card__body">
+                                    <h3>Omada Delivers a Seamless Wi-Fi 6 Solution with Centralized Management for <span class="text-neonGreen">380+</span> Apartments</h3>
+                                    <p class="text-white/60">Omada delivers a whole-building Wi-Fi 6 solution covering 34,000 square meters for Tokyo Toyosu Manyo Club Co., Ltd. in Japan.</p>
+                                    <div class="flex flex-row items-center">
+                                        <p class="cs-card__link text-white">Read Case Study</p>
+                                        <svg style="margin-top: 0.5rem; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    </div>
+                                </div>
+                                </article>
+                            </a>
                         </li>
 
                         <!-- SLIDE 3 -->
@@ -497,16 +507,21 @@
                             data-stat2-value="200+"
                             data-stat2-label="Sites covered"
                             data-products="OC300,EAP670,EAP245,EAP615-Wall,EAP650-Outdoor,and more!">
+                            <a href="https://static.tp-link.com/upload/case-study/2024/202412/20241218/MDU-Case%20Study-Turkey-11.6.pdf" target="_blank">
                             <article class="cs-card">
-                            <img class="cs-card__img" src="images/cedia_turk.webp" alt="City night">
-                            <div class="cs-card__overlay"></div>
-                            <div class="cs-card__logo"></div>
-                            <div class="cs-card__body">
-                                <h3>Omada Supports Türk Telekom in Delivering Wi-Fi 6 Solution for <span class="text-limeGreen">200,000</span> Earthquake Resettlement Container Homes</h3>
-                                <p>Omada delivered over 14,000 TB of downloads and 1,330 TB of uploads for 200,000 container houses, supporting over 17,000 daily online client devices in earthquake resettlement container cities.</p>
-                                <a target="_blank" href="https://static.tp-link.com/upload/case-study/2024/202412/20241218/MDU-Case%20Study-Turkey-11.6.pdf" class="btn-primary" style="margin-top: 0.5rem;">Read Case Study</a>
-                            </div>
-                            </article>
+                                <img class="cs-card__img" src="images/cedia_turk.webp" alt="Turk Telekom">
+                                <div class="cs-card__overlay"></div>
+                                <div class="cs-card__logo"></div>
+                                <div class="cs-card__body">
+                                    <h3>Omada Supports Türk Telekom in Delivering Wi-Fi 6 Solution for <span class="text-neonGreen">200,000</span> Earthquake Resettlement Container Homes</h3>
+                                    <p class="text-white/60">Omada delivered over 14,000 TB of downloads and 1,330 TB of uploads for 200,000 container houses, supporting over 17,000 daily online client devices in earthquake resettlement container cities.</p>
+                                    <div class="flex flex-row items-center">
+                                        <p class="cs-card__link text-white">Read Case Study</p>
+                                        <svg style="margin-top: 0.5rem; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    </div>
+                                </div>
+                                </article>
+                            </a>
                         </li>
 
                         <!-- SLIDE 4 -->
@@ -517,16 +532,21 @@
                             data-stat2-value="Reduced"
                             data-stat2-label="Vacancy rates"
                             data-products="SG108PE,AP615-WE Wall,VIGI NVR1016H,VIGI C345 Camera">
-                            <article class="cs-card">
-                            <img class="cs-card__img" src="images/cedia_jnets.webp" alt="City night">
-                            <div class="cs-card__overlay"></div>
-                            <div class="cs-card__logo"></div>
-                            <div class="cs-card__body">
-                                <h3>Omada and VIGI Deploy <span class="text-limeGreen">4,000+</span> Devices to Power Wi-Fi 6 and Surveillance in Japan</h3>
-                                <p>Omada and VIGI delivered a high-performance Wi-Fi 6 and surveillance solution for all units in a new Tokyo property, boosting value and reducing vacancy rates for owners.</p>
-                                <a target="_blank" href="https://static.tp-link.com/upload/case-study/2025/202505/20250526/final-MDU-JNETS%20Co.,%20Ltd.-Japan%20-0526.pdf" class="btn-primary" style="margin-top: 0.5rem;">Read Case Study</a>
-                            </div>
-                            </article>
+                            <a href="https://static.tp-link.com/upload/case-study/2025/202505/20250526/final-MDU-JNETS%20Co.,%20Ltd.-Japan%20-0526.pdf" target="_blank">
+                                <article class="cs-card">
+                                <img class="cs-card__img" src="images/cedia_jnets.webp" alt="JNETS Co. Ltd">
+                                <div class="cs-card__overlay"></div>
+                                <div class="cs-card__logo"></div>
+                                <div class="cs-card__body">
+                                    <h3>Omada and VIGI Deploy <span class="text-neonGreen">4,000+</span> Devices to Power Wi-Fi 6 and Surveillance in Japan</h3>
+                                    <p class="text-white/60">Omada and VIGI delivered a high-performance Wi-Fi 6 and surveillance solution for all units in a new Tokyo property, boosting value and reducing vacancy rates for owners.</p>
+                                    <div class="flex flex-row items-center">
+                                        <p class="cs-card__link text-white">Read Case Study</p>
+                                        <svg style="margin-top: 0.5rem; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    </div>
+                                </div>
+                                </article>
+                            </a>
                         </li>
                         </ul>
                     </div>
@@ -535,18 +555,51 @@
                     <div class="cs__progress" aria-hidden="true">
                         <div class="cs__bar"></div>
                     </div>
+
                     </div>
                 </div>
                 </div>
             </div>
         </section>
+
+        <section class="relative section-container section-float">
+            <svg class="absolute inset-0 w-full h-full" style="z-index: -1; pointer-events: none;"
+               viewBox="0 0 1920 751" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="0" y="0" width="1920" height="751" fill="url(#paint0_linear_animated)" />
+               <defs>
+                  <linearGradient id="paint0_linear_animated" x1="0%" y1="50%" x2="100%" y2="50%">
+                     <stop offset="0%" stop-color="#00A870">
+                        <animate attributeName="stop-color" values="#32796B;#0D3834;#32796B" dur="8s"
+                           repeatCount="indefinite" />
+                     </stop>
+                     <stop offset="100%" stop-color="#0D3834">
+                        <animate attributeName="stop-color" values="#0D3834;#32796B;#0D3834" dur="8s"
+                           repeatCount="indefinite" />
+                     </stop>
+                  </linearGradient>
+               </defs>
+            </svg>
+
+            <div class="flex flex-col max-w-page mx-auto py-16 lg:py-28 gap-8">
+               <div class="flex flex-col gap-4 w-full text-center items-center mx-auto">
+                  <h2 style="text-wrap: pretty;">See how Omada & VIGI can <span class="text-limeGreen">work for you</span>.</h2>
+                  <div class="flex flex-col gap-2">
+                     <p class="text-white/80 large-paragraph mb-6">Ready to learn more? Download our flyers or talk with our team.</p>
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <button class="btn-primary">Download All Flyers</button>
+                    <button class="btn-primary">Contact Us</button>
+                  </div>
+               </div>
+            </div>
+         </section>
       </main>
    </div>
    <?php include_once($_SERVER['ROOT_DIR']."/$appFolder/footer.php"); ?>
 
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-   <script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
         (() => {
         const toggle = document.querySelector('.site-nav__toggle');
         const menu = document.getElementById('site-nav-menu');
@@ -575,7 +628,7 @@
         })();
     </script>
 
-   <script>
+    <script>
       function animateTick(id) {
          gsap.fromTo(`#${id}`, {
             opacity: 0,
@@ -613,13 +666,16 @@
     (() => {
       const root = document.querySelector('#highlights');
       if (!root) return;
+
+      const carousel = root.querySelector('.cedia-carousel'); 
       const viewport = root.querySelector('.cc-viewport');
       const track    = root.querySelector('.cc-track');
       const slides   = Array.from(root.querySelectorAll('.cc-slide'));
       const prevBtn  = root.querySelector('.cc-prev');
       const nextBtn  = root.querySelector('.cc-next');
       const dotsWrap = root.querySelector('.cc-dots');
-      const autoplayMs = parseInt(root.dataset.autoplay, 10) || 0;
+
+      const autoplayMs = parseInt(carousel?.dataset.autoplay, 10) || 0;
       const prefersNoMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
       const dots = slides.map((_, i) => {
@@ -673,6 +729,37 @@
         revealFor(index);
       }
     
+      const mql = window.matchMedia('(max-width: 960px)');
+
+        function pickSlideImages() {
+        slides.forEach(s => {
+            const img   = s.querySelector('img');
+            if (!img) return;
+            const desk  = s.dataset.srcDesktop || img.getAttribute('src');
+            const mob   = s.dataset.srcMobile || desk;
+            const next  = mql.matches ? mob : desk;
+
+            if (img.dataset.currentSrc !== next) {
+            img.src = next;
+            img.dataset.currentSrc = next;
+            }
+        });
+        }
+
+        pickSlideImages();
+
+        if (mql.addEventListener) {
+        mql.addEventListener('change', pickSlideImages);
+        } else {
+        mql.addListener(pickSlideImages);
+        }
+
+        window.addEventListener('resize', (() => {
+        let t; 
+        return () => { clearTimeout(t); t = setTimeout(pickSlideImages, 120); };
+        })());
+
+
       function next() { goTo(index + 1); }
       function prev() { goTo(index - 1); }
     
