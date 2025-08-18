@@ -76,7 +76,7 @@
     .omada-landing .cs { background: linear-gradient(160deg,#0b0b0c,#1c201f 60%,#0b0b0c);}
     .omada-landing .cs__wrap { width: 100%; }
     .omada-landing .cs__tabs { display:flex; justify-content: space-between; align-items:center; flex-wrap:wrap; gap:2rem; }
-    .omada-landing .cs__tabs button { border:1px solid #28443b; color:#ffffffc8; padding:.6rem 1.25rem; cursor:pointer; border-radius: 999px; }
+    .omada-landing .cs__tabs button { border:1px solid #28443b; color:#ffffffc8; padding:.6rem 1.25rem; cursor:pointer; border-radius: 999px; font-size: clamp(0.875rem, 2vw, 1rem); }
     .omada-landing .cs__tabs button.is-active { color:var(--color-white); border-color: var(--color-neonGreen); }
     .omada-landing .cs__tabs .cs__all:hover { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 0.5px; }
     .cs__grid { display:grid; grid-template-columns: 280px 1fr; gap: clamp(1rem, 3vw, 2rem); margin-top: 2rem; grid-template-areas: "rail main"; }
@@ -177,7 +177,7 @@
                   <h1>Welcome to<br />
                      <span class="text-neonGreen">CEDIA Expo 2025</span></h1>
 
-                  <h4 class="max-w-xl">Networking and Surveillance Solutions for Residential Homes & MDUs</h4>
+                  <h4 class="max-w-xl">Networking and Surveillance Solutions for Single&#8209;Family Homes & MDUs</h4>
 
                   <div class="flex flex-col gap-2">
                      <div class="flex flex-row gap-2 items-center"><svg fill="#ffffff90" height="16"
@@ -229,12 +229,12 @@
                         <div class="cc-viewport" aria-live="polite">
                         <ul class="cc-track">
                             <li class="cc-slide is-active" data-src-desktop="images/cedia_luxury.webp" data-src-mobile="images/m_cedia_luxury.webp">
-                            <!-- <img src="https://static.tp-link.com/upload/static-page/cedia_luxury_20250815025043q.webp" alt="High-Performance Networking & Surveillance for Large Homes" loading="eager" /> -->
-                            <img src="images/cedia_luxury.webp" alt="High-Performance Networking & Surveillance for Large Homes" loading="eager" />
+                            <!-- <img src="https://static.tp-link.com/upload/static-page/cedia_luxury_20250815025043q.webp" alt="High-Performance Networking & Surveillance for Single-Family Homes" loading="eager" /> -->
+                            <img src="images/cedia_luxury.webp" alt="High-Performance Networking & Surveillance for Single-Family Homes" loading="eager" />
                             <div class="cc-overlay">
                                 <div class="flex flex-col gap-8">
                                     <div class="flex flex-col gap-4">
-                                        <h3>High-Performance Networking &amp; Surveillance Solution for Large Homes and Villages</h3>
+                                        <h3>High-Performance Networking &amp; Surveillance Solution for Single&#8209;Family Homes</h3>
                                         <p class="large-paragraph">Seamless Roaming, Ultra&#8209;Stable Connectivity, Always&#8209;On Protection</p>
                                     </div>
                                     <a href="#solutions" class="btn-primary btn-cedia">Learn More</a>
@@ -282,7 +282,7 @@
             <div class="flex flex-col justify-between max-w-page mx-auto py-16 lg:py-28 gap-12 items-center" style="padding-top: 0;">
                 <div class="flex flex-col gap-4 items-center">
                     <p class="large-paragraph text-neonGreen">Solutions</p>
-                    <h2 class="text-center">Explore All Our Solutions</h2>
+                    <h2 class="text-center">Discover More of Our Offerings</h2>
                 </div>
 
                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4" style="gap: clamp(1rem, 1vw + 0.5rem, 2rem);">
@@ -295,13 +295,13 @@
                         <p class="text-neonGreen">Learn More</p>
                         <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
                     </div>
-                    </a>
+                  </a>
 
                   <a href="https://www.vigi.com" target="_blank" class="solution-button flex flex-col gap-2 w-full">
-                    <!-- <img alt="VIGI VMS Image" style="margin-bottom: 1rem;" src="https://static.tp-link.com/upload/static-page/vigi_vms_20250815182929c.webp" /> -->
-                    <img alt="VIGI VMS Image" style="margin-bottom: 1rem;" src="images/vigi_vms.webp" />
-                     <!-- <p class="text-neonGreen">VIGI VMS</p> -->
-                     <h4>Centralized Management for Surveillance</h4>
+                    <!-- <img alt="Networking Solution" style="margin-bottom: 1rem;" src="https://static.tp-link.com/upload/static-page/solution_20250815185504x.webp" /> -->
+                    <img alt="Networking Solution" style="margin-bottom: 1rem;" src="images/solution.webp" />
+                     <!-- <p class="text-neonGreen">Affordable Solutions</p> -->
+                     <h4 style="text-wrap: pretty;">Omada Easy & Affordable Networking for Surveillance</h4>
                      <div class="flex flex-row items-center">
                         <p class="text-neonGreen">Learn More</p>
                         <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
@@ -331,17 +331,6 @@
                   </a>
 
                   <a href="https://www.vigi.com" target="_blank" class="solution-button flex flex-col gap-2 w-full">
-                    <!-- <img alt="Networking Solution" style="margin-bottom: 1rem;" src="https://static.tp-link.com/upload/static-page/solution_20250815185504x.webp" /> -->
-                    <img alt="Networking Solution" style="margin-bottom: 1rem;" src="images/solution.webp" />
-                     <!-- <p class="text-neonGreen">Affordable Solutions</p> -->
-                     <h4 style="text-wrap: pretty;">Omada Easy & Affordable Networking for Surveillance</h4>
-                     <div class="flex flex-row items-center">
-                        <p class="text-neonGreen">Learn More</p>
-                        <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
-                    </div>
-                  </a>
-
-                  <a href="https://www.vigi.com" target="_blank" class="solution-button flex flex-col gap-2 w-full">
                     <!-- <img alt="Omada PoE Switches" style="margin-bottom: 1rem;" src="https://static.tp-link.com/upload/static-page/poe_20250815185039f.webp" /> -->
                     <img alt="Omada PoE Switches" style="margin-bottom: 1rem;" src="images/poe.webp" />
                      <!-- <p class="text-neonGreen">PoE Infrastructure</p> -->
@@ -357,6 +346,16 @@
                     <img alt="Omada Future-Proof Multi-Gigabit Network Solution" style="margin-bottom: 1rem;" src="images/futureproof.webp" />
                      <!-- <p class="text-neonGreen">High-Speed Networks</p> -->
                      <h4>Omada Future-Proof Multi-Gigabit Network Solution</h4>
+                     <div class="flex flex-row items-center">
+                        <p class="text-neonGreen">Learn More</p>
+                        <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                    </div>
+                  </a>
+
+                  <a href="https://www.vigi.com" target="_blank" class="solution-button flex flex-col gap-2 w-full">
+                    <img alt="Omada Future-Proof Multi-Gigabit Network Solution" style="margin-bottom: 1rem;" src="images/ppsk.webp" />
+                     <!-- <p class="text-neonGreen">High-Speed Networks</p> -->
+                     <h4>Omada PPSK Solution</h4>
                      <div class="flex flex-row items-center">
                         <p class="text-neonGreen">Learn More</p>
                         <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
@@ -406,6 +405,17 @@
                         <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
                     </div>
                   </a>
+
+                  <a href="https://www.vigi.com" target="_blank" class="solution-button flex flex-col gap-2 w-full">
+                    <!-- <img alt="VIGI VMS Image" style="margin-bottom: 1rem;" src="https://static.tp-link.com/upload/static-page/vigi_vms_20250815182929c.webp" /> -->
+                    <img alt="VIGI VMS Image" style="margin-bottom: 1rem;" src="images/vigi_vms.webp" />
+                     <!-- <p class="text-neonGreen">VIGI VMS</p> -->
+                     <h4>Centralized Management for Surveillance</h4>
+                     <div class="flex flex-row items-center">
+                        <p class="text-neonGreen">Learn More</p>
+                        <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                    </div>
+                  </a>
                </div>
             </div>
          </section>
@@ -421,10 +431,12 @@
                 <!-- Tabs -->
                 <nav class="cs__tabs" aria-label="Customer size">
                     <div class="flex flex-wrap gap-2">
-                        <button class="is-active" data-seg="ipacket">iPacket Networks</button>
+                        <button class="is-active" data-seg="gsd">GSD Solutions</button>
+                        <button data-seg="ipacket">iPacket Networks</button>
                         <button data-seg="tokyo">Tokyo Toyosu Manyo Club</button>
                         <button data-seg="turk">Türk Telekom</button>
                         <button data-seg="jnets">JNETS Co., Ltd.</button>
+                        <button data-seg="aura">Aura by Aqualand</button>
                     </div>
                     <div class="flex flex-row items-center">
                         <a target="_blank" href="https://www.omadanetworks.com/us/business-networking/case-study/" class=" cs__all text-white">All Case Studies</a>
@@ -449,11 +461,35 @@
                     <div class="cs__main">
                     <div class="cs__viewport" aria-live="polite">
                         <ul class="cs__track">
-                        <!-- SLIDE 1 -->
+
                         <li class="cs__slide is-active"
+                            data-seg="gsd"
+                            data-stat1-value="100+ units"
+                            data-stat1-label="Covered"
+                            data-stat2-value="Wi-Fi 6"
+                            data-stat2-label="Property-wide connectivity"
+                            data-products="EAP653,TL-SG2428P,ER8411,Omada SDN Software Controller">
+                            <a href="https://static.tp-link.com/upload/case-study/2023/202307/20230726/B2B_PPSK%20GSD%20Solutions_Case%20Study-Final.pdf" target="_blank">
+                                <article class="cs-card">
+                                <img class="cs-card__img" src="images/cedia_mdu.webp" alt="GSD Solutions">
+                                <div class="cs-card__overlay"></div>
+                                <div class="cs-card__logo"></div>
+                                <div class="cs-card__body">
+                                    <h3>Omada Solution with <span class="text-neonGreen">PPSK</span> Provides “Excellent Features” and Greater Affordability for Newly Built Oakland Apartment Complex</h3>
+                                    <p class="text-white/60">GSD Solutions, a Bay Area managed service provider, successfully completes first Omada by TP-Link MDU network deployment for high-speed managed Wi-Fi services.</p>
+                                    <div class="flex flex-row items-center">
+                                        <p class="cs-card__link text-white">Read Case Study</p>
+                                        <svg style="margin-top: 0.5rem; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    </div>
+                                </div>
+                                </article>
+                            </a>
+                        </li>
+
+                        <li class="cs__slide"
                             data-seg="ipacket"
-                            data-stat1-value="14,000"
-                            data-stat1-label="Units upgraded to Wi-Fi 6"
+                            data-stat1-value="14,000 units"
+                            data-stat1-label="Upgraded to Wi-Fi 6"
                             data-stat2-value="20-30%"
                             data-stat2-label="Sped up deployment time"
                             data-products="EAP615-Wall,EAP610,EAP660 HD,EAP610-Outdoor,Omada Software Controller">
@@ -474,7 +510,6 @@
                             </a>
                         </li>
 
-                        <!-- SLIDE 2 -->
                         <li class="cs__slide"
                             data-seg="tokyo"
                             data-stat1-value="200+ devices"
@@ -499,7 +534,6 @@
                             </a>
                         </li>
 
-                        <!-- SLIDE 3 -->
                         <li class="cs__slide"
                             data-seg="turk"
                             data-stat1-value="27,905"
@@ -524,13 +558,12 @@
                             </a>
                         </li>
 
-                        <!-- SLIDE 4 -->
                         <li class="cs__slide"
                             data-seg="jnets"
                             data-stat1-value="4,000+"
                             data-stat1-label="Devices connected"
-                            data-stat2-value="Reduced"
-                            data-stat2-label="Vacancy rates"
+                            data-stat2-value="268"
+                            data-stat2-label="AI-powered cameras"
                             data-products="SG108PE,AP615-WE Wall,VIGI NVR1016H,VIGI C345 Camera">
                             <a href="https://static.tp-link.com/upload/case-study/2025/202505/20250526/final-MDU-JNETS%20Co.,%20Ltd.-Japan%20-0526.pdf" target="_blank">
                                 <article class="cs-card">
@@ -540,6 +573,30 @@
                                 <div class="cs-card__body">
                                     <h3>Omada and VIGI Deploy <span class="text-neonGreen">4,000+</span> Devices to Power Wi-Fi 6 and Surveillance in Japan</h3>
                                     <p class="text-white/60">Omada and VIGI delivered a high-performance Wi-Fi 6 and surveillance solution for all units in a new Tokyo property, boosting value and reducing vacancy rates for owners.</p>
+                                    <div class="flex flex-row items-center">
+                                        <p class="cs-card__link text-white">Read Case Study</p>
+                                        <svg style="margin-top: 0.5rem; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+                                    </div>
+                                </div>
+                                </article>
+                            </a>
+                        </li>
+
+                        <li class="cs__slide"
+                            data-seg="aura"
+                            data-stat1-value="386 apartments"
+                            data-stat1-label="Covered by the network"
+                            data-stat2-value="100% coverage"
+                            data-stat2-label="Indoor and outdoor"
+                            data-products="OC300,SG3452XP,EAP660,EAP613,EAP650-Outdoor,and more!">
+                            <a href="https://static.tp-link.com/upload/case-study/2025/202505/20250526/Final-Aura%20by%20Aqualand%20-Omada%20Case%20Study%20from%20Australia-Randi.pdf" target="_blank">
+                            <article class="cs-card">
+                                <img class="cs-card__img" src="images/cedia_aura.webp" alt="Aura by Aqualand">
+                                <div class="cs-card__overlay"></div>
+                                <div class="cs-card__logo"></div>
+                                <div class="cs-card__body">
+                                    <h3>Omada Delivers a Seamless Wi-Fi 6 Solution with Centralized Management for <span class="text-neonGreen">380+</span> Apartments</h3>
+                                    <p class="text-white/60">Omada delivered a reliable, high-performance Wi-Fi 6 solution with centralized management for Aura by Aqualand—a luxury North Sydney development with single-bedroom apartments starting at $1.8 million.</p>
                                     <div class="flex flex-row items-center">
                                         <p class="cs-card__link text-white">Read Case Study</p>
                                         <svg style="margin-top: 0.5rem; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
