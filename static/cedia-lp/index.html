@@ -76,8 +76,36 @@
     .omada-landing .cs { background: linear-gradient(160deg,#0b0b0c,#1c201f 60%,#0b0b0c);}
     .omada-landing .cs__wrap { width: 100%; }
     .omada-landing .cs__tabs { display:flex; justify-content: space-between; align-items:center; flex-wrap:wrap; gap:2rem; }
-    .omada-landing .cs__tabs button { border:1px solid #28443b; color:#ffffffc8; padding:.6rem 1.25rem; cursor:pointer; border-radius: 999px; font-size: clamp(0.875rem, 2vw, 1rem); }
-    .omada-landing .cs__tabs button.is-active { color:var(--color-white); border-color: var(--color-neonGreen); }
+    .omada-landing .cs__tabs button { position: relative; --prog: 0; --ring: 1px; color:#ffffffc8; padding:.6rem 1.25rem; cursor:pointer; border-radius: 999px; font-size: clamp(0.875rem, 2vw, 1rem); }
+    .omada-landing .cs__tabs button.is-active { color:var(--color-white); } 
+    .omada-landing .cs__tabs button::before{
+        content:"";
+        position:absolute; inset:0;
+        border-radius: inherit;
+        background:
+            conic-gradient(from 0deg, #28443b 0turn 1turn);
+        -webkit-mask:
+            linear-gradient(#000 0 0) content-box,
+            linear-gradient(#000 0 0);
+        -webkit-mask-composite:xor; mask-composite:exclude;
+        padding: var(--ring);
+        pointer-events:none;
+    }
+    .omada-landing .cs__tabs button::after{
+        content:"";
+        position:absolute; inset:0;
+        border-radius: inherit;
+        background:
+            conic-gradient(from -90deg, var(--color-neonGreen) calc(var(--prog) * 1turn), transparent 0 );
+        -webkit-mask:
+            linear-gradient(#000 0 0) content-box,
+            linear-gradient(#000 0 0);
+        -webkit-mask-composite:xor; mask-composite:exclude;
+        padding: var(--ring);
+        pointer-events:none;
+        transition: opacity .18s ease;
+        opacity: 1;
+    }
     .omada-landing .cs__tabs .cs__all:hover { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 0.5px; }
     .cs__grid { display:grid; grid-template-columns: 280px 1fr; gap: clamp(1rem, 3vw, 2rem); margin-top: 2rem; grid-template-areas: "rail main"; }
     .cs__grid .cs__rail { grid-area: rail; }
@@ -108,7 +136,7 @@
     .omada-landing .cs-card__body { position:absolute; left:20px; right:20px; bottom:16px; display:flex; flex-direction:column; gap:0.75rem; max-width: 800px; }
     .omada-landing .cs-card__body .cs-card__link {margin-top: 0.5rem;}
     .omada-landing .cs-card__body:hover .cs-card__link {margin-top: 0.5rem; text-decoration-line: underline;text-underline-offset: 6px;text-decoration-thickness: 0.5px;}
-    .omada-landing .cs__progress { height: 1px; background:#1a2522; overflow:hidden; margin:.75rem 0 0 0; }
+    .omada-landing .cs__progress { display: none; height: 1px; background:#1a2522; overflow:hidden; margin:.75rem 0 0 0; }
     .omada-landing .cs__bar { height:100%; width:0%; background:var(--color-neonGreen); transform-origin: left center; }
     .omada-landing .cs__rail #prodList { list-style:none; padding:0; margin:0; }
     .omada-landing .cs__rail #prodList li { display:flex; align-items:center; gap:.5rem; color:#b9c7c3; margin:.35rem 0; }
@@ -643,6 +671,18 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"></script>
+    <script>
+    /* An empirical curve that feels uniform around a pill:
+    slower near 0, .25, .5, .75 (rounded ends), quicker in between (straights). */
+    const ringEase = gsap.parseEase(
+    "M0,0 C0.06,0.00 0.12,0.03 0.18,0.10 " +  // into top straight
+    "0.32,0.28 0.43,0.47 0.50,0.50 " +       // slow near right end
+    "0.57,0.53 0.68,0.72 0.82,0.90 " +       // bottom straight
+    "0.88,0.97 0.94,1.00 1,1"
+    );
+    </script>
+
     <script>
         (() => {
         const toggle = document.querySelector('.site-nav__toggle');
@@ -769,7 +809,6 @@
         })();
 
     </script>
-
     <script>
       function animateTick(id) {
          gsap.fromTo(`#${id}`, {
@@ -1051,37 +1090,49 @@
             
             const seg = current?.dataset?.seg || null;
             tabs.forEach(t => t.classList.toggle('is-active', seg && t.dataset.seg === seg));
-
-            restartProgress();
+            
+            restartProgressFor(seg);
             }
 
         
           function next() { goTo(idx + 1); }
         
-          function restartProgress() {
-            if (barTween) barTween.kill();
-            gsap.set(bar, { width: '0%' });
-            barTween = gsap.to(bar, {
-              width: '100%',
-              duration: AUTOPLAY_MS / 1000,
-              ease: 'none'
+          let progTween = null;
+
+            function setAllTabProgress(value = 0) {
+            tabs.forEach(t => t.style.setProperty('--prog', value));
+            }
+
+            function restartProgressFor(seg) {
+            if (progTween) progTween.kill();
+            setAllTabProgress(0);
+
+            const activeBtn = tabs.find(t => t.dataset.seg === seg);
+            if (!activeBtn || prefersNoMotion) return;
+
+            progTween = gsap.to(activeBtn, {
+                duration: AUTOPLAY_MS / 1000,
+                ease: 'none',
+                onUpdate() {},
+                '--prog': 1
             });
-          }
+            }
         
-          function play() {
-            stop();
-            if (prefersNoMotion) return;
-            timer = setInterval(next, AUTOPLAY_MS);
-            restartProgress();
-          }
-          function stop() {
-            if (timer) clearInterval(timer);
-            timer = null;
-            if (barTween) barTween.kill();
-            gsap.set(bar, { width: '0%' });
-          }
+            function play() {
+                stop();
+                if (prefersNoMotion) return;
+                timer = setInterval(next, AUTOPLAY_MS);
+                const currentSeg = visibleSlides[idx]?.dataset?.seg || null;
+                restartProgressFor(currentSeg);
+            }
+
+            function stop() {
+                if (timer) clearInterval(timer);
+                timer = null;
+                if (progTween) progTween.kill();
+            }
         
-          function jumpTo(seg){
+        function jumpTo(seg){
             allSlides.forEach(s => s.classList.remove('is-hidden'));
             visibleSlides = allSlides;
 
