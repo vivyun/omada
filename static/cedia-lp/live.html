@@ -52,7 +52,7 @@
     .omada-landing .cedia-carousel .cc-track {display: flex;will-change: transform;}
     .omada-landing .cedia-carousel .cc-slide {position: relative;flex: 0 0 100%;border-radius: 6px;overflow: hidden;background: #0b0b0b;}
     .omada-landing .cedia-carousel .cc-slide img {width: 100%; height: 450px; object-fit: cover; display: block;transform: translateZ(0);}
-    .omada-landing #highlights .cedia-carousel .cc-overlay {display: flex;position: absolute; inset: 0;color: #fff;background: linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.15) 55%, rgba(0,0,0,0) 100%);}
+    .omada-landing #highlights .cedia-carousel .cc-overlay {display: flex;position: absolute; inset: 0;color: #fff;background: linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.15) 55%, rgba(0,0,0,0) 100%); text-wrap: pretty;}
     .omada-landing .cedia-carousel .cc-overlay > * {background: rgba(0, 0, 0, 0.155);backdrop-filter: saturate(120%) blur(6px);padding: clamp(1rem, 4vw, 2rem);max-width: 600px;}
     .omada-landing .cedia-carousel .cc-overlay h3 {font-size: clamp(1.5rem, 4vw, 2.5rem);}
     .omada-landing .cedia-carousel .cc-overlay p {font-weight: 300;}
@@ -115,10 +115,13 @@
     /* Case Studies End */
 
     .omada-landing #solutions h4 {font-size: clamp(1.25rem, 0.5vw + .75rem, 1.4rem);}
+    .omada-landing #solutions h3 {font-size: clamp(1.5rem, 1vw + 0.5rem, 2rem); text-wrap: pretty;}
+    .omada-landing #solutions p {font-size: clamp(.875rem, 0.5vw + 0.5rem, 1rem); line-height: 1.5;}
     .omada-landing .solution-button {transition: all 0.2s ease-in-out;margin-bottom: 1rem;}
     .omada-landing .solution-button img {border-radius: 6px;}
     .omada-landing .solution-button:hover p {text-decoration-line: underline;text-underline-offset: 6px;text-decoration-thickness: 0.5px;}
     .omada-landing .solution-button:hover {scale: 1.02;transition: all 0.2s ease-in-out;}
+    .omada-landing .solution-more {border: 1px solid var(--color-dullGreen); border-radius: 6px; padding: clamp(1.25rem, 0.5vw + .75rem, 2rem); aspect-ratio: 843 / 652; gap: clamp(1rem, 0.5vw + .5rem, 2rem);}
     </style>
 </head>
 
@@ -226,7 +229,20 @@
                                 <div class="flex flex-col gap-8">
                                     <div class="flex flex-col gap-4">
                                         <h3>High-Performance Networking &amp; Surveillance Solution for Single&#8209;Family Homes</h3>
-                                        <p class="large-paragraph">Business&#8209;Grade Whole Home Mesh Wi&#8209;Fi 7 with Seamless Roaming, Always&#8209;On Protection</p>
+                                        <div class="flex flex-col gap-2">
+                                            <div class="flex flex-row gap-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#00e194" viewBox="0 0 256 256"><path d="M228.24,76.24l-128,128a6,6,0,0,1-8.48,0l-56-56a6,6,0,0,1,8.48-8.48L96,191.51,219.76,67.76a6,6,0,0,1,8.48,8.48Z"></path></svg>
+                                                <p class="w-full">
+                                                    Business&#8209;Grade Whole Home Mesh Wi&#8209;Fi 7 with Seamless Roaming
+                                                </p>
+                                            </div>
+                                            <div class="flex flex-row gap-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#00e194" viewBox="0 0 256 256"><path d="M228.24,76.24l-128,128a6,6,0,0,1-8.48,0l-56-56a6,6,0,0,1,8.48-8.48L96,191.51,219.76,67.76a6,6,0,0,1,8.48,8.48Z"></path></svg>
+                                                <p class="w-full">
+                                                    Always&#8209;On Protection
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <a href="#solutions" class="btn-primary btn-cedia">Learn More</a>
                                 </div>
@@ -238,7 +254,26 @@
                                 <div class="flex flex-col gap-8">
                                     <div class="flex flex-col gap-4">
                                         <h3>End-to-End Network and Security Solutions for Multi&#8209;Dwelling Units (MDUs)</h3>
-                                        <p class="large-paragraph">Built&#8209;in Security with Enterprise&#8209;Grade PPSK and Dynamic VLAN, Always Connected with Property&#8209;Wide Wi&#8209;Fi 7, Lower Capital Expenditures</p>
+                                        <div class="flex flex-col gap-2">
+                                            <div class="flex flex-row gap-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#00e194" viewBox="0 0 256 256"><path d="M228.24,76.24l-128,128a6,6,0,0,1-8.48,0l-56-56a6,6,0,0,1,8.48-8.48L96,191.51,219.76,67.76a6,6,0,0,1,8.48,8.48Z"></path></svg>
+                                                <p class="w-full">
+                                                    Built&#8209;in Security with Enterprise&#8209;Grade PPSK and Dynamic VLAN
+                                                </p>
+                                            </div>
+                                            <div class="flex flex-row gap-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#00e194" viewBox="0 0 256 256"><path d="M228.24,76.24l-128,128a6,6,0,0,1-8.48,0l-56-56a6,6,0,0,1,8.48-8.48L96,191.51,219.76,67.76a6,6,0,0,1,8.48,8.48Z"></path></svg>
+                                                <p class="w-full">
+                                                    Always Connected with Property&#8209;Wide Wi&#8209;Fi 7
+                                                </p>
+                                            </div>
+                                            <div class="flex flex-row gap-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#00e194" viewBox="0 0 256 256"><path d="M228.24,76.24l-128,128a6,6,0,0,1-8.48,0l-56-56a6,6,0,0,1,8.48-8.48L96,191.51,219.76,67.76a6,6,0,0,1,8.48,8.48Z"></path></svg>
+                                                <p class="w-full">
+                                                    Lower Capital Expenditures
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <a href="#more" class="btn-primary btn-cedia">Learn More</a>
                                 </div>
@@ -250,7 +285,26 @@
                                 <div class="flex flex-col gap-8">
                                     <div class="flex flex-col gap-4">
                                         <h3>Reliable Wi&#8209;Fi Solution for the Outdoors</h3>
-                                        <p class="large-paragraph">Centralized Management, Long-Range Coverage, All&#8209;Day Weather Protection</p>
+                                        <div class="flex flex-col gap-2">
+                                            <div class="flex flex-row gap-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#00e194" viewBox="0 0 256 256"><path d="M228.24,76.24l-128,128a6,6,0,0,1-8.48,0l-56-56a6,6,0,0,1,8.48-8.48L96,191.51,219.76,67.76a6,6,0,0,1,8.48,8.48Z"></path></svg>
+                                                <p class="w-full">
+                                                    Centralized Management
+                                                </p>
+                                            </div>
+                                            <div class="flex flex-row gap-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#00e194" viewBox="0 0 256 256"><path d="M228.24,76.24l-128,128a6,6,0,0,1-8.48,0l-56-56a6,6,0,0,1,8.48-8.48L96,191.51,219.76,67.76a6,6,0,0,1,8.48,8.48Z"></path></svg>
+                                                <p class="w-full">
+                                                    Long&#8209;Range Coverage
+                                                </p>
+                                            </div>
+                                            <div class="flex flex-row gap-2">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#00e194" viewBox="0 0 256 256"><path d="M228.24,76.24l-128,128a6,6,0,0,1-8.48,0l-56-56a6,6,0,0,1,8.48-8.48L96,191.51,219.76,67.76a6,6,0,0,1,8.48,8.48Z"></path></svg>
+                                                <p class="w-full">
+                                                    All&#8209;Day Weather Protection
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <a href="#cases" class="btn-primary">Learn More</a>
                                 </div>
@@ -276,7 +330,7 @@
 
                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4" style="gap: clamp(1rem, 1vw + 0.5rem, 2rem);">
                   <div data-href="https://www.omadanetworks.com/us/business-networking/omada-controller-cloud-based/omada-cloud-essentials/" role="link" tabindex="0" target="_blank" class="solution-button flex flex-col gap-2 w-full">
-                    <img alt="Omada Cloud Essentials Image" style="margin-bottom: 1rem;" src="images/omada_cloud_management.webp" />
+                    <img alt="Omada Cloud Essentials Image" style="margin-bottom: 1rem;" src="https://static.tp-link.com/upload/static-page/omada_cloud_management_20250821164132y.webp" />
                     <h4>Free Cloud Management for Omada Networking</h4>
                     <div class="flex flex-row items-center">
                         <p class="text-neonGreen">Learn More</p>
@@ -330,7 +384,7 @@
                   </div>
 
                   <div data-href="https://www.vigi.com" role="link" tabindex="0" target="_blank" class="solution-button flex flex-col gap-2 w-full">
-                    <img alt="Omada Design Hub — A Free Network Planning Tool" style="margin-bottom: 1rem;" src="https://static.tp-link.com/upload/static-page/endtoend_20250815214042g.webp" />
+                    <img alt="Omada Design Hub — A Free Network Planning Tool" style="margin-bottom: 1rem;" src="https://static.tp-link.com/upload/static-page/design_hub_20250821164119g.webp" />
                      <h4>Omada Design Hub — A Free Network Planning Tool</h4>
                      <div class="flex flex-row items-center">
                         <p class="text-neonGreen">Learn More</p>
@@ -365,14 +419,14 @@
                     </div>
                   </div>
 
-                  <div data-href="https://www.vigi.com" role="link" tabindex="0" target="_blank" class="solution-button flex flex-col gap-2 w-full">
-                    <img alt="VIGI LightPro Night Vision Technology" style="margin-bottom: 1rem;" src="images/colorpro.webp" />
-                     <h4>VIGI ColorPro 2.0 Night Vision</h4>
+                  <!-- <div data-href="https://www.vigi.com" role="link" tabindex="0" target="_blank" class="solution-button flex flex-col gap-2 w-full">
+                    <img alt="Omada ColorPro 2.0" style="margin-bottom: 1rem;" src="images/colorpro.webp" />
+                     <h4>Omada ColorPro 2.0</h4>
                      <div class="flex flex-row items-center">
                         <p class="text-neonGreen">Learn More</p>
                         <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
                     </div>
-                  </div>
+                  </div> -->
 
                   <div data-href="https://www.vigi.com/us/business-networking/vigi-software-service/vigi-cloud-vms/" role="link" tabindex="0" target="_blank" class="solution-button flex flex-col gap-2 w-full">
                     <img alt="VIGI VMS Image" style="margin-bottom: 1rem;" src="https://static.tp-link.com/upload/static-page/vigi_vms_20250815182929c.webp" />
@@ -381,6 +435,11 @@
                         <p class="text-neonGreen">Learn More</p>
                         <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00e194" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
                     </div>
+                  </div>
+
+                  <div class="solution-more flex flex-col w-full items-center justify-center text-center">
+                     <h3>Still looking for the right solution?</h3>
+                     <p class="text-white/60">Not all solutions fit in a flyer. <a href="" class="text-neonGreen">Ask us</a> to see what’s possible to meet your needs.</p>
                   </div>
                </div>
             </div>
