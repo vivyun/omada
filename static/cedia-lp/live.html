@@ -18,13 +18,15 @@
     <style type="text/css">
     html { background: black; }
     .tp-omada-header { display: none; }
+    .omada-landing .cedia-carousel,
+    .omada-landing .cs__viewport {-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;-webkit-touch-callout: none;-webkit-tap-highlight-color: transparent;}
     .omada-landing img { -khtml-user-select: none; -o-user-select: none; -moz-user-select: none;-webkit-user-select: none;user-select: none;pointer-events: auto;-webkit-user-drag: none;user-drag: none;}
     .omada-landing .floor-bg {top: 500px;left: 0;width: 100%;scale: 1.5;}
     @media screen and (max-width: 80rem) {.omada-landing .floor-bg-mobile {bottom: -50%;left: 0;z-index: -1;}}
 
     /* Navbar Start */
     .omada-landing .sr-only {position: absolute !important;width: 1px; height: 1px;padding: 0; margin: -1px; overflow: hidden;clip: rect(0,0,0,0); white-space: nowrap; border: 0;}
-    .omada-landing .site-nav {position: fixed; top: 0; z-index: 50;background: rgba(0,0,0,0.6);backdrop-filter: saturate(120%) blur(6px);}
+    .omada-landing .site-nav {position: fixed; top: 0; left: 0; z-index: 50;background: rgba(0,0,0,0.6);backdrop-filter: saturate(120%) blur(6px);}
     .omada-landing .site-nav__container {padding: 1.5rem 0;gap: 2rem;display: flex;flex-direction: column;}
     .omada-landing .site-nav__brand { display: inline-flex; align-items: center; gap: 1rem; text-decoration: none; }
     .omada-landing .site-nav__logo { height: 28px; user-select: none; -webkit-user-drag: none; }
@@ -139,7 +141,7 @@
         <nav class="site-nav section-container" role="navigation" aria-label="Primary">
             <div class="site-nav__container justify-between max-w-page mx-auto relative">
                 <div class="flex flex-row items-center justify-between">
-                <a class="site-nav__brand" href="/">
+                <a class="site-nav__brand" href="https://www.omadanetworks.com/" target="_blank">
                 <img alt="Omada & VIGI Logo" src="https://static.tp-link.com/upload/static-page/omada_vigi_logo_20250801155754l.svg" style="width: 40%; max-width: 200px">
                 <p>at</p>
                 <img alt="CEDIA Logo" src="https://static.tp-link.com/upload/static-page/cedia_logo_20250801155830e.svg" style="width: 20%; max-width: 100px">
@@ -465,7 +467,7 @@
                         <button data-seg="aura">Aura by Aqualand</button>
                     </div>
                     <div class="flex flex-row items-center">
-                        <a target="_blank" href="https://www.omadanetworks.com/us/business-networking/case-study/" class=" cs__all text-white">All Case Studies</a>
+                        <a target="_blank" href="https://www.omadanetworks.com/us/business-networking/case-study/" class="cs__all text-white"><p>All Case Studies</p></a>
                         <svg style="margin-bottom: -2px; margin-left: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
                     </div>
                 </nav>
@@ -854,7 +856,11 @@
         b.type = 'button';
         b.setAttribute('role', 'tab');
         b.setAttribute('aria-label', `Go to slide ${i + 1}`);
-        b.addEventListener('click', () => goTo(i));
+        b.addEventListener('click', () => { 
+            stop();
+            goTo(i);
+            play();
+        });
         dotsWrap.appendChild(b);
         return b;
       });
@@ -934,12 +940,21 @@
       function next() { goTo(index + 1); }
       function prev() { goTo(index - 1); }
     
-      prevBtn.addEventListener('click', prev);
-      nextBtn.addEventListener('click', next);
+      prevBtn.addEventListener('click', () => { 
+        stop();
+        prev();
+        play();
+      });
+      nextBtn.addEventListener('click', () => { 
+        stop();
+        next();
+        play();
+      });
     
       function play() { if (autoplayMs) { stop(); autoId = setInterval(next, autoplayMs); } }
       function stop() { if (autoId) clearInterval(autoId); autoId = null; }
-      play();
+      
+
     
       let pointerDown = false, startX = 0, startTrackX = 0, moved = false;
       const setX = gsap.quickSetter(track, 'x', 'px');
